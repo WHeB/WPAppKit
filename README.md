@@ -1,15 +1,12 @@
-# WPAppKit
-
-[![CI Status](https://img.shields.io/travis/WHeB/WPAppKit.svg?style=flat)](https://travis-ci.org/WHeB/WPAppKit)
-[![Version](https://img.shields.io/cocoapods/v/WPAppKit.svg?style=flat)](https://cocoapods.org/pods/WPAppKit)
-[![License](https://img.shields.io/cocoapods/l/WPAppKit.svg?style=flat)](https://cocoapods.org/pods/WPAppKit)
-[![Platform](https://img.shields.io/cocoapods/p/WPAppKit.svg?style=flat)](https://cocoapods.org/pods/WPAppKit)
 
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+
+Swift 4.0
+Xcode 10.0
 
 ## Installation
 
@@ -27,3 +24,17 @@ WHeB, 1193325271@qq.com
 ## License
 
 WPAppKit is available under the MIT license. See the LICENSE file for more info.
+
+
+## Outline
+
+|── WPAppKit
+|   |── Cocoa                        
+|   |   |── UIKit 
+|   |   |── UIFoundation 
+|   |── Tool   
+|   |── ThirdKit      
+|   |   |── MJRefresh
+|   |   |── MBHudProgress    
+|   |   |── Kingfisher
+

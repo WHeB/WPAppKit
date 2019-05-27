@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WPAppKit'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = '搭建 Swift 项目常用类库整合'
   s.description      = <<-DESC
       Cocoa：Foundation,UIKit相关扩展
@@ -27,8 +27,17 @@ Pod::Spec.new do |s|
 
   # ---------------  Cocoa常用扩展  -----------
   s.subspec 'Cocoa' do |ss|
-    ss.source_files = 'WPAppKit/Classes/Cocoa/**/*.swift'
-    ss.frameworks = 'UIKit', 'Foundation'
+    
+    # Foundation
+    ss.subspec 'Foundation' do |sss|
+      sss.source_files = 'WPAppKit/Classes/Cocoa/Foundation/*.swift'
+    end
+    
+    # UIKit
+    ss.subspec 'UIKit' do |sss|
+      sss.source_files = 'WPAppKit/Classes/Cocoa/UIKit/*.swift'
+    end
+    
   end
   
   # ---------------  工具库  -----------
@@ -39,6 +48,12 @@ Pod::Spec.new do |s|
 
   # ---------------  第三方库 + 扩展  -----------
   s.subspec 'ThirdKit' do |ss|
+    
+    # MJRefresh
+    ss.subspec 'MJRefresh' do |sss|
+      sss.source_files = 'WPAppKit/Classes/ThirdKit/MJRefresh/*.swift'
+      sss.dependency 'MJRefresh'
+    end
     
     # Kingfisher
     ss.subspec 'Kingfisher' do |sss|

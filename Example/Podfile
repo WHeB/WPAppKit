@@ -2,10 +2,7 @@ use_frameworks!
 
 target 'WPAppKit_Example' do
   pod 'WPAppKit', :path => '../'
-
-  target 'WPAppKit_Tests' do
-    inherit! :search_paths
-
-    
-  end
+  pod 'Kingfisher'
+  pod 'MJRefresh'
+  
 end

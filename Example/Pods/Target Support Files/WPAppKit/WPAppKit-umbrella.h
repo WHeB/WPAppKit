@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "MBProgressHUD.h"
 
 FOUNDATION_EXPORT double WPAppKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char WPAppKitVersionString[];

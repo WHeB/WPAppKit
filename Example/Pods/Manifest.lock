@@ -1,16 +1,42 @@
 PODS:
-  - WPAppKit (0.1.0)
+  - Kingfisher (4.10.1)
+  - WPAppKit (0.1.2):
+    - WPAppKit/Cocoa (= 0.1.2)
+    - WPAppKit/ThirdKit (= 0.1.2)
+    - WPAppKit/Tool (= 0.1.2)
+  - WPAppKit/Cocoa (0.1.2):
+    - WPAppKit/Cocoa/Foundation (= 0.1.2)
+    - WPAppKit/Cocoa/UIKit (= 0.1.2)
+  - WPAppKit/Cocoa/Foundation (0.1.2)
+  - WPAppKit/Cocoa/UIKit (0.1.2)
+  - WPAppKit/ThirdKit (0.1.2):
+    - WPAppKit/ThirdKit/Kingfisher (= 0.1.2)
+    - WPAppKit/ThirdKit/ZHRefresh (= 0.1.2)
+  - WPAppKit/ThirdKit/Kingfisher (0.1.2):
+    - Kingfisher
+  - WPAppKit/ThirdKit/ZHRefresh (0.1.2)
+  - WPAppKit/Tool (0.1.2)
+  - ZHRefresh (0.1.9)
 
 DEPENDENCIES:
+  - Kingfisher
   - WPAppKit (from `../`)
+  - ZHRefresh
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Kingfisher
+    - ZHRefresh
 
 EXTERNAL SOURCES:
   WPAppKit:
     :path: "../"
 
 SPEC CHECKSUMS:
-  WPAppKit: 982a6e3e61c47e9b9b0f26a814d378c593f0c188
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  WPAppKit: 5e42de9ad21bb1df7b76c09cce2305554c00b38d
+  ZHRefresh: 876b409acc73dbd10ea4e7967e1f4aea2ef44a53
 
-PODFILE CHECKSUM: 7125ff55f58d0270df066971b7a3417743e0b783
+PODFILE CHECKSUM: 3cb7a0eeccf8f0b016d9cf68bf629942adbb05cf
 
 COCOAPODS: 1.6.1
