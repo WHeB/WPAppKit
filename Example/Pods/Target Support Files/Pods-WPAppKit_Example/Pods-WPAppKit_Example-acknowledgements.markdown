@@ -27,9 +27,9 @@ SOFTWARE.
 
 
 
-## WPAppKit
+## MJRefresh
 
-Copyright (c) 2019 WHeB <13525996463@163.com>
+Copyright (c) 2013-2015 MJRefresh (https://github.com/CoderMJLee/MJRefresh)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -50,9 +50,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
-## ZHRefresh
+## WPAppKit
 
-Copyright (c) 2018 SummerHF <391565521@qq.com>
+Copyright (c) 2019 WHeB <13525996463@163.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

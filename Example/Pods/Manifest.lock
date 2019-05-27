@@ -1,32 +1,35 @@
 PODS:
   - Kingfisher (4.10.1)
-  - WPAppKit (0.1.2):
-    - WPAppKit/Cocoa (= 0.1.2)
-    - WPAppKit/ThirdKit (= 0.1.2)
-    - WPAppKit/Tool (= 0.1.2)
-  - WPAppKit/Cocoa (0.1.2):
-    - WPAppKit/Cocoa/Foundation (= 0.1.2)
-    - WPAppKit/Cocoa/UIKit (= 0.1.2)
-  - WPAppKit/Cocoa/Foundation (0.1.2)
-  - WPAppKit/Cocoa/UIKit (0.1.2)
-  - WPAppKit/ThirdKit (0.1.2):
-    - WPAppKit/ThirdKit/Kingfisher (= 0.1.2)
-    - WPAppKit/ThirdKit/ZHRefresh (= 0.1.2)
-  - WPAppKit/ThirdKit/Kingfisher (0.1.2):
+  - MJRefresh (3.2.0)
+  - WPAppKit (0.1.3):
+    - WPAppKit/Cocoa (= 0.1.3)
+    - WPAppKit/ThirdKit (= 0.1.3)
+    - WPAppKit/Tool (= 0.1.3)
+  - WPAppKit/Cocoa (0.1.3):
+    - WPAppKit/Cocoa/Foundation (= 0.1.3)
+    - WPAppKit/Cocoa/UIKit (= 0.1.3)
+  - WPAppKit/Cocoa/Foundation (0.1.3)
+  - WPAppKit/Cocoa/UIKit (0.1.3)
+  - WPAppKit/ThirdKit (0.1.3):
+    - WPAppKit/ThirdKit/Kingfisher (= 0.1.3)
+    - WPAppKit/ThirdKit/MJRefresh (= 0.1.3)
+    - WPAppKit/ThirdKit/ZHRefresh (= 0.1.3)
+  - WPAppKit/ThirdKit/Kingfisher (0.1.3):
     - Kingfisher
-  - WPAppKit/ThirdKit/ZHRefresh (0.1.2)
-  - WPAppKit/Tool (0.1.2)
-  - ZHRefresh (0.1.9)
+  - WPAppKit/ThirdKit/MJRefresh (0.1.3):
+    - MJRefresh
+  - WPAppKit/ThirdKit/ZHRefresh (0.1.3)
+  - WPAppKit/Tool (0.1.3)
 
 DEPENDENCIES:
   - Kingfisher
+  - MJRefresh
   - WPAppKit (from `../`)
-  - ZHRefresh
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Kingfisher
-    - ZHRefresh
+    - MJRefresh
 
 EXTERNAL SOURCES:
   WPAppKit:
@@ -34,9 +37,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
-  WPAppKit: 5e42de9ad21bb1df7b76c09cce2305554c00b38d
-  ZHRefresh: 876b409acc73dbd10ea4e7967e1f4aea2ef44a53
+  MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
+  WPAppKit: 939cacdf63b71da497e6c21005f47a6bbea7c716
 
-PODFILE CHECKSUM: 3cb7a0eeccf8f0b016d9cf68bf629942adbb05cf
+PODFILE CHECKSUM: c09ac6238511b1ad1418007b684f3c851a61431f
 
 COCOAPODS: 1.6.1

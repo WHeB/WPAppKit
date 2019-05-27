@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import MJRefresh
 
 public class RefreshHeader: MJRefreshNormalHeader {
     

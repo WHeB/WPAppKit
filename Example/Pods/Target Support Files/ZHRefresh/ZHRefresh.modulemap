@@ -1,6 +1,0 @@
-framework module ZHRefresh {
-  umbrella header "ZHRefresh-umbrella.h"
-
-  export *
-  module * { export * }
-}

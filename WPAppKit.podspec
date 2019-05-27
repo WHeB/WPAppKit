@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WPAppKit'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = '搭建 Swift 项目常用类库整合'
   s.description      = <<-DESC
       Cocoa：Foundation,UIKit相关扩展
@@ -17,14 +17,16 @@ Pod::Spec.new do |s|
                        DESC
 
   s.homepage         = 'https://github.com/WHeB/WPAppKit.git'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'WHeB' => '1193325271@qq.com' }
   s.source           = { :git => 'https://github.com/WHeB/WPAppKit.git', :tag => s.version.to_s }
   s.swift_version = '4.0'
   s.ios.deployment_target = '9.0'
 
+  # 集成的库
+  s.dependency 'SnapKit', '~> 4.0.0'
 
+  
   # ---------------  Cocoa常用扩展  -----------
   s.subspec 'Cocoa' do |ss|
     
@@ -62,7 +64,7 @@ Pod::Spec.new do |s|
     end
     
     # MBProgressHUD
-    ss.subspec 'ZHRefresh' do |sss|
+    ss.subspec 'MBProgressHUD' do |sss|
       sss.source_files = 'WPAppKit/Classes/ThirdKit/MBProgressHUD/*.{swift,h,m}'
     end
     
