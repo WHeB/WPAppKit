@@ -1,0 +1,6 @@
+framework module WPAppKit {
+  umbrella header "WPAppKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

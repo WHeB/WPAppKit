@@ -22,7 +22,7 @@ pod 'WPAppKit'
 
 ## Author
 
-WHeB, 13525996463@163.com
+WHeB, 1193325271@qq.com
 
 ## License
 

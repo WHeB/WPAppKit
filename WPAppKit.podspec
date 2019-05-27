@@ -9,28 +9,29 @@
 Pod::Spec.new do |s|
   s.name             = 'WPAppKit'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of WPAppKit.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
+  s.summary          = '搭建 Swift 项目常用类库整合'
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+      Cocoa：Foundation,UIKit相关扩展 
                        DESC
 
-  s.homepage         = 'https://github.com/WHeB/WPAppKit'
+  s.homepage         = 'https://github.com/WHeB/WPAppKit.git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'WHeB' => '13525996463@163.com' }
+  s.author           = { 'WHeB' => '1193325271@qq.com' }
   s.source           = { :git => 'https://github.com/WHeB/WPAppKit.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
-  s.source_files = 'WPAppKit/Classes/**/*'
+
+  # ---------------  Cocoa常用扩展  -----------
+  s.subspec 'Cocoa' do |ss|
+    ss.source_files = 'WPAppKit/Classes/Cocoa/**/*.swift'
+
+    ss.frameworks = 'UIKit', 'Foundation'
+  end
+
+
+  # s.source_files = 'WPAppKit/Classes/**/*'
   
   # s.resource_bundles = {
   #   'WPAppKit' => ['WPAppKit/Assets/*.png']
