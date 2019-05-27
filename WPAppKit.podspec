@@ -1,14 +1,8 @@
-#
-# Be sure to run `pod lib lint WPAppKit.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
-#
+
 
 Pod::Spec.new do |s|
   s.name             = 'WPAppKit'
-  s.version          = '0.1.4'
+  s.version          = '0.1.5'
   s.summary          = '搭建 Swift 项目常用类库整合'
   s.description      = <<-DESC
       Cocoa：Foundation,UIKit相关扩展
@@ -22,7 +16,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/WHeB/WPAppKit.git', :tag => s.version.to_s }
   s.swift_version = '4.0'
   s.ios.deployment_target = '9.0'
-
+  
   # 集成的库
   s.dependency 'SnapKit', '~> 4.0.0'
 
@@ -46,6 +40,11 @@ Pod::Spec.new do |s|
   s.subspec 'Tool' do |ss|
     ss.source_files = 'WPAppKit/Classes/Tool/*.swift'
     ss.frameworks = 'UIKit', 'Foundation'
+  end
+  
+  # ---------------  空页面  -----------
+  s.subspec 'WPEmptyView' do |ss|
+      ss.source_files = 'WPAppKit/Classes/WPEmptyView/*.swift'
   end
 
   # ---------------  第三方库 + 扩展  -----------
