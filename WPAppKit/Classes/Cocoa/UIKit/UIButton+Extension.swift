@@ -1,6 +1,6 @@
 //
 //  UIButton+Extension.swift
-//  WPToolDemo
+//  WPAppKit
 //  倒计时
 //  Created by 王鹏 on 2019/4/10.
 //  Copyright © 2019年 王海鹏. All rights reserved.
@@ -62,7 +62,7 @@ public extension UIButton {
     /// - Parameters:
     ///   - position: 图片相对于文字的位置 仅限 上下左右
     ///   - spacing: 图片和文字的间距
-    public func setImageOrientation(position: UIView.ContentMode, spacing: CGFloat) {
+    public func setImageOrientation(position: UIViewContentMode, spacing: CGFloat) {
         
         let buttonW = self.bounds.size.width
         let buttonH = self.bounds.size.height
@@ -72,7 +72,7 @@ public extension UIButton {
         
         let title: String = (self.titleLabel?.text)!
         let titleFont = self.titleLabel?.font!
-        let titleSize = title.size(withAttributes: [kCTFontAttributeName as NSAttributedString.Key: titleFont!])
+        let titleSize = title.size(withAttributes: [kCTFontAttributeName as NSAttributedStringKey: titleFont!])
         // 文本lable大小（显示不全时会比原值小）
         let normalW: CGFloat = (self.titleLabel?.bounds.size.width)!
         let normalH: CGFloat = (self.titleLabel?.bounds.size.height)!
@@ -87,11 +87,11 @@ public extension UIButton {
                 return
             }
             if position == .left {
-                self.imageEdgeInsets = UIEdgeInsets(top: 0, left: -spacing / 2.0, bottom: 0, right: spacing / 2.0)
-                self.titleEdgeInsets = UIEdgeInsets(top: 0, left: spacing / 2.0, bottom: 0, right: -spacing / 2.0)
+                self.imageEdgeInsets = UIEdgeInsetsMake(0, -spacing / 2.0, 0, spacing / 2.0)
+                self.titleEdgeInsets = UIEdgeInsetsMake(0, spacing / 2.0, 0, -spacing / 2.0)
             }else if position == .right {
-                self.imageEdgeInsets = UIEdgeInsets(top: 0, left: titleW + spacing / 2, bottom: 0, right: -(titleW + spacing / 2.0));
-                self.titleEdgeInsets = UIEdgeInsets(top: 0, left: -(imgW + spacing / 2.0) , bottom: 0, right: imgW + spacing / 2.0);
+                self.imageEdgeInsets = UIEdgeInsetsMake(0, titleW + spacing / 2, 0, -(titleW + spacing / 2.0));
+                self.titleEdgeInsets = UIEdgeInsetsMake(0, -(imgW + spacing / 2.0) , 0, imgW + spacing / 2.0);
             }
         }else if position == .top || position == .bottom {
             
@@ -102,13 +102,13 @@ public extension UIButton {
             if position == .top {
                 // 使图片和文字水平居中显示
                 self.contentHorizontalAlignment = .center
-                self.imageEdgeInsets = UIEdgeInsets(top: -(titleH + spacing), left: 0, bottom: 0, right: -titleW);
-                self.titleEdgeInsets = UIEdgeInsets(top: 0, left: -imgW, bottom: -(imgH + spacing), right: 0);
+                self.imageEdgeInsets = UIEdgeInsetsMake(-(titleH + spacing), 0, 0, -titleW);
+                self.titleEdgeInsets = UIEdgeInsetsMake(0, -imgW, -(imgH + spacing), 0);
             }else if position == .bottom {
                 // 使图片和文字水平居中显示
                 self.contentHorizontalAlignment = .center
-                self.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: -(titleH + spacing / 2.0), right: -titleW);
-                self.titleEdgeInsets = UIEdgeInsets(top: -(imgH + spacing / 2), left: -imgW, bottom: 0, right: 0);
+                self.imageEdgeInsets = UIEdgeInsetsMake(0, 0, -(titleH + spacing / 2.0), -titleW);
+                self.titleEdgeInsets = UIEdgeInsetsMake(-(imgH + spacing / 2), -imgW, 0, 0);
             }
         }
     }

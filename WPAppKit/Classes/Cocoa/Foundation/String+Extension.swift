@@ -1,6 +1,6 @@
 //
 //  String+Extension.swift
-//  WPToolDemo
+//  WPAppKit
 //
 //  Created by 王鹏 on 2019/4/10.
 //  Copyright © 2019年 王海鹏. All rights reserved.
@@ -141,16 +141,16 @@ public extension String {
     /// 获取文本高
     public func txtStringHeight(font: UIFont, maxWidth: CGFloat) -> CGFloat {
         let size = CGSize.init(width: maxWidth, height: CGFloat(MAXFLOAT))
-        let dictionary = NSDictionary.init(object: font, forKey: NSAttributedString.Key.font as NSCopying)
-        let stringSize = self.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: dictionary as? [NSAttributedString.Key : Any], context: nil)
+        let dictionary = NSDictionary.init(object: font, forKey: NSAttributedStringKey.font as NSCopying)
+        let stringSize = self.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: dictionary as? [NSAttributedStringKey : Any], context: nil)
         return stringSize.height
     }
     
     /// 获取文本宽
     public func txtStringWidth(font: UIFont, maxHeight: CGFloat) -> CGFloat {
         let size = CGSize.init(width: CGFloat(MAXFLOAT), height: maxHeight)
-        let dictionary = NSDictionary.init(object: font, forKey: NSAttributedString.Key.font as NSCopying)
-        let stringSize = self.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: dictionary as? [NSAttributedString.Key : Any], context: nil)
+        let dictionary = NSDictionary.init(object: font, forKey: NSAttributedStringKey.font as NSCopying)
+        let stringSize = self.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: dictionary as? [NSAttributedStringKey : Any], context: nil)
         return stringSize.width
     }
 }

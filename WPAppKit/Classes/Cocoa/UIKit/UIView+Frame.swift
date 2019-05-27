@@ -1,6 +1,6 @@
 //
 //  UIView+Frame.swift
-//  WPKit
+//  WPAppKit
 //  frame便捷设置
 //  Created by 王鹏 on 2018/7/21.
 //  Copyright © 2018年 王海鹏. All rights reserved.

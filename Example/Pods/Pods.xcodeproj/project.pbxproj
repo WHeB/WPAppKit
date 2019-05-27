@@ -15,24 +15,32 @@
 		8A4A6CF8ECCF7232A2839BE8323175AF /* Pods-WPAppKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9025739D518F4761EF0890A7D3CF4F5A /* Pods-WPAppKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AE6BB569E4A5EC425151406CA1FD81D9 /* Pods-WPAppKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 447520FA21486740B2FE9EBC98618520 /* Pods-WPAppKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B2D3198C4005323DEB2CBE6EAD81F841 /* WPAppKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A51153FF9B6F5F8FCE9D879EAB40167 /* WPAppKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B8E32F1D229BCEC1004324C5 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F0A229BCEC1004324C5 /* UIImageView+Extension.swift */; };
-		B8E32F1E229BCEC1004324C5 /* UITextField+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F0B229BCEC1004324C5 /* UITextField+Convenience.swift */; };
-		B8E32F1F229BCEC1004324C5 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F0C229BCEC1004324C5 /* UIButton+Extension.swift */; };
-		B8E32F20229BCEC1004324C5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F0D229BCEC1004324C5 /* UIView+Extension.swift */; };
-		B8E32F21229BCEC1004324C5 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F0E229BCEC1004324C5 /* UIImage+Extension.swift */; };
-		B8E32F22229BCEC1004324C5 /* WebView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F0F229BCEC1004324C5 /* WebView+Extension.swift */; };
-		B8E32F23229BCEC1004324C5 /* UIView+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F10229BCEC1004324C5 /* UIView+Frame.swift */; };
-		B8E32F24229BCEC1004324C5 /* UIButton+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F11229BCEC1004324C5 /* UIButton+Convenience.swift */; };
-		B8E32F25229BCEC1004324C5 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F12229BCEC1004324C5 /* UIViewController+Extension.swift */; };
-		B8E32F26229BCEC1004324C5 /* UIColor+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F13229BCEC1004324C5 /* UIColor+Convenience.swift */; };
-		B8E32F27229BCEC1004324C5 /* UIView+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F14229BCEC1004324C5 /* UIView+Convenience.swift */; };
-		B8E32F28229BCEC1004324C5 /* UITextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F15229BCEC1004324C5 /* UITextView+Extension.swift */; };
-		B8E32F29229BCEC1004324C5 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F16229BCEC1004324C5 /* UITextField+Extension.swift */; };
-		B8E32F2A229BCEC1004324C5 /* UILabel+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F17229BCEC1004324C5 /* UILabel+Convenience.swift */; };
-		B8E32F2B229BCEC1004324C5 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F19229BCEC1004324C5 /* Date+Extension.swift */; };
-		B8E32F2C229BCEC1004324C5 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F1A229BCEC1004324C5 /* String+Extension.swift */; };
-		B8E32F2D229BCEC1004324C5 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F1B229BCEC1004324C5 /* Dictionary+Extension.swift */; };
-		B8E32F2E229BCEC1004324C5 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F1C229BCEC1004324C5 /* Array+Extension.swift */; };
+		B8E32F33229BD583004324C5 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F2F229BD583004324C5 /* Date+Extension.swift */; };
+		B8E32F34229BD583004324C5 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F30229BD583004324C5 /* Array+Extension.swift */; };
+		B8E32F35229BD583004324C5 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F31229BD583004324C5 /* Dictionary+Extension.swift */; };
+		B8E32F36229BD583004324C5 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F32229BD583004324C5 /* String+Extension.swift */; };
+		B8E32F45229BD59C004324C5 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F37229BD59B004324C5 /* UIImageView+Extension.swift */; };
+		B8E32F46229BD59C004324C5 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F38229BD59B004324C5 /* UITextField+Extension.swift */; };
+		B8E32F47229BD59C004324C5 /* UITextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F39229BD59B004324C5 /* UITextView+Extension.swift */; };
+		B8E32F48229BD59C004324C5 /* UIView+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F3A229BD59B004324C5 /* UIView+Convenience.swift */; };
+		B8E32F49229BD59C004324C5 /* UITextField+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F3B229BD59B004324C5 /* UITextField+Convenience.swift */; };
+		B8E32F4A229BD59C004324C5 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F3C229BD59B004324C5 /* UIViewController+Extension.swift */; };
+		B8E32F4B229BD59C004324C5 /* UILabel+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F3D229BD59B004324C5 /* UILabel+Convenience.swift */; };
+		B8E32F4C229BD59C004324C5 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F3E229BD59B004324C5 /* UIButton+Extension.swift */; };
+		B8E32F4D229BD59C004324C5 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F3F229BD59B004324C5 /* UIImage+Extension.swift */; };
+		B8E32F4E229BD59C004324C5 /* UIButton+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F40229BD59B004324C5 /* UIButton+Convenience.swift */; };
+		B8E32F4F229BD59C004324C5 /* UIColor+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F41229BD59C004324C5 /* UIColor+Convenience.swift */; };
+		B8E32F50229BD59C004324C5 /* WebView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F42229BD59C004324C5 /* WebView+Extension.swift */; };
+		B8E32F51229BD59C004324C5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F43229BD59C004324C5 /* UIView+Extension.swift */; };
+		B8E32F52229BD59C004324C5 /* UIView+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F44229BD59C004324C5 /* UIView+Frame.swift */; };
+		B8E32F5C229BD6F0004324C5 /* LocalStoreTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F54229BD6F0004324C5 /* LocalStoreTool.swift */; };
+		B8E32F5D229BD6F0004324C5 /* ValueCheckTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F55229BD6F0004324C5 /* ValueCheckTool.swift */; };
+		B8E32F5E229BD6F0004324C5 /* FormatterNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F56229BD6F0004324C5 /* FormatterNumber.swift */; };
+		B8E32F5F229BD6F0004324C5 /* StoryboardAndXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F57229BD6F0004324C5 /* StoryboardAndXib.swift */; };
+		B8E32F60229BD6F0004324C5 /* RandomTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F58229BD6F0004324C5 /* RandomTool.swift */; };
+		B8E32F61229BD6F0004324C5 /* CurrentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F59229BD6F0004324C5 /* CurrentManager.swift */; };
+		B8E32F62229BD6F0004324C5 /* FormatterTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F5A229BD6F0004324C5 /* FormatterTime.swift */; };
+		B8E32F63229BD6F0004324C5 /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F5B229BD6F0004324C5 /* DeviceInfo.swift */; };
 		F1183B626E294B1CD5298705E9490208 /* Pods-WPAppKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A935FF1CCAFC0A977FCDF64231C2A60A /* Pods-WPAppKit_Tests-dummy.m */; };
 /* End PBXBuildFile section */
 
@@ -76,24 +84,32 @@
 		B2E382C469FE6FD9FD3D06035E9C58E6 /* Pods-WPAppKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WPAppKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		B583CE1A899CF0B256F3D3581114A465 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B8A9CB1DA3F7E454295C086CE2058512 /* Pods-WPAppKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WPAppKit_Example.modulemap"; sourceTree = "<group>"; };
-		B8E32F0A229BCEC1004324C5 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
-		B8E32F0B229BCEC1004324C5 /* UITextField+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Convenience.swift"; sourceTree = "<group>"; };
-		B8E32F0C229BCEC1004324C5 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
-		B8E32F0D229BCEC1004324C5 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		B8E32F0E229BCEC1004324C5 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
-		B8E32F0F229BCEC1004324C5 /* WebView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebView+Extension.swift"; sourceTree = "<group>"; };
-		B8E32F10229BCEC1004324C5 /* UIView+Frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Frame.swift"; sourceTree = "<group>"; };
-		B8E32F11229BCEC1004324C5 /* UIButton+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Convenience.swift"; sourceTree = "<group>"; };
-		B8E32F12229BCEC1004324C5 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		B8E32F13229BCEC1004324C5 /* UIColor+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Convenience.swift"; sourceTree = "<group>"; };
-		B8E32F14229BCEC1004324C5 /* UIView+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Convenience.swift"; sourceTree = "<group>"; };
-		B8E32F15229BCEC1004324C5 /* UITextView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+Extension.swift"; sourceTree = "<group>"; };
-		B8E32F16229BCEC1004324C5 /* UITextField+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
-		B8E32F17229BCEC1004324C5 /* UILabel+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Convenience.swift"; sourceTree = "<group>"; };
-		B8E32F19229BCEC1004324C5 /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
-		B8E32F1A229BCEC1004324C5 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
-		B8E32F1B229BCEC1004324C5 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
-		B8E32F1C229BCEC1004324C5 /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		B8E32F2F229BD583004324C5 /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		B8E32F30229BD583004324C5 /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		B8E32F31229BD583004324C5 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
+		B8E32F32229BD583004324C5 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		B8E32F37229BD59B004324C5 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		B8E32F38229BD59B004324C5 /* UITextField+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		B8E32F39229BD59B004324C5 /* UITextView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+Extension.swift"; sourceTree = "<group>"; };
+		B8E32F3A229BD59B004324C5 /* UIView+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Convenience.swift"; sourceTree = "<group>"; };
+		B8E32F3B229BD59B004324C5 /* UITextField+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Convenience.swift"; sourceTree = "<group>"; };
+		B8E32F3C229BD59B004324C5 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		B8E32F3D229BD59B004324C5 /* UILabel+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Convenience.swift"; sourceTree = "<group>"; };
+		B8E32F3E229BD59B004324C5 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		B8E32F3F229BD59B004324C5 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		B8E32F40229BD59B004324C5 /* UIButton+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Convenience.swift"; sourceTree = "<group>"; };
+		B8E32F41229BD59C004324C5 /* UIColor+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Convenience.swift"; sourceTree = "<group>"; };
+		B8E32F42229BD59C004324C5 /* WebView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebView+Extension.swift"; sourceTree = "<group>"; };
+		B8E32F43229BD59C004324C5 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		B8E32F44229BD59C004324C5 /* UIView+Frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Frame.swift"; sourceTree = "<group>"; };
+		B8E32F54229BD6F0004324C5 /* LocalStoreTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalStoreTool.swift; sourceTree = "<group>"; };
+		B8E32F55229BD6F0004324C5 /* ValueCheckTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueCheckTool.swift; sourceTree = "<group>"; };
+		B8E32F56229BD6F0004324C5 /* FormatterNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatterNumber.swift; sourceTree = "<group>"; };
+		B8E32F57229BD6F0004324C5 /* StoryboardAndXib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardAndXib.swift; sourceTree = "<group>"; };
+		B8E32F58229BD6F0004324C5 /* RandomTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomTool.swift; sourceTree = "<group>"; };
+		B8E32F59229BD6F0004324C5 /* CurrentManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentManager.swift; sourceTree = "<group>"; };
+		B8E32F5A229BD6F0004324C5 /* FormatterTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatterTime.swift; sourceTree = "<group>"; };
+		B8E32F5B229BD6F0004324C5 /* DeviceInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
 		BDB254C6CBEA09F813CDB91DB05A5059 /* Pods_WPAppKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WPAppKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C415DDEC514ACD9095178FB6EF0D4E22 /* Pods-WPAppKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WPAppKit_Example-dummy.m"; sourceTree = "<group>"; };
 		C5DE322164C5DAE00D35F900C4292438 /* WPAppKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = WPAppKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -144,6 +160,7 @@
 		91AEC85F75930F807B9814F83E9CBED0 /* WPAppKit */ = {
 			isa = PBXGroup;
 			children = (
+				B8E32F53229BD6F0004324C5 /* Tool */,
 				B8E32F08229BCEC1004324C5 /* Cocoa */,
 				FDC947249C9822C744285C6C5FB562E9 /* Pod */,
 				9ED4C608087FADE98B3D3940AAB65BF9 /* Support Files */,
@@ -197,20 +214,20 @@
 		B8E32F09229BCEC1004324C5 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				B8E32F0A229BCEC1004324C5 /* UIImageView+Extension.swift */,
-				B8E32F0B229BCEC1004324C5 /* UITextField+Convenience.swift */,
-				B8E32F0C229BCEC1004324C5 /* UIButton+Extension.swift */,
-				B8E32F0D229BCEC1004324C5 /* UIView+Extension.swift */,
-				B8E32F0E229BCEC1004324C5 /* UIImage+Extension.swift */,
-				B8E32F0F229BCEC1004324C5 /* WebView+Extension.swift */,
-				B8E32F10229BCEC1004324C5 /* UIView+Frame.swift */,
-				B8E32F11229BCEC1004324C5 /* UIButton+Convenience.swift */,
-				B8E32F12229BCEC1004324C5 /* UIViewController+Extension.swift */,
-				B8E32F13229BCEC1004324C5 /* UIColor+Convenience.swift */,
-				B8E32F14229BCEC1004324C5 /* UIView+Convenience.swift */,
-				B8E32F15229BCEC1004324C5 /* UITextView+Extension.swift */,
-				B8E32F16229BCEC1004324C5 /* UITextField+Extension.swift */,
-				B8E32F17229BCEC1004324C5 /* UILabel+Convenience.swift */,
+				B8E32F40229BD59B004324C5 /* UIButton+Convenience.swift */,
+				B8E32F3E229BD59B004324C5 /* UIButton+Extension.swift */,
+				B8E32F41229BD59C004324C5 /* UIColor+Convenience.swift */,
+				B8E32F3F229BD59B004324C5 /* UIImage+Extension.swift */,
+				B8E32F37229BD59B004324C5 /* UIImageView+Extension.swift */,
+				B8E32F3D229BD59B004324C5 /* UILabel+Convenience.swift */,
+				B8E32F3B229BD59B004324C5 /* UITextField+Convenience.swift */,
+				B8E32F38229BD59B004324C5 /* UITextField+Extension.swift */,
+				B8E32F39229BD59B004324C5 /* UITextView+Extension.swift */,
+				B8E32F3A229BD59B004324C5 /* UIView+Convenience.swift */,
+				B8E32F43229BD59C004324C5 /* UIView+Extension.swift */,
+				B8E32F44229BD59C004324C5 /* UIView+Frame.swift */,
+				B8E32F3C229BD59B004324C5 /* UIViewController+Extension.swift */,
+				B8E32F42229BD59C004324C5 /* WebView+Extension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -218,12 +235,28 @@
 		B8E32F18229BCEC1004324C5 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				B8E32F19229BCEC1004324C5 /* Date+Extension.swift */,
-				B8E32F1A229BCEC1004324C5 /* String+Extension.swift */,
-				B8E32F1B229BCEC1004324C5 /* Dictionary+Extension.swift */,
-				B8E32F1C229BCEC1004324C5 /* Array+Extension.swift */,
+				B8E32F30229BD583004324C5 /* Array+Extension.swift */,
+				B8E32F2F229BD583004324C5 /* Date+Extension.swift */,
+				B8E32F31229BD583004324C5 /* Dictionary+Extension.swift */,
+				B8E32F32229BD583004324C5 /* String+Extension.swift */,
 			);
 			path = Foundation;
+			sourceTree = "<group>";
+		};
+		B8E32F53229BD6F0004324C5 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				B8E32F54229BD6F0004324C5 /* LocalStoreTool.swift */,
+				B8E32F55229BD6F0004324C5 /* ValueCheckTool.swift */,
+				B8E32F56229BD6F0004324C5 /* FormatterNumber.swift */,
+				B8E32F57229BD6F0004324C5 /* StoryboardAndXib.swift */,
+				B8E32F58229BD6F0004324C5 /* RandomTool.swift */,
+				B8E32F59229BD6F0004324C5 /* CurrentManager.swift */,
+				B8E32F5A229BD6F0004324C5 /* FormatterTime.swift */,
+				B8E32F5B229BD6F0004324C5 /* DeviceInfo.swift */,
+			);
+			name = Tool;
+			path = WPAppKit/Classes/Tool;
 			sourceTree = "<group>";
 		};
 		BA374F2031F69E7CE0BA3E0824BC3184 /* Targets Support Files */ = {
@@ -448,25 +481,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8E32F1E229BCEC1004324C5 /* UITextField+Convenience.swift in Sources */,
-				B8E32F1F229BCEC1004324C5 /* UIButton+Extension.swift in Sources */,
-				B8E32F26229BCEC1004324C5 /* UIColor+Convenience.swift in Sources */,
-				B8E32F1D229BCEC1004324C5 /* UIImageView+Extension.swift in Sources */,
-				B8E32F21229BCEC1004324C5 /* UIImage+Extension.swift in Sources */,
-				B8E32F2D229BCEC1004324C5 /* Dictionary+Extension.swift in Sources */,
-				B8E32F2B229BCEC1004324C5 /* Date+Extension.swift in Sources */,
-				B8E32F23229BCEC1004324C5 /* UIView+Frame.swift in Sources */,
-				B8E32F20229BCEC1004324C5 /* UIView+Extension.swift in Sources */,
-				B8E32F2C229BCEC1004324C5 /* String+Extension.swift in Sources */,
-				B8E32F24229BCEC1004324C5 /* UIButton+Convenience.swift in Sources */,
-				B8E32F2E229BCEC1004324C5 /* Array+Extension.swift in Sources */,
-				B8E32F27229BCEC1004324C5 /* UIView+Convenience.swift in Sources */,
-				B8E32F29229BCEC1004324C5 /* UITextField+Extension.swift in Sources */,
-				B8E32F28229BCEC1004324C5 /* UITextView+Extension.swift in Sources */,
-				B8E32F2A229BCEC1004324C5 /* UILabel+Convenience.swift in Sources */,
+				B8E32F45229BD59C004324C5 /* UIImageView+Extension.swift in Sources */,
+				B8E32F4D229BD59C004324C5 /* UIImage+Extension.swift in Sources */,
+				B8E32F61229BD6F0004324C5 /* CurrentManager.swift in Sources */,
+				B8E32F60229BD6F0004324C5 /* RandomTool.swift in Sources */,
+				B8E32F4A229BD59C004324C5 /* UIViewController+Extension.swift in Sources */,
+				B8E32F5F229BD6F0004324C5 /* StoryboardAndXib.swift in Sources */,
+				B8E32F5E229BD6F0004324C5 /* FormatterNumber.swift in Sources */,
+				B8E32F63229BD6F0004324C5 /* DeviceInfo.swift in Sources */,
+				B8E32F4C229BD59C004324C5 /* UIButton+Extension.swift in Sources */,
+				B8E32F52229BD59C004324C5 /* UIView+Frame.swift in Sources */,
+				B8E32F5C229BD6F0004324C5 /* LocalStoreTool.swift in Sources */,
+				B8E32F4B229BD59C004324C5 /* UILabel+Convenience.swift in Sources */,
+				B8E32F5D229BD6F0004324C5 /* ValueCheckTool.swift in Sources */,
+				B8E32F36229BD583004324C5 /* String+Extension.swift in Sources */,
+				B8E32F46229BD59C004324C5 /* UITextField+Extension.swift in Sources */,
+				B8E32F47229BD59C004324C5 /* UITextView+Extension.swift in Sources */,
+				B8E32F35229BD583004324C5 /* Dictionary+Extension.swift in Sources */,
+				B8E32F50229BD59C004324C5 /* WebView+Extension.swift in Sources */,
+				B8E32F4F229BD59C004324C5 /* UIColor+Convenience.swift in Sources */,
+				B8E32F4E229BD59C004324C5 /* UIButton+Convenience.swift in Sources */,
+				B8E32F51229BD59C004324C5 /* UIView+Extension.swift in Sources */,
+				B8E32F48229BD59C004324C5 /* UIView+Convenience.swift in Sources */,
+				B8E32F62229BD6F0004324C5 /* FormatterTime.swift in Sources */,
+				B8E32F33229BD583004324C5 /* Date+Extension.swift in Sources */,
+				B8E32F49229BD59C004324C5 /* UITextField+Convenience.swift in Sources */,
+				B8E32F34229BD583004324C5 /* Array+Extension.swift in Sources */,
 				4E2F35B07874755F77239E31C830330E /* Pods-WPAppKit_Example-dummy.m in Sources */,
-				B8E32F25229BCEC1004324C5 /* UIViewController+Extension.swift in Sources */,
-				B8E32F22229BCEC1004324C5 /* WebView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,7 +553,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-WPAppKit_Tests/Pods-WPAppKit_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-WPAppKit_Tests/Pods-WPAppKit_Tests.modulemap";
@@ -545,7 +586,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/WPAppKit/WPAppKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/WPAppKit/WPAppKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/WPAppKit/WPAppKit.modulemap";
 				PRODUCT_MODULE_NAME = WPAppKit;
@@ -576,7 +617,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-WPAppKit_Example/Pods-WPAppKit_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-WPAppKit_Example/Pods-WPAppKit_Example.modulemap";
@@ -587,6 +628,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -610,7 +652,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-WPAppKit_Tests/Pods-WPAppKit_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-WPAppKit_Tests/Pods-WPAppKit_Tests.modulemap";
@@ -679,7 +721,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -708,7 +750,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-WPAppKit_Example/Pods-WPAppKit_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-WPAppKit_Example/Pods-WPAppKit_Example.modulemap";
@@ -719,6 +761,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -741,7 +784,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/WPAppKit/WPAppKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/WPAppKit/WPAppKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/WPAppKit/WPAppKit.modulemap";
 				PRODUCT_MODULE_NAME = WPAppKit;
@@ -805,7 +848,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";

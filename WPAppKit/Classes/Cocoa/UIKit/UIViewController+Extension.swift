@@ -1,6 +1,6 @@
 //
 //  UIViewController+Extension.swift
-//  WPToolDemo
+//  WPAppKit
 //
 //  Created by 王鹏 on 2019/4/10.
 //  Copyright © 2019年 王海鹏. All rights reserved.
@@ -12,23 +12,23 @@ public extension UIViewController {
     
     /// 添加子控制器
     public func add(childViewController: UIViewController) {
-        addChild(childViewController)
+        addChildViewController(childViewController)
         view.addSubview(childViewController.view)
-        childViewController.didMove(toParent: self)
+        childViewController.didMove(toParentViewController: self)
     }
     
     /// 添加子控制器
     public func add(childViewController: UIViewController, subView: UIView) {
-        addChild(childViewController)
+        addChildViewController(childViewController)
         subView.addSubview(childViewController.view)
-        childViewController.didMove(toParent: self)
+        childViewController.didMove(toParentViewController: self)
     }
     
     /// 移除子控制器
     public func remove(childViewController: UIViewController) {
-        childViewController.willMove(toParent: nil)
+        childViewController.willMove(toParentViewController: nil)
         childViewController.view.removeFromSuperview()
-        childViewController.removeFromParent()
+        childViewController.removeFromParentViewController()
     }
     
     /// push
@@ -140,7 +140,7 @@ public extension UIViewController {
     
     /// 跳转到<<设置>>界面
     public func pushSystemSetting() {
-        guard let urlPath = URL.init(string: UIApplication.openSettingsURLString) else { return }
+        guard let urlPath = URL.init(string: UIApplicationOpenSettingsURLString) else { return }
         UIApplication.shared.openURL(urlPath)
     }
     

@@ -8,10 +8,11 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WPAppKit'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = '搭建 Swift 项目常用类库整合'
   s.description      = <<-DESC
-      Cocoa：Foundation,UIKit相关扩展 
+      Cocoa：Foundation,UIKit相关扩展
+      Tool：常用工具库
                        DESC
 
   s.homepage         = 'https://github.com/WHeB/WPAppKit.git'
@@ -19,14 +20,19 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'WHeB' => '1193325271@qq.com' }
   s.source           = { :git => 'https://github.com/WHeB/WPAppKit.git', :tag => s.version.to_s }
-
+  s.swift_version = '4.0'
   s.ios.deployment_target = '9.0'
 
 
   # ---------------  Cocoa常用扩展  -----------
   s.subspec 'Cocoa' do |ss|
     ss.source_files = 'WPAppKit/Classes/Cocoa/**/*.swift'
-
+    ss.frameworks = 'UIKit', 'Foundation'
+  end
+  
+  # ---------------  工具库  -----------
+  s.subspec 'Tool' do |ss|
+    ss.source_files = 'WPAppKit/Classes/Tool/*.swift'
     ss.frameworks = 'UIKit', 'Foundation'
   end
 

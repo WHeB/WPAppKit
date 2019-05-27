@@ -1,5 +1,5 @@
 //
-//  WebView+Extension.swift
+//  FormatterNumber.swift
 //  WPAppKit
 //
 //  Created by 王鹏 on 2019/4/15.
@@ -7,10 +7,10 @@
 //
 
 import UIKit
-import WebKit
 
-extension WKWebView {
+class FormatterNumber: NSObject {
 
     
-
+    
+    
 }

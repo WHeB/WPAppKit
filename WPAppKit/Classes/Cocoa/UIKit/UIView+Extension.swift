@@ -1,6 +1,6 @@
 //
 //  UIView+Extension.swift
-//  WPToolDemo
+//  WPAppKit
 //
 //  Created by 王鹏 on 2019/4/10.
 //  Copyright © 2019年 王海鹏. All rights reserved.
@@ -170,7 +170,7 @@ public extension UIView {
         border.path = path.cgPath
         border.frame = tempBounds!
         border.lineWidth = lineWidth
-        border.lineCap = CAShapeLayerLineCap(rawValue: "square")
+        border.lineCap = "square"
         border.lineDashPattern = lineDash
         self.layer.addSublayer(border)
     }
