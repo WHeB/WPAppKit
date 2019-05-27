@@ -11,9 +11,7 @@
 		29B691A883A01CB55C7B6AEAB7E841DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 		2C696EE8B4E01ADF35E5293209D20409 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 		4E2F35B07874755F77239E31C830330E /* Pods-WPAppKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C415DDEC514ACD9095178FB6EF0D4E22 /* Pods-WPAppKit_Example-dummy.m */; };
-		69983559C2A8F1CDE4A77D06DE5C0BA3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 		8A4A6CF8ECCF7232A2839BE8323175AF /* Pods-WPAppKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9025739D518F4761EF0890A7D3CF4F5A /* Pods-WPAppKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AE6BB569E4A5EC425151406CA1FD81D9 /* Pods-WPAppKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 447520FA21486740B2FE9EBC98618520 /* Pods-WPAppKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B2D3198C4005323DEB2CBE6EAD81F841 /* WPAppKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A51153FF9B6F5F8FCE9D879EAB40167 /* WPAppKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B8E32F33229BD583004324C5 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F2F229BD583004324C5 /* Date+Extension.swift */; };
 		B8E32F34229BD583004324C5 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F30229BD583004324C5 /* Array+Extension.swift */; };
@@ -41,17 +39,15 @@
 		B8E32F61229BD6F0004324C5 /* CurrentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F59229BD6F0004324C5 /* CurrentManager.swift */; };
 		B8E32F62229BD6F0004324C5 /* FormatterTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F5A229BD6F0004324C5 /* FormatterTime.swift */; };
 		B8E32F63229BD6F0004324C5 /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F5B229BD6F0004324C5 /* DeviceInfo.swift */; };
-		F1183B626E294B1CD5298705E9490208 /* Pods-WPAppKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A935FF1CCAFC0A977FCDF64231C2A60A /* Pods-WPAppKit_Tests-dummy.m */; };
+		B8E32F69229BE272004324C5 /* AppKingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F68229BE272004324C5 /* AppKingfisher.swift */; };
+		B8E32F6E229BE3E2004324C5 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = B8E32F6C229BE3E2004324C5 /* MBProgressHUD.h */; };
+		B8E32F6F229BE3E2004324C5 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F6D229BE3E2004324C5 /* MBProgressHUD.m */; };
+		B8E32F71229BE3EC004324C5 /* AppHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F70229BE3EC004324C5 /* AppHud.swift */; };
+		B8E32F74229BE814004324C5 /* MBProgressHUD.h in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F6C229BE3E2004324C5 /* MBProgressHUD.h */; };
+		B8E32F75229BE814004324C5 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F6D229BE3E2004324C5 /* MBProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4230923BE670B42C81CE73C217F6A52F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B3E36C298F5FB7D5DADC117CFB7AEACD;
-			remoteInfo = "Pods-WPAppKit_Example";
-		};
 		A1B8AE3C3F6174F399030F53B773F8C9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -65,22 +61,15 @@
 		0424DC820AC94CA81A12EF3EADE3DFB9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		0F0E8E4AAA8CDC6BAC61C1C01E74DD64 /* Pods-WPAppKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WPAppKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		1295A6BA9F45F246727EFA9202B07B93 /* Pods-WPAppKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WPAppKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		2CCB96BEBB67B4473C1FAA5F2D632B50 /* Pods-WPAppKit_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WPAppKit_Tests-Info.plist"; sourceTree = "<group>"; };
 		2EDF69422D851CC742D7DEECF3D016F2 /* WPAppKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WPAppKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		387E8F6D6D1D3BF88C49DCEC6482D0F0 /* WPAppKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WPAppKit-prefix.pch"; sourceTree = "<group>"; };
-		447520FA21486740B2FE9EBC98618520 /* Pods-WPAppKit_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WPAppKit_Tests-umbrella.h"; sourceTree = "<group>"; };
 		4A3B81705D8B346BB1F153FBE872291F /* Pods-WPAppKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WPAppKit_Example-frameworks.sh"; sourceTree = "<group>"; };
-		5611821027F2E4A07673B1A622E287F7 /* Pods-WPAppKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WPAppKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6A51153FF9B6F5F8FCE9D879EAB40167 /* WPAppKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WPAppKit-umbrella.h"; sourceTree = "<group>"; };
 		7BE1D38087E750872E475EAB47CCE3A2 /* WPAppKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WPAppKit-dummy.m"; sourceTree = "<group>"; };
 		9025739D518F4761EF0890A7D3CF4F5A /* Pods-WPAppKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WPAppKit_Example-umbrella.h"; sourceTree = "<group>"; };
 		9033BF489DC891DC3E1105E3A51FFDCD /* Pods-WPAppKit_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WPAppKit_Example-Info.plist"; sourceTree = "<group>"; };
 		94EF5B2A50C2294B8F3DA134B5AFCE04 /* Pods-WPAppKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WPAppKit_Example.release.xcconfig"; sourceTree = "<group>"; };
-		9C22E79D6CC6FA2BA039241853F1A45A /* Pods-WPAppKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WPAppKit_Tests.modulemap"; sourceTree = "<group>"; };
-		9C3B4F3F8AE08D7501B59FE27D0EEDEE /* Pods_WPAppKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WPAppKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A935FF1CCAFC0A977FCDF64231C2A60A /* Pods-WPAppKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WPAppKit_Tests-dummy.m"; sourceTree = "<group>"; };
-		B1C9C982082A604C9058E41E0A54D0CD /* Pods-WPAppKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WPAppKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B2E382C469FE6FD9FD3D06035E9C58E6 /* Pods-WPAppKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WPAppKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		B583CE1A899CF0B256F3D3581114A465 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B8A9CB1DA3F7E454295C086CE2058512 /* Pods-WPAppKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WPAppKit_Example.modulemap"; sourceTree = "<group>"; };
@@ -110,6 +99,10 @@
 		B8E32F59229BD6F0004324C5 /* CurrentManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentManager.swift; sourceTree = "<group>"; };
 		B8E32F5A229BD6F0004324C5 /* FormatterTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatterTime.swift; sourceTree = "<group>"; };
 		B8E32F5B229BD6F0004324C5 /* DeviceInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
+		B8E32F68229BE272004324C5 /* AppKingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppKingfisher.swift; sourceTree = "<group>"; };
+		B8E32F6C229BE3E2004324C5 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		B8E32F6D229BE3E2004324C5 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		B8E32F70229BE3EC004324C5 /* AppHud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppHud.swift; sourceTree = "<group>"; };
 		BDB254C6CBEA09F813CDB91DB05A5059 /* Pods_WPAppKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WPAppKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C415DDEC514ACD9095178FB6EF0D4E22 /* Pods-WPAppKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WPAppKit_Example-dummy.m"; sourceTree = "<group>"; };
 		C5DE322164C5DAE00D35F900C4292438 /* WPAppKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = WPAppKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -117,19 +110,9 @@
 		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D72A48145334F213B351DA860098B918 /* WPAppKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WPAppKit-Info.plist"; sourceTree = "<group>"; };
 		D8ADE69501901072B7DD53BA485F06FA /* WPAppKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WPAppKit.xcconfig; sourceTree = "<group>"; };
-		E391194FFAE9B19EB5DAF75738C22BBF /* Pods-WPAppKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WPAppKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E69C9B70D724003F8A8640A78A647EE1 /* Pods-WPAppKit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WPAppKit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		00C37FAF131D93314155B3ECB2AA98C9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				69983559C2A8F1CDE4A77D06DE5C0BA3 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		76E3A7C18B53F8DE47D58C4B9D3620A9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -160,6 +143,7 @@
 		91AEC85F75930F807B9814F83E9CBED0 /* WPAppKit */ = {
 			isa = PBXGroup;
 			children = (
+				B8E32F64229BE272004324C5 /* ThirdKit */,
 				B8E32F53229BD6F0004324C5 /* Tool */,
 				B8E32F08229BCEC1004324C5 /* Cocoa */,
 				FDC947249C9822C744285C6C5FB562E9 /* Pod */,
@@ -173,7 +157,6 @@
 			isa = PBXGroup;
 			children = (
 				BDB254C6CBEA09F813CDB91DB05A5059 /* Pods_WPAppKit_Example.framework */,
-				9C3B4F3F8AE08D7501B59FE27D0EEDEE /* Pods_WPAppKit_Tests.framework */,
 				2EDF69422D851CC742D7DEECF3D016F2 /* WPAppKit.framework */,
 			);
 			name = Products;
@@ -259,11 +242,38 @@
 			path = WPAppKit/Classes/Tool;
 			sourceTree = "<group>";
 		};
+		B8E32F64229BE272004324C5 /* ThirdKit */ = {
+			isa = PBXGroup;
+			children = (
+				B8E32F66229BE272004324C5 /* MBProgressHUD */,
+				B8E32F67229BE272004324C5 /* Kingfisher */,
+			);
+			name = ThirdKit;
+			path = WPAppKit/Classes/ThirdKit;
+			sourceTree = "<group>";
+		};
+		B8E32F66229BE272004324C5 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				B8E32F70229BE3EC004324C5 /* AppHud.swift */,
+				B8E32F6C229BE3E2004324C5 /* MBProgressHUD.h */,
+				B8E32F6D229BE3E2004324C5 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		B8E32F67229BE272004324C5 /* Kingfisher */ = {
+			isa = PBXGroup;
+			children = (
+				B8E32F68229BE272004324C5 /* AppKingfisher.swift */,
+			);
+			path = Kingfisher;
+			sourceTree = "<group>";
+		};
 		BA374F2031F69E7CE0BA3E0824BC3184 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
 				E11154D0BF2165BC55BB472E7DF704B1 /* Pods-WPAppKit_Example */,
-				DF1D451BD0A3ED42FFC4813D1A43D00F /* Pods-WPAppKit_Tests */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
@@ -285,22 +295,6 @@
 				9B055D0CFEA43187E72B03DED11F5662 /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		DF1D451BD0A3ED42FFC4813D1A43D00F /* Pods-WPAppKit_Tests */ = {
-			isa = PBXGroup;
-			children = (
-				9C22E79D6CC6FA2BA039241853F1A45A /* Pods-WPAppKit_Tests.modulemap */,
-				E391194FFAE9B19EB5DAF75738C22BBF /* Pods-WPAppKit_Tests-acknowledgements.markdown */,
-				E69C9B70D724003F8A8640A78A647EE1 /* Pods-WPAppKit_Tests-acknowledgements.plist */,
-				A935FF1CCAFC0A977FCDF64231C2A60A /* Pods-WPAppKit_Tests-dummy.m */,
-				2CCB96BEBB67B4473C1FAA5F2D632B50 /* Pods-WPAppKit_Tests-Info.plist */,
-				447520FA21486740B2FE9EBC98618520 /* Pods-WPAppKit_Tests-umbrella.h */,
-				B1C9C982082A604C9058E41E0A54D0CD /* Pods-WPAppKit_Tests.debug.xcconfig */,
-				5611821027F2E4A07673B1A622E287F7 /* Pods-WPAppKit_Tests.release.xcconfig */,
-			);
-			name = "Pods-WPAppKit_Tests";
-			path = "Target Support Files/Pods-WPAppKit_Tests";
 			sourceTree = "<group>";
 		};
 		E11154D0BF2165BC55BB472E7DF704B1 /* Pods-WPAppKit_Example */ = {
@@ -345,40 +339,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8E32F6E229BE3E2004324C5 /* MBProgressHUD.h in Headers */,
 				8A4A6CF8ECCF7232A2839BE8323175AF /* Pods-WPAppKit_Example-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F14B9EE843E86AAC5ECF7022BBC2DD54 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AE6BB569E4A5EC425151406CA1FD81D9 /* Pods-WPAppKit_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		28BC217EAB8CC9E8ACFDA5EA7BB7CA64 /* Pods-WPAppKit_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3641856B15E0DC1B88F84F5DDCF1A3F8 /* Build configuration list for PBXNativeTarget "Pods-WPAppKit_Tests" */;
-			buildPhases = (
-				F14B9EE843E86AAC5ECF7022BBC2DD54 /* Headers */,
-				835E3649F1A525477A65DB4CF92C7920 /* Sources */,
-				00C37FAF131D93314155B3ECB2AA98C9 /* Frameworks */,
-				0082057BF1E0EEB9129B8F4B20B26044 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				652DC164D5AB26537D179DE6A2BF9D05 /* PBXTargetDependency */,
-			);
-			name = "Pods-WPAppKit_Tests";
-			productName = "Pods-WPAppKit_Tests";
-			productReference = 9C3B4F3F8AE08D7501B59FE27D0EEDEE /* Pods_WPAppKit_Tests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		6753650236431AAE3972896E7545552A /* WPAppKit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A1370382ACEAD59091722DF29F05C78 /* Build configuration list for PBXNativeTarget "WPAppKit" */;
@@ -438,20 +406,12 @@
 			projectRoot = "";
 			targets = (
 				B3E36C298F5FB7D5DADC117CFB7AEACD /* Pods-WPAppKit_Example */,
-				28BC217EAB8CC9E8ACFDA5EA7BB7CA64 /* Pods-WPAppKit_Tests */,
 				6753650236431AAE3972896E7545552A /* WPAppKit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0082057BF1E0EEB9129B8F4B20B26044 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		CD7ECACA15A4143D340BD7F8372E3A7F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -469,14 +429,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		835E3649F1A525477A65DB4CF92C7920 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F1183B626E294B1CD5298705E9490208 /* Pods-WPAppKit_Tests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8D19D5A5B2709DCA3BA5340D63700EF0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -486,9 +438,12 @@
 				B8E32F61229BD6F0004324C5 /* CurrentManager.swift in Sources */,
 				B8E32F60229BD6F0004324C5 /* RandomTool.swift in Sources */,
 				B8E32F4A229BD59C004324C5 /* UIViewController+Extension.swift in Sources */,
+				B8E32F69229BE272004324C5 /* AppKingfisher.swift in Sources */,
 				B8E32F5F229BD6F0004324C5 /* StoryboardAndXib.swift in Sources */,
+				B8E32F6F229BE3E2004324C5 /* MBProgressHUD.m in Sources */,
 				B8E32F5E229BD6F0004324C5 /* FormatterNumber.swift in Sources */,
 				B8E32F63229BD6F0004324C5 /* DeviceInfo.swift in Sources */,
+				B8E32F71229BE3EC004324C5 /* AppHud.swift in Sources */,
 				B8E32F4C229BD59C004324C5 /* UIButton+Extension.swift in Sources */,
 				B8E32F52229BD59C004324C5 /* UIView+Frame.swift in Sources */,
 				B8E32F5C229BD6F0004324C5 /* LocalStoreTool.swift in Sources */,
@@ -515,6 +470,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8E32F74229BE814004324C5 /* MBProgressHUD.h in Sources */,
+				B8E32F75229BE814004324C5 /* MBProgressHUD.m in Sources */,
 				195D0D80B66F1556B90033A5139DC513 /* WPAppKit-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -528,48 +485,9 @@
 			target = 6753650236431AAE3972896E7545552A /* WPAppKit */;
 			targetProxy = A1B8AE3C3F6174F399030F53B773F8C9 /* PBXContainerItemProxy */;
 		};
-		652DC164D5AB26537D179DE6A2BF9D05 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-WPAppKit_Example";
-			target = B3E36C298F5FB7D5DADC117CFB7AEACD /* Pods-WPAppKit_Example */;
-			targetProxy = 4230923BE670B42C81CE73C217F6A52F /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0822C1A44B0DBC83245E438A5E4F66F8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1C9C982082A604C9058E41E0A54D0CD /* Pods-WPAppKit_Tests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-WPAppKit_Tests/Pods-WPAppKit_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-WPAppKit_Tests/Pods-WPAppKit_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		3F9D3715C8F2391678C0D650C3C48FFE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D8ADE69501901072B7DD53BA485F06FA /* WPAppKit.xcconfig */;
@@ -629,40 +547,6 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		6136143562461609FA85DC27054AB58E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5611821027F2E4A07673B1A622E287F7 /* Pods-WPAppKit_Tests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-WPAppKit_Tests/Pods-WPAppKit_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-WPAppKit_Tests/Pods-WPAppKit_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -862,15 +746,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3641856B15E0DC1B88F84F5DDCF1A3F8 /* Build configuration list for PBXNativeTarget "Pods-WPAppKit_Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0822C1A44B0DBC83245E438A5E4F66F8 /* Debug */,
-				6136143562461609FA85DC27054AB58E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		3A1370382ACEAD59091722DF29F05C78 /* Build configuration list for PBXNativeTarget "WPAppKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

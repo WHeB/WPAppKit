@@ -8,11 +8,12 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WPAppKit'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = '搭建 Swift 项目常用类库整合'
   s.description      = <<-DESC
       Cocoa：Foundation,UIKit相关扩展
       Tool：常用工具库
+      ThirdKit：常用第三方库
                        DESC
 
   s.homepage         = 'https://github.com/WHeB/WPAppKit.git'
@@ -36,6 +37,21 @@ Pod::Spec.new do |s|
     ss.frameworks = 'UIKit', 'Foundation'
   end
 
+  # ---------------  第三方库 + 扩展  -----------
+  s.subspec 'ThirdKit' do |ss|
+    
+    # Kingfisher
+    ss.subspec 'Kingfisher' do |sss|
+      sss.source_files = 'WPAppKit/Classes/ThirdKit/Kingfisher/*.swift'
+      sss.dependency 'Kingfisher'
+    end
+    
+    # MBProgressHUD
+    ss.subspec 'ZHRefresh' do |sss|
+      sss.source_files = 'WPAppKit/Classes/ThirdKit/MBProgressHUD/*.{swift,h,m}'
+    end
+    
+  end
 
   # s.source_files = 'WPAppKit/Classes/**/*'
   
