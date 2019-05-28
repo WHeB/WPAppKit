@@ -13,6 +13,14 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		B8E32F8E229D1BDF004324C5 /* ArrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F85229D1BDE004324C5 /* ArrayViewController.swift */; };
+		B8E32F8F229D1BDF004324C5 /* TextViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F86229D1BDE004324C5 /* TextViewViewController.swift */; };
+		B8E32F90229D1BDF004324C5 /* UIViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F87229D1BDE004324C5 /* UIViewViewController.swift */; };
+		B8E32F91229D1BDF004324C5 /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F88229D1BDE004324C5 /* DictionaryViewController.swift */; };
+		B8E32F92229D1BDF004324C5 /* StringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F89229D1BDE004324C5 /* StringViewController.swift */; };
+		B8E32F93229D1BDF004324C5 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F8A229D1BDE004324C5 /* PageViewController.swift */; };
+		B8E32F94229D1BDF004324C5 /* CheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F8B229D1BDF004324C5 /* CheckViewController.swift */; };
+		B8E32F96229D1BDF004324C5 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F8D229D1BDF004324C5 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +36,14 @@
 		71DB0440C96D13D4D6DFF6F6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		7ED4B3DA385CB94FBC76C400 /* Pods_WPAppKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WPAppKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4FA5E05089D758F0ADC782F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		B8E32F85229D1BDE004324C5 /* ArrayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayViewController.swift; sourceTree = "<group>"; };
+		B8E32F86229D1BDE004324C5 /* TextViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewViewController.swift; sourceTree = "<group>"; };
+		B8E32F87229D1BDE004324C5 /* UIViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewViewController.swift; sourceTree = "<group>"; };
+		B8E32F88229D1BDE004324C5 /* DictionaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
+		B8E32F89229D1BDE004324C5 /* StringViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringViewController.swift; sourceTree = "<group>"; };
+		B8E32F8A229D1BDE004324C5 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		B8E32F8B229D1BDF004324C5 /* CheckViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckViewController.swift; sourceTree = "<group>"; };
+		B8E32F8D229D1BDF004324C5 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		E198D8E7358835557ED368B2 /* Pods-WPAppKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WPAppKit_Example.release.xcconfig"; path = "Target Support Files/Pods-WPAppKit_Example/Pods-WPAppKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +100,14 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				B8E32F85229D1BDE004324C5 /* ArrayViewController.swift */,
+				B8E32F8B229D1BDF004324C5 /* CheckViewController.swift */,
+				B8E32F88229D1BDE004324C5 /* DictionaryViewController.swift */,
+				B8E32F8A229D1BDE004324C5 /* PageViewController.swift */,
+				B8E32F89229D1BDE004324C5 /* StringViewController.swift */,
+				B8E32F8D229D1BDF004324C5 /* TableViewController.swift */,
+				B8E32F86229D1BDE004324C5 /* TextViewViewController.swift */,
+				B8E32F87229D1BDE004324C5 /* UIViewViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -237,8 +261,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8E32F91229D1BDF004324C5 /* DictionaryViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				B8E32F92229D1BDF004324C5 /* StringViewController.swift in Sources */,
+				B8E32F90229D1BDF004324C5 /* UIViewViewController.swift in Sources */,
+				B8E32F96229D1BDF004324C5 /* TableViewController.swift in Sources */,
+				B8E32F8F229D1BDF004324C5 /* TextViewViewController.swift in Sources */,
+				B8E32F94229D1BDF004324C5 /* CheckViewController.swift in Sources */,
+				B8E32F8E229D1BDF004324C5 /* ArrayViewController.swift in Sources */,
+				B8E32F93229D1BDF004324C5 /* PageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

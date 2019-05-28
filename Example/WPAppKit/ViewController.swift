@@ -7,17 +7,60 @@
 //
 
 import UIKit
-import WPAppKit
 
-class ViewController: UIViewController {
+let ScreenWidth: CGFloat = UIScreen.main.bounds.size.width
+let ScreenHeight: CGFloat = UIScreen.main.bounds.size.height
+
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.title = "Test"
+        self.view.addSubview(self.tableView)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    lazy var demoData: [(String, UIViewController)] = {
+        let array: [(String, UIViewController)] = [
+            ("String", StringViewController()),
+            ("Array", ArrayViewController()),
+            ("Dictionary", DictionaryViewController()),
+            ("ViewController", ViewController()),
+            ("ValueCheckTool", CheckViewController()),
+            ("UIView", UIViewViewController()),
+            ("TextView", TextViewViewController()),
+            ("PageView", PageViewController()),
+            ]
+        return array
+    }()
+    
+    lazy var tableView: UITableView = {
+        let tableView = UITableView.init(frame: CGRect.init(x: 0, y: 0, width: ScreenWidth, height: ScreenHeight), style: .plain)
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: "Cell")
+        tableView.tableFooterView = UIView.init()
+        return tableView
+    }()
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return demoData.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        cell.textLabel?.text = self.demoData[indexPath.row].0
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let vc = self.demoData[indexPath.row].1
+        vc.title = self.demoData[indexPath.row].0
+        self.push(viewController: vc)
     }
 }
 

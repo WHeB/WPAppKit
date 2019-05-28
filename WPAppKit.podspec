@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WPAppKit'
-  s.version          = '0.1.5'
+  s.version          = '0.1.6'
   s.summary          = '搭建 Swift 项目常用类库整合'
   s.description      = <<-DESC
       Cocoa：Foundation,UIKit相关扩展
@@ -45,6 +45,11 @@ Pod::Spec.new do |s|
   # ---------------  空页面  -----------
   s.subspec 'WPEmptyView' do |ss|
       ss.source_files = 'WPAppKit/Classes/WPEmptyView/*.swift'
+  end
+  
+  # ---------------  WebView  -----------
+  s.subspec 'WPWebView' do |ss|
+      ss.source_files = 'WPAppKit/Classes/WPWebView/*.{swift,html}'
   end
 
   # ---------------  第三方库 + 扩展  -----------

@@ -8,10 +8,10 @@
 
 import UIKit
 
-class ValueCheckTool: NSObject {
+public class ValueCheckTool: NSObject {
     
     /// 为空判断，用于输入校验（" "也算空）
-    static func isBlank(string: String) -> Bool {
+    public static func isBlank(string: String) -> Bool {
         let array = string.components(separatedBy: " ")
         var tempString = ""
         for (index, item) in array.enumerated() {
@@ -28,7 +28,7 @@ class ValueCheckTool: NSObject {
     }
     
     /// 验证大陆手机号
-    static func checkTelNum(telNumber: String) -> Bool {
+    public static func checkTelNum(telNumber: String) -> Bool {
         let pattern = "^1[2-9][0-9]\\d{8}$"
         let regular: NSRegularExpression = try! NSRegularExpression.init(pattern: pattern, options: .caseInsensitive)
         let resultCount: Int = regular.numberOfMatches(in: telNumber, options: .reportProgress, range: NSRange.init(location: 0, length: telNumber.count))
@@ -36,7 +36,7 @@ class ValueCheckTool: NSObject {
     }
     
     /// 校验密码(6 - 12位 数字或字母)
-    static func checkPassword(password: String) -> Bool {
+    public static func checkPassword(password: String) -> Bool {
         let pattern = "^[0-9a-zA-Z]{6,12}$"
         let regular: NSRegularExpression = try! NSRegularExpression.init(pattern: pattern, options: .caseInsensitive)
         let resultCount: Int = regular.numberOfMatches(in: password, options: .reportProgress, range: NSRange.init(location: 0, length: password.count))
@@ -44,7 +44,7 @@ class ValueCheckTool: NSObject {
     }
     
     /// 校验url
-    static func checkURL(urlString: String) -> Bool {
+    public static func checkURL(urlString: String) -> Bool {
         let pattern = "^(http|https|ftp)+://[^\\s]*"
         let regular: NSRegularExpression = try! NSRegularExpression.init(pattern: pattern, options: .caseInsensitive)
         let resultCount: Int = regular.numberOfMatches(in: urlString, options: .reportProgress, range: NSRange.init(location: 0, length: urlString.count))
@@ -52,7 +52,7 @@ class ValueCheckTool: NSObject {
     }
     
     /// 是否有中文
-    static func checkChinese(string: String) -> Bool {
+    public static func checkChinese(string: String) -> Bool {
         for char in string {
             if ("\u{4E00}" <= char  && char <= "\u{9FA5}") {
                 return true
@@ -62,7 +62,7 @@ class ValueCheckTool: NSObject {
     }
     
     /// 校验身份证号(只限制二代身份证)
-    static func checkCardId(idCard: String) -> Bool {
+    public static func checkCardId(idCard: String) -> Bool {
         // 1、18位
         if idCard.count != 18 {
             return false
