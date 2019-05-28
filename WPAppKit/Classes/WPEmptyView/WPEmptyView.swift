@@ -11,7 +11,6 @@ import UIKit
 private let stackViewPadding: CGFloat = 20.0
 private let stackViewSpacing: CGFloat = 10.0
 
-@available(iOS 9.0, *)
 public class WPEmptyView: UIView {
     
     typealias ClickRefresh = (_ view: WPEmptyView) -> Void
@@ -130,11 +129,10 @@ public class WPEmptyView: UIView {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+        fatalError("init(coder:) has not been implemented")
     }
 }
 
-@available(iOS 9.0, *)
 extension WPEmptyView {
     
     // 设置emptyView frame
@@ -153,7 +151,7 @@ extension WPEmptyView {
             if stackButtonViewH > self.bounds.size.height {
                 stackViewY = 0
             }else {
-                stackViewY = (self.bounds.size.height - stackButtonViewH) / 2
+                stackViewY = (self.bounds.size.height - stackButtonViewH) / 2 - self.getbuttonViewHeight() / 2
             }
         case .bottom:
             stackViewY = self.bounds.size.height - self.getbuttonViewHeight() - self.getStackHeight()
@@ -203,19 +201,17 @@ extension WPEmptyView {
     }
 }
 
-@available(iOS 9.0, *)
 extension WPEmptyView {
     // 获取文本高
     private func wp_getTxtHeight(string: String, txtFont: UIFont, maxWidth: CGFloat) -> CGFloat {
-        let size = CGSize.init(width: maxWidth, height: CGFloat(MAXFLOAT))
-        let stringSize = string.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font : txtFont], context: nil)
+        let size = CGSize.init(width: maxWidth, height: 800)
+        let stringSize = string.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font : txtFont], context: nil)
         return stringSize.height
     }
-    
     // 获取文本宽
     private func wp_getTxtWidth(string: String, txtFont: UIFont, maxHeight: CGFloat) -> CGFloat {
-        let size = CGSize.init(width: CGFloat(MAXFLOAT), height: maxHeight)
-        let stringSize = string.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font : txtFont], context: nil)
+        let size = CGSize.init(width: 800, height: maxHeight)
+        let stringSize = string.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font : txtFont], context: nil)
         return stringSize.width
     }
 }
