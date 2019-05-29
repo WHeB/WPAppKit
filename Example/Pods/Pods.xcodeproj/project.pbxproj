@@ -95,6 +95,9 @@
 		B8E32FC7229D4124004324C5 /* CTMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E32FC5229D4124004324C5 /* CTMediator.m */; };
 		B8E32FC9229D4157004324C5 /* CTMediator.h in Headers */ = {isa = PBXBuildFile; fileRef = B8E32FC6229D4124004324C5 /* CTMediator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B8E32FCA229D4169004324C5 /* WPAppKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E89F5A7264E430365417269F38C2B54A /* WPAppKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B8E32FCF229E21DC004324C5 /* UMManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32FCE229E21DC004324C5 /* UMManager.swift */; };
+		B8E32FD1229E21F1004324C5 /* UMUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32FD0229E21F1004324C5 /* UMUI.swift */; };
+		B8E32FEE229E2658004324C5 /* JPushManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32FED229E2658004324C5 /* JPushManager.swift */; };
 		BEC948FD9184422A4FC74B2D77746072 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0116BA18FE9EA83FA3E4B604DC39F5 /* Foundation.framework */; };
 		C57888B17B0055A8A37B5F2139E9DF74 /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B7DCD69FE35E9C5E2C37C42C135402 /* MJRefreshComponent.m */; };
 		C6BEF88157EF47A21DA9A0C618A3A9C2 /* MJRefreshStateHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDFF9ED17065415BF37AFB0D545E1B6 /* MJRefreshStateHeader.m */; };
@@ -267,6 +270,9 @@
 		B8E32FBB229D3E1C004324C5 /* UIView+Empty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Empty.swift"; sourceTree = "<group>"; };
 		B8E32FC5229D4124004324C5 /* CTMediator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMediator.m; sourceTree = "<group>"; };
 		B8E32FC6229D4124004324C5 /* CTMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMediator.h; sourceTree = "<group>"; };
+		B8E32FCE229E21DC004324C5 /* UMManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMManager.swift; sourceTree = "<group>"; };
+		B8E32FD0229E21F1004324C5 /* UMUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMUI.swift; sourceTree = "<group>"; };
+		B8E32FED229E2658004324C5 /* JPushManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPushManager.swift; sourceTree = "<group>"; };
 		BC539C0F58188285A146D62662EE0E7D /* MJRefreshBackNormalFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshBackNormalFooter.h; path = MJRefresh/Custom/Footer/Back/MJRefreshBackNormalFooter.h; sourceTree = "<group>"; };
 		BCD9B76B27A5E52DFEE9C17E3D294495 /* UIButton+Convenience.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Convenience.swift"; path = "WPAppKit/Classes/Cocoa/UIKit/UIButton+Convenience.swift"; sourceTree = "<group>"; };
 		BDE046E14966CF6C6FAD1ADF95167D88 /* MJRefreshConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshConfig.h; path = MJRefresh/MJRefreshConfig.h; sourceTree = "<group>"; };
@@ -580,6 +586,25 @@
 			path = WPAppKit/Classes/CTMediator;
 			sourceTree = "<group>";
 		};
+		B8E32FCD229E216A004324C5 /* UM */ = {
+			isa = PBXGroup;
+			children = (
+				B8E32FCE229E21DC004324C5 /* UMManager.swift */,
+				B8E32FD0229E21F1004324C5 /* UMUI.swift */,
+			);
+			name = UM;
+			path = WPAppKit/Classes/UM;
+			sourceTree = "<group>";
+		};
+		B8E32FEC229E262C004324C5 /* JPush */ = {
+			isa = PBXGroup;
+			children = (
+				B8E32FED229E2658004324C5 /* JPushManager.swift */,
+			);
+			name = JPush;
+			path = WPAppKit/Classes/JPush;
+			sourceTree = "<group>";
+		};
 		BE426C2AAEC8A998BA9C7E84165464E0 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -662,6 +687,8 @@
 		E958AD486E5DE4FDE0D93D1AD8641FFD /* WPAppKit */ = {
 			isa = PBXGroup;
 			children = (
+				B8E32FEC229E262C004324C5 /* JPush */,
+				B8E32FCD229E216A004324C5 /* UM */,
 				B8E32FC4229D4124004324C5 /* CTMediator */,
 				B8E32FB8229D3DE8004324C5 /* WPEmptyView */,
 				B8E32F84229C3CB3004324C5 /* WPWebView */,
@@ -1016,6 +1043,7 @@
 				1146292E235138025017BAB24FD5147D /* FormatterNumber.swift in Sources */,
 				CBB7A24936AB163CF628291A0BAEFEAE /* FormatterTime.swift in Sources */,
 				E0A6713AD96DF28ECE8B7C73010F219E /* LocalStoreTool.swift in Sources */,
+				B8E32FEE229E2658004324C5 /* JPushManager.swift in Sources */,
 				5016D7F947F7598F15016D42EE3BADB6 /* MBProgressHUD.m in Sources */,
 				5FFD35A29BE0DE3FD56B5C82C87B29DB /* RandomTool.swift in Sources */,
 				064A4B028040CAFDF9D60D94F5D9A905 /* StoryboardAndXib.swift in Sources */,
@@ -1032,7 +1060,9 @@
 				2FE1B0178DBC9A42DD2E8A5FFB25187D /* UITextView+Extension.swift in Sources */,
 				43F7540CC2DE5BFC084855115F69254D /* UIView+Convenience.swift in Sources */,
 				702343F669A76425A672A582B5EA9D36 /* UIView+Extension.swift in Sources */,
+				B8E32FD1229E21F1004324C5 /* UMUI.swift in Sources */,
 				4199117567D03114675F3293569E7898 /* UIView+Frame.swift in Sources */,
+				B8E32FCF229E21DC004324C5 /* UMManager.swift in Sources */,
 				C816280701FC9D595CC6CD89283362F6 /* UIViewController+Extension.swift in Sources */,
 				9D358B35E523242174F8603B4A8889EB /* ValueCheckTool.swift in Sources */,
 				CE2684F8D798BDAD04822F3524C7FEE4 /* WebView+Extension.swift in Sources */,

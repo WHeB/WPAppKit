@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WPAppKit'
-  s.version          = '0.1.8'
+  s.version          = '0.2.0'
   s.summary          = '搭建 Swift 项目常用类库整合'
   s.description      = <<-DESC
       Cocoa：Foundation,UIKit相关扩展
@@ -56,6 +56,23 @@ Pod::Spec.new do |s|
   s.subspec 'CTMediator' do |ss|
       ss.source_files = 'WPAppKit/Classes/CTMediator/*.{h,m}'
   end
+  
+  # ---------------  友盟  -----------
+  s.subspec 'UM' do |ss|
+      ss.source_files = 'WPAppKit/Classes/UM/*.swift'
+      ss.dependency 'UMCCommon'
+      ss.dependency 'UMCSecurityPlugins'
+      ss.dependency 'UMCShare/UI'
+      ss.dependency 'UMCShare/Social/ReducedWeChat'
+      ss.dependency 'UMCShare/Social/ReducedQQ'
+      ss.dependency 'UMCShare/Social/ReducedSina'
+  end
+  
+  # ---------------  极光推送  -----------
+  s.subspec 'JPush' do |ss|
+      ss.source_files = 'WPAppKit/Classes/JPush/*.swift'
+      ss.dependency 'JPush'
+  end
 
   # ---------------  第三方库 + 扩展  -----------
   s.subspec 'ThirdKit' do |ss|
@@ -69,7 +86,7 @@ Pod::Spec.new do |s|
     # Kingfisher
     ss.subspec 'Kingfisher' do |sss|
       sss.source_files = 'WPAppKit/Classes/ThirdKit/Kingfisher/*.swift'
-      sss.dependency 'Kingfisher'
+      sss.dependency 'Kingfisher','~> 4.6.0'
     end
     
     # MBProgressHUD

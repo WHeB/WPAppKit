@@ -33,6 +33,6 @@ class UIViewViewController: UIViewController {
         LocalStoreTool.share.writeString(toFilePath: "/string.text", string: sssss)
         let ss = LocalStoreTool.share.documentFileName(fileName: "/string.text")
         print(ss)
+        
     }
-
 }
