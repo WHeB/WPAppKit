@@ -22,5 +22,12 @@ class CheckViewController: UIViewController {
         print(ValueCheckTool.checkChinese(string: "hello 中国"))
         
         print("中国欢迎你".transformToPinyin(isBlank: false))
+    
+        let email = "1193325271@163.com"
+        print(ValueCheckTool.checkEmail(email: email))
+        
+        let psd = "12312sss"
+        print(ValueCheckTool.checkPassword(password: psd))
+        
     }
 }

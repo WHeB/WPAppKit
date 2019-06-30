@@ -21,6 +21,7 @@
 		B8E32F93229D1BDF004324C5 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F8A229D1BDE004324C5 /* PageViewController.swift */; };
 		B8E32F94229D1BDF004324C5 /* CheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F8B229D1BDF004324C5 /* CheckViewController.swift */; };
 		B8E32F96229D1BDF004324C5 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F8D229D1BDF004324C5 /* TableViewController.swift */; };
+		B8E361DC22C86D7F00BA8FA0 /* pika.gif in Resources */ = {isa = PBXBuildFile; fileRef = B8E361DB22C86D7F00BA8FA0 /* pika.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		B8E32F8A229D1BDE004324C5 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		B8E32F8B229D1BDF004324C5 /* CheckViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckViewController.swift; sourceTree = "<group>"; };
 		B8E32F8D229D1BDF004324C5 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		B8E361DB22C86D7F00BA8FA0 /* pika.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = pika.gif; sourceTree = "<group>"; };
 		E198D8E7358835557ED368B2 /* Pods-WPAppKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WPAppKit_Example.release.xcconfig"; path = "Target Support Files/Pods-WPAppKit_Example/Pods-WPAppKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +113,7 @@
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				B8E361DB22C86D7F00BA8FA0 /* pika.gif */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for WPAppKit";
@@ -198,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				B8E361DC22C86D7F00BA8FA0 /* pika.gif in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);

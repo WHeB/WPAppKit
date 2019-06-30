@@ -22,7 +22,6 @@ class StringViewController: UIViewController {
         self.view.addSubview(pushButton)
         pushButton.addTarget(self, action: #selector(pushAction), for: .touchUpInside)
         
-        
         print(RandomTool.randomString(length: 10))
         print(RandomTool.randomString(length: 30, isLetter: true))
     }
@@ -30,5 +29,5 @@ class StringViewController: UIViewController {
     @objc private func pushAction() {
         self.push(viewController: ArrayViewController())
     }
-
+    
 }

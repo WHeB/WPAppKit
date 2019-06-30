@@ -24,7 +24,7 @@ public struct DeviceInfo {
     
     /// build版本
     public static var appBuild: String {
-        return Bundle.main.object(forInfoDictionaryKey: kCFBundleVersionKey as String) as! String
+        return Bundle.main.infoDictionary!["CFBundleVersion"] as! String
     }
     
     /// bundle id App唯一标识

@@ -95,9 +95,25 @@
 		B8E32FC7229D4124004324C5 /* CTMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E32FC5229D4124004324C5 /* CTMediator.m */; };
 		B8E32FC9229D4157004324C5 /* CTMediator.h in Headers */ = {isa = PBXBuildFile; fileRef = B8E32FC6229D4124004324C5 /* CTMediator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B8E32FCA229D4169004324C5 /* WPAppKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E89F5A7264E430365417269F38C2B54A /* WPAppKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B8E32FCF229E21DC004324C5 /* UMManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32FCE229E21DC004324C5 /* UMManager.swift */; };
-		B8E32FD1229E21F1004324C5 /* UMUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32FD0229E21F1004324C5 /* UMUI.swift */; };
-		B8E32FEE229E2658004324C5 /* JPushManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32FED229E2658004324C5 /* JPushManager.swift */; };
+		B8E33015229E605A004324C5 /* AppJPushManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E33003229E605A004324C5 /* AppJPushManager.swift */; };
+		B8E33016229E605A004324C5 /* jpush-extension-ios-1.1.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8E33004229E605A004324C5 /* jpush-extension-ios-1.1.2.a */; };
+		B8E33017229E605A004324C5 /* JPushNotificationExtensionService.h in Headers */ = {isa = PBXBuildFile; fileRef = B8E33005229E605A004324C5 /* JPushNotificationExtensionService.h */; };
+		B8E33018229E605A004324C5 /* JPUSHService.h in Headers */ = {isa = PBXBuildFile; fileRef = B8E33006229E605A004324C5 /* JPUSHService.h */; };
+		B8E33019229E605A004324C5 /* jcore-ios-2.0.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8E33007229E605A004324C5 /* jcore-ios-2.0.1.a */; };
+		B8E3301A229E605A004324C5 /* jpush-ios-3.2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8E33008229E605A004324C5 /* jpush-ios-3.2.0.a */; };
+		B8E3301C229E6CA2004324C5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8E3301B229E6CA2004324C5 /* CoreGraphics.framework */; };
+		B8E3304E229ED384004324C5 /* AppUMUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E3303D229ED384004324C5 /* AppUMUI.swift */; };
+		B8E3304F229ED384004324C5 /* UMSocialSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B8E3303F229ED384004324C5 /* UMSocialSDKResources.bundle */; };
+		B8E33050229ED384004324C5 /* UShareUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8E33040229ED384004324C5 /* UShareUI.framework */; };
+		B8E33051229ED384004324C5 /* UMShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8E33041229ED384004324C5 /* UMShare.framework */; };
+		B8E33052229ED384004324C5 /* UMCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8E33042229ED384004324C5 /* UMCommon.framework */; };
+		B8E33053229ED384004324C5 /* libSocialWeChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8E33045229ED384004324C5 /* libSocialWeChat.a */; };
+		B8E33054229ED384004324C5 /* UMSocialWechatHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = B8E33046229ED384004324C5 /* UMSocialWechatHandler.h */; };
+		B8E33055229ED384004324C5 /* libSocialSina.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8E33048229ED384004324C5 /* libSocialSina.a */; };
+		B8E33056229ED384004324C5 /* UMSocialSinaHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = B8E33049229ED384004324C5 /* UMSocialSinaHandler.h */; };
+		B8E33057229ED384004324C5 /* UMSocialQQHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = B8E3304B229ED384004324C5 /* UMSocialQQHandler.h */; };
+		B8E33058229ED384004324C5 /* libSocialQQ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8E3304C229ED384004324C5 /* libSocialQQ.a */; };
+		B8E33059229ED384004324C5 /* AppUMManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E3304D229ED384004324C5 /* AppUMManager.swift */; };
 		BEC948FD9184422A4FC74B2D77746072 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0116BA18FE9EA83FA3E4B604DC39F5 /* Foundation.framework */; };
 		C57888B17B0055A8A37B5F2139E9DF74 /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B7DCD69FE35E9C5E2C37C42C135402 /* MJRefreshComponent.m */; };
 		C6BEF88157EF47A21DA9A0C618A3A9C2 /* MJRefreshStateHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDFF9ED17065415BF37AFB0D545E1B6 /* MJRefreshStateHeader.m */; };
@@ -270,9 +286,25 @@
 		B8E32FBB229D3E1C004324C5 /* UIView+Empty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Empty.swift"; sourceTree = "<group>"; };
 		B8E32FC5229D4124004324C5 /* CTMediator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMediator.m; sourceTree = "<group>"; };
 		B8E32FC6229D4124004324C5 /* CTMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMediator.h; sourceTree = "<group>"; };
-		B8E32FCE229E21DC004324C5 /* UMManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMManager.swift; sourceTree = "<group>"; };
-		B8E32FD0229E21F1004324C5 /* UMUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMUI.swift; sourceTree = "<group>"; };
-		B8E32FED229E2658004324C5 /* JPushManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPushManager.swift; sourceTree = "<group>"; };
+		B8E33003229E605A004324C5 /* AppJPushManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppJPushManager.swift; sourceTree = "<group>"; };
+		B8E33004229E605A004324C5 /* jpush-extension-ios-1.1.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-extension-ios-1.1.2.a"; sourceTree = "<group>"; };
+		B8E33005229E605A004324C5 /* JPushNotificationExtensionService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPushNotificationExtensionService.h; sourceTree = "<group>"; };
+		B8E33006229E605A004324C5 /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
+		B8E33007229E605A004324C5 /* jcore-ios-2.0.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jcore-ios-2.0.1.a"; sourceTree = "<group>"; };
+		B8E33008229E605A004324C5 /* jpush-ios-3.2.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-3.2.0.a"; sourceTree = "<group>"; };
+		B8E3301B229E6CA2004324C5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		B8E3303D229ED384004324C5 /* AppUMUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUMUI.swift; sourceTree = "<group>"; };
+		B8E3303F229ED384004324C5 /* UMSocialSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UMSocialSDKResources.bundle; sourceTree = "<group>"; };
+		B8E33040229ED384004324C5 /* UShareUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UShareUI.framework; sourceTree = "<group>"; };
+		B8E33041229ED384004324C5 /* UMShare.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMShare.framework; sourceTree = "<group>"; };
+		B8E33042229ED384004324C5 /* UMCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMCommon.framework; sourceTree = "<group>"; };
+		B8E33045229ED384004324C5 /* libSocialWeChat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialWeChat.a; sourceTree = "<group>"; };
+		B8E33046229ED384004324C5 /* UMSocialWechatHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialWechatHandler.h; sourceTree = "<group>"; };
+		B8E33048229ED384004324C5 /* libSocialSina.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialSina.a; sourceTree = "<group>"; };
+		B8E33049229ED384004324C5 /* UMSocialSinaHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialSinaHandler.h; sourceTree = "<group>"; };
+		B8E3304B229ED384004324C5 /* UMSocialQQHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialQQHandler.h; sourceTree = "<group>"; };
+		B8E3304C229ED384004324C5 /* libSocialQQ.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialQQ.a; sourceTree = "<group>"; };
+		B8E3304D229ED384004324C5 /* AppUMManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUMManager.swift; sourceTree = "<group>"; };
 		BC539C0F58188285A146D62662EE0E7D /* MJRefreshBackNormalFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshBackNormalFooter.h; path = MJRefresh/Custom/Footer/Back/MJRefreshBackNormalFooter.h; sourceTree = "<group>"; };
 		BCD9B76B27A5E52DFEE9C17E3D294495 /* UIButton+Convenience.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Convenience.swift"; path = "WPAppKit/Classes/Cocoa/UIKit/UIButton+Convenience.swift"; sourceTree = "<group>"; };
 		BDE046E14966CF6C6FAD1ADF95167D88 /* MJRefreshConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshConfig.h; path = MJRefresh/MJRefreshConfig.h; sourceTree = "<group>"; };
@@ -337,10 +369,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8E33055229ED384004324C5 /* libSocialSina.a in Frameworks */,
+				B8E3301C229E6CA2004324C5 /* CoreGraphics.framework in Frameworks */,
 				A2E80B336DED2444FFADCAF714C8FB0B /* Foundation.framework in Frameworks */,
 				D0831D901A1FB5AB3095DAB619C575C0 /* Kingfisher.framework in Frameworks */,
 				95F7EF66ED9927A11526225964D998B7 /* MJRefresh.framework in Frameworks */,
+				B8E33051229ED384004324C5 /* UMShare.framework in Frameworks */,
 				FC83461BCAB57C2461D0F55E3EA599BF /* UIKit.framework in Frameworks */,
+				B8E3301A229E605A004324C5 /* jpush-ios-3.2.0.a in Frameworks */,
+				B8E33019229E605A004324C5 /* jcore-ios-2.0.1.a in Frameworks */,
+				B8E33052229ED384004324C5 /* UMCommon.framework in Frameworks */,
+				B8E33016229E605A004324C5 /* jpush-extension-ios-1.1.2.a in Frameworks */,
+				B8E33053229ED384004324C5 /* libSocialWeChat.a in Frameworks */,
+				B8E33058229ED384004324C5 /* libSocialQQ.a in Frameworks */,
+				B8E33050229ED384004324C5 /* UShareUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,23 +628,86 @@
 			path = WPAppKit/Classes/CTMediator;
 			sourceTree = "<group>";
 		};
-		B8E32FCD229E216A004324C5 /* UM */ = {
+		B8E32FEF229E605A004324C5 /* OpenSDK */ = {
 			isa = PBXGroup;
 			children = (
-				B8E32FCE229E21DC004324C5 /* UMManager.swift */,
-				B8E32FD0229E21F1004324C5 /* UMUI.swift */,
+				B8E3303C229ED384004324C5 /* UM */,
+				B8E33002229E605A004324C5 /* JPush */,
 			);
-			name = UM;
-			path = WPAppKit/Classes/UM;
+			name = OpenSDK;
+			path = WPAppKit/Classes/OpenSDK;
 			sourceTree = "<group>";
 		};
-		B8E32FEC229E262C004324C5 /* JPush */ = {
+		B8E33002229E605A004324C5 /* JPush */ = {
 			isa = PBXGroup;
 			children = (
-				B8E32FED229E2658004324C5 /* JPushManager.swift */,
+				B8E33003229E605A004324C5 /* AppJPushManager.swift */,
+				B8E33004229E605A004324C5 /* jpush-extension-ios-1.1.2.a */,
+				B8E33005229E605A004324C5 /* JPushNotificationExtensionService.h */,
+				B8E33006229E605A004324C5 /* JPUSHService.h */,
+				B8E33007229E605A004324C5 /* jcore-ios-2.0.1.a */,
+				B8E33008229E605A004324C5 /* jpush-ios-3.2.0.a */,
 			);
-			name = JPush;
-			path = WPAppKit/Classes/JPush;
+			path = JPush;
+			sourceTree = "<group>";
+		};
+		B8E3303C229ED384004324C5 /* UM */ = {
+			isa = PBXGroup;
+			children = (
+				B8E3303D229ED384004324C5 /* AppUMUI.swift */,
+				B8E3303E229ED384004324C5 /* UMSocialUI */,
+				B8E33041229ED384004324C5 /* UMShare.framework */,
+				B8E33042229ED384004324C5 /* UMCommon.framework */,
+				B8E33043229ED384004324C5 /* SocialLibraries */,
+				B8E3304D229ED384004324C5 /* AppUMManager.swift */,
+			);
+			path = UM;
+			sourceTree = "<group>";
+		};
+		B8E3303E229ED384004324C5 /* UMSocialUI */ = {
+			isa = PBXGroup;
+			children = (
+				B8E3303F229ED384004324C5 /* UMSocialSDKResources.bundle */,
+				B8E33040229ED384004324C5 /* UShareUI.framework */,
+			);
+			path = UMSocialUI;
+			sourceTree = "<group>";
+		};
+		B8E33043229ED384004324C5 /* SocialLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				B8E33044229ED384004324C5 /* WeChat */,
+				B8E33047229ED384004324C5 /* Sina */,
+				B8E3304A229ED384004324C5 /* QQ */,
+			);
+			path = SocialLibraries;
+			sourceTree = "<group>";
+		};
+		B8E33044229ED384004324C5 /* WeChat */ = {
+			isa = PBXGroup;
+			children = (
+				B8E33045229ED384004324C5 /* libSocialWeChat.a */,
+				B8E33046229ED384004324C5 /* UMSocialWechatHandler.h */,
+			);
+			path = WeChat;
+			sourceTree = "<group>";
+		};
+		B8E33047229ED384004324C5 /* Sina */ = {
+			isa = PBXGroup;
+			children = (
+				B8E33048229ED384004324C5 /* libSocialSina.a */,
+				B8E33049229ED384004324C5 /* UMSocialSinaHandler.h */,
+			);
+			path = Sina;
+			sourceTree = "<group>";
+		};
+		B8E3304A229ED384004324C5 /* QQ */ = {
+			isa = PBXGroup;
+			children = (
+				B8E3304B229ED384004324C5 /* UMSocialQQHandler.h */,
+				B8E3304C229ED384004324C5 /* libSocialQQ.a */,
+			);
+			path = QQ;
 			sourceTree = "<group>";
 		};
 		BE426C2AAEC8A998BA9C7E84165464E0 /* Support Files */ = {
@@ -687,8 +792,7 @@
 		E958AD486E5DE4FDE0D93D1AD8641FFD /* WPAppKit */ = {
 			isa = PBXGroup;
 			children = (
-				B8E32FEC229E262C004324C5 /* JPush */,
-				B8E32FCD229E216A004324C5 /* UM */,
+				B8E32FEF229E605A004324C5 /* OpenSDK */,
 				B8E32FC4229D4124004324C5 /* CTMediator */,
 				B8E32FB8229D3DE8004324C5 /* WPEmptyView */,
 				B8E32F84229C3CB3004324C5 /* WPWebView */,
@@ -738,6 +842,7 @@
 		F491D0E5FA048FB2893DCC3626D29D53 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B8E3301B229E6CA2004324C5 /* CoreGraphics.framework */,
 				FA6B8E9A1BB6FBE4141466F4D88C0135 /* Kingfisher.framework */,
 				6365F3CEFF8B55A8F99A47E7C875A164 /* MJRefresh.framework */,
 				0F2C2F8F8D2DDA8E208D2DAA602C5955 /* iOS */,
@@ -769,9 +874,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8E33017229E605A004324C5 /* JPushNotificationExtensionService.h in Headers */,
 				2BEA82A342C455E232812FFACF42B40A /* MBProgressHUD.h in Headers */,
+				B8E33054229ED384004324C5 /* UMSocialWechatHandler.h in Headers */,
 				B8E32FC9229D4157004324C5 /* CTMediator.h in Headers */,
+				B8E33056229ED384004324C5 /* UMSocialSinaHandler.h in Headers */,
 				B8E32FCA229D4169004324C5 /* WPAppKit-umbrella.h in Headers */,
+				B8E33057229ED384004324C5 /* UMSocialQQHandler.h in Headers */,
+				B8E33018229E605A004324C5 /* JPUSHService.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -933,6 +1043,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8E3304F229ED384004324C5 /* UMSocialSDKResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1031,7 +1142,9 @@
 			files = (
 				423641DE63F9F3796E0F58F1FFBFFA4D /* AppHud.swift in Sources */,
 				B8E32FBD229D3E1C004324C5 /* WPEmptyView.swift in Sources */,
+				B8E33015229E605A004324C5 /* AppJPushManager.swift in Sources */,
 				0E1C39C64ABA716061BCEC92BA813759 /* AppKingfisher.swift in Sources */,
+				B8E3304E229ED384004324C5 /* AppUMUI.swift in Sources */,
 				19A0FF8A67324E3B73DC8F02835612BB /* AppRefresh.swift in Sources */,
 				9C41F5B03AEF3201F8C8E588EA7AD5F8 /* Array+Extension.swift in Sources */,
 				1028FFE9AEF7541F26117E971CAF4E90 /* CurrentManager.swift in Sources */,
@@ -1043,8 +1156,8 @@
 				1146292E235138025017BAB24FD5147D /* FormatterNumber.swift in Sources */,
 				CBB7A24936AB163CF628291A0BAEFEAE /* FormatterTime.swift in Sources */,
 				E0A6713AD96DF28ECE8B7C73010F219E /* LocalStoreTool.swift in Sources */,
-				B8E32FEE229E2658004324C5 /* JPushManager.swift in Sources */,
 				5016D7F947F7598F15016D42EE3BADB6 /* MBProgressHUD.m in Sources */,
+				B8E33059229ED384004324C5 /* AppUMManager.swift in Sources */,
 				5FFD35A29BE0DE3FD56B5C82C87B29DB /* RandomTool.swift in Sources */,
 				064A4B028040CAFDF9D60D94F5D9A905 /* StoryboardAndXib.swift in Sources */,
 				7B63289E2418C2F6DA0D1F25BC245CA2 /* String+Extension.swift in Sources */,
@@ -1060,9 +1173,7 @@
 				2FE1B0178DBC9A42DD2E8A5FFB25187D /* UITextView+Extension.swift in Sources */,
 				43F7540CC2DE5BFC084855115F69254D /* UIView+Convenience.swift in Sources */,
 				702343F669A76425A672A582B5EA9D36 /* UIView+Extension.swift in Sources */,
-				B8E32FD1229E21F1004324C5 /* UMUI.swift in Sources */,
 				4199117567D03114675F3293569E7898 /* UIView+Frame.swift in Sources */,
-				B8E32FCF229E21DC004324C5 /* UMManager.swift in Sources */,
 				C816280701FC9D595CC6CD89283362F6 /* UIViewController+Extension.swift in Sources */,
 				9D358B35E523242174F8603B4A8889EB /* ValueCheckTool.swift in Sources */,
 				CE2684F8D798BDAD04822F3524C7FEE4 /* WebView+Extension.swift in Sources */,
@@ -1313,11 +1424,22 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Kingfisher\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MJRefresh\"",
+					"\"$(SRCROOT)/../../WPAppKit/Classes/OpenSDK/UM\"/**",
+					"\"$(SRCROOT)/../../WPAppKit/Classes/OpenSDK/UM\"/**",
+				);
 				GCC_PREFIX_HEADER = "Target Support Files/WPAppKit/WPAppKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/WPAppKit/WPAppKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../WPAppKit/Classes/OpenSDK/UM\"/**",
+					"\"$(SRCROOT)/../../WPAppKit/Classes/OpenSDK/JPush\"/**",
+				);
 				MODULEMAP_FILE = "Target Support Files/WPAppKit/WPAppKit.modulemap";
 				PRODUCT_MODULE_NAME = WPAppKit;
 				PRODUCT_NAME = WPAppKit;
@@ -1435,11 +1557,22 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Kingfisher\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MJRefresh\"",
+					"\"$(SRCROOT)/../../WPAppKit/Classes/OpenSDK/UM\"/**",
+					"\"$(SRCROOT)/../../WPAppKit/Classes/OpenSDK/UM\"/**",
+				);
 				GCC_PREFIX_HEADER = "Target Support Files/WPAppKit/WPAppKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/WPAppKit/WPAppKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../WPAppKit/Classes/OpenSDK/UM\"/**",
+					"\"$(SRCROOT)/../../WPAppKit/Classes/OpenSDK/JPush\"/**",
+				);
 				MODULEMAP_FILE = "Target Support Files/WPAppKit/WPAppKit.modulemap";
 				PRODUCT_MODULE_NAME = WPAppKit;
 				PRODUCT_NAME = WPAppKit;

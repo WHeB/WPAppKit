@@ -11,6 +11,7 @@
 #endif
 
 #import "MBProgressHUD.h"
+#import "CTMediator.h"
 
 FOUNDATION_EXPORT double WPAppKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char WPAppKitVersionString[];

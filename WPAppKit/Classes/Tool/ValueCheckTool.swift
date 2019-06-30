@@ -30,24 +30,40 @@ public class ValueCheckTool: NSObject {
     /// 验证大陆手机号
     public static func checkTelNum(telNumber: String) -> Bool {
         let pattern = "^1[2-9][0-9]\\d{8}$"
-        let regular: NSRegularExpression = try! NSRegularExpression.init(pattern: pattern, options: .caseInsensitive)
-        let resultCount: Int = regular.numberOfMatches(in: telNumber, options: .reportProgress, range: NSRange.init(location: 0, length: telNumber.count))
-        return resultCount == 0 ? false : true
+        let result = self.customCheck(regular: pattern, content: telNumber)
+        return result
+    }
+    
+    /// 验证邮箱
+    public static func checkEmail(email: String) -> Bool {
+        let pattern = "^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
+        let result = self.customCheck(regular: pattern, content: email)
+        return result
     }
     
     /// 校验密码(6 - 12位 数字或字母)
     public static func checkPassword(password: String) -> Bool {
         let pattern = "^[0-9a-zA-Z]{6,12}$"
-        let regular: NSRegularExpression = try! NSRegularExpression.init(pattern: pattern, options: .caseInsensitive)
-        let resultCount: Int = regular.numberOfMatches(in: password, options: .reportProgress, range: NSRange.init(location: 0, length: password.count))
-        return resultCount == 0 ? false : true
+        let result = self.customCheck(regular: pattern, content: password)
+        return result
     }
     
     /// 校验url
     public static func checkURL(urlString: String) -> Bool {
         let pattern = "^(http|https|ftp)+://[^\\s]*"
+        let result = self.customCheck(regular: pattern, content: urlString)
+        return result
+    }
+    
+    /// 自定义检测内容
+    ///
+    /// - Parameters:
+    ///   - regular: 正则表达式
+    ///   - content: 待检测内容
+    public static func customCheck(regular: String, content: String) -> Bool {
+        let pattern = regular
         let regular: NSRegularExpression = try! NSRegularExpression.init(pattern: pattern, options: .caseInsensitive)
-        let resultCount: Int = regular.numberOfMatches(in: urlString, options: .reportProgress, range: NSRange.init(location: 0, length: urlString.count))
+        let resultCount: Int = regular.numberOfMatches(in: content, options: .reportProgress, range: NSRange.init(location: 0, length: content.count))
         return resultCount == 0 ? false : true
     }
     

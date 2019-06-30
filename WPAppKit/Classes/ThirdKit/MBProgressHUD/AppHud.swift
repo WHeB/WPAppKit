@@ -66,15 +66,17 @@ public class AppHud: NSObject {
     }
     
     /// 隐藏加载框
-    static func hideLoadingView() -> Void{
+    public static func hideLoadingView() -> Void{
         let toView = getCurrentViewWithView()
         let view = toView.viewWithTag(-999)
         (view as! MBProgressHUD).hide(animated: true)
     }
+}
+
+extension AppHud {
     
     // 获取当前view
     private static func getCurrentViewWithView() -> UIView {
         return UIApplication.shared.windows.last!
     }
-    
 }
