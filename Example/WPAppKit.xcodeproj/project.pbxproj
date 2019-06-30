@@ -21,7 +21,6 @@
 		B8E32F93229D1BDF004324C5 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F8A229D1BDE004324C5 /* PageViewController.swift */; };
 		B8E32F94229D1BDF004324C5 /* CheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F8B229D1BDF004324C5 /* CheckViewController.swift */; };
 		B8E32F96229D1BDF004324C5 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F8D229D1BDF004324C5 /* TableViewController.swift */; };
-		B8E361DC22C86D7F00BA8FA0 /* pika.gif in Resources */ = {isa = PBXBuildFile; fileRef = B8E361DB22C86D7F00BA8FA0 /* pika.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -201,7 +200,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
-				B8E361DC22C86D7F00BA8FA0 /* pika.gif in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);

@@ -157,7 +157,7 @@ public struct DeviceInfo {
             return false
         }
         if #available(iOS 11.0, *) {
-            if (kWindow?.safeAreaInsets.bottom)! > 0.0 {
+            if (UIApplication.shared.windows[0].safeAreaInsets.bottom) > 0.0 {
                 return true
             }
         }

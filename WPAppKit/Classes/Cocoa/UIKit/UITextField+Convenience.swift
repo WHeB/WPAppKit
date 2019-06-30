@@ -14,6 +14,7 @@ public enum TxtKeyboardType {
     case price                  // 价格 小数点后两位
     case password               // 密码
     case url                    // URL键盘，有.com按钮
+    case email                  // 邮箱
 }
 
 public extension UITextField {
@@ -41,6 +42,8 @@ public extension UITextField {
             self.isSecureTextEntry = true
         case .url:
             self.keyboardType = .URL
+        case .email:
+            self.keyboardType = .emailAddress
         }
     }
 }

@@ -114,6 +114,7 @@
 		B8E33057229ED384004324C5 /* UMSocialQQHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = B8E3304B229ED384004324C5 /* UMSocialQQHandler.h */; };
 		B8E33058229ED384004324C5 /* libSocialQQ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8E3304C229ED384004324C5 /* libSocialQQ.a */; };
 		B8E33059229ED384004324C5 /* AppUMManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E3304D229ED384004324C5 /* AppUMManager.swift */; };
+		B8E361DE22C8972F00BA8FA0 /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E361DD22C8972F00BA8FA0 /* FileUtils.swift */; };
 		BEC948FD9184422A4FC74B2D77746072 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0116BA18FE9EA83FA3E4B604DC39F5 /* Foundation.framework */; };
 		C57888B17B0055A8A37B5F2139E9DF74 /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B7DCD69FE35E9C5E2C37C42C135402 /* MJRefreshComponent.m */; };
 		C6BEF88157EF47A21DA9A0C618A3A9C2 /* MJRefreshStateHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDFF9ED17065415BF37AFB0D545E1B6 /* MJRefreshStateHeader.m */; };
@@ -305,6 +306,7 @@
 		B8E3304B229ED384004324C5 /* UMSocialQQHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialQQHandler.h; sourceTree = "<group>"; };
 		B8E3304C229ED384004324C5 /* libSocialQQ.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialQQ.a; sourceTree = "<group>"; };
 		B8E3304D229ED384004324C5 /* AppUMManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUMManager.swift; sourceTree = "<group>"; };
+		B8E361DD22C8972F00BA8FA0 /* FileUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
 		BC539C0F58188285A146D62662EE0E7D /* MJRefreshBackNormalFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshBackNormalFooter.h; path = MJRefresh/Custom/Footer/Back/MJRefreshBackNormalFooter.h; sourceTree = "<group>"; };
 		BCD9B76B27A5E52DFEE9C17E3D294495 /* UIButton+Convenience.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Convenience.swift"; path = "WPAppKit/Classes/Cocoa/UIKit/UIButton+Convenience.swift"; sourceTree = "<group>"; };
 		BDE046E14966CF6C6FAD1ADF95167D88 /* MJRefreshConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshConfig.h; path = MJRefresh/MJRefreshConfig.h; sourceTree = "<group>"; };
@@ -746,6 +748,7 @@
 				D7D76B08233C5C8D049D6936E990652D /* RandomTool.swift */,
 				FF2072A764750A10C361C5DA8F139A01 /* StoryboardAndXib.swift */,
 				2A4304887F5D1264786BC4174B7BB170 /* ValueCheckTool.swift */,
+				B8E361DD22C8972F00BA8FA0 /* FileUtils.swift */,
 			);
 			name = Tool;
 			sourceTree = "<group>";
@@ -1125,6 +1128,7 @@
 				1E19BE549007C32EA9CB5B34BCE0AB18 /* Kingfisher.swift in Sources */,
 				564F4F2F244081DAE769DE4A746A2F9E /* KingfisherManager.swift in Sources */,
 				B8E32FAA229D2369004324C5 /* Extension+String.swift in Sources */,
+				B8E361DE22C8972F00BA8FA0 /* FileUtils.swift in Sources */,
 				5DB0B564B21758D9647AB5441EEAA88C /* KingfisherOptionsInfo.swift in Sources */,
 				65B777FA3048CEBE127F501E9B053C0A /* Placeholder.swift in Sources */,
 				B3B39EB8A9162DE9F256CBDDDBB1141E /* RequestModifier.swift in Sources */,

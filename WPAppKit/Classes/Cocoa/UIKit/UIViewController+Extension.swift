@@ -106,6 +106,15 @@ public extension UIViewController {
         return false
     }
     
+    /// pop 或 dismiss
+    public func backLastController() {
+        if let navCtr = self.navigationController{
+            navCtr.popViewController(animated: true)
+        }else{
+            self.dismiss(animated: true)
+        }
+    }
+    
     /// 系统alertView
     public func showAlertView(title: String? = nil,
                               message: String? = nil,

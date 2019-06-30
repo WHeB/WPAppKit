@@ -55,23 +55,6 @@ Pod::Spec.new do |s|
     end
     
     # ---------------  开放SDK  -----------
-    s.subspec 'OpenSDK' do |ss|
-        # UM
-        ss.subspec 'UM' do |sss|
-            sss.source_files = 'WPAppKit/Classes/OpenSDK/UM/*.swift'
-            sss.vendored_frameworks = 'WPAppKit/Classes/OpenSDK/UM/*.framework', 'WPAppKit/Classes/OpenSDK/UM/UMSocialUI/*.framework'
-            sss.vendored_libraries = 'WPAppKit/Classes/OpenSDK/UM/SocialLibraries/**/*.a'
-            sss.resource = 'WPAppKit/Classes/OpenSDK/UM/UMSocialUI/*.bundle'
-            sss.frameworks = 'UIKit', 'CoreGraphics'
-            sss.libraries = 'sqlite3'
-            sss.pod_target_xcconfig = {
-                'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/WPAppKit/Classes/OpenSDK/UM/**/*.framework/Headers',
-                'LD_RUNPATH_SEARCH_PATHS' => '$(PODS_ROOT)/WPAppKit/Classes/OpenSDK/UM/',
-                'OTHER_LDFLAGS' => '-ObjC',
-            }
-        end
-        
-    end
     
     # ---------------  第三方库 + 扩展  -----------
     s.subspec 'ThirdKit' do |ss|
