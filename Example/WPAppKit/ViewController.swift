@@ -17,8 +17,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         self.title = "Test"
         self.view.addSubview(self.tableView)
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,6 +33,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             ("UIView", UIViewViewController()),
             ("TextView", TextViewViewController()),
             ("PageView", PageViewController()),
+            ("PopView", HomeViewController()),
             ]
         return array
     }()

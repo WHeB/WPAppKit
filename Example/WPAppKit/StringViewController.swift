@@ -24,6 +24,9 @@ class StringViewController: UIViewController {
         
         print(RandomTool.randomString(length: 10))
         print(RandomTool.randomString(length: 30, isLetter: true))
+        
+        let sss = "12你aa"
+        print(sss.charLength())
     }
     
     @objc private func pushAction() {

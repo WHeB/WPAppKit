@@ -133,6 +133,21 @@ public extension String {
         return String(mutableString).replace(" ", with: "")
     }
     
+    /// 获取中英文混合的字节长度
+    public func charLength() -> Int {
+        var strLength = 0
+        for char in self {
+            if ("\u{4E00}" <= char  && char <= "\u{9FA5}") { // 中文
+                strLength += 2
+            }else {
+                strLength += 1
+            }
+        }
+        return strLength
+    }
+    
+    
+    
 }
 
 

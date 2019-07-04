@@ -140,7 +140,7 @@ public extension UIView {
     ///   - alpha: alpha
     ///   - range: 范围
     ///   - offset: 偏移量
-    func setShadow(color: UIColor, alpha: Float? = 0.5, range: CGFloat, offset: CGSize? = CGSize.init(width: 10, height: 10)) {
+    func setShadow(color: UIColor, alpha: Float? = 0.5, range: CGFloat, offset: CGSize? = CGSize.init(width: 0, height: 0)) {
         self.layer.shadowColor = color.cgColor
         self.layer.shadowOpacity = alpha! //不透明度
         self.layer.shadowRadius = range //设置阴影所照射的范围

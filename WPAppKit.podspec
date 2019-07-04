@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'WPAppKit'
-    s.version          = '0.2.1'
+    s.version          = '0.3.0'
     s.summary          = '搭建 Swift 项目常用类库整合'
     s.description      = <<-DESC
     Cocoa：Foundation,UIKit相关扩展
@@ -44,6 +44,11 @@ Pod::Spec.new do |s|
         ss.source_files = 'WPAppKit/Classes/WPEmptyView/*.swift'
     end
     
+    # ---------------  弹窗  -----------
+    s.subspec 'WPPopupView' do |ss|
+        ss.source_files = 'WPAppKit/Classes/WPPopupView/*.swift'
+    end
+    
     # ---------------  WebView  -----------
     s.subspec 'WPWebView' do |ss|
         ss.source_files = 'WPAppKit/Classes/WPWebView/*.{swift,html}'
@@ -53,8 +58,6 @@ Pod::Spec.new do |s|
     s.subspec 'CTMediator' do |ss|
         ss.source_files = 'WPAppKit/Classes/CTMediator/*.{h,m}'
     end
-    
-    # ---------------  开放SDK  -----------
     
     # ---------------  第三方库 + 扩展  -----------
     s.subspec 'ThirdKit' do |ss|
