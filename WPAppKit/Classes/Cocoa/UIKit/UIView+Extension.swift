@@ -70,7 +70,7 @@ public extension UIView {
     ///   - startOrientation: 起点
     ///   - endOrientation: 终点
     ///   - colors: 渐变颜色
-    public func setGradientColor(startOrientation: Orientation, endOrientation: Orientation, colors: [CGColor]) {
+    public func setGradientColor(startOrientation: Orientation, endOrientation: Orientation, colors: [CGColor], bounds: CGRect? = CGRect.zero) {
         let gradientColors: [CGColor] = colors
         let gradientLayer: CAGradientLayer = CAGradientLayer()
         gradientLayer.colors = gradientColors
@@ -129,7 +129,8 @@ public extension UIView {
             gradientLayer.endPoint = CGPoint.init(x: 0.5, y: 1)
             break
         }
-        gradientLayer.frame = self.bounds
+        let tempBounds = bounds == CGRect.zero ? self.bounds : bounds
+        gradientLayer.frame = tempBounds ?? CGRect.zero
         self.layer.insertSublayer(gradientLayer, at: 0)
     }
     
@@ -175,4 +176,5 @@ public extension UIView {
         self.layer.addSublayer(border)
     }
 }
+
 

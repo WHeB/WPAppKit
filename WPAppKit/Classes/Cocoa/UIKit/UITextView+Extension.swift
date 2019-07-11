@@ -30,6 +30,7 @@ public extension TextViewable where Self: UITextView {
             }
             
             let label = UILabel.init()
+            label.numberOfLines = 0
             label.text = placeholder
             label.textColor = UIColor.lightGray
             label.sizeToFit()

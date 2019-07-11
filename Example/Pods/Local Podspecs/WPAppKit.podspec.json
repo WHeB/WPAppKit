@@ -1,6 +1,6 @@
 {
   "name": "WPAppKit",
-  "version": "0.1.3",
+  "version": "0.3.0",
   "summary": "搭建 Swift 项目常用类库整合",
   "description": "Cocoa：Foundation,UIKit相关扩展\nTool：常用工具库\nThirdKit：常用第三方库",
   "homepage": "https://github.com/WHeB/WPAppKit.git",
@@ -13,11 +13,17 @@
   },
   "source": {
     "git": "https://github.com/WHeB/WPAppKit.git",
-    "tag": "0.1.3"
+    "tag": "0.3.0"
   },
   "swift_version": "4.0",
   "platforms": {
     "ios": "9.0"
+  },
+  "static_framework": true,
+  "dependencies": {
+    "SnapKit": [
+      "~> 4.0.0"
+    ]
   },
   "subspecs": [
     {
@@ -42,6 +48,22 @@
       ]
     },
     {
+      "name": "WPEmptyView",
+      "source_files": "WPAppKit/Classes/WPEmptyView/*.swift"
+    },
+    {
+      "name": "WPPopupView",
+      "source_files": "WPAppKit/Classes/WPPopupView/*.swift"
+    },
+    {
+      "name": "WPWebView",
+      "source_files": "WPAppKit/Classes/WPWebView/*.{swift,html}"
+    },
+    {
+      "name": "CTMediator",
+      "source_files": "WPAppKit/Classes/CTMediator/*.{h,m}"
+    },
+    {
       "name": "ThirdKit",
       "subspecs": [
         {
@@ -58,12 +80,12 @@
           "source_files": "WPAppKit/Classes/ThirdKit/Kingfisher/*.swift",
           "dependencies": {
             "Kingfisher": [
-
+              "~> 4.6.0"
             ]
           }
         },
         {
-          "name": "ZHRefresh",
+          "name": "MBProgressHUD",
           "source_files": "WPAppKit/Classes/ThirdKit/MBProgressHUD/*.{swift,h,m}"
         }
       ]
