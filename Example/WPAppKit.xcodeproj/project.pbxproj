@@ -16,7 +16,6 @@
 		B87037B422CCBFB900D97413 /* BubbleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87037B222CCBFB800D97413 /* BubbleViewController.swift */; };
 		B87037B522CCBFB900D97413 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87037B322CCBFB800D97413 /* HomeViewController.swift */; };
 		B87037DC22CDA16600D97413 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87037DB22CDA16600D97413 /* WebViewController.swift */; };
-		B87037DD22CDAC3300D97413 /* pika.gif in Resources */ = {isa = PBXBuildFile; fileRef = B8E361DB22C86D7F00BA8FA0 /* pika.gif */; };
 		B87037DF22CDC75700D97413 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = B87037DE22CDC75700D97413 /* loading.gif */; };
 		B87037E122CDC99700D97413 /* HUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87037E022CDC99700D97413 /* HUDViewController.swift */; };
 		B8E32F8E229D1BDF004324C5 /* ArrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F85229D1BDE004324C5 /* ArrayViewController.swift */; };
@@ -55,7 +54,6 @@
 		B8E32F8A229D1BDE004324C5 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		B8E32F8B229D1BDF004324C5 /* CheckViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckViewController.swift; sourceTree = "<group>"; };
 		B8E32F8D229D1BDF004324C5 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		B8E361DB22C86D7F00BA8FA0 /* pika.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = pika.gif; sourceTree = "<group>"; };
 		E198D8E7358835557ED368B2 /* Pods-WPAppKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WPAppKit_Example.release.xcconfig"; path = "Target Support Files/Pods-WPAppKit_Example/Pods-WPAppKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,7 +126,6 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				B87037DE22CDC75700D97413 /* loading.gif */,
-				B8E361DB22C86D7F00BA8FA0 /* pika.gif */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for WPAppKit";
@@ -215,7 +212,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B87037DD22CDAC3300D97413 /* pika.gif in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				B87037DF22CDC75700D97413 /* loading.gif in Resources */,
