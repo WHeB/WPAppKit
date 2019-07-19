@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'WPAppKit'
-    s.version          = '0.3.1'
+    s.version          = '0.3.2'
     s.summary          = '搭建 Swift 项目常用类库整合'
     s.description      = <<-DESC
     Cocoa：Foundation,UIKit相关扩展
@@ -19,6 +19,7 @@ Pod::Spec.new do |s|
     s.static_framework = true
     # 集成的库
     s.dependency 'SnapKit', '~> 4.0.0'
+    s.dependency 'Localize-Swift', '~> 2.0'
     
     # ---------------  Cocoa常用扩展  -----------
     s.subspec 'Cocoa' do |ss|

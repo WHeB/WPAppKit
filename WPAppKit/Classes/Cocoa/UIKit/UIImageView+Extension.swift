@@ -62,6 +62,4 @@ public extension UIImageView {
         self.startAnimating()
     }
     
-    
-    
 }

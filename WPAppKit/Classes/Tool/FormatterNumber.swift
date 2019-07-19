@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FormatterNumber: NSObject {
+public class FormatterNumber: NSObject {
 
     /// CLongLong格式化String
     ///
@@ -17,7 +17,7 @@ class FormatterNumber: NSObject {
     ///   - minIntLen: 最小位数
     ///   - maxIntLen: 最大位数 默认9位
     /// - Returns: 返回String
-    static func formatterInt(value: CLongLong, minIntLen: Int? = 1, maxIntLen: Int? = 9, separator: String? = "", prefix: String? = "") -> String {
+    public static func formatterInt(value: CLongLong, minIntLen: Int? = 1, maxIntLen: Int? = 9, separator: String? = "", prefix: String? = "") -> String {
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
         formatter.minimumIntegerDigits = minIntLen!
@@ -29,7 +29,7 @@ class FormatterNumber: NSObject {
     }
     
     /// Doubel
-    static func formatterDouble(value: Double? = 0, minFractionLen: Int? = 0, maxFractionLen: Int? = 8, separator: String? = "", prefix: String? = "") -> String {
+    public static func formatterDouble(value: Double? = 0, minFractionLen: Int? = 0, maxFractionLen: Int? = 8, separator: String? = "", prefix: String? = "") -> String {
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
         formatter.minimumFractionDigits = minFractionLen!
@@ -41,7 +41,7 @@ class FormatterNumber: NSObject {
     }
     
     /// 格式化数字string
-    static func formatterString(value: String, minFractionLen: Int? = 0, maxFractionLen: Int? = 8, separator: String? = "") -> String {
+    public static func formatterString(value: String, minFractionLen: Int? = 0, maxFractionLen: Int? = 8, separator: String? = "") -> String {
         
         if value.contains(".") {
             guard let tempValue = Double(value) else {

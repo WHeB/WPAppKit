@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FormatterTime: NSObject {
+public class FormatterTime: NSObject {
 
     /// 时间戳转时间
     ///
@@ -16,7 +16,7 @@ class FormatterTime: NSObject {
     ///   - timestamp: 时间戳
     ///   - format: 格式
     /// - Returns: 结果
-    static func toTime(timestamp: CLong, format: String? = "yyyy/MM/dd HH:mm") -> String {
+    public static func toTime(timestamp: CLong, format: String? = "yyyy/MM/dd HH:mm") -> String {
         let times: TimeInterval = TimeInterval(timestamp)
         let date = Date(timeIntervalSince1970: times)
         let formatter = DateFormatter()
@@ -30,7 +30,7 @@ class FormatterTime: NSObject {
     ///   - day: 几天
     ///   - format: 格式
     /// - Returns: 结果
-    static func afterDay(day: Int, format: String? = "yyyy/MM/dd") -> String {
+    public static func afterDay(day: Int, format: String? = "yyyy/MM/dd") -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = format
         let nextTime: TimeInterval = TimeInterval(24*60*60*day)
@@ -44,7 +44,7 @@ class FormatterTime: NSObject {
     ///   - time: 时间
     ///   - format: 格式
     /// - Returns: 结果
-    static func toTimeStamp(time: String, format: String? = "yyyy年MM月dd日") -> CLong {
+    public static func toTimeStamp(time: String, format: String? = "yyyy年MM月dd日") -> CLong {
         let formatter = DateFormatter()
         formatter.dateFormat = format
         let date = formatter.date(from: time)

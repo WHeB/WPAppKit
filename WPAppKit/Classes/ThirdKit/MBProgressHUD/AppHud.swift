@@ -79,9 +79,8 @@ public class AppHud: NSObject {
         hud.mode = MBProgressHUDMode.customView
         hud.isUserInteractionEnabled = false
         hud.removeFromSuperViewOnHide = true
-        hud.bezelView.backgroundColor = UIColor.clear
+        hud.margin = 0
         let imageView = UIImageView()
-//        imageView.loadBundleGif(imgPath)
         AppHud.loadBundleGif(imgPath, imgView: imageView)
         hud.customView = imageView
     }
