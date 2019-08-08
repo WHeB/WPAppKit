@@ -37,11 +37,6 @@ public struct DeviceInfo {
         return Bundle.main.infoDictionary!["CFBundleName"] as! String
     }
     
-    /// appstore地址
-    public static var appStoreURL: URL {
-        return URL(string: "http://baidu.com")!
-    }
-    
     /// 版本 + build
     public static var appVersionAndBuild: String {
         let version = appVersion
@@ -49,29 +44,19 @@ public struct DeviceInfo {
         return version == build ? "v\(version)" : "v\(version)(\(build))"
     }
     
-    /// IDFA
-    public static var IDFA: String {
-        return ASIdentifierManager.shared().advertisingIdentifier.uuidString
-    }
-    
-    /// IDFV
-    public static var IDFV: String {
-        return UIDevice.current.identifierForVendor?.uuidString ?? ""
-    }
-    
     /// 状态栏高度
     public static var statusBarHeight: CGFloat {
-        return isHasSafeArea ? 44: 20
+        return UIApplication.shared.statusBarFrame.height
     }
     
     /// 导航栏高度
     public static var navigationBarHeight: CGFloat {
-        return 44
+        return 44.0
     }
     
     /// tabbar高度
     public static var tabBarHeight: CGFloat {
-        return isHasSafeArea ? 83: 49
+        return isHasSafeArea ? 83.0 : 49.0
     }
     
     /// statusBar + navigationBar

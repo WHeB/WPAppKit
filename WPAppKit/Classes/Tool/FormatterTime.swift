@@ -10,6 +10,13 @@ import UIKit
 
 public class FormatterTime: NSObject {
 
+    /// 格式化当前时间
+    public static func toNow(format: String? = "yyyy/MM/dd HH:mm") -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = format
+        return formatter.string(from: Date())
+    }
+    
     /// 时间戳转时间
     ///
     /// - Parameters:

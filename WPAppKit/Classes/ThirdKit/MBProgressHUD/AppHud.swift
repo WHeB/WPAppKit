@@ -48,12 +48,26 @@ public class AppHud: NSObject {
     }
     
     /// 显示加载框
-    public static func showLoading(_ text: String? = "") {
+    ///
+    /// - Parameters:
+    ///   - text: 文字提示
+    ///   - maskingAlpha: > 0 会锁死界面，不能操作, 一定要移除
+    public static func showLoading(_ text: String? = "", maskingAlpha: CGFloat? = 0.00) {
         let toView = getCurrentViewWithView()
         MBProgressHUD.hide(for: toView, animated: true)
         
-        let hud: MBProgressHUD = MBProgressHUD.showAdded(to: toView, animated: true)
-        hud.tag = -999
+        var tempView = UIView()
+        if maskingAlpha != nil && maskingAlpha! > 0.00  {
+            let masking = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height))
+            masking.tag = -100
+            masking.backgroundColor = UIColor.black.withAlphaComponent(maskingAlpha!)
+            toView.addSubview(masking)
+            tempView = masking
+        }else {
+            tempView = toView
+        }
+        let hud: MBProgressHUD = MBProgressHUD.showAdded(to: tempView, animated: true)
+        hud.tag = -200
         hud.bezelView.backgroundColor = UIColor.black
         hud.mode = MBProgressHUDMode.indeterminate
         hud.isUserInteractionEnabled = false
@@ -66,16 +80,29 @@ public class AppHud: NSObject {
     }
     
     /// 显示本地gif动画
-    public static func showGifLoading(_ gifName: String) {
+    ///
+    /// - Parameters:
+    ///   - gifName: 动图名称
+    ///   - maskingAlpha: > 0 会锁死界面，不能操作, 一定要移除
+    public static func showGifLoading(_ gifName: String, maskingAlpha: CGFloat? = 0.00) {
         let toView = getCurrentViewWithView()
         MBProgressHUD.hide(for: toView, animated: true)
         
         guard let imgPath = Bundle.main.path(forResource:gifName, ofType:"gif") else {
             return
         }
-        
-        let hud: MBProgressHUD = MBProgressHUD.showAdded(to: toView, animated: true)
-        hud.tag = -999
+        var tempView = UIView()
+        if maskingAlpha != nil && maskingAlpha! > 0.00  {
+            let masking = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height))
+            masking.tag = -100
+            masking.backgroundColor = UIColor.black.withAlphaComponent(maskingAlpha!)
+            toView.addSubview(masking)
+            tempView = masking
+        }else {
+            tempView = toView
+        }
+        let hud: MBProgressHUD = MBProgressHUD.showAdded(to: tempView, animated: true)
+        hud.tag = -200
         hud.mode = MBProgressHUDMode.customView
         hud.isUserInteractionEnabled = false
         hud.removeFromSuperViewOnHide = true
@@ -85,13 +112,46 @@ public class AppHud: NSObject {
         hud.customView = imageView
     }
     
+    public static func showGifLoading(images: [UIImage], maskingAlpha: CGFloat? = 0.00) {
+        let toView = getCurrentViewWithView()
+        MBProgressHUD.hide(for: toView, animated: true)
+        
+        var tempView = UIView()
+        if maskingAlpha != nil && maskingAlpha! > 0.00  {
+            let masking = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height))
+            masking.tag = -100
+            masking.backgroundColor = UIColor.black.withAlphaComponent(maskingAlpha!)
+            toView.addSubview(masking)
+            tempView = masking
+        }else {
+            tempView = toView
+        }
+        let hud: MBProgressHUD = MBProgressHUD.showAdded(to: tempView, animated: true)
+        hud.tag = -200
+        hud.mode = MBProgressHUDMode.customView
+        hud.isUserInteractionEnabled = false
+        hud.removeFromSuperViewOnHide = true
+        hud.margin = 0
+        let imageView = UIImageView()
+        imageView.animationImages = images
+        imageView.animationRepeatCount = 0  // 设置为0时无限执行
+        imageView.startAnimating()
+        
+//        AppHud.loadBundleGif(imgPath, imgView: imageView)
+        hud.customView = imageView
+    }
+    
+    
     /// 隐藏提示
     public static func hideHudView() {
         let toView = getCurrentViewWithView()
-        if let view: MBProgressHUD = toView.viewWithTag(-999) as? MBProgressHUD {
+        if let view: MBProgressHUD = toView.viewWithTag(-200) as? MBProgressHUD {
             view.hide(animated: true)
         }else {
             MBProgressHUD.hide(for: toView, animated: true)
+        }
+        if let masking = toView.viewWithTag(-100) {
+            masking.removeFromSuperview()
         }
     }
 }

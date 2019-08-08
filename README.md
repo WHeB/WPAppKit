@@ -36,8 +36,7 @@ WPAppKit is available under the MIT license. See the LICENSE file for more info.
 |   |   |── UIFoundation                          
 |   |── Tool                        
 |   |── WPEmptyView                           
-|   |── WPWebView                        
-|   |── CTMediator                                              
+|   |── WPWebView                                                                  
 |   |── WPPopupView                                           
 |   |── ThirdKit                              
 |   |   |── MJRefresh                              

@@ -76,7 +76,7 @@ public extension Date {
         default:
             break
         }
-        return "未取到数据"
+        return ""
     }
     
     /// 是否是今天

@@ -39,3 +39,33 @@ public class RefreshFooter: MJRefreshBackNormalFooter {
         super.init(coder: aDecoder)
     }
 }
+
+
+/// git下拉刷新 refreshHeader.gif
+public class RefreshGifHeader: MJRefreshGifHeader {
+    
+    override public func prepare() {
+        super.prepare()
+        
+        guard let imgPath = Bundle.main.path(forResource:"refreshHeader", ofType:"gif") else {
+            return
+        }
+        guard let imgData = NSData(contentsOfFile: imgPath) else {
+            return
+        }
+        guard let imgSource = CGImageSourceCreateWithData(imgData, nil) else {
+            return
+        }
+        let imgCount = CGImageSourceGetCount(imgSource)
+        var imgs = [UIImage]()
+        for i in 0..<imgCount {
+            guard let cgimg = CGImageSourceCreateImageAtIndex(imgSource, i, nil) else { continue }
+            let img = UIImage(cgImage: cgimg)
+            imgs.append(img)
+        }
+        
+        self.setImages(imgs, for: .idle)
+        self.setImages(imgs, for: .pulling)
+        self.setImages(imgs, for: .refreshing)
+    }
+}

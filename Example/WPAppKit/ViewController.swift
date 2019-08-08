@@ -36,6 +36,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             ("PopView", HomeViewController()),
             ("WebView", WebViewController()),
             ("HUD", HUDViewController()),
+            ("二维码",ScanViewController())
             ]
         return array
     }()
