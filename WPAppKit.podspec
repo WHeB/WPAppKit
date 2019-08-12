@@ -76,7 +76,7 @@ Pod::Spec.new do |s|
         
         # HBDNavigationBar
         ss.subspec 'HBDNavigationBar' do |sss|
-            sss.source_files = 'WPAppKit/Classes/ThirdKit/HBDNavigationBar/*.{swift,h,m}'
+            sss.source_files = 'WPAppKit/Classes/ThirdKit/HBDNavigationBar/*.swift'
             sss.dependency 'HBDNavigationBar','~> 1.5.2'
         end
         

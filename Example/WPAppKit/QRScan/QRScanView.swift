@@ -21,7 +21,6 @@ class QRScanView: UIView {
         super.init(coder: aDecoder)
     }
     
-    
     override open func draw(_ rect: CGRect) {
 //        let rectangleSize = CGSize(width: 200, height: 200)
 //
