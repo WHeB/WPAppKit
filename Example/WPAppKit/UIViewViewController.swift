@@ -13,7 +13,11 @@ class UIViewViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.navigationItem.rightBarButtonItem = self.customItem(image: UIImage(named: "hud_success")!, imageSize: CGSize(width: 24, height: 24), action: #selector(testAction))
+        
+//        self.navigationItem.rightBarButtonItem = self.customItem(title: "测试", action: #selector(testAction))
+        
         title = "UIView"
         view.backgroundColor = UIColor.white
         
@@ -33,6 +37,25 @@ class UIViewViewController: UIViewController {
         LocalStoreTool.share.writeString(toFilePath: "/string.text", string: sssss)
         let ss = LocalStoreTool.share.documentFileName(fileName: "/string.text")
         print(ss)
+        
+        
+        let button = UIButton(title: "你好", txtColor: UIColor.white, font: UIFont.systemFont(ofSize: 14), bgColor: UIColor.white, radius: 20)
+        button.frame = CGRect(x: 200, y: 100, width: 80, height: 40)
+        self.view.addSubview(button)
+        
+//        button.setBackgroundImage(UIImage.colorToImage(UIColor.orange), for: .normal)
+//        button.setBackgroundImage(UIImage.colorToImage(UIColor.red), for: .selected)
+        button.setbackground(normalColor: UIColor.orange, selectedColor: UIColor.red)
+        button.addTarget(self, action: #selector(buttonAction(button:)), for: .touchUpInside)
+        
+    }
+    
+    @objc private func buttonAction(button: UIButton) {
+        button.isSelected = !button.isSelected
+    }
+    
+    @objc private func testAction() {
+        
         
     }
 }

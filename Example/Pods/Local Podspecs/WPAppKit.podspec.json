@@ -1,6 +1,6 @@
 {
   "name": "WPAppKit",
-  "version": "0.3.0",
+  "version": "0.3.3",
   "summary": "搭建 Swift 项目常用类库整合",
   "description": "Cocoa：Foundation,UIKit相关扩展\nTool：常用工具库\nThirdKit：常用第三方库",
   "homepage": "https://github.com/WHeB/WPAppKit.git",
@@ -13,9 +13,9 @@
   },
   "source": {
     "git": "https://github.com/WHeB/WPAppKit.git",
-    "tag": "0.3.0"
+    "tag": "0.3.3"
   },
-  "swift_version": "4.0",
+  "swift_versions": "4.0",
   "platforms": {
     "ios": "9.0"
   },
@@ -23,6 +23,9 @@
   "dependencies": {
     "SnapKit": [
       "~> 4.0.0"
+    ],
+    "Localize-Swift": [
+      "~> 2.0"
     ]
   },
   "subspecs": [
@@ -60,10 +63,6 @@
       "source_files": "WPAppKit/Classes/WPWebView/*.{swift,html}"
     },
     {
-      "name": "CTMediator",
-      "source_files": "WPAppKit/Classes/CTMediator/*.{h,m}"
-    },
-    {
       "name": "ThirdKit",
       "subspecs": [
         {
@@ -87,8 +86,18 @@
         {
           "name": "MBProgressHUD",
           "source_files": "WPAppKit/Classes/ThirdKit/MBProgressHUD/*.{swift,h,m}"
+        },
+        {
+          "name": "HBDNavigationBar",
+          "source_files": "WPAppKit/Classes/ThirdKit/HBDNavigationBar/*.{swift,h,m}",
+          "dependencies": {
+            "HBDNavigationBar": [
+              "~> 1.5.2"
+            ]
+          }
         }
       ]
     }
-  ]
+  ],
+  "swift_version": "4.0"
 }

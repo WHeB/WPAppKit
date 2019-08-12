@@ -2,7 +2,8 @@ use_frameworks!
 
 target 'WPAppKit_Example' do
   pod 'WPAppKit', :path => '../'
-  pod 'Kingfisher'
+  pod 'Kingfisher','~> 4.6.0'
   pod 'MJRefresh'
+  pod 'HBDNavigationBar', '~> 1.5.2' # https://github.com/listenzz/HBDNavigationBar
   
 end

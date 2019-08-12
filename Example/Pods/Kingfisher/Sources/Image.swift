@@ -181,11 +181,7 @@ extension Kingfisher where Base: Image {
             let rep = NSBitmapImageRep(cgImage: cgimage)
             return rep.representation(using: .png, properties: [:])
         #else
-            #if swift(>=4.2)
-            return base.pngData()
-            #else
             return UIImagePNGRepresentation(base)
-            #endif
         #endif
     }
     
@@ -198,11 +194,7 @@ extension Kingfisher where Base: Image {
             let rep = NSBitmapImageRep(cgImage: cgImage)
             return rep.representation(using:.jpeg, properties: [.compressionFactor: compressionQuality])
         #else
-            #if swift(>=4.2)
-            return base.jpegData(compressionQuality: compressionQuality)
-            #else
             return UIImageJPEGRepresentation(base, compressionQuality)
-            #endif
         #endif
     }
     
@@ -214,7 +206,7 @@ extension Kingfisher where Base: Image {
 
 // MARK: - Create images from data
 extension Kingfisher where Base: Image {
-    public static func animated(with data: Data, scale: CGFloat = 1.0, duration: TimeInterval = 0.0, preloadAll: Bool, onlyFirstFrame: Bool = false) -> Image? {
+    static func animated(with data: Data, scale: CGFloat = 1.0, duration: TimeInterval = 0.0, preloadAll: Bool, onlyFirstFrame: Bool = false) -> Image? {
         
         func decode(from imageSource: CGImageSource, for options: NSDictionary) -> ([Image], TimeInterval)? {
             
@@ -293,7 +285,7 @@ extension Kingfisher where Base: Image {
                 guard let (images, gifDuration) = decode(from: imageSource, for: options) else { return nil }
                 image = onlyFirstFrame ? images.first : Kingfisher<Image>.animated(with: images, forDuration: duration <= 0.0 ? gifDuration : duration)
             } else {
-                image = Image(data: data, scale: scale)
+                image = Image(data: data)
                 image?.kf.imageSource = ImageSource(ref: imageSource)
             }
             image?.kf.animatedImageData = data
@@ -301,7 +293,7 @@ extension Kingfisher where Base: Image {
         #endif
     }
 
-    public static func image(data: Data, scale: CGFloat, preloadAllAnimationData: Bool, onlyFirstFrame: Bool) -> Image? {
+    static func image(data: Data, scale: CGFloat, preloadAllAnimationData: Bool, onlyFirstFrame: Bool) -> Image? {
         var image: Image?
 
         #if os(macOS)
@@ -439,11 +431,7 @@ extension Kingfisher where Base: Image {
                 }
 
                 let path = NSBezierPath(roundedRect: rect, byRoundingCorners: corners, radius: radius)
-                #if swift(>=4.2)
-                path.windingRule = .evenOdd
-                #else
                 path.windingRule = .evenOddWindingRule
-                #endif
                 path.addClip()
                 base.draw(in: rect)
             #else
@@ -469,7 +457,7 @@ extension Kingfisher where Base: Image {
     }
     
     #if os(iOS) || os(tvOS)
-    func resize(to size: CGSize, for contentMode: UIView.ContentMode) -> Image {
+    func resize(to size: CGSize, for contentMode: UIViewContentMode) -> Image {
         switch contentMode {
         case .scaleAspectFit:
             return resize(to: size, for: .aspectFit)
@@ -720,11 +708,11 @@ extension Kingfisher where Base: Image {
 
 // MARK: - Decode
 extension Kingfisher where Base: Image {
-    public var decoded: Image {
+    var decoded: Image {
         return decoded(scale: scale)
     }
     
-    public func decoded(scale: CGFloat) -> Image {
+    func decoded(scale: CGFloat) -> Image {
         // prevent animated image (GIF) lose it's images
         #if os(iOS)
             if imageSource != nil { return base }
@@ -768,7 +756,7 @@ private struct ImageHeaderData {
     static var GIF: [UInt8] = [0x47, 0x49, 0x46]
 }
 
-public enum ImageFormat {
+enum ImageFormat {
     case unknown, PNG, JPEG, GIF
 }
 
@@ -789,7 +777,7 @@ extension Data: KingfisherCompatible {
 }
 
 extension DataProxy {
-    public var imageFormat: ImageFormat {
+    var imageFormat: ImageFormat {
         var buffer = [UInt8](repeating: 0, count: 8)
         (base as NSData).getBytes(&buffer, length: 8)
         if buffer == ImageHeaderData.PNG {
@@ -825,26 +813,14 @@ extension CGSize: KingfisherCompatible {
 }
 
 extension CGSizeProxy {
-    
-    public func resize(to size: CGSize, for contentMode: ContentMode) -> CGSize {
-        switch contentMode {
-        case .aspectFit:
-            return constrained(size)
-        case .aspectFill:
-            return filling(size)
-        default:
-            return self.base
-        }
-    }
-    
-    public func constrained(_ size: CGSize) -> CGSize {
+    func constrained(_ size: CGSize) -> CGSize {
         let aspectWidth = round(aspectRatio * size.height)
         let aspectHeight = round(size.width / aspectRatio)
 
         return aspectWidth > size.width ? CGSize(width: size.width, height: aspectHeight) : CGSize(width: aspectWidth, height: size.height)
     }
 
-    public func filling(_ size: CGSize) -> CGSize {
+    func filling(_ size: CGSize) -> CGSize {
         let aspectWidth = round(aspectRatio * size.height)
         let aspectHeight = round(size.width / aspectRatio)
 
@@ -856,7 +832,7 @@ extension CGSizeProxy {
     }
     
     
-    public func constrainedRect(for size: CGSize, anchor: CGPoint) -> CGRect {
+    func constrainedRect(for size: CGSize, anchor: CGPoint) -> CGRect {
         
         let unifiedAnchor = CGPoint(x: anchor.x.clamped(to: 0.0...1.0),
                                     y: anchor.y.clamped(to: 0.0...1.0))
@@ -996,9 +972,9 @@ extension NSBezierPath {
         let maxCorner = min(rect.width, rect.height) / 2
         
         let radiusTopLeft = min(maxCorner, max(0, topLeftRadius))
-        let radiusTopRight = min(maxCorner, max(0, topRightRadius))
-        let radiusBottomLeft = min(maxCorner, max(0, bottomLeftRadius))
-        let radiusBottomRight = min(maxCorner, max(0, bottomRightRadius))
+        let radiustopRight = min(maxCorner, max(0, topRightRadius))
+        let radiusbottomLeft = min(maxCorner, max(0, bottomLeftRadius))
+        let radiusbottomRight = min(maxCorner, max(0, bottomRightRadius))
         
         guard !NSIsEmptyRect(rect) else {
             return
@@ -1010,9 +986,9 @@ extension NSBezierPath {
         
         move(to: NSMakePoint(NSMidX(rect), NSMaxY(rect)))
         appendArc(from: topLeft, to: rect.origin, radius: radiusTopLeft)
-        appendArc(from: rect.origin, to: bottomRight, radius: radiusBottomLeft)
-        appendArc(from: bottomRight, to: topRight, radius: radiusBottomRight)
-        appendArc(from: topRight, to: topLeft, radius: radiusTopRight)
+        appendArc(from: rect.origin, to: bottomRight, radius: radiusbottomLeft)
+        appendArc(from: bottomRight, to: topRight, radius: radiusbottomRight)
+        appendArc(from: topRight, to: topLeft, radius: radiustopRight)
         close()
     }
     

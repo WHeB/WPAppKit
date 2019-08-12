@@ -161,3 +161,46 @@ public extension UIViewController {
     }
     
 }
+
+
+public extension UIViewController {
+    
+    /// 添加文字item
+    public func customItem(title: String, action: Selector) -> UIBarButtonItem {
+        let itemButton = UIButton(type: .custom)
+        itemButton.setTitle(title, for: .normal)
+        if let navBar = self.navigationController?.navigationBar {
+            itemButton.setTitleColor(navBar.tintColor, for: .normal)
+        }else {
+            let appearanceNavBar = UINavigationBar.appearance()
+            if appearanceNavBar == NSNull() {
+                itemButton.setTitleColor(UIColor.black, for: .normal)
+            }else {
+                itemButton.setTitleColor(appearanceNavBar.tintColor, for: .normal)
+            }
+        }
+        itemButton.sizeToFit()
+        itemButton.addTarget(self, action: action, for: .touchUpInside)
+        let item = UIBarButtonItem(customView: itemButton)
+        return item
+    }
+    
+    /// 添加图片item
+    public func customItem(image: UIImage, imageSize: CGSize? = CGSize(width: 30, height: 30), action: Selector) -> UIBarButtonItem {
+        let itemButton = UIButton(type: .custom)
+        itemButton.setImage(image, for: .normal)
+        var imgSize = itemButton.imageView?.bounds.size
+        if #available(iOS 11.0, *) {
+            imgSize = itemButton.imageView?.bounds.size
+        }else {
+            imgSize = imageSize
+        }
+        itemButton.frame = CGRect.init(origin: CGPoint.zero, size: imgSize!)
+        itemButton.addTarget(self, action: action, for: .touchUpInside)
+        let item = UIBarButtonItem(customView: itemButton)
+        return item
+    }
+    
+    
+    
+}

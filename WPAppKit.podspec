@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'WPAppKit'
-    s.version          = '0.3.3'
+    s.version          = '0.4.0'
     s.summary          = '搭建 Swift 项目常用类库整合'
     s.description      = <<-DESC
     Cocoa：Foundation,UIKit相关扩展
@@ -73,6 +73,13 @@ Pod::Spec.new do |s|
         ss.subspec 'MBProgressHUD' do |sss|
             sss.source_files = 'WPAppKit/Classes/ThirdKit/MBProgressHUD/*.{swift,h,m}'
         end
+        
+        # HBDNavigationBar
+        ss.subspec 'HBDNavigationBar' do |sss|
+            sss.source_files = 'WPAppKit/Classes/ThirdKit/HBDNavigationBar/*.{swift,h,m}'
+            sss.dependency 'HBDNavigationBar','~> 1.5.2'
+        end
+        
     end
 
 end

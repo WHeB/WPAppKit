@@ -75,13 +75,8 @@ public extension UIButton {
     
     /// 设置背景颜色
     public func setbackground(normalColor: UIColor, selectedColor: UIColor) {
-        self.setImage(UIImage.colorToImage(normalColor), for: .normal)
-        self.setImage(UIImage.colorToImage(selectedColor), for: .selected)
-        // 禁止闪烁
-        self.addTarget(self, action: #selector(unFlashing(button:)), for: .allTouchEvents)
+        self.setBackgroundImage(UIImage.colorToImage(normalColor, size: self.bounds.size), for: .normal)
+        self.setBackgroundImage(UIImage.colorToImage(selectedColor, size: self.bounds.size), for: .selected)
     }
     
-    @objc func unFlashing(button: UIButton) {
-        button.isHighlighted = false
-    }
 }

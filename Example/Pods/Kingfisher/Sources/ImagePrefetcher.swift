@@ -53,10 +53,6 @@ public class ImagePrefetcher {
     /// The maximum concurrent downloads to use when prefetching images. Default is 5.
     public var maxConcurrentDownloads = 5
     
-    /// The dispatch queue to use for handling resource process so downloading does not occur on the main thread
-    /// This prevents stuttering when preloading images in a collection view or table view
-    private var prefetchQueue: DispatchQueue
-    
     private let prefetchResources: [Resource]
     private let optionsInfo: KingfisherOptionsInfo
     private var progressBlock: PrefetcherProgressBlock?
@@ -90,6 +86,8 @@ public class ImagePrefetcher {
      - parameter progressBlock:     Called every time an resource is downloaded, skipped or cancelled.
      - parameter completionHandler: Called when the whole prefetching process finished.
      
+     - returns: An `ImagePrefetcher` object.
+     
      - Note: By default, the `ImageDownloader.defaultDownloader` and `ImageCache.defaultCache` will be used as 
      the downloader and cache target respectively. You can specify another downloader or cache by using a customized `KingfisherOptionsInfo`.
      Both the progress and completion block will be invoked in main thread. The `CallbackDispatchQueue` in `optionsInfo` will be ignored in this method.
@@ -114,7 +112,9 @@ public class ImagePrefetcher {
      - parameter options:           A dictionary could control some behaviors. See `KingfisherOptionsInfo` for more.
      - parameter progressBlock:     Called every time an resource is downloaded, skipped or cancelled.
      - parameter completionHandler: Called when the whole prefetching process finished.
-
+     
+     - returns: An `ImagePrefetcher` object.
+     
      - Note: By default, the `ImageDownloader.defaultDownloader` and `ImageCache.defaultCache` will be used as
      the downloader and cache target respectively. You can specify another downloader or cache by using a customized `KingfisherOptionsInfo`.
      Both the progress and completion block will be invoked in main thread. The `CallbackDispatchQueue` in `optionsInfo` will be ignored in this method.
@@ -127,20 +127,12 @@ public class ImagePrefetcher {
         prefetchResources = resources
         pendingResources = ArraySlice(resources)
         
-        // Set up the dispatch queue that all our work should occur on.
-        let prefetchQueueName = "com.onevcat.Kingfisher.PrefetchQueue"
-        prefetchQueue = DispatchQueue(label: prefetchQueueName)
+        // We want all callbacks from main queue, so we ignore the call back queue in options
+        let optionsInfoWithoutQueue = options?.removeAllMatchesIgnoringAssociatedValue(.callbackDispatchQueue(nil))
+        self.optionsInfo = optionsInfoWithoutQueue ?? KingfisherEmptyOptionsInfo
         
-        // We want all callbacks from our prefetch queue, so we should ignore the call back queue in options
-        var optionsInfoWithoutQueue = options?.removeAllMatchesIgnoringAssociatedValue(.callbackDispatchQueue(nil)) ?? KingfisherEmptyOptionsInfo
-        
-        // Add our own callback dispatch queue to make sure all callbacks are coming back in our expected queue
-        optionsInfoWithoutQueue.append(.callbackDispatchQueue(prefetchQueue))
-        
-        self.optionsInfo = optionsInfoWithoutQueue
-        
-        let cache = self.optionsInfo.targetCache ?? .default
-        let downloader = self.optionsInfo.downloader ?? .default
+        let cache = self.optionsInfo.targetCache
+        let downloader = self.optionsInfo.downloader
         manager = KingfisherManager(downloader: downloader, cache: cache)
         
         self.progressBlock = progressBlock
@@ -154,8 +146,8 @@ public class ImagePrefetcher {
      */
     public func start()
     {
-        // Since we want to handle the resources cancellation in the prefetch queue only.
-        prefetchQueue.async {
+        // Since we want to handle the resources cancellation in main thread only.
+        DispatchQueue.main.safeAsync {
             
             guard !self.stopped else {
                 assertionFailure("You can not restart the same prefetcher. Try to create a new prefetcher.")
@@ -188,7 +180,7 @@ public class ImagePrefetcher {
      Stop current downloading progress, and cancel any future prefetching activity that might be occuring.
      */
     public func stop() {
-        prefetchQueue.async {
+        DispatchQueue.main.safeAsync {
             if self.finished { return }
             self.stopped = true
             self.tasks.values.forEach { $0.cancel() }
@@ -256,7 +248,7 @@ public class ImagePrefetcher {
     }
     
     func reportCompletionOrStartNext() {
-        prefetchQueue.async {
+        DispatchQueue.main.async {
             if let resource = self.pendingResources.popFirst() {
                 self.startPrefetching(resource)
             } else {
@@ -267,11 +259,8 @@ public class ImagePrefetcher {
     }
     
     func handleComplete() {
-        // The completion handler should be called on the main thread
-        DispatchQueue.main.safeAsync {
-            self.completionHandler?(self.skippedResources, self.failedResources, self.completedResources)
-            self.completionHandler = nil
-            self.progressBlock = nil
-        }
+        completionHandler?(skippedResources, failedResources, completedResources)
+        completionHandler = nil
+        progressBlock = nil
     }
 }

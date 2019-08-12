@@ -27,6 +27,7 @@ class StringViewController: UIViewController {
         
         let sss = "12你aa"
         print(sss.charLength())
+        
     }
     
     @objc private func pushAction() {

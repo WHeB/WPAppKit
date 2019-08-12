@@ -56,14 +56,14 @@ public struct Filter {
     
     let transform: Transformer
 
-    public init(transform: @escaping Transformer) {
-        self.transform = transform
+    public init(tranform: @escaping Transformer) {
+        self.transform = tranform
     }
     
     /// Tint filter which will apply a tint color to images.
     public static var tint: (Color) -> Filter = {
         color in
-        Filter(transform: { input in
+        Filter { input in
             let colorFilter = CIFilter(name: "CIConstantColorGenerator")!
             colorFilter.setValue(CIColor(color: color), forKey: kCIInputColorKey)
             
@@ -76,7 +76,7 @@ public struct Filter {
             #else
             return filter.outputImage?.cropping(to: input.extent)
             #endif
-        })
+        }
     }
     
     public typealias ColorElement = (CGFloat, CGFloat, CGFloat, CGFloat)
@@ -84,7 +84,7 @@ public struct Filter {
     /// Color control filter which will apply color control change to images.
     public static var colorControl: (ColorElement) -> Filter = { arg -> Filter in
         let (brightness, contrast, saturation, inputEV) = arg
-        return Filter(transform: { input in
+        return Filter { input in
             let paramsColor = [kCIInputBrightnessKey: brightness,
                                kCIInputContrastKey: contrast,
                                kCIInputSaturationKey: saturation]
@@ -97,15 +97,8 @@ public struct Filter {
             let blackAndWhite = input.applyingFilter("CIColorControls", withInputParameters: paramsColor)
             return blackAndWhite.applyingFilter("CIExposureAdjust", withInputParameters: paramsExposure)
             #endif
-        })
-    }
-}
-
-// MARK: - Deprecated
-extension Filter {
-    @available(*, deprecated, message: "Use init(transform:) instead.", renamed: "init(transform:)")
-    public init(tranform: @escaping Transformer) {
-        self.transform = tranform
+        }
+        
     }
 }
 
