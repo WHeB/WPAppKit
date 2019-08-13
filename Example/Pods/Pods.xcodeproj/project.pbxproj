@@ -150,6 +150,14 @@
 		B7F559ABF7622040866557F0C6F422C3 /* RequestModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8924D7248D09BADF0BBC6479885EF10F /* RequestModifier.swift */; };
 		B80CA61D7F94E216B8F83BA92544111A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C02D91DBABE7C0F8FF2C5D109AB13D6C /* Foundation.framework */; };
 		B87F1B482301358800C60FE6 /* AppNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87F1B472301358800C60FE6 /* AppNavigationBar.swift */; };
+		B87F1B7C2302541F00C60FE6 /* ScanNetAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87F1B752302541F00C60FE6 /* ScanNetAnimation.swift */; };
+		B87F1B7D2302541F00C60FE6 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87F1B762302541F00C60FE6 /* ScanView.swift */; };
+		B87F1B7E2302541F00C60FE6 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87F1B772302541F00C60FE6 /* ScanViewController.swift */; };
+		B87F1B7F2302541F00C60FE6 /* ScanLineAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87F1B782302541F00C60FE6 /* ScanLineAnimation.swift */; };
+		B87F1B802302541F00C60FE6 /* ScanViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87F1B792302541F00C60FE6 /* ScanViewStyle.swift */; };
+		B87F1B812302541F00C60FE6 /* Permissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87F1B7A2302541F00C60FE6 /* Permissions.swift */; };
+		B87F1B822302541F00C60FE6 /* ScanWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87F1B7B2302541F00C60FE6 /* ScanWrapper.swift */; };
+		B87F1B8423025AEF00C60FE6 /* CodeCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87F1B8323025AEF00C60FE6 /* CodeCreate.swift */; };
 		BACA19A92FB31CBEBA9BF48805EFDDEF /* AppHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9362ED7B1179F09583899C0591DC7B18 /* AppHud.swift */; };
 		BD9A09840189D37657887D1467CAA330 /* MJRefreshStateHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 28C4F3CEDE83F06C38BD231FE85B9E81 /* MJRefreshStateHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BEB0C287C895386C521C4A39E1F0322B /* String+LocalizeBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D2D9C1AFFCA60E551C640FB238E80E /* String+LocalizeBundle.swift */; };
@@ -425,6 +433,14 @@
 		B783F922715A369195B2F164CB544FE3 /* MJRefresh-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MJRefresh-prefix.pch"; sourceTree = "<group>"; };
 		B7D8BB006A192E327E738C3BBFC41FDE /* UIView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "WPAppKit/Classes/Cocoa/UIKit/UIView+Extension.swift"; sourceTree = "<group>"; };
 		B87F1B472301358800C60FE6 /* AppNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationBar.swift; sourceTree = "<group>"; };
+		B87F1B752302541F00C60FE6 /* ScanNetAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanNetAnimation.swift; sourceTree = "<group>"; };
+		B87F1B762302541F00C60FE6 /* ScanView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
+		B87F1B772302541F00C60FE6 /* ScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		B87F1B782302541F00C60FE6 /* ScanLineAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanLineAnimation.swift; sourceTree = "<group>"; };
+		B87F1B792302541F00C60FE6 /* ScanViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanViewStyle.swift; sourceTree = "<group>"; };
+		B87F1B7A2302541F00C60FE6 /* Permissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Permissions.swift; sourceTree = "<group>"; };
+		B87F1B7B2302541F00C60FE6 /* ScanWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanWrapper.swift; sourceTree = "<group>"; };
+		B87F1B8323025AEF00C60FE6 /* CodeCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeCreate.swift; sourceTree = "<group>"; };
 		B9BFF14737AE58EFDA05ED78472D7643 /* MJRefreshAutoStateFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoStateFooter.m; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoStateFooter.m; sourceTree = "<group>"; };
 		BAA64F8D6C809C38ACD740C250371586 /* Localize-Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Localize-Swift-prefix.pch"; sourceTree = "<group>"; };
 		BB18B5F8E4B2C957DBC633481912B9A1 /* Kingfisher-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-umbrella.h"; sourceTree = "<group>"; };
@@ -818,6 +834,22 @@
 			path = WPAppKit/Classes/ThirdKit/HBDNavigationBar;
 			sourceTree = "<group>";
 		};
+		B87F1B742302541F00C60FE6 /* CodeScan */ = {
+			isa = PBXGroup;
+			children = (
+				B87F1B752302541F00C60FE6 /* ScanNetAnimation.swift */,
+				B87F1B762302541F00C60FE6 /* ScanView.swift */,
+				B87F1B772302541F00C60FE6 /* ScanViewController.swift */,
+				B87F1B782302541F00C60FE6 /* ScanLineAnimation.swift */,
+				B87F1B792302541F00C60FE6 /* ScanViewStyle.swift */,
+				B87F1B7A2302541F00C60FE6 /* Permissions.swift */,
+				B87F1B7B2302541F00C60FE6 /* ScanWrapper.swift */,
+				B87F1B8323025AEF00C60FE6 /* CodeCreate.swift */,
+			);
+			name = CodeScan;
+			path = WPAppKit/Classes/CodeScan;
+			sourceTree = "<group>";
+		};
 		C083E82262DB81BC8390E71DB81B95D3 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
@@ -987,6 +1019,7 @@
 		EBBACBC01B1CED4F0F588161E61F9A7D /* WPAppKit */ = {
 			isa = PBXGroup;
 			children = (
+				B87F1B742302541F00C60FE6 /* CodeScan */,
 				F0249B489C2613F3194E744B0D0FE1A3 /* Cocoa */,
 				8C42FCC6E763D38CECC13546A23626E8 /* Pod */,
 				4DB97934D31B88BF5598EEE1BF2D8042 /* Support Files */,
@@ -1509,12 +1542,16 @@
 				0A4A268B13490749FE6934578D6D1B01 /* CurrentManager.swift in Sources */,
 				2F75EBE455BDCDD9506A38A4CA48C9CE /* Date+Extension.swift in Sources */,
 				A0F3A8D5530AF8F7BC8D58838728FCC6 /* DeviceInfo.swift in Sources */,
+				B87F1B812302541F00C60FE6 /* Permissions.swift in Sources */,
 				98C83A48FFA028192F93A1F8C0D7327C /* Dictionary+Extension.swift in Sources */,
 				38BE26F4540E5562B0B0D223ECAA2E9A /* Extension+String.swift in Sources */,
+				B87F1B8423025AEF00C60FE6 /* CodeCreate.swift in Sources */,
 				102874E298EB6BCB8BE2F0272D0E1607 /* FileUtils.swift in Sources */,
+				B87F1B7F2302541F00C60FE6 /* ScanLineAnimation.swift in Sources */,
 				A53F52AD185635B0C57017F90FABFFE2 /* FormatterNumber.swift in Sources */,
 				01AD1059FE448B0148DA39AB704E9439 /* FormatterTime.swift in Sources */,
 				84EC31C65648CF4A9511C8ACE670FF24 /* LocalStoreTool.swift in Sources */,
+				B87F1B802302541F00C60FE6 /* ScanViewStyle.swift in Sources */,
 				F2B4C9CDA749699C08A73CCF13C96060 /* MBProgressHUD.m in Sources */,
 				6A818C85C8D525938A3788EE5D0FFBF4 /* Notification+Extension.swift in Sources */,
 				EEB13149459A212D0D2CF6D5F4CB7AE7 /* NSAttributedString+Extension.swift in Sources */,
@@ -1522,12 +1559,14 @@
 				B87F1B482301358800C60FE6 /* AppNavigationBar.swift in Sources */,
 				FA619D79C168AA9043D1E9CCF304DD69 /* StoryboardAndXib.swift in Sources */,
 				67BEEFAA977A214A25084263304849A0 /* String+Extension.swift in Sources */,
+				B87F1B7E2302541F00C60FE6 /* ScanViewController.swift in Sources */,
 				DE4FA1294BA08F70736224E01842C923 /* UIApplication+Extension.swift in Sources */,
 				3AE0AFA0E0CD5547AB89FD59985217A2 /* UIButton+Convenience.swift in Sources */,
 				87BF4894DDEA2FE266F8C4FD68FED06D /* UIButton+Extension.swift in Sources */,
 				A11EA6AF3C927901859934B608A3529D /* UIColor+Convenience.swift in Sources */,
 				369F0045AC68C2DB763BAB7EF1B12B1E /* UIImage+Extension.swift in Sources */,
 				7908A791E886EF67AD9CA5FB04E155DF /* UIImageView+Extension.swift in Sources */,
+				B87F1B7C2302541F00C60FE6 /* ScanNetAnimation.swift in Sources */,
 				67A5AEB93D4E973C1964E0E48EA0B6F7 /* UILabel+Convenience.swift in Sources */,
 				ECF26D46BA0B74E0FFBA067C636D07C8 /* UITextField+Convenience.swift in Sources */,
 				01F813113B008225FA5DA168273A4B99 /* UITextField+Extension.swift in Sources */,
@@ -1538,6 +1577,7 @@
 				A6D69BA0F6295D3743C3543838B95BD2 /* UIView+Frame.swift in Sources */,
 				9A2E1136071AEB6FB68F0C370F4E3293 /* UIViewController+Extension.swift in Sources */,
 				1A7A7BEA8DD91175ADCB3485DE55F37F /* ValueCheckTool.swift in Sources */,
+				B87F1B7D2302541F00C60FE6 /* ScanView.swift in Sources */,
 				855B8C27E6053289297A7D051C8447CD /* WebView+Extension.swift in Sources */,
 				364EC1E3E5F7FC47B61B7F50999A04F6 /* WKJSPOST.html in Sources */,
 				8F177D87F8A8330656B0A663F59E4863 /* WkwebViewConfig.swift in Sources */,
@@ -1547,6 +1587,7 @@
 				29C264987370ACAFF9EB2D832A1A9FA0 /* WPEmptyStyle.swift in Sources */,
 				3841CBA5E6332AC003F0440A26D53DFA /* WPEmptyView.swift in Sources */,
 				2FB72D70F86763B46538FD629F2D052A /* WPPopupStyle.swift in Sources */,
+				B87F1B822302541F00C60FE6 /* ScanWrapper.swift in Sources */,
 				3100EEBD62FC5362C299E69217FA6A22 /* WPPopupToll.swift in Sources */,
 				3600DF8D8AA6470187C50F715093E021 /* WPPopupView.swift in Sources */,
 				310643924E62AE50F89DFA7FC359D7D3 /* WPSheetView.swift in Sources */,

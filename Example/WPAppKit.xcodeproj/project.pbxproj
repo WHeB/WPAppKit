@@ -18,8 +18,6 @@
 		B87037B522CCBFB900D97413 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87037B322CCBFB800D97413 /* HomeViewController.swift */; };
 		B87037DC22CDA16600D97413 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87037DB22CDA16600D97413 /* WebViewController.swift */; };
 		B87037E122CDC99700D97413 /* HUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87037E022CDC99700D97413 /* HUDViewController.swift */; };
-		B8DA47C122F41AD400FDC49B /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DA47C022F41AD400FDC49B /* ScanViewController.swift */; };
-		B8DA47C422F4227A00FDC49B /* QRScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DA47C322F4227A00FDC49B /* QRScanView.swift */; };
 		B8E32F8E229D1BDF004324C5 /* ArrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F85229D1BDE004324C5 /* ArrayViewController.swift */; };
 		B8E32F8F229D1BDF004324C5 /* TextViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F86229D1BDE004324C5 /* TextViewViewController.swift */; };
 		B8E32F90229D1BDF004324C5 /* UIViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E32F87229D1BDE004324C5 /* UIViewViewController.swift */; };
@@ -48,8 +46,6 @@
 		B87037B322CCBFB800D97413 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B87037DB22CDA16600D97413 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		B87037E022CDC99700D97413 /* HUDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDViewController.swift; sourceTree = "<group>"; };
-		B8DA47C022F41AD400FDC49B /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
-		B8DA47C322F4227A00FDC49B /* QRScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanView.swift; sourceTree = "<group>"; };
 		B8E32F85229D1BDE004324C5 /* ArrayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayViewController.swift; sourceTree = "<group>"; };
 		B8E32F86229D1BDE004324C5 /* TextViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewViewController.swift; sourceTree = "<group>"; };
 		B8E32F87229D1BDE004324C5 /* UIViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewViewController.swift; sourceTree = "<group>"; };
@@ -112,7 +108,6 @@
 		607FACD21AFB9204008FA782 /* Example for WPAppKit */ = {
 			isa = PBXGroup;
 			children = (
-				B8DA47C222F4225500FDC49B /* QRScan */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				B8E32F85229D1BDE004324C5 /* ArrayViewController.swift */,
@@ -127,7 +122,6 @@
 				B87037B322CCBFB800D97413 /* HomeViewController.swift */,
 				B87037DB22CDA16600D97413 /* WebViewController.swift */,
 				B87037E022CDC99700D97413 /* HUDViewController.swift */,
-				B8DA47C022F41AD400FDC49B /* ScanViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -154,14 +148,6 @@
 				B4FA5E05089D758F0ADC782F /* LICENSE */,
 			);
 			name = "Podspec Metadata";
-			sourceTree = "<group>";
-		};
-		B8DA47C222F4225500FDC49B /* QRScan */ = {
-			isa = PBXGroup;
-			children = (
-				B8DA47C322F4227A00FDC49B /* QRScanView.swift */,
-			);
-			path = QRScan;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,7 +279,6 @@
 			files = (
 				B8E32F91229D1BDF004324C5 /* DictionaryViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
-				B8DA47C122F41AD400FDC49B /* ScanViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				B8E32F92229D1BDF004324C5 /* StringViewController.swift in Sources */,
 				B8E32F90229D1BDF004324C5 /* UIViewViewController.swift in Sources */,
@@ -305,7 +290,6 @@
 				B8E32F93229D1BDF004324C5 /* PageViewController.swift in Sources */,
 				B87037DC22CDA16600D97413 /* WebViewController.swift in Sources */,
 				B87037E122CDC99700D97413 /* HUDViewController.swift in Sources */,
-				B8DA47C422F4227A00FDC49B /* QRScanView.swift in Sources */,
 				B87037B522CCBFB900D97413 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

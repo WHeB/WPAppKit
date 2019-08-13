@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'WPAppKit'
-    s.version          = '0.4.0'
+    s.version          = '0.4.1'
     s.summary          = '搭建 Swift 项目常用类库整合'
     s.description      = <<-DESC
     Cocoa：Foundation,UIKit相关扩展
@@ -53,6 +53,13 @@ Pod::Spec.new do |s|
     # ---------------  WebView  -----------
     s.subspec 'WPWebView' do |ss|
         ss.source_files = 'WPAppKit/Classes/WPWebView/*.{swift,html}'
+    end
+    
+    # ---------------  CodeScan  -----------
+    s.subspec 'CodeScan' do |ss|
+        ss.source_files = 'WPAppKit/Classes/CodeScan/*.swift'
+        ss.resource = 'WPAppKit/Assets/CodeScan.bundle'
+        
     end
     
     # ---------------  第三方库 + 扩展  -----------
