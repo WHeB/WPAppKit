@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CommonCrypto
 
 public extension String {
     
@@ -146,11 +147,10 @@ public extension String {
         return strLength
     }
     
-    
-    
 }
 
 
+// MARK: stringSize
 public extension String {
 
     /// 获取文本高
@@ -171,6 +171,7 @@ public extension String {
 }
 
 
+// MARK: jsonString
 public extension String {
     
     /// jsonString转字典
@@ -195,10 +196,11 @@ public extension String {
 }
 
 
+// MARK: Range
 public extension String {
     
     /// Range转换为NSRange
-    func nsRange(from range: Range<String.Index>) -> NSRange {
+    public func nsRange(from range: Range<String.Index>) -> NSRange {
         let from = range.lowerBound.samePosition(in: utf16)
         let to = range.upperBound.samePosition(in: utf16)
         return NSRange(location: utf16.distance(from: utf16.startIndex, to: from!),
@@ -206,7 +208,7 @@ public extension String {
     }
     
     /// Range转换为NSRange
-    func range(from nsRange: NSRange) -> Range<String.Index>? {
+    public func range(from nsRange: NSRange) -> Range<String.Index>? {
         guard
             let from16 = utf16.index(utf16.startIndex, offsetBy: nsRange.location,
                                      limitedBy: utf16.endIndex),
@@ -218,3 +220,39 @@ public extension String {
         return from ..< to
     }
 }
+
+// MARK: 加密
+public extension String {
+    
+    /// MD5加密
+    public func md5() -> String {
+        let cStrl = cString(using: String.Encoding(rawValue: String.Encoding.utf8.rawValue));
+        let buffer = UnsafeMutablePointer<UInt8>.allocate(capacity: 16);
+        CC_MD5(cStrl, CC_LONG(strlen(cStrl!)), buffer);
+        var md5String = "";
+        for idx in 0...15 {
+            let obcStrl = String.init(format: "%02x", buffer[idx]);
+            md5String.append(obcStrl);
+        }
+        free(buffer);
+        return md5String;
+    }
+    
+    /// base64 编码
+    public func base64EncodedString(options: Data.Base64EncodingOptions = []) -> String? {
+        let data = self.data(using: .utf8)
+        return data?.base64EncodedString(options: options)
+    }
+    
+    /// base64 解码
+    public func base64DecodedString(options: Data.Base64DecodingOptions = []) -> String? {
+        let base64Data = Data(base64Encoded: self, options: options)
+        guard let data = base64Data else {
+            return nil
+        }
+        return String(data: data, encoding: .utf8)
+    }
+}
+
+
+

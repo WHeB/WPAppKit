@@ -145,11 +145,7 @@ public class AppHud: NSObject {
     /// 隐藏提示
     public static func hideHudView() {
         let toView = getCurrentViewWithView()
-        if let view: MBProgressHUD = toView.viewWithTag(-200) as? MBProgressHUD {
-            view.hide(animated: true)
-        }else {
-            MBProgressHUD.hide(for: toView, animated: true)
-        }
+        MBProgressHUD.hide(for: toView, animated: true)
         if let masking = toView.viewWithTag(-100) {
             masking.removeFromSuperview()
         }
