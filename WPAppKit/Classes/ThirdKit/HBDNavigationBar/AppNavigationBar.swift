@@ -8,7 +8,7 @@
 import UIKit
 import HBDNavigationBar
 
-extension UIViewController {
+public extension UIViewController {
     
     /*
      github： https://github.com/listenzz/HBDNavigationBar
@@ -34,7 +34,7 @@ extension UIViewController {
     ///   - barShadowHidden: 是否隐藏线
     ///   - barHidden: 是否隐藏导航栏
     ///   - barStyle: 状态栏风格
-    func customNavigationBar(_ barColor: UIColor,
+    public func customNavigationBar(_ barColor: UIColor,
                           barShadowHidden: Bool? = false,
                           barHidden: Bool? = false,
                           barStyle: UIBarStyle? = .default) {
@@ -51,7 +51,7 @@ extension UIViewController {
     ///   - barTintColor: 左右标题颜色
     ///   - titleTxtColor: 中间标题颜色
     ///   - titleTxtFont: 中间标题字号
-    func customNavigationBar(barTintColor: UIColor,
+    public func customNavigationBar(barTintColor: UIColor,
                              titleTxtColor: UIColor,
                              titleTxtFont: UIFont) {
         self.hbd_tintColor = barTintColor
@@ -62,47 +62,47 @@ extension UIViewController {
     }
     
     /// 设置导航栏颜色
-    func setBarColor(_ color: UIColor) {
+    public func setBarColor(_ color: UIColor) {
         self.hbd_barTintColor = color
     }
     
     /// 设置导航栏隐藏状态
-    func setBarHide(_ hide: Bool) {
+    public func setBarHide(_ hide: Bool) {
         self.hbd_barHidden = hide
     }
     
     /// 设置导航栏线状态
-    func setBarShadowHidden(_ hide: Bool) {
+    public func setBarShadowHidden(_ hide: Bool) {
         self.hbd_barShadowHidden = hide
     }
     
     /// 设置状态栏风格
-    func setBarStyle(_ style: UIBarStyle) {
+    public func setBarStyle(_ style: UIBarStyle) {
         self.hbd_barStyle = style
     }
     
     /// 设置导航栏透明度
-    func setBarAlpha(_ alpha: CGFloat) {
+    public func setBarAlpha(_ alpha: CGFloat) {
         self.hbd_barAlpha = Float(alpha)
     }
     
     /// 设置导航栏背景图片 （barTintColor会失效）
-    func setBarImage(_ image: UIImage) {
+    public func setBarImage(_ image: UIImage) {
         self.hbd_barImage = image
     }
     
     /// 更新导航栏属性设置
-    func updateNavigationBarIfNedds() {
+    public func updateNavigationBarIfNedds() {
         self.hbd_setNeedsUpdateNavigationBar()
     }
 
     /// 当前页面是否可以右滑返回，默认是 YES
-    func isEnableSwipeBack(_ enable: Bool) {
+    public func isEnableSwipeBack(_ enable: Bool) {
         self.hbd_clickBackEnabled = enable
     }
     
     /// 当前页面是否响应右滑返回或返回按钮返回，默认是 YES
-    func isEnableBackInteractive(_ enable: Bool) {
+    public func isEnableBackInteractive(_ enable: Bool) {
         self.hbd_backInteractive = enable
     }
     

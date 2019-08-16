@@ -225,13 +225,14 @@ public extension String {
 public extension String {
     
     /// MD5加密
-    public func md5() -> String {
+    public func md5(_ isSmall: Bool? = true) -> String {
         let cStrl = cString(using: String.Encoding(rawValue: String.Encoding.utf8.rawValue));
         let buffer = UnsafeMutablePointer<UInt8>.allocate(capacity: 16);
         CC_MD5(cStrl, CC_LONG(strlen(cStrl!)), buffer);
         var md5String = "";
+        let letters = isSmall! ? "%02x" : "%02X"
         for idx in 0...15 {
-            let obcStrl = String.init(format: "%02x", buffer[idx]);
+            let obcStrl = String.init(format: letters, buffer[idx]);
             md5String.append(obcStrl);
         }
         free(buffer);
