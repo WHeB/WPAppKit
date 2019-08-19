@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'WPAppKit'
-    s.version          = '0.4.3'
+    s.version          = '0.4.4'
     s.summary          = '搭建 Swift 项目常用类库整合'
     s.description      = <<-DESC
     Cocoa：Foundation,UIKit相关扩展
@@ -19,6 +19,7 @@ Pod::Spec.new do |s|
     s.static_framework = true
     # 集成的库
     s.dependency 'SnapKit', '~> 4.0.0'
+    s.dependency 'Alamofire', '4.8.0'
     s.dependency 'Localize-Swift', '~> 2.0'
     
     # ---------------  Cocoa常用扩展  -----------
@@ -41,8 +42,9 @@ Pod::Spec.new do |s|
     end
     
     # ---------------  空页面  -----------
-    s.subspec 'WPEmptyView' do |ss|
-        ss.source_files = 'WPAppKit/Classes/WPEmptyView/*.swift'
+    # https://github.com/Ethan561/HDEmptyView
+    s.subspec 'EmptyView' do |ss|
+        ss.source_files = 'WPAppKit/Classes/EmptyView/*.swift'
     end
     
     # ---------------  弹窗  -----------

@@ -30,14 +30,17 @@ WPAppKit is available under the MIT license. See the LICENSE file for more info.
 ```
 
 |── SnapKit
+|── Alamofire
+|── Localize-Swift
 |── WPAppKit 			
 |   |── Cocoa                        
 |   |   |── UIKit                        
 |   |   |── UIFoundation                          
 |   |── Tool                        
-|   |── WPEmptyView                           
+|   |── EmptyView                           
 |   |── WPWebView                                                                  
-|   |── WPPopupView                                           
+|   |── WPPopupView                                        
+|   |── CodeScan                                         
 |   |── ThirdKit                              
 |   |   |── MJRefresh                              
 |   |   |── MBHudProgress                              

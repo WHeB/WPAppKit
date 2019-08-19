@@ -26,7 +26,7 @@ public extension UIViewController {
      */
     
     
-
+    
     /// 设置导航栏属性
     ///
     /// - Parameters:
@@ -35,9 +35,9 @@ public extension UIViewController {
     ///   - barHidden: 是否隐藏导航栏
     ///   - barStyle: 状态栏风格
     public func customNavigationBar(_ barColor: UIColor,
-                          barShadowHidden: Bool? = false,
-                          barHidden: Bool? = false,
-                          barStyle: UIBarStyle? = .default) {
+                                    barShadowHidden: Bool? = false,
+                                    barHidden: Bool? = false,
+                                    barStyle: UIBarStyle? = .default) {
         
         self.hbd_barTintColor = barColor
         self.hbd_barShadowHidden = barShadowHidden ?? false
@@ -51,10 +51,10 @@ public extension UIViewController {
     ///   - barTintColor: 左右标题颜色
     ///   - titleTxtColor: 中间标题颜色
     ///   - titleTxtFont: 中间标题字号
-    public func customNavigationBar(barTintColor: UIColor,
-                             titleTxtColor: UIColor,
-                             titleTxtFont: UIFont) {
-        self.hbd_tintColor = barTintColor
+    public func customNavigationBar(tintColor: UIColor,
+                                    titleTxtColor: UIColor,
+                                    titleTxtFont: UIFont) {
+        self.hbd_tintColor = tintColor
         self.hbd_titleTextAttributes = [
             NSAttributedString.Key.foregroundColor : titleTxtColor,
             NSAttributedString.Key.font : titleTxtFont
@@ -76,11 +76,6 @@ public extension UIViewController {
         self.hbd_barShadowHidden = hide
     }
     
-    /// 设置状态栏风格
-    public func setBarStyle(_ style: UIBarStyle) {
-        self.hbd_barStyle = style
-    }
-    
     /// 设置导航栏透明度
     public func setBarAlpha(_ alpha: CGFloat) {
         self.hbd_barAlpha = Float(alpha)
@@ -95,7 +90,7 @@ public extension UIViewController {
     public func updateNavigationBarIfNedds() {
         self.hbd_setNeedsUpdateNavigationBar()
     }
-
+    
     /// 当前页面是否可以右滑返回，默认是 YES
     public func isEnableSwipeBack(_ enable: Bool) {
         self.hbd_clickBackEnabled = enable

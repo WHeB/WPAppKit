@@ -13,6 +13,7 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		B843F6B3230A3F7A005CCD16 /* AttributeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B843F6B2230A3F7A005CCD16 /* AttributeViewController.swift */; };
 		B84F1B8122E166750035628F /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = B84F1B8022E166750035628F /* loading.gif */; };
 		B87037B422CCBFB900D97413 /* BubbleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87037B222CCBFB800D97413 /* BubbleViewController.swift */; };
 		B87037B522CCBFB900D97413 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87037B322CCBFB800D97413 /* HomeViewController.swift */; };
@@ -41,6 +42,7 @@
 		71DB0440C96D13D4D6DFF6F6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		7ED4B3DA385CB94FBC76C400 /* Pods_WPAppKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WPAppKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4FA5E05089D758F0ADC782F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		B843F6B2230A3F7A005CCD16 /* AttributeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeViewController.swift; sourceTree = "<group>"; };
 		B84F1B8022E166750035628F /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
 		B87037B222CCBFB800D97413 /* BubbleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleViewController.swift; sourceTree = "<group>"; };
 		B87037B322CCBFB800D97413 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				B87037B322CCBFB800D97413 /* HomeViewController.swift */,
 				B87037DB22CDA16600D97413 /* WebViewController.swift */,
 				B87037E022CDC99700D97413 /* HUDViewController.swift */,
+				B843F6B2230A3F7A005CCD16 /* AttributeViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -280,6 +283,7 @@
 				B8E32F91229D1BDF004324C5 /* DictionaryViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				B843F6B3230A3F7A005CCD16 /* AttributeViewController.swift in Sources */,
 				B8E32F92229D1BDF004324C5 /* StringViewController.swift in Sources */,
 				B8E32F90229D1BDF004324C5 /* UIViewViewController.swift in Sources */,
 				B87037B422CCBFB900D97413 /* BubbleViewController.swift in Sources */,

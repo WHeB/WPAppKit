@@ -37,7 +37,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             ("PageView", PageViewController()),
             ("PopView", HomeViewController()),
             ("WebView", WebViewController()),
-            ("HUD", HUDViewController())
+            ("HUD", HUDViewController()),
+            ("富文本", AttributeViewController())
             ]
         return array
     }()
