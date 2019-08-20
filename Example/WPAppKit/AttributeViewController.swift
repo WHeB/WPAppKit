@@ -22,11 +22,6 @@ class AttributeViewController: UIViewController {
         
         let attString = NSAttributedString.setBaseAttributToString(original: origin, target: "明月", font: UIFont.systemFont(ofSize: 30), textColor: UIColor.black)
         
-//        label.attributedText = attString
-        
-        
-    
-        
         
     }
     
