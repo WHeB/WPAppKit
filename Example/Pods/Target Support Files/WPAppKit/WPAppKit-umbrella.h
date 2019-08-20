@@ -11,6 +11,9 @@
 #endif
 
 #import "MBProgressHUD.h"
+#import "HBDNavigationController.h"
+#import "HBDNavigationBar.h"
+#import "UIViewController+HBD.h"
 
 FOUNDATION_EXPORT double WPAppKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char WPAppKitVersionString[];
