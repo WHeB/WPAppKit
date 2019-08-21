@@ -10,7 +10,7 @@ import UIKit
 
 /// 方位
 public enum Orientation {
-    case lettTop
+    case leftTop
     case top
     case rightTop
     case right
@@ -64,6 +64,34 @@ public extension UIView {
         self.layer.addSublayer(shapeLayer)
     }
     
+    /// 设置圆角 + 边框
+    ///
+    /// - Parameters:
+    ///   - direction: 圆角位置
+    ///   - cornerRadius: 圆角大小
+    ///   - color: 边框颜色
+    ///   - borderWidth: 边框宽度
+    ///   - bounds: 控件大小 自动布局需设置
+    public func setCornerRadiusAndBorder(_ direction: UIRectCorner, cornerRadius: CGFloat, color: UIColor, borderWidth: CGFloat, bounds: CGRect? = CGRect.zero) {
+        
+        let tempBounds = bounds == CGRect.zero ? self.bounds : bounds
+        let cornerSize = CGSize(width: cornerRadius, height: cornerRadius)
+        let maskPath = UIBezierPath(roundedRect: tempBounds!, byRoundingCorners: direction, cornerRadii: cornerSize)
+        
+        let maskLayer = CAShapeLayer()
+        maskLayer.frame = tempBounds!
+        maskLayer.path = maskPath.cgPath
+        self.layer.mask = maskLayer
+        
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.frame = tempBounds!
+        shapeLayer.path = maskPath.cgPath
+        shapeLayer.lineWidth = borderWidth
+        shapeLayer.strokeColor = color.cgColor
+        shapeLayer.fillColor = UIColor.clear.cgColor
+        self.layer.addSublayer(shapeLayer)
+    }
+    
     /// 为view添加渐变色
     ///
     /// - Parameters:
@@ -77,7 +105,7 @@ public extension UIView {
         
         // 起点
         switch startOrientation {
-        case .lettTop:
+        case .leftTop:
             gradientLayer.startPoint = CGPoint.init(x: 0, y: 0)
             break
         case .top:
@@ -104,7 +132,7 @@ public extension UIView {
         }
         // 终点
         switch endOrientation {
-        case .lettTop:
+        case .leftTop:
             gradientLayer.endPoint = CGPoint.init(x: 0, y: 0)
             break
         case .top:
