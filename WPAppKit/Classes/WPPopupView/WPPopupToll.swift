@@ -12,7 +12,7 @@ import UIKit
 public struct WPPopupToll {
     
     /// 判断是否有齐刘海
-    public static var isHasSafeArea: Bool {
+    public static var popup_isHasSafeArea: Bool {
         if UIDevice.current.userInterfaceIdiom != UIUserInterfaceIdiom.phone {
             return false
         }

@@ -10,6 +10,12 @@ import WebKit
 
 public class WPWebView: UIView {
     
+    //设置代理
+    public weak var delegate: WKWebViewDelegate?
+    
+    /// WebView配置项
+    public var webConfig : WkwebViewConfig?
+    
     /// 事件
     fileprivate var target: AnyObject?
     
@@ -17,7 +23,7 @@ public class WPWebView: UIView {
     fileprivate var webView = WKWebView()
     
     /// 进度条
-    var progressView = UIProgressView()
+    fileprivate var progressView = UIProgressView()
     
     /// 创建一个webiview的配置项
     fileprivate let configuretion = WKWebViewConfiguration()
@@ -28,14 +34,8 @@ public class WPWebView: UIView {
     //是否是第一次加载
     fileprivate var needLoadJSPOST: Bool?
     
-    /// WebView配置项
-    var webConfig : WkwebViewConfig?
-    
     //保存请求链接
     fileprivate var snapShotsArray: Array<Any>?
-    
-    //设置代理
-    weak var delegate: WKWebViewDelegate?
     
     override public init(frame: CGRect) {
         super.init(frame: frame)
@@ -66,7 +66,7 @@ public class WPWebView: UIView {
         //滚动条
         webView.scrollView.showsVerticalScrollIndicator = webConfig.isShowScrollIndicator
         webView.scrollView.showsHorizontalScrollIndicator = webConfig.isShowScrollIndicator
-
+        
         // 监听支持KVO的属性
         webView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil)
         //内容自适应
@@ -85,7 +85,7 @@ public class WPWebView: UIView {
     }
     
     /// 加载webView
-    func webloadType(_ target:AnyObject,_ loadType: WkwebLoadType) {
+    public func webloadType(_ target:AnyObject,_ loadType: WkwebLoadType) {
         self.target = target
         setupUI(webConfig:webConfig ?? WkwebViewConfig())
         
@@ -173,13 +173,16 @@ public class WPWebView: UIView {
     open override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "estimatedProgress"{
             // 设置进度条透明度
-            progressView.alpha = CGFloat(1.0 - webView.estimatedProgress)
+            progressView.alpha = 1
             // 给进度条添加进度和动画
             progressView.setProgress(Float(webView.estimatedProgress), animated: true)
             // 结束进度
             if Float(webView.estimatedProgress) >= 1.0{
-                progressView.alpha = 0.0
-                progressView .setProgress(0.0, animated: false)
+                UIView.animate(withDuration: 0.3, delay: 0.3, options: .curveEaseOut, animations: {
+                    self.progressView.alpha = 0.0
+                }, completion: { (Bool) in
+                    self.progressView .setProgress(0.0, animated: false)
+                })
             }
         }
     }

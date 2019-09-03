@@ -20,4 +20,8 @@ public extension UITextField {
         self.setValue(font, forKey: "_placeholderLabel.font")
     }
     
+    /// 设置光标颜色
+    public func setCursor(color: UIColor) {
+        self.tintColor = color
+    }
 }

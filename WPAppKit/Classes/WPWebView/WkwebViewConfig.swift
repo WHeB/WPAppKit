@@ -45,10 +45,11 @@ public struct WkwebViewConfig {
     /// 配置支付宝支付成功返回指定APPScheme
     public var aliPayScheme: String = "zhifubao"
     
+    public init() {}
 }
 
 //网页加载类型
-public enum WkwebLoadType{
+public enum WkwebLoadType {
     
     /// 加载普通URL
     case URLString(url:String)
@@ -60,7 +61,7 @@ public enum WkwebLoadType{
     case POST(url:String,parameters: [String:Any])
 }
 
-public protocol WKWebViewDelegate:class {
+public protocol WKWebViewDelegate: class {
     
     /// 服务器开始请求的时候调用
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void)
@@ -84,7 +85,7 @@ public protocol WKWebViewDelegate:class {
     func webViewEvaluateJavaScript(_ result:Any?,error:Error?)
 }
 
-extension WKWebViewDelegate {
+public extension WKWebViewDelegate {
     /// 服务器开始请求的时候调用
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void){}
     

@@ -35,14 +35,9 @@ public extension UIViewController {
     ///   - barHidden: 是否隐藏导航栏
     ///   - barStyle: 状态栏风格
     public func customNavigationBar(_ barColor: UIColor,
-                                    barShadowHidden: Bool? = false,
-                                    barHidden: Bool? = false,
-                                    barStyle: UIBarStyle? = .default) {
-        
+                                    barShadowHidden: Bool? = false) {
         self.hbd_barTintColor = barColor
         self.hbd_barShadowHidden = barShadowHidden ?? false
-        self.hbd_barHidden = barHidden ?? false
-        self.hbd_barStyle = barStyle ?? .default
     }
     
     /// 设置导航栏标题属性

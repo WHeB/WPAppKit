@@ -18,6 +18,7 @@ public enum Orientation {
     case bottom
     case leftBottom
     case left
+    case center
 }
 
 public extension UIView {
@@ -127,7 +128,10 @@ public extension UIView {
             gradientLayer.startPoint = CGPoint.init(x: 0, y: 1)
             break
         case .left:
-            gradientLayer.startPoint = CGPoint.init(x: 0.5, y: 1)
+            gradientLayer.startPoint = CGPoint.init(x: 0, y: 0.5)
+            break
+        case .center:
+            gradientLayer.startPoint = CGPoint.init(x: 0.5, y: 0.5)
             break
         }
         // 终点
@@ -154,7 +158,10 @@ public extension UIView {
             gradientLayer.endPoint = CGPoint.init(x: 0, y: 1)
             break
         case .left:
-            gradientLayer.endPoint = CGPoint.init(x: 0.5, y: 1)
+            gradientLayer.endPoint = CGPoint.init(x: 0, y: 0.5)
+            break
+        case .center:
+            gradientLayer.endPoint = CGPoint.init(x: 0.5, y: 0.5)
             break
         }
         let tempBounds = bounds == CGRect.zero ? self.bounds : bounds

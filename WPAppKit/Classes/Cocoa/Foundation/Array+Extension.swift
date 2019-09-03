@@ -72,4 +72,12 @@ public extension Array {
         }
     }
     
+    /// 找出数组中的元素
+    // let one = groups.findElement {return $0 == 1}
+    public func findElement(match:(Element) -> Bool) -> Element? {
+        for element in self where match(element){
+            return element
+        }
+        return nil
+    }
 }

@@ -94,6 +94,14 @@ public struct DeviceInfo {
         return UIScreen.main.bounds.size.height - headerBarHeight - tabBarHeight
     }
     
+    /// 底部安全区域高度
+    public static var bottomSafeHeight: CGFloat {
+        if #available(iOS 11.0, *) {
+            return UIApplication.shared.windows[0].safeAreaInsets.bottom
+        }
+        return 0
+    }
+    
     /// Iphone4
     public static var isIphone4: Bool {
         return screenHeight == 480.000000 ? true : false

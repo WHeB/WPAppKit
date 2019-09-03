@@ -51,7 +51,7 @@ open class WPSheetView: UIView {
         }
         
         // buttons
-        if WPPopupToll.isHasSafeArea {
+        if WPPopupToll.popup_isHasSafeArea {
             self.buttonH = CGFloat(buttons.count) * buttonHeight + 20 + 5
             let safetyView = UIView.init(frame: CGRect.init(x: 0, y: self.buttonH - 20, width: self.sheetViewW, height: 20))
             safetyView.backgroundColor = self.style.popupBgColor
