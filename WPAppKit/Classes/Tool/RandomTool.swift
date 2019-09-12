@@ -12,10 +12,10 @@ public class RandomTool: NSObject {
 
     /// 随机色
     public static func randomColor() -> UIColor {
-        return UIColor(red: CGFloat(arc4random_uniform(256) / 255),
-                       green: CGFloat(arc4random_uniform(256) / 255),
-                       blue: CGFloat(arc4random_uniform(256) / 255),
-                       alpha: 1)
+        let red = CGFloat(arc4random() % 256) / 255.0
+        let green = CGFloat(arc4random() % 256) / 255.0
+        let blue = CGFloat(arc4random() % 256) / 255.0
+        return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
     }
     
     /// 创建随机字符串

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WPAppKit
 
 let ScreenWidth: CGFloat = UIScreen.main.bounds.size.width
 let ScreenHeight: CGFloat = UIScreen.main.bounds.size.height

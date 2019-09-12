@@ -33,7 +33,7 @@ class BubbleViewController: UIViewController {
         style.lineColor = UIColor.white
         style.triangleOrientation = .top
         style.adjustDistance = 60
-        let Y: CGFloat = WPPopupToll.popup_isHasSafeArea ? 88 : 64
+        let Y: CGFloat = 88
         let point = CGPoint.init(x: ScreenWidth - 80, y: Y)
         WPPopupView.showBubbleView(startPoint: point, style: style, viewSize: CGSize.init(width: 150, height: 200), imgNameAndTitleArray: [("iconMsg", "发起群聊"), ("iconAdd", "添加朋友"), ("iconScan", "扫一扫"), ("iconPay", "收付款")]) { (string, index) in
             print(string)

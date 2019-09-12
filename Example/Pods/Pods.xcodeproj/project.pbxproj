@@ -152,6 +152,7 @@
 		B843F6FB230AADE0005CCD16 /* UIView+Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = B843F6F6230AADDF005CCD16 /* UIView+Position.swift */; };
 		B843F6FC230AADE0005CCD16 /* UIScrollView+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = B843F6F7230AADDF005CCD16 /* UIScrollView+Empty.swift */; };
 		B843F6FD230AADE0005CCD16 /* HDEmptyBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B843F6F8230AADDF005CCD16 /* HDEmptyBaseView.swift */; };
+		B849D1F9232A50980017EDCA /* CacheManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B849D1F8232A50970017EDCA /* CacheManage.swift */; };
 		B87F1B482301358800C60FE6 /* AppNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87F1B472301358800C60FE6 /* AppNavigationBar.swift */; };
 		B87F1B7C2302541F00C60FE6 /* ScanNetAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87F1B752302541F00C60FE6 /* ScanNetAnimation.swift */; };
 		B87F1B7D2302541F00C60FE6 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87F1B762302541F00C60FE6 /* ScanView.swift */; };
@@ -440,6 +441,7 @@
 		B843F6F6230AADDF005CCD16 /* UIView+Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Position.swift"; sourceTree = "<group>"; };
 		B843F6F7230AADDF005CCD16 /* UIScrollView+Empty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Empty.swift"; sourceTree = "<group>"; };
 		B843F6F8230AADDF005CCD16 /* HDEmptyBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HDEmptyBaseView.swift; sourceTree = "<group>"; };
+		B849D1F8232A50970017EDCA /* CacheManage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CacheManage.swift; path = WPAppKit/Classes/Tool/CacheManage.swift; sourceTree = "<group>"; };
 		B87F1B472301358800C60FE6 /* AppNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationBar.swift; sourceTree = "<group>"; };
 		B87F1B752302541F00C60FE6 /* ScanNetAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanNetAnimation.swift; sourceTree = "<group>"; };
 		B87F1B762302541F00C60FE6 /* ScanView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
@@ -697,6 +699,7 @@
 		7CE4412DCA49E067475F9D414BF7EC46 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				B849D1F8232A50970017EDCA /* CacheManage.swift */,
 				77681A355FE11390A40C08B73EB93F79 /* CurrentManager.swift */,
 				6850247669A3F3FC781DBAA5CDC165C0 /* DeviceInfo.swift */,
 				CC6610E99B4947ADFB3FD2951748A05B /* FileUtils.swift */,
@@ -1625,6 +1628,7 @@
 				54441F4E01E4D1EEC2E0D11B92993EE5 /* WPAppKit-dummy.m in Sources */,
 				277B4AB9A9D63D5FF99060FA1325460F /* WPBubbleView.swift in Sources */,
 				2FB72D70F86763B46538FD629F2D052A /* WPPopupStyle.swift in Sources */,
+				B849D1F9232A50980017EDCA /* CacheManage.swift in Sources */,
 				B87F1B822302541F00C60FE6 /* ScanWrapper.swift in Sources */,
 				3100EEBD62FC5362C299E69217FA6A22 /* WPPopupToll.swift in Sources */,
 				3600DF8D8AA6470187C50F715093E021 /* WPPopupView.swift in Sources */,

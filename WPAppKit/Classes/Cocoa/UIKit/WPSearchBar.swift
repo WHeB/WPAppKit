@@ -85,6 +85,9 @@ public class WPSearchBar: UISearchBar, UITextFieldDelegate {
     }
     
     public func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        if let text = textField.text, text.count > 0 { // 有文字就不删除
+            return true
+        }
         if #available(iOS 11.0, *) {
             UIView.animate(withDuration: 0.25) {
                 self.setPositionAdjustment(UIOffset.init(horizontal: (self.width - (self.searchIconSize.width + 13 + self.placeholderSize.width)) / 2, vertical: 0), for: .search)

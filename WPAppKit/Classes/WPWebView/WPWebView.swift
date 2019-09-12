@@ -142,7 +142,7 @@ public class WPWebView: UIView {
     public func goForward() {
         webView.goForward()
     }
-    /// 遗传webView
+    /// 移除webView
     public func removeWebView(){
         webView.removeObserver(self, forKeyPath: "estimatedProgress")
         if let scriptMessage = webConfig?.scriptMessageHandlerArray {
@@ -202,7 +202,7 @@ extension WPWebView: WKScriptMessageHandler{
 extension WPWebView: WKNavigationDelegate{
     
     //服务器开始请求的时候调用
-    private func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+    public func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         self.delegate?.webView(webView, decidePolicyFor: navigationAction, decisionHandler: decisionHandler)
         
         let navigationURL = navigationAction.request.url?.absoluteString
@@ -261,12 +261,12 @@ extension WPWebView: WKNavigationDelegate{
     }
     
     //开始加载
-    private func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+    public func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         self.delegate?.webView(webView, didStartProvisionalNavigation: navigation)
     }
     
     //这个是网页加载完成，导航的变化
-    private func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+    public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         self.delegate?.webView(webView, didFinish: navigation)
         // 判断是否需要加载（仅在第一次加载）
         if needLoadJSPOST == true {
@@ -278,11 +278,11 @@ extension WPWebView: WKNavigationDelegate{
     }
     
     //跳转失败的时候调用
-    private func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+    public func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         self.delegate?.webView(webView, didFail: navigation, withError: error)
     }
     // 内容加载失败时候调用
-    private func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
+    public func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
         self.delegate?.webView(webView, didFailProvisionalNavigation: navigation, withError: error)
         progressView.isHidden = true
     }
@@ -300,7 +300,7 @@ extension WPWebView: WKNavigationDelegate{
 extension WPWebView: WKUIDelegate{
     
     // 获取js 里面的提示
-    private func webView(_ webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping () -> Void) {
+    public func webView(_ webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping () -> Void) {
         
         let alert = UIAlertController(title: "提示", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "确定", style: .default, handler: { (_) -> Void in
@@ -313,7 +313,7 @@ extension WPWebView: WKUIDelegate{
     }
     
     // js 信息的交流
-    private func webView(_ webView: WKWebView, runJavaScriptConfirmPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (Bool) -> Void) {
+    public func webView(_ webView: WKWebView, runJavaScriptConfirmPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (Bool) -> Void) {
         
         let alert = UIAlertController(title: "提示", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "确定", style: .default, handler: { (_) -> Void in
@@ -326,7 +326,7 @@ extension WPWebView: WKUIDelegate{
     }
     
     // 交互。可输入的文本。
-    private func webView(_ webView: WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: String, defaultText: String?, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (String?) -> Void) {
+    public func webView(_ webView: WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: String, defaultText: String?, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (String?) -> Void) {
         
         let alert = UIAlertController(title: prompt, message: defaultText, preferredStyle: .alert)
         

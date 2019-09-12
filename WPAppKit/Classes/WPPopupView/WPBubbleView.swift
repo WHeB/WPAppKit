@@ -126,6 +126,8 @@ open class WPBubbleView: UIView, UITableViewDataSource, UITableViewDelegate {
         tableView.backgroundColor = self.style.popupBgColor
         tableView.rowHeight = self.cellHeight
         tableView.isScrollEnabled = false
+        tableView.showsVerticalScrollIndicator = false
+        tableView.showsHorizontalScrollIndicator = false
         tableView.separatorStyle = .none
         tableView.tableHeaderView = UIView()
         tableView.tableFooterView = UIView()
@@ -146,9 +148,9 @@ open class WPBubbleView: UIView, UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
-    private func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = self.sourceArray[indexPath.row]
-        self.clickBlock!(item.1, indexPath.row)
+        self.clickBlock?(item.1, indexPath.row)
         self.hideBubbleView()
     }
     

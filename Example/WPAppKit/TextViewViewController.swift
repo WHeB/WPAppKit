@@ -18,7 +18,6 @@ class TextViewViewController: UIViewController {
         var textView = UITextView.init(frame: CGRect.init(x: 50, y: 100, width: 200, height: 100))
         self.view.addSubview(textView)
         textView.setBorder(color: UIColor.orange, borderWidth: 2)
-        
         textView.placeholder = "请输入内容"
         textView.textContainerInset = UIEdgeInsetsMake(10, 10, 10, 10)
     }

@@ -9,10 +9,10 @@
 import UIKit
 
 //-------------- popup_ 是防止冲冲突处理 --------------//
-public struct WPPopupToll {
+internal struct WPPopupToll {
     
     /// 判断是否有齐刘海
-    public static var popup_isHasSafeArea: Bool {
+    internal static var popup_isHasSafeArea: Bool {
         if UIDevice.current.userInterfaceIdiom != UIUserInterfaceIdiom.phone {
             return false
         }
@@ -26,10 +26,10 @@ public struct WPPopupToll {
     }
 }
 
-extension UIView {
+internal extension UIView {
     
     /// x值
-    public var popup_x: CGFloat{
+    internal var popup_x: CGFloat{
         get{
             return self.frame.origin.x
         }
@@ -41,7 +41,7 @@ extension UIView {
     }
     
     /// y值
-    public var popup_y: CGFloat{
+    internal var popup_y: CGFloat{
         get{
             return self.frame.origin.y
         }
@@ -53,7 +53,7 @@ extension UIView {
     }
     
     /// 右边界的x值
-    public var popup_rightX: CGFloat{
+    internal var popup_rightX: CGFloat{
         get{
             return self.popup_x + self.popup_width
         }
@@ -65,7 +65,7 @@ extension UIView {
     }
     
     /// 下边界的y值
-    public var popup_bottomY: CGFloat{
+    internal var popup_bottomY: CGFloat{
         get{
             return self.popup_y + self.popup_height
         }
@@ -77,7 +77,7 @@ extension UIView {
     }
     
     /// 中心x值
-    public var popup_centerX : CGFloat{
+    internal var popup_centerX : CGFloat{
         get{
             return self.center.x
         }
@@ -87,7 +87,7 @@ extension UIView {
     }
     
     /// 中心y值
-    public var popup_centerY : CGFloat{
+    internal var popup_centerY : CGFloat{
         get{
             return self.center.y
         }
@@ -97,7 +97,7 @@ extension UIView {
     }
     
     /// 宽度
-    public var popup_width: CGFloat{
+    internal var popup_width: CGFloat{
         get{
             return self.frame.size.width
         }
@@ -109,7 +109,7 @@ extension UIView {
     }
     
     /// 高度
-    public var popup_height: CGFloat{
+    internal var popup_height: CGFloat{
         get{
             return self.frame.size.height
         }
@@ -121,7 +121,7 @@ extension UIView {
     }
     
     /// 起点
-    public var popup_origin: CGPoint{
+    internal var popup_origin: CGPoint{
         get{
             return self.frame.origin
         }
@@ -132,7 +132,7 @@ extension UIView {
     }
     
     /// 大小
-    public var popup_size: CGSize{
+    internal var popup_size: CGSize{
         get{
             return self.frame.size
         }
@@ -143,7 +143,7 @@ extension UIView {
     }
 }
 
-public extension UIColor {
+internal extension UIColor {
     
     ///  设置RGB颜色
     private convenience init(popup_red: CGFloat, popup_green: CGFloat, popup_blue: CGFloat, alpha: CGFloat = 1.0) {
@@ -181,16 +181,16 @@ public extension UIColor {
 }
 
 
-extension String {
+internal extension String {
     
     // 获取文本高
-    public func  popup_getTxtHeight(txtFont: UIFont, maxWidth: CGFloat) -> CGFloat {
+    internal func  popup_getTxtHeight(txtFont: UIFont, maxWidth: CGFloat) -> CGFloat {
         let size = CGSize.init(width: maxWidth, height: 100000)
         let stringSize = (self as NSString).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font : txtFont], context: nil)
         return stringSize.height
     }
     // 获取文本宽
-    public func  popup_getTxtWidth(txtFont: UIFont, maxHeight: CGFloat) -> CGFloat {
+    internal func  popup_getTxtWidth(txtFont: UIFont, maxHeight: CGFloat) -> CGFloat {
         let size = CGSize.init(width: 100000, height: maxHeight)
         let stringSize = (self as NSString).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font : txtFont], context: nil)
         return stringSize.width

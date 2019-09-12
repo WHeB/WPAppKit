@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FileUtils: NSObject {
+public class FileUtils: NSObject {
     
     /// 获取文件类型
     public class func getFileType(data: Data) -> String {
