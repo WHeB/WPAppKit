@@ -1,8 +1,7 @@
 
-
 Pod::Spec.new do |s|
     s.name             = 'WPAppKit'
-    s.version          = '0.5.2'
+    s.version          = '0.5.3'
     s.summary          = '搭建 Swift 项目常用类库整合'
     s.description      = <<-DESC
     Cocoa：Foundation,UIKit相关扩展
@@ -17,6 +16,7 @@ Pod::Spec.new do |s|
     s.swift_version = '4.0'
     s.ios.deployment_target = '9.0'
     s.static_framework = true
+    
     # 集成的库
     s.dependency 'SnapKit', '~> 4.0.0'
     s.dependency 'Alamofire', '4.8.0'
@@ -54,6 +54,7 @@ Pod::Spec.new do |s|
     
     # ---------------  WebView  -----------
     s.subspec 'WPWebView' do |ss|
+        ss.ios.framework  = 'WebKit'
         ss.source_files = 'WPAppKit/Classes/WPWebView/*.{swift,html}'
     end
     

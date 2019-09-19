@@ -10,7 +10,7 @@ import UIKit
 import WebKit
 import WPAppKit
 
-class WebViewController: UIViewController, WKNavigationDelegate,WKUIDelegate  {
+class WebViewController: UIViewController {
 
    
     override func viewDidLoad() {
@@ -83,7 +83,6 @@ class WebViewController: UIViewController, WKNavigationDelegate,WKUIDelegate  {
         
         print(result)
     }
-    
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         let jsGetImages =

@@ -136,11 +136,9 @@ public class AppHud: NSObject {
         imageView.animationImages = images
         imageView.animationRepeatCount = 0  // 设置为0时无限执行
         imageView.startAnimating()
-        
 //        AppHud.loadBundleGif(imgPath, imgView: imageView)
         hud.customView = imageView
     }
-    
     
     /// 隐藏提示
     public static func hideHudView() {

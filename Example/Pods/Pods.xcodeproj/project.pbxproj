@@ -153,6 +153,8 @@
 		B843F6FC230AADE0005CCD16 /* UIScrollView+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = B843F6F7230AADDF005CCD16 /* UIScrollView+Empty.swift */; };
 		B843F6FD230AADE0005CCD16 /* HDEmptyBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B843F6F8230AADDF005CCD16 /* HDEmptyBaseView.swift */; };
 		B849D1F9232A50980017EDCA /* CacheManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B849D1F8232A50970017EDCA /* CacheManage.swift */; };
+		B85C3F23232FE62900762052 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85C3F22232FE62900762052 /* NSObject+Extension.swift */; };
+		B85C3F5A2330D66C00762052 /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85C3F592330D66C00762052 /* TagsView.swift */; };
 		B87F1B482301358800C60FE6 /* AppNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87F1B472301358800C60FE6 /* AppNavigationBar.swift */; };
 		B87F1B7C2302541F00C60FE6 /* ScanNetAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87F1B752302541F00C60FE6 /* ScanNetAnimation.swift */; };
 		B87F1B7D2302541F00C60FE6 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87F1B762302541F00C60FE6 /* ScanView.swift */; };
@@ -442,6 +444,8 @@
 		B843F6F7230AADDF005CCD16 /* UIScrollView+Empty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Empty.swift"; sourceTree = "<group>"; };
 		B843F6F8230AADDF005CCD16 /* HDEmptyBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HDEmptyBaseView.swift; sourceTree = "<group>"; };
 		B849D1F8232A50970017EDCA /* CacheManage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CacheManage.swift; path = WPAppKit/Classes/Tool/CacheManage.swift; sourceTree = "<group>"; };
+		B85C3F22232FE62900762052 /* NSObject+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSObject+Extension.swift"; path = "WPAppKit/Classes/Cocoa/Foundation/NSObject+Extension.swift"; sourceTree = "<group>"; };
+		B85C3F592330D66C00762052 /* TagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
 		B87F1B472301358800C60FE6 /* AppNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationBar.swift; sourceTree = "<group>"; };
 		B87F1B752302541F00C60FE6 /* ScanNetAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanNetAnimation.swift; sourceTree = "<group>"; };
 		B87F1B762302541F00C60FE6 /* ScanView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
@@ -841,6 +845,15 @@
 			path = WPAppKit/Classes/EmptyView;
 			sourceTree = "<group>";
 		};
+		B85C3F582330D66000762052 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				B85C3F592330D66C00762052 /* TagsView.swift */,
+			);
+			name = CustomView;
+			path = WPAppKit/Classes/CustomView;
+			sourceTree = "<group>";
+		};
 		B87F1B462301351700C60FE6 /* HBDNavigationBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -869,6 +882,7 @@
 		C083E82262DB81BC8390E71DB81B95D3 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				B85C3F22232FE62900762052 /* NSObject+Extension.swift */,
 				AE86215C4C538623CF8FB2B1346BAFF2 /* Array+Extension.swift */,
 				644131FBB18D58E1631C2415D1E4D00A /* Date+Extension.swift */,
 				BCB09E9FEDED35C462CD61126614BBFA /* Dictionary+Extension.swift */,
@@ -1037,6 +1051,7 @@
 		EBBACBC01B1CED4F0F588161E61F9A7D /* WPAppKit */ = {
 			isa = PBXGroup;
 			children = (
+				B85C3F582330D66000762052 /* CustomView */,
 				B87F1B742302541F00C60FE6 /* CodeScan */,
 				F0249B489C2613F3194E744B0D0FE1A3 /* Cocoa */,
 				8C42FCC6E763D38CECC13546A23626E8 /* Pod */,
@@ -1590,6 +1605,7 @@
 				01AD1059FE448B0148DA39AB704E9439 /* FormatterTime.swift in Sources */,
 				84EC31C65648CF4A9511C8ACE670FF24 /* LocalStoreTool.swift in Sources */,
 				B87F1B802302541F00C60FE6 /* ScanViewStyle.swift in Sources */,
+				B85C3F23232FE62900762052 /* NSObject+Extension.swift in Sources */,
 				F2B4C9CDA749699C08A73CCF13C96060 /* MBProgressHUD.m in Sources */,
 				6A818C85C8D525938A3788EE5D0FFBF4 /* Notification+Extension.swift in Sources */,
 				EEB13149459A212D0D2CF6D5F4CB7AE7 /* NSAttributedString+Extension.swift in Sources */,
@@ -1601,6 +1617,7 @@
 				B87F1B7E2302541F00C60FE6 /* ScanViewController.swift in Sources */,
 				DE4FA1294BA08F70736224E01842C923 /* UIApplication+Extension.swift in Sources */,
 				3AE0AFA0E0CD5547AB89FD59985217A2 /* UIButton+Convenience.swift in Sources */,
+				B85C3F5A2330D66C00762052 /* TagsView.swift in Sources */,
 				B843F6FB230AADE0005CCD16 /* UIView+Position.swift in Sources */,
 				87BF4894DDEA2FE266F8C4FD68FED06D /* UIButton+Extension.swift in Sources */,
 				B83B03AD230650720092619F /* UserDefaults+Extension.swift in Sources */,

@@ -164,9 +164,13 @@ public extension UIViewController {
 
 
 public extension UIViewController {
+    public enum ItemType {
+        case leftItem
+        case rightItem
+    }
     
     /// 添加文字item
-    public func customItem(title: String, action: Selector) -> UIBarButtonItem {
+    public func customTxtItem(type: ItemType, title: String, action: Selector) -> UIBarButtonItem {
         let itemButton = UIButton(type: .custom)
         itemButton.setTitle(title, for: .normal)
         if let navBar = self.navigationController?.navigationBar {
@@ -180,13 +184,22 @@ public extension UIViewController {
             }
         }
         itemButton.sizeToFit()
+        itemButton.width = itemButton.width < 40 ? 40 : itemButton.width
+        itemButton.height = itemButton.height < 40 ? 40 : itemButton.height
+        
+        switch type {
+        case .leftItem:
+            itemButton.contentHorizontalAlignment = .left
+        case .rightItem:
+            itemButton.contentHorizontalAlignment = .right
+        }
         itemButton.addTarget(self, action: action, for: .touchUpInside)
         let item = UIBarButtonItem(customView: itemButton)
         return item
     }
     
     /// 添加图片item
-    public func customItem(image: UIImage, imageSize: CGSize? = CGSize(width: 30, height: 30), action: Selector) -> UIBarButtonItem {
+    public func customImgItem(type: ItemType, image: UIImage?, imageSize: CGSize? = CGSize(width: 40, height: 40), action: Selector) -> UIBarButtonItem {
         let itemButton = UIButton(type: .custom)
         itemButton.setImage(image, for: .normal)
         var imgSize = itemButton.imageView?.bounds.size
@@ -195,12 +208,19 @@ public extension UIViewController {
         }else {
             imgSize = imageSize
         }
-        itemButton.frame = CGRect.init(origin: CGPoint.zero, size: imgSize!)
+        if let imgS = imgSize, imgS.width < 40 {
+            imgSize = CGSize(width: 40, height: 40)
+        }
+        itemButton.frame = CGRect.init(origin: CGPoint.zero, size: imgSize ?? CGSize(width: 40, height: 40))
+        
+        switch type {
+        case .leftItem:
+            itemButton.contentHorizontalAlignment = .left
+        case .rightItem:
+            itemButton.contentHorizontalAlignment = .right
+        }
         itemButton.addTarget(self, action: action, for: .touchUpInside)
         let item = UIBarButtonItem(customView: itemButton)
         return item
     }
-    
-    
-    
 }

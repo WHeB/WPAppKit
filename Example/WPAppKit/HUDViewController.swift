@@ -13,26 +13,8 @@ class HUDViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        AppHud.showGifLoading("loading", maskingAlpha: 0.30)
-//        AppHud.showLoading(maskingAlpha: 0.03)
         
-        let array = [UIImage(named: "0"),
-                     UIImage(named: "1"),
-                     UIImage(named: "2"),
-                     UIImage(named: "3"),
-                     UIImage(named: "4"),
-                     UIImage(named: "5"),
-                     UIImage(named: "6"),
-                     UIImage(named: "7"),
-                     UIImage(named: "8"),
-                     UIImage(named: "9"),
-                     UIImage(named: "10"),
-                     UIImage(named: "11")]
-        AppHud.showGifLoading(images: array as! [UIImage], maskingAlpha: 0.03)
-        
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 5) {
-            AppHud.hideHudView()
-        }
+//        AppHud.showLoading()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -42,8 +24,16 @@ class HUDViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.orange
+        self.view.backgroundColor = UIColor.white
         
-//        AppHud.showGifLoading("loading")
+        let button = UIButton(title: "alert", txtColor: UIColor.red, font: UIFont.systemFont(ofSize: 14))
+        button.frame = CGRect(x: 50, y: 100, width: 100, height: 40)
+        button.backgroundColor = UIColor.red
+        button.addTarget(self, action: #selector(showAction), for: .touchUpInside)
+        self.view.addSubview(button)
+    }
+    
+    @objc private func showAction() {
+        
     }
 }

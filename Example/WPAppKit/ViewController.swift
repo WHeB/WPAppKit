@@ -19,11 +19,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.title = "Test"
         self.view.addSubview(self.tableView)
         
+        self.navigationItem.leftBarButtonItem = self.customTxtItem(type: .leftItem, title: "点", action: #selector(clickAction))
+        
+        self.navigationItem.rightBarButtonItem = self.customImgItem(type: .rightItem, image: UIImage(named: "hud_success"), action: #selector(clickAction))
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    
+    @objc private func clickAction() {
+        
+        
     }
     
     lazy var demoData: [(String, UIViewController)] = {
@@ -38,9 +42,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             ("PageView", PageViewController()),
             ("PopView", HomeViewController()),
             ("WebView", WebViewController()),
-            ("HUD", HUDViewController()),
-            ("富文本", AttributeViewController())
-            ]
+            ("HUD", HUDViewController())]
         return array
     }()
     
@@ -71,15 +73,3 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 }
 
-
-
-extension UIViewController {
-    
-
-    
-    
-    
-    
-    
-    
-}
