@@ -11,7 +11,7 @@ import UIKit
 public extension UIButton {
     
     /// 文字 + 字颜色 + 字号
-    public convenience init(title: String, txtColor: UIColor, font: UIFont) {
+    convenience init(title: String, txtColor: UIColor, font: UIFont) {
         self.init(type: .custom)
         self.adjustsImageWhenHighlighted = false
         self.setTitle(title, for: .normal)
@@ -20,7 +20,7 @@ public extension UIButton {
     }
     
     /// 文字 + 字颜色 + 选中颜色 + 字号
-    public convenience init(title: String, txtColor: UIColor, selectedTxtColor: UIColor, font: UIFont) {
+    convenience init(title: String, txtColor: UIColor, selectedTxtColor: UIColor, font: UIFont) {
         self.init(type: .custom)
         self.adjustsImageWhenHighlighted = false
         self.setTitle(title, for: .normal)
@@ -30,7 +30,7 @@ public extension UIButton {
     }
     
     /// 文字 + 字颜色 + 字号 + 背景色 + 圆角
-    public convenience init(title: String, txtColor: UIColor, font: UIFont, bgColor: UIColor, radius: CGFloat? = 0) {
+    convenience init(title: String, txtColor: UIColor, font: UIFont, bgColor: UIColor, radius: CGFloat? = 0) {
         self.init(type: .custom)
         self.adjustsImageWhenHighlighted = false
         self.setTitle(title, for: .normal)
@@ -42,7 +42,7 @@ public extension UIButton {
     }
     
     /// 默认图片 + 选中图片
-    public convenience init(normalImg: UIImage, selectedImg: UIImage? = nil) {
+    convenience init(normalImg: UIImage, selectedImg: UIImage? = nil) {
         self.init(type: .custom)
         self.adjustsImageWhenHighlighted = false
         self.setImage(normalImg, for: .normal)
@@ -51,7 +51,7 @@ public extension UIButton {
     }
     
     /// 文本 + 文本颜色 + 字号 + 图片
-    public convenience init(title: String, txtColor: UIColor, font: UIFont, normalImg: UIImage) {
+    convenience init(title: String, txtColor: UIColor, font: UIFont, normalImg: UIImage) {
         self.init(type: .custom)
         self.adjustsImageWhenHighlighted = false
         self.setTitle(title, for: .normal)
@@ -61,7 +61,7 @@ public extension UIButton {
     }
     
     /// 文本 + 颜色 + 选中颜色 + 字号 + 默认图片 + 选中图片
-    public convenience init(title: String, txtColor: UIColor, selectedTxtColor: UIColor, font: UIFont, normalImg: UIImage, selectedImg: UIImage? = nil) {
+    convenience init(title: String, txtColor: UIColor, selectedTxtColor: UIColor, font: UIFont, normalImg: UIImage, selectedImg: UIImage? = nil) {
         self.init(type: .custom)
         self.adjustsImageWhenHighlighted = false
         self.setTitle(title, for: .normal)
@@ -74,7 +74,7 @@ public extension UIButton {
     }
     
     /// 设置背景颜色
-    public func setbackground(normalColor: UIColor, selectedColor: UIColor) {
+    func setbackground(normalColor: UIColor, selectedColor: UIColor) {
         self.setBackgroundImage(UIImage.colorToImage(normalColor, size: self.bounds.size), for: .normal)
         self.setBackgroundImage(UIImage.colorToImage(selectedColor, size: self.bounds.size), for: .selected)
     }

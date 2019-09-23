@@ -11,12 +11,12 @@ import UIKit
 public extension UIColor {
     
     ///  设置RGB颜色
-    public convenience init(r: CGFloat, g: CGFloat, b: CGFloat, alpha: CGFloat = 1.0) {
+    convenience init(r: CGFloat, g: CGFloat, b: CGFloat, alpha: CGFloat = 1.0) {
         self.init(red: r / 255.0, green: g / 255.0, blue: b / 255.0, alpha: alpha)
     }
     
     ///  设置十六进制颜色
-    public convenience init(hex: String, alpha: CGFloat = 1.0) {
+    convenience init(hex: String, alpha: CGFloat = 1.0) {
         guard hex.count >= 6 else {
             self.init(r: CGFloat(255), g: CGFloat(255), b: CGFloat(255), alpha: alpha)
             return
@@ -45,7 +45,7 @@ public extension UIColor {
     }
     
     /// 获取随机颜色
-    public class func randomColor() -> UIColor {
+    class func randomColor() -> UIColor {
         return UIColor(r: CGFloat(arc4random_uniform(256)),
                        g: CGFloat(arc4random_uniform(256)),
                        b: CGFloat(arc4random_uniform(256)))

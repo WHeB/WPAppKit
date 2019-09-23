@@ -10,7 +10,7 @@ import UIKit
 public extension NSObject {
     
     /// 交换方法
-    public static func exchange(_ method1: String, _ method2: String) {
+    static func exchange(_ method1: String, _ method2: String) {
         guard let m1 = class_getInstanceMethod(self, Selector(method1)) else {
             return
         }

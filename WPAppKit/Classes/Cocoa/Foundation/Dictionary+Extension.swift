@@ -11,7 +11,7 @@ import Foundation
 public extension Dictionary {
     
     /// 字典拼接
-    public mutating func append(dictionary: Dictionary) -> Dictionary {
+    mutating func append(dictionary: Dictionary) -> Dictionary {
         dictionary.forEach { (key, value) in
             self.updateValue(value, forKey: key)
         }
@@ -19,7 +19,7 @@ public extension Dictionary {
     }
     
     /// 字典转jsonString
-    public func toJsonString() -> String {
+    func toJsonString() -> String {
         guard let dict = (self as AnyObject) as? [String: Any],
             JSONSerialization.isValidJSONObject(dict) else {
             return ""
@@ -36,7 +36,7 @@ public extension Dictionary {
     }
     
     /// 字典转URL参数
-    public func toURLParameter() -> String {
+    func toURLParameter() -> String {
         guard let dict = (self as AnyObject) as? [String: Any] else {
             return ""
         }

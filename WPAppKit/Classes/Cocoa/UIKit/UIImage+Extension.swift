@@ -17,7 +17,7 @@ public extension UIImage {
     ///   - size: 大小
     ///   - radius: 圆角
     /// - Returns: 结果
-    public class func colorToImage(_ color: UIColor, size: CGSize = CGSize(width: 1, height: 1), radius: Int = 0) -> UIImage{
+    class func colorToImage(_ color: UIColor, size: CGSize = CGSize(width: 1, height: 1), radius: Int = 0) -> UIImage{
         UIGraphicsBeginImageContext(size)
         let context = UIGraphicsGetCurrentContext()!
         
@@ -35,7 +35,7 @@ public extension UIImage {
     ///
     /// - Parameter imgName: 图片名字
     /// - Returns: 结果
-    public class func setResizableImage(name: String) -> UIImage {
+    class func setResizableImage(name: String) -> UIImage {
         var image = UIImage.init(named: name)
         let imgW: Float = Float(image!.size.width)
         let imgH: Float = Float(image!.size.height)

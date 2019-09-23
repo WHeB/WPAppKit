@@ -13,7 +13,7 @@ public protocol LoadStoryboardProtocol {}
 extension UIViewController: LoadStoryboardProtocol {}
 public extension LoadStoryboardProtocol where Self: UIViewController {
     
-    public static func wp_loadStoryboard(storyboardName: String? = nil) -> Self {
+    static func wp_loadStoryboard(storyboardName: String? = nil) -> Self {
         var storyboard = UIStoryboard()
         if storyboardName == nil {
             storyboard = UIStoryboard(name: "\(self)", bundle: nil)
@@ -29,20 +29,20 @@ public protocol LoadNibProtocol {}
 extension UIView: LoadNibProtocol {}
 public extension LoadNibProtocol where Self: UIView {
     
-    public static func wp_loadViewFromNib(name: String? = nil) -> Self {
+    static func wp_loadViewFromNib(name: String? = nil) -> Self {
         return Bundle.main.loadNibNamed(name ?? "\(self)", owner: nil, options: nil)?.last as! Self
     }
 }
 
 public extension UITableView {
     /// 注册xib中cell
-    public func wp_registerNibCell(cellName: String) {
+    func wp_registerNibCell(cellName: String) {
         let cellNib = UINib.init(nibName: cellName, bundle: nil)
         register(cellNib, forCellReuseIdentifier: cellName)
     }
     
     /// 实例化cell
-    public func wp_dequeueReusableNibCell(cellId: String,indexPath: IndexPath) -> UITableViewCell {
+    func wp_dequeueReusableNibCell(cellId: String,indexPath: IndexPath) -> UITableViewCell {
         return dequeueReusableCell(withIdentifier: cellId, for: indexPath)
     }
 }
@@ -51,35 +51,35 @@ public extension UITableView {
 public extension UICollectionView {
     
     /// 注册xib中cell
-    public func wp_registerNibCell(cellName: String) {
+    func wp_registerNibCell(cellName: String) {
         let cellNib = UINib.init(nibName: cellName, bundle: nil)
         register(cellNib, forCellWithReuseIdentifier: cellName)
     }
     
     /// 实例化cell
-    public func wp_dequeueReusableNibCell(cellId: String,indexPath: IndexPath) -> UICollectionViewCell {
+    func wp_dequeueReusableNibCell(cellId: String,indexPath: IndexPath) -> UICollectionViewCell {
         return dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
     }
     
     /// 注册页眉
-    public func wp_registerHeaderView(headerViewName: String) {
+    func wp_registerHeaderView(headerViewName: String) {
         let cellNib = UINib.init(nibName: headerViewName, bundle: nil)
         register(cellNib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerViewName)
     }
     
     /// 获取页眉
-    public func wp_dequeueReusableHeaderView(headerViewName: String, indexPath: IndexPath) -> UICollectionReusableView {
+    func wp_dequeueReusableHeaderView(headerViewName: String, indexPath: IndexPath) -> UICollectionReusableView {
         return dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerViewName, for: indexPath)
     }
     
     /// 注册页脚
-    public func wp_registerFooterView(footerViewName: String) {
+    func wp_registerFooterView(footerViewName: String) {
         let cellNib = UINib.init(nibName: footerViewName, bundle: nil)
         register(cellNib, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: footerViewName)
     }
     
     /// 获取页脚
-    public func wp_dequeueReusableFooterView(footerViewName: String, indexPath: IndexPath) -> UICollectionReusableView {
+    func wp_dequeueReusableFooterView(footerViewName: String, indexPath: IndexPath) -> UICollectionReusableView {
         return dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter, withReuseIdentifier: footerViewName, for: indexPath)
     }
 }

@@ -19,7 +19,7 @@ public enum TxtKeyboardType {
 
 public extension UITextField {
     
-    public convenience init(txtType: TxtKeyboardType, placeholder: String? = "", txtColor: UIColor, txtFont: UIFont, txtAlignment: NSTextAlignment? = .left) {
+    convenience init(txtType: TxtKeyboardType, placeholder: String? = "", txtColor: UIColor, txtFont: UIFont, txtAlignment: NSTextAlignment? = .left) {
         self.init()
         self.placeholder = placeholder
         self.textColor = txtColor

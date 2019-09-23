@@ -11,7 +11,7 @@ import UIKit
 public extension UIView {
 
     /// x值
-    public var x: CGFloat{
+    var x: CGFloat{
         get{
             return self.frame.origin.x
         }
@@ -23,7 +23,7 @@ public extension UIView {
     }
     
     /// y值
-    public var y: CGFloat{
+    var y: CGFloat{
         get{
             return self.frame.origin.y
         }
@@ -35,7 +35,7 @@ public extension UIView {
     }
     
     /// 右边界的x值
-    public var rightX: CGFloat{
+    var rightX: CGFloat{
         get{
             return self.x + self.width
         }
@@ -47,7 +47,7 @@ public extension UIView {
     }
     
     /// 下边界的y值
-    public var bottomY: CGFloat{
+    var bottomY: CGFloat{
         get{
             return self.y + self.height
         }
@@ -59,7 +59,7 @@ public extension UIView {
     }
     
     /// 中心x值
-    public var centerX : CGFloat{
+    var centerX : CGFloat{
         get{
             return self.center.x
         }
@@ -69,7 +69,7 @@ public extension UIView {
     }
     
     /// 中心y值
-    public var centerY : CGFloat{
+    var centerY : CGFloat{
         get{
             return self.center.y
         }
@@ -79,7 +79,7 @@ public extension UIView {
     }
     
     /// 宽度
-    public var width: CGFloat{
+    var width: CGFloat{
         get{
             return self.frame.size.width
         }
@@ -91,7 +91,7 @@ public extension UIView {
     }
     
     /// 高度
-    public var height: CGFloat{
+    var height: CGFloat{
         get{
             return self.frame.size.height
         }
@@ -103,7 +103,7 @@ public extension UIView {
     }
     
     /// 起点
-    public var origin: CGPoint{
+    var origin: CGPoint{
         get{
             return self.frame.origin
         }
@@ -114,7 +114,7 @@ public extension UIView {
     }
     
     /// 大小
-    public var size: CGSize{
+    var size: CGSize{
         get{
             return self.frame.size
         }

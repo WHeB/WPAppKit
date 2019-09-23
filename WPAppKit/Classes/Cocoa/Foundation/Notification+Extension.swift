@@ -10,7 +10,7 @@ import UIKit
 public extension Notification {
     
     /// 键盘高度
-    public func keyBoardHeight() -> CGFloat {
+    func keyBoardHeight() -> CGFloat {
         if let userInfo = self.userInfo {
             if let value = userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue {
                 let size = value.cgRectValue.size
@@ -21,7 +21,7 @@ public extension Notification {
     }
     
     /// 动画时长
-    public func animationTime() -> TimeInterval {
+    func animationTime() -> TimeInterval {
         if let userInfo = self.userInfo {
             if let value = userInfo[UIKeyboardAnimationDurationUserInfoKey] as? TimeInterval {
                 return value
@@ -31,7 +31,7 @@ public extension Notification {
     }
     
     /// 动画类型
-    public func animationType() -> UIView.AnimationCurve {
+    func animationType() -> UIView.AnimationCurve {
         if let userInfo = self.userInfo {
             if let value = userInfo[UIKeyboardAnimationCurveUserInfoKey] as? Int {
                 return UIView.AnimationCurve(rawValue: value) ?? .easeInOut

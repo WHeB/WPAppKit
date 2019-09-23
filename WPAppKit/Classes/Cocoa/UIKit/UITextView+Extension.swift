@@ -16,7 +16,7 @@ extension UITextView: TextViewable {}
 public extension TextViewable where Self: UITextView {
     
     /// placeholder
-    public var placeholder: String? {
+    var placeholder: String? {
         set(newValue) {
             // iOS9 之后有 _placeholderLabel 属性
             guard #available(iOS 9.0, *) else { return }

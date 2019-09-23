@@ -18,7 +18,7 @@ public extension NSAttributedString {
     ///   - textColor: 特殊颜色
     ///   - bgColor: 特殊背景色
     /// - Returns: 被修饰过的文本
-    public static func setBaseAttributToString(original: String,
+    static func setBaseAttributToString(original: String,
                                         target: String,
                                         font: UIFont? = nil,
                                         textColor: UIColor? = nil,
@@ -49,7 +49,7 @@ public extension NSMutableAttributedString {
     ///   - textColor: 字体颜色
     ///   - bgColor: 背景色
     ///   - range: 范围
-    public func setBaseAttributToRange(range: NSRange,
+    func setBaseAttributToRange(range: NSRange,
                                        font: UIFont? = nil,
                                        textColor: UIColor? = nil,
                                        bgColor: UIColor? = nil) {

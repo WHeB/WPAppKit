@@ -27,9 +27,26 @@ class UIViewViewController: UIViewController {
         line.frame = CGRect(x: ScreenWidth / 2 - 0.5, y: 180, width: 1, height: 20)
         self.view.addSubview(line)
         
-        let searchView = WPSearchBar(frame: CGRect(x: 20, y: 200, width: 335, height: 50))
+        let searchView = WPSearchBar(frame: CGRect(x: 20, y: 200, width: ScreenWidth - 40, height: 50))
+        searchView.placeholder = "测试一下"
         searchView.searchIcon = UIImage(named: "hud_success")
         self.view.addSubview(searchView)
+        
+        let tfView = UITextField(frame: CGRect(x: 20, y: 300, width: ScreenWidth - 40, height: 50))
+        tfView.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 40))
+        tfView.leftViewMode = .always
+        tfView.setBorder(color: UIColor.red, borderWidth: 1)
+        tfView.placeholder = "测试一下"
+        tfView.setPlaceholder(color: UIColor.red)
+        self.view.addSubview(tfView)
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboardAction))
+        self.view.addGestureRecognizer(tap)
+        
+    }
+    
+    @objc private func hideKeyboardAction() {
+        self.view.endEditing(true)
     }
     
     @objc private func buttonAction(button: UIButton) {

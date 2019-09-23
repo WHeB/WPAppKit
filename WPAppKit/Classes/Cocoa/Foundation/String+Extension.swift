@@ -12,7 +12,7 @@ import CommonCrypto
 public extension String {
     
     /// 正则表达式匹配
-    public func matches(_ pattern: String) -> Bool {
+    func matches(_ pattern: String) -> Bool {
         var reg : NSRegularExpression?
         do{
             reg = try NSRegularExpression(pattern: pattern, options: NSRegularExpression.Options.caseInsensitive)
@@ -30,7 +30,7 @@ public extension String {
     ///
     /// - Parameter str: 待对比字符串
     /// - Returns: 结果
-    public func equals(_ str: String?) -> Bool{
+    func equals(_ str: String?) -> Bool{
         return str == nil ? false : self == str!
     }
     
@@ -38,7 +38,7 @@ public extension String {
     ///
     /// - Parameter str: 待对比字符串
     /// - Returns: 结果
-    public func equalsIgnoreCase(_ str: String?) -> Bool {
+    func equalsIgnoreCase(_ str: String?) -> Bool {
         return str == nil ? false : self.lowercased() == str!.lowercased()
     }
  
@@ -46,7 +46,7 @@ public extension String {
     ///
     /// - Parameter with: 开头字符串
     /// - Returns: 结果
-    public func start(_ with: String) -> Bool {
+    func start(_ with: String) -> Bool {
         return self.substring(toIndex: with.count) == with
     }
     
@@ -54,7 +54,7 @@ public extension String {
     ///
     /// - Parameter toIndex: 截取到哪个位置
     /// - Returns: 结果
-    public func substring(toIndex: Int) -> String {
+    func substring(toIndex: Int) -> String {
         return (self as NSString).substring(to: toIndex)
     }
     
@@ -62,7 +62,7 @@ public extension String {
     ///
     /// - Parameter fromIndex: 从哪个位置开始截取
     /// - Returns: 结果
-    public func substring(fromIndex: Int) -> String {
+    func substring(fromIndex: Int) -> String {
         return (self as NSString).substring(from: fromIndex)
     }
     
@@ -72,7 +72,7 @@ public extension String {
     ///   - fromIndex: 从哪个位置开始截取
     ///   - toIndex: 截取到哪个位置
     /// - Returns: 结果
-    public func substring(fromIndex: Int, toIndex: Int) -> String {
+    func substring(fromIndex: Int, toIndex: Int) -> String {
         let range = NSMakeRange(fromIndex, toIndex - fromIndex)
         return (self as NSString).substring(with: range)
     }
@@ -83,7 +83,7 @@ public extension String {
     ///   - fromIndex: 从哪个位置开始截取
     ///   - length: 截取长度
     /// - Returns: 结果
-    public func substring(fromIndex: Int, length: Int)-> String {
+    func substring(fromIndex: Int, length: Int)-> String {
         let range = NSMakeRange(fromIndex, length)
         return (self as NSString).substring(with: range)
     }
@@ -94,18 +94,18 @@ public extension String {
     ///   - of: 要替换的字符串
     ///   - with: 替换成哪个字符串
     /// - Returns: 结果
-    public func replace(_ of: String, with: String) -> String {
+    func replace(_ of: String, with: String) -> String {
         return self.replacingOccurrences(of: of, with: with)
     }
     
     /// url编码
-    public func urlEncode() -> String {
+    func urlEncode() -> String {
         let rfc3986Unreserved = CharacterSet(charactersIn:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-._~")
         return self.addingPercentEncoding(withAllowedCharacters: rfc3986Unreserved) ?? self
     }
     
     /// url解码
-    public func urlDecode() -> String {
+    func urlDecode() -> String {
         return self.removingPercentEncoding ?? self
     }
  
@@ -113,7 +113,7 @@ public extension String {
     ///
     /// - Parameter char: 切割标志
     /// - Returns: 结果
-    public func separate(_ char: String) -> [String] {
+    func separate(_ char: String) -> [String] {
         let set = CharacterSet.init(charactersIn: char)
         return self.components(separatedBy: set)
     }
@@ -122,7 +122,7 @@ public extension String {
     ///
     /// - Parameter isBlank: 是否要空格
     /// - Returns: 结果
-    public func transformToPinyin(isBlank: Bool? = true) -> String {
+    func transformToPinyin(isBlank: Bool? = true) -> String {
         let mutableString = NSMutableString(string: self)
         // 结果带音标
         CFStringTransform(mutableString, nil, kCFStringTransformToLatin, false)
@@ -135,7 +135,7 @@ public extension String {
     }
     
     /// 获取中英文混合的字节长度
-    public func charLength() -> Int {
+    func charLength() -> Int {
         var strLength = 0
         for char in self {
             if ("\u{4E00}" <= char  && char <= "\u{9FA5}") { // 中文
@@ -154,7 +154,7 @@ public extension String {
 public extension String {
 
     /// 获取文本高
-    public func txtStringHeight(font: UIFont, maxWidth: CGFloat) -> CGFloat {
+    func txtStringHeight(font: UIFont, maxWidth: CGFloat) -> CGFloat {
         let size = CGSize.init(width: maxWidth, height: CGFloat(MAXFLOAT))
         let dictionary = NSDictionary.init(object: font, forKey: NSAttributedStringKey.font as NSCopying)
         let stringSize = self.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: dictionary as? [NSAttributedStringKey : Any], context: nil)
@@ -162,7 +162,7 @@ public extension String {
     }
     
     /// 获取文本宽
-    public func txtStringWidth(font: UIFont, maxHeight: CGFloat) -> CGFloat {
+    func txtStringWidth(font: UIFont, maxHeight: CGFloat) -> CGFloat {
         let size = CGSize.init(width: CGFloat(MAXFLOAT), height: maxHeight)
         let dictionary = NSDictionary.init(object: font, forKey: NSAttributedStringKey.font as NSCopying)
         let stringSize = self.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: dictionary as? [NSAttributedStringKey : Any], context: nil)
@@ -175,7 +175,7 @@ public extension String {
 public extension String {
     
     /// jsonString转字典
-    public func toDictionary() -> [String : Any] {
+    func toDictionary() -> [String : Any] {
         let jsonData: Data = self.data(using: .utf8)!
         let dict = try? JSONSerialization.jsonObject(with: jsonData, options: .mutableContainers)
         if dict != nil {
@@ -185,7 +185,7 @@ public extension String {
     }
     
     /// jsonString转数组
-    public func toArray() -> [Any] {
+    func toArray() -> [Any] {
         let jsonData: Data = self.data(using: .utf8)!
         let array = try? JSONSerialization.jsonObject(with: jsonData, options: .mutableContainers)
         if array != nil {
@@ -200,7 +200,7 @@ public extension String {
 public extension String {
     
     /// Range转换为NSRange
-    public func nsRange(from range: Range<String.Index>) -> NSRange {
+    func nsRange(from range: Range<String.Index>) -> NSRange {
         let from = range.lowerBound.samePosition(in: utf16)
         let to = range.upperBound.samePosition(in: utf16)
         return NSRange(location: utf16.distance(from: utf16.startIndex, to: from!),
@@ -208,7 +208,7 @@ public extension String {
     }
     
     /// Range转换为NSRange
-    public func range(from nsRange: NSRange) -> Range<String.Index>? {
+    func range(from nsRange: NSRange) -> Range<String.Index>? {
         guard
             let from16 = utf16.index(utf16.startIndex, offsetBy: nsRange.location,
                                      limitedBy: utf16.endIndex),
@@ -225,7 +225,7 @@ public extension String {
 public extension String {
     
     /// MD5加密
-    public func md5(_ isSmall: Bool? = true) -> String {
+    func md5(_ isSmall: Bool? = true) -> String {
         let cStrl = cString(using: String.Encoding(rawValue: String.Encoding.utf8.rawValue));
         let buffer = UnsafeMutablePointer<UInt8>.allocate(capacity: 16);
         CC_MD5(cStrl, CC_LONG(strlen(cStrl!)), buffer);
@@ -240,13 +240,13 @@ public extension String {
     }
     
     /// base64 编码
-    public func base64EncodedString(options: Data.Base64EncodingOptions = []) -> String? {
+    func base64EncodedString(options: Data.Base64EncodingOptions = []) -> String? {
         let data = self.data(using: .utf8)
         return data?.base64EncodedString(options: options)
     }
     
     /// base64 解码
-    public func base64DecodedString(options: Data.Base64DecodingOptions = []) -> String? {
+    func base64DecodedString(options: Data.Base64DecodingOptions = []) -> String? {
         let base64Data = Data(base64Encoded: self, options: options)
         guard let data = base64Data else {
             return nil

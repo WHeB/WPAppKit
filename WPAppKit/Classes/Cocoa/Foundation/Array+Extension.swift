@@ -11,7 +11,7 @@ import Foundation
 public extension Array {
     
     /// 数组转jsonString
-    public func toJsonString() -> String {
+    func toJsonString() -> String {
         guard let array = (self as AnyObject) as? [Any],
             JSONSerialization.isValidJSONObject(array) else {
             return ""
@@ -28,7 +28,7 @@ public extension Array {
     }
     
     /// 数组乱序
-    public func shuffle() -> [Any] {
+    func shuffle() -> [Any] {
         var list = [Any]()
         for index in 0..<self.count {
             let newIndex = Int(arc4random_uniform(UInt32(list.count-index))) + index
@@ -40,7 +40,7 @@ public extension Array {
     }
     
     /// 判断是否包含
-    public func isContains<T: Equatable>(element: T) -> Bool {
+    func isContains<T: Equatable>(element: T) -> Bool {
         guard let array: [T] = self as? [T]  else {
             return false
         }
@@ -50,7 +50,7 @@ public extension Array {
     }
     
     /// 移除元素
-    public func remove<T: Equatable>(element: T) -> [T] {
+    func remove<T: Equatable>(element: T) -> [T] {
         guard let array: [T] = self as? [T]  else {
             return []
         }
@@ -63,7 +63,7 @@ public extension Array {
     }
     
     /// 数组移除
-    public func remove<T: Equatable>(atArray: [T]) -> [T] {
+    func remove<T: Equatable>(atArray: [T]) -> [T] {
         guard let array: [T] = self as? [T]  else {
             return []
         }
@@ -74,7 +74,7 @@ public extension Array {
     
     /// 找出数组中的元素
     // let one = groups.findElement {return $0 == 1}
-    public func findElement(match:(Element) -> Bool) -> Element? {
+    func findElement(match:(Element) -> Bool) -> Element? {
         for element in self where match(element){
             return element
         }

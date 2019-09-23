@@ -11,17 +11,31 @@ import UIKit
 public extension UITextField {
     
     /// 设置 Placeholder 颜色
-    public func setPlaceholder(color: UIColor) {
-        self.setValue(color, forKey: "_placeholderLabel.textColor")
+    func setPlaceholder(color: UIColor) {
+        if #available(iOS 13.0, *) {
+            guard let placeholder = self.placeholder else {
+                return
+            }
+            self.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSAttributedStringKey.foregroundColor : color])
+        }else {
+            self.setValue(color, forKey: "_placeholderLabel.textColor")
+        }
     }
     
     /// 设置 Placeholder 字号
-    public func setPlaceholder(font: UIFont) {
-        self.setValue(font, forKey: "_placeholderLabel.font")
+    func setPlaceholder(font: UIFont) {
+        if #available(iOS 13.0, *) {
+            guard let placeholder = self.placeholder else {
+                return
+            }
+            self.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSAttributedStringKey.font : font])
+        }else {
+            self.setValue(font, forKey: "_placeholderLabel.font")
+        }
     }
     
     /// 设置光标颜色
-    public func setCursor(color: UIColor) {
+    func setCursor(color: UIColor) {
         self.tintColor = color
     }
 }

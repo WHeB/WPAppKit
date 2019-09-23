@@ -14,7 +14,7 @@ class HUDViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-//        AppHud.showLoading()
+        AppHud.showLoading()
     }
     
     override func viewWillDisappear(_ animated: Bool) {

@@ -11,52 +11,52 @@ import UIKit
 public extension Date {
 
     /// 年
-    public var year: Int {
+    var year: Int {
         return Calendar.current.component(.year, from: self as Date)
     }
     
     /// 月
-    public var month: Int {
+    var month: Int {
         return Calendar.current.component(.month, from: self as Date)
     }
     
     /// 日
-    public var day: Int {
+    var day: Int {
         return Calendar.current.component(.day, from: self as Date)
     }
     
     /// 时
-    public var hour: Int {
+    var hour: Int {
         return Calendar.current.component(.hour, from: self as Date)
     }
     
     /// 分
-    public var minute: Int {
+    var minute: Int {
         return Calendar.current.component(.minute, from: self as Date)
     }
     
     /// 秒
-    public var second: Int {
+    var second: Int {
         return Calendar.current.component(.second, from: self as Date)
     }
     
     /// 今天是本周的第几天（范围1-7 注：周日为第一天）
-    public var weekday: Int {
+    var weekday: Int {
         return Calendar.current.component(.weekday, from: self as Date)
     }
     
     /// 今天是本月的第几周（最多为6个周）
-    public var weekOfMonth: Int {
+    var weekOfMonth: Int {
         return Calendar.current.component(.weekOfMonth, from: self as Date)
     }
     
     /// 今天是本年的第几周（最多为53个周）
-    public var weekOfYear: Int {
+    var weekOfYear: Int {
         return Calendar.current.component(.weekOfYear, from: self as Date)
     }
     
     /// 今天是周几
-    public func week() -> String {
+    func week() -> String {
         let weekIndex = self.weekday
         switch weekIndex {
         case 0:
@@ -80,7 +80,7 @@ public extension Date {
     }
     
     /// 是否是今天
-    public func isToday() -> Bool {
+    func isToday() -> Bool {
         let fmt = DateFormatter()
         fmt.dateFormat = "yyyy-MM-dd"
         let dateStr = fmt.string(from: self)
@@ -89,7 +89,7 @@ public extension Date {
     }
     
     /// 判断是否为昨天
-    public func isYesterday() -> Bool {
+    func isYesterday() -> Bool {
         let fmt = DateFormatter()
         fmt.dateFormat = "yyyy-MM-dd"
         
@@ -106,7 +106,7 @@ public extension Date {
     }
     
     /// 判断某个时间是否为今年
-    public func isThisYear() -> Bool {
+    func isThisYear() -> Bool {
         let calender = Calendar.current
         let yearComps = calender.component(Calendar.Component.year, from: self)
         let nowComps = calender.component(Calendar.Component.year, from: Date())
@@ -117,7 +117,7 @@ public extension Date {
     ///
     /// - Parameter date: 待对比日期
     /// - Returns: 结果
-    public func isEqualWeek(date: Date) -> Bool {
+    func isEqualWeek(date: Date) -> Bool {
         if (fabs(self.timeIntervalSince(date))) >= 7 * 24 * 3600 {
             return false
         }
@@ -130,7 +130,7 @@ public extension Date {
     
     /// 多长时间以前
     // numericDates 是否是数字时间 例如：1个月前 显示 上个月
-    public func timeAgoSinceDate(numericDates: Bool? = true) -> String {
+    func timeAgoSinceDate(numericDates: Bool? = true) -> String {
         let calendar = Calendar.current
         let now = Date()
         let earliest = (now as NSDate).earlierDate(self)

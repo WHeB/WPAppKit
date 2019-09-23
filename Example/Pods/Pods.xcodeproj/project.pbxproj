@@ -1360,16 +1360,16 @@
 						LastSwiftMigration = 1010;
 					};
 					19622742EBA51E823D6DAE3F8CDBFAD4 = {
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1100;
 					};
 					340DDF7DB405EDF7F01580175FF090DF = {
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1100;
 					};
 					4B79C925293550B90EA49B23D7548C4F = {
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1100;
 					};
 					E8022D22FAA6690B5E1C379C1BCE1491 = {
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1100;
 					};
 				};
 			};
@@ -1379,6 +1379,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = 87FA559F00D4A761002DD63D7A95BC24 /* Products */;
@@ -2000,6 +2001,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
+				MARKETING_VERSION = 0.5.4;
 				MODULEMAP_FILE = "Target Support Files/WPAppKit/WPAppKit.modulemap";
 				PRODUCT_MODULE_NAME = WPAppKit;
 				PRODUCT_NAME = WPAppKit;
@@ -2283,6 +2285,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
+				MARKETING_VERSION = 0.5.4;
 				MODULEMAP_FILE = "Target Support Files/WPAppKit/WPAppKit.modulemap";
 				PRODUCT_MODULE_NAME = WPAppKit;
 				PRODUCT_NAME = WPAppKit;

@@ -15,7 +15,7 @@ public extension UIImageView {
     /// - Parameters:
     ///   - bounds: 控件大小 自动布局需设置
     ///   - cornerRadius: 圆角大小
-    public func setCornerRadius(_ bounds: CGRect? = CGRect.zero, cornerRadius: CGFloat) {
+    func setCornerRadius(_ bounds: CGRect? = CGRect.zero, cornerRadius: CGFloat) {
         let tempBounds = bounds == CGRect.zero ? self.bounds : bounds
         let maskPath = UIBezierPath(roundedRect: tempBounds!, cornerRadius: cornerRadius)
         let maskLayer = CAShapeLayer()
@@ -25,7 +25,7 @@ public extension UIImageView {
     }
     
     /// 加载本地Gif动画
-    public func loadBundleGif(_ path: String) {
+    func loadBundleGif(_ path: String) {
         // 1、加载gif图片，并转成Data类型
         guard let imgData = NSData(contentsOfFile: path) else {
             return

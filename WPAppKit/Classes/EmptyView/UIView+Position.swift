@@ -42,7 +42,7 @@ extension UIView {
         }
         set {
             var frame = self.frame
-            frame.origin.x = ly_right - frame.size.width
+            frame.origin.x = newValue - frame.size.width
             self.frame = frame
         }
     }
@@ -54,7 +54,7 @@ extension UIView {
         }
         set {
             var frame = self.frame
-            frame.origin.y = ly_bottom - frame.origin.y
+            frame.origin.y = newValue - frame.origin.y
             self.frame = frame
         }
     }
@@ -66,7 +66,7 @@ extension UIView {
         }
         set {
             var frame = self.frame
-            frame.size.width = ly_width
+            frame.size.width = newValue
             self.frame = frame
         }
     }
@@ -78,7 +78,7 @@ extension UIView {
         }
         set {
             var frame = self.frame
-            frame.size.height = ly_height
+            frame.size.height = newValue
             self.frame = frame
         }
     }
@@ -89,7 +89,7 @@ extension UIView {
             return self.center.x
         }
         set {
-            self.center = CGPoint.init(x: ly_centerX, y: self.center.y)
+            self.center = CGPoint.init(x: newValue, y: self.center.y)
         }
     }
     
@@ -99,7 +99,7 @@ extension UIView {
             return self.center.y
         }
         set {
-            self.center = CGPoint.init(x: self.center.x, y: ly_centerY)
+            self.center = CGPoint.init(x: self.center.x, y: newValue)
         }
     }
     
@@ -110,7 +110,7 @@ extension UIView {
         }
         set {
             var frame = self.frame
-            frame.origin = ly_origin
+            frame.origin = newValue
             self.frame = frame
         }
     }
@@ -122,7 +122,7 @@ extension UIView {
         }
         set {
             var frame = self.frame
-            frame.size = ly_size
+            frame.size = newValue
             self.frame = frame
         }
     }

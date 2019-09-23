@@ -29,7 +29,7 @@ internal struct WPPopupToll {
 internal extension UIView {
     
     /// x值
-    internal var popup_x: CGFloat{
+    var popup_x: CGFloat{
         get{
             return self.frame.origin.x
         }
@@ -41,7 +41,7 @@ internal extension UIView {
     }
     
     /// y值
-    internal var popup_y: CGFloat{
+    var popup_y: CGFloat{
         get{
             return self.frame.origin.y
         }
@@ -53,7 +53,7 @@ internal extension UIView {
     }
     
     /// 右边界的x值
-    internal var popup_rightX: CGFloat{
+    var popup_rightX: CGFloat{
         get{
             return self.popup_x + self.popup_width
         }
@@ -65,7 +65,7 @@ internal extension UIView {
     }
     
     /// 下边界的y值
-    internal var popup_bottomY: CGFloat{
+    var popup_bottomY: CGFloat{
         get{
             return self.popup_y + self.popup_height
         }
@@ -77,7 +77,7 @@ internal extension UIView {
     }
     
     /// 中心x值
-    internal var popup_centerX : CGFloat{
+    var popup_centerX : CGFloat{
         get{
             return self.center.x
         }
@@ -87,7 +87,7 @@ internal extension UIView {
     }
     
     /// 中心y值
-    internal var popup_centerY : CGFloat{
+    var popup_centerY : CGFloat{
         get{
             return self.center.y
         }
@@ -97,7 +97,7 @@ internal extension UIView {
     }
     
     /// 宽度
-    internal var popup_width: CGFloat{
+    var popup_width: CGFloat{
         get{
             return self.frame.size.width
         }
@@ -109,7 +109,7 @@ internal extension UIView {
     }
     
     /// 高度
-    internal var popup_height: CGFloat{
+    var popup_height: CGFloat{
         get{
             return self.frame.size.height
         }
@@ -121,7 +121,7 @@ internal extension UIView {
     }
     
     /// 起点
-    internal var popup_origin: CGPoint{
+    var popup_origin: CGPoint{
         get{
             return self.frame.origin
         }
@@ -132,7 +132,7 @@ internal extension UIView {
     }
     
     /// 大小
-    internal var popup_size: CGSize{
+    var popup_size: CGSize{
         get{
             return self.frame.size
         }
@@ -184,13 +184,13 @@ internal extension UIColor {
 internal extension String {
     
     // 获取文本高
-    internal func  popup_getTxtHeight(txtFont: UIFont, maxWidth: CGFloat) -> CGFloat {
+    func  popup_getTxtHeight(txtFont: UIFont, maxWidth: CGFloat) -> CGFloat {
         let size = CGSize.init(width: maxWidth, height: 100000)
         let stringSize = (self as NSString).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font : txtFont], context: nil)
         return stringSize.height
     }
     // 获取文本宽
-    internal func  popup_getTxtWidth(txtFont: UIFont, maxHeight: CGFloat) -> CGFloat {
+    func  popup_getTxtWidth(txtFont: UIFont, maxHeight: CGFloat) -> CGFloat {
         let size = CGSize.init(width: 100000, height: maxHeight)
         let stringSize = (self as NSString).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font : txtFont], context: nil)
         return stringSize.width

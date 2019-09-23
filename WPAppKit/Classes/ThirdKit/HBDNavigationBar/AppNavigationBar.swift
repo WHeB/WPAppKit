@@ -34,7 +34,7 @@ public extension UIViewController {
     ///   - barShadowHidden: 是否隐藏线
     ///   - barHidden: 是否隐藏导航栏
     ///   - barStyle: 状态栏风格
-    public func customNavigationBar(_ barColor: UIColor,
+    func customNavigationBar(_ barColor: UIColor,
                                     barShadowHidden: Bool? = false) {
         self.hbd_barTintColor = barColor
         self.hbd_barShadowHidden = barShadowHidden ?? false
@@ -46,7 +46,7 @@ public extension UIViewController {
     ///   - barTintColor: 左右标题颜色
     ///   - titleTxtColor: 中间标题颜色
     ///   - titleTxtFont: 中间标题字号
-    public func customNavigationBar(tintColor: UIColor,
+    func customNavigationBar(tintColor: UIColor,
                                     titleTxtColor: UIColor,
                                     titleTxtFont: UIFont) {
         self.hbd_tintColor = tintColor
@@ -57,42 +57,42 @@ public extension UIViewController {
     }
     
     /// 设置导航栏颜色
-    public func setBarColor(_ color: UIColor) {
+    func setBarColor(_ color: UIColor) {
         self.hbd_barTintColor = color
     }
     
     /// 设置导航栏隐藏状态
-    public func setBarHide(_ hide: Bool) {
+    func setBarHide(_ hide: Bool) {
         self.hbd_barHidden = hide
     }
     
     /// 设置导航栏线状态
-    public func setBarShadowHidden(_ hide: Bool) {
+    func setBarShadowHidden(_ hide: Bool) {
         self.hbd_barShadowHidden = hide
     }
     
     /// 设置导航栏透明度
-    public func setBarAlpha(_ alpha: CGFloat) {
+    func setBarAlpha(_ alpha: CGFloat) {
         self.hbd_barAlpha = Float(alpha)
     }
     
     /// 设置导航栏背景图片 （barTintColor会失效）
-    public func setBarImage(_ image: UIImage) {
+    func setBarImage(_ image: UIImage) {
         self.hbd_barImage = image
     }
     
     /// 更新导航栏属性设置
-    public func updateNavigationBarIfNedds() {
+    func updateNavigationBarIfNedds() {
         self.hbd_setNeedsUpdateNavigationBar()
     }
     
     /// 当前页面是否可以右滑返回，默认是 YES
-    public func isEnableSwipeBack(_ enable: Bool) {
+    func isEnableSwipeBack(_ enable: Bool) {
         self.hbd_clickBackEnabled = enable
     }
     
     /// 当前页面是否响应右滑返回或返回按钮返回，默认是 YES
-    public func isEnableBackInteractive(_ enable: Bool) {
+    func isEnableBackInteractive(_ enable: Bool) {
         self.hbd_backInteractive = enable
     }
     

@@ -11,7 +11,7 @@ import UIKit
 public extension UILabel {
     
     /// 便利构造器
-    public convenience init(text: String, txtColor: UIColor, font: UIFont, txtAlignment: NSTextAlignment? = .left) {
+    convenience init(text: String, txtColor: UIColor, font: UIFont, txtAlignment: NSTextAlignment? = .left) {
         self.init()
         numberOfLines = 0
         self.text = text
@@ -21,7 +21,7 @@ public extension UILabel {
     }
     
     /// 细线
-    public convenience init(lineBgColor: UIColor) {
+    convenience init(lineBgColor: UIColor) {
         self.init()
         self.backgroundColor = lineBgColor
     }

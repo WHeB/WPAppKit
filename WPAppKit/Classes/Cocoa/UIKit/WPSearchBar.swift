@@ -11,32 +11,43 @@ public class WPSearchBar: UISearchBar, UITextFieldDelegate {
     
     public var font: UIFont? {
         didSet {
-            guard let tfSearch = self.searchTextField else {
-                return
+            if #available(iOS 13.0, *) {
+                let tfSearch = self.searchTextField
+                tfSearch.font = font
+                placeholderSize = (self.placeholder as NSString?)?.size(withAttributes: [NSAttributedStringKey.font : font ?? 15]) ?? .zero
+            }else {
+                if let tfSearch: UITextField = self.value(forKey: "searchField") as? UITextField {
+                    tfSearch.font = font
+                    placeholderSize = (self.placeholder as NSString?)?.size(withAttributes: [NSAttributedStringKey.font : font ?? 15]) ?? .zero
+                }
             }
-            tfSearch.font = font
-            placeholderSize = (self.placeholder as NSString?)?.size(withAttributes: [NSAttributedStringKey.font : font ?? 15]) ?? .zero
-            
             setNormalPosition()
         }
     }
     
     public var textColor: UIColor? {
         didSet {
-            guard let tfSearch = self.searchTextField else {
-                return
+            if #available(iOS 13.0, *) {
+                let tfSearch = self.searchTextField
+                tfSearch.textColor = textColor
+            }else {
+                if let tfSearch: UITextField = self.value(forKey: "searchField") as? UITextField {
+                    tfSearch.textColor = textColor
+                }
             }
-            tfSearch.textColor = textColor
         }
     }
     
     override public var placeholder: String? {
         didSet {
-            guard let tfSearch = self.searchTextField else {
-                return
+            if #available(iOS 13.0, *) {
+                let tfSearch = self.searchTextField
+                placeholderSize = (self.placeholder as NSString?)?.size(withAttributes: [NSAttributedStringKey.font : tfSearch.font ?? 15]) ?? .zero
+            }else {
+                if let tfSearch: UITextField = self.value(forKey: "searchField") as? UITextField {
+                    placeholderSize = (self.placeholder as NSString?)?.size(withAttributes: [NSAttributedStringKey.font : tfSearch.font ?? 15]) ?? .zero
+                }
             }
-            placeholderSize = (self.placeholder as NSString?)?.size(withAttributes: [NSAttributedStringKey.font : tfSearch.font ?? 15]) ?? .zero
-            
             setNormalPosition()
         }
     }
@@ -50,7 +61,6 @@ public class WPSearchBar: UISearchBar, UITextFieldDelegate {
         }
     }
     
-    private var searchTextField: UITextField?
     private var placeholderSize = CGSize.zero
     private var searchIconSize = CGSize(width: 14, height: 14)
     
@@ -59,11 +69,16 @@ public class WPSearchBar: UISearchBar, UITextFieldDelegate {
         
         self.placeholder = "搜索"
         
-        if let tfSearch: UITextField = self.value(forKey: "searchField") as? UITextField {
-            self.searchTextField = tfSearch
+        if #available(iOS 13.0, *) {
+            let tfSearch = self.searchTextField
+            tfSearch.delegate = self
             tfSearch.font = UIFont.systemFont(ofSize: 15)
-            
             placeholderSize = (self.placeholder as NSString?)?.size(withAttributes: [NSAttributedStringKey.font : tfSearch.font ?? 15]) ?? .zero
+        }else {
+            if let tfSearch: UITextField = self.value(forKey: "searchField") as? UITextField {
+                tfSearch.font = UIFont.systemFont(ofSize: 15)
+                placeholderSize = (self.placeholder as NSString?)?.size(withAttributes: [NSAttributedStringKey.font : tfSearch.font ?? 15]) ?? .zero
+            }
         }
         setNormalPosition()
     }
@@ -71,7 +86,8 @@ public class WPSearchBar: UISearchBar, UITextFieldDelegate {
     // 设置初始化偏移
     private func setNormalPosition() {
         if #available(iOS 11.0, *) {
-            self.setPositionAdjustment(UIOffset.init(horizontal: (self.width - (self.searchIconSize.width + 8 + 30 +  self.placeholderSize.width)) / 2, vertical: 0), for: .search)
+            let offX = (self.width - (self.searchIconSize.width + 8 + 30 +  self.placeholderSize.width)) / 2
+            self.setPositionAdjustment(UIOffset.init(horizontal: offX, vertical: 0), for: .search)
         }
     }
     
@@ -90,7 +106,7 @@ public class WPSearchBar: UISearchBar, UITextFieldDelegate {
         }
         if #available(iOS 11.0, *) {
             UIView.animate(withDuration: 0.25) {
-                self.setPositionAdjustment(UIOffset.init(horizontal: (self.width - (self.searchIconSize.width + 13 + self.placeholderSize.width)) / 2, vertical: 0), for: .search)
+                self.setNormalPosition()
             }
         }
         return true
@@ -99,7 +115,7 @@ public class WPSearchBar: UISearchBar, UITextFieldDelegate {
     override public func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
         let isInside = super.point(inside: point, with: event)
         if isInside == false {
-            self.searchTextField?.resignFirstResponder()
+            self.resignFirstResponder()
         }
         return isInside
     }

@@ -10,7 +10,7 @@ import UIKit
 public extension UIApplication {
     
     /// 状态栏
-    public var statusBarView: UIView? {
+    var statusBarView: UIView? {
         if responds(to: Selector(("statusBar"))) {
             return value(forKey: "statusBar") as? UIView
         }

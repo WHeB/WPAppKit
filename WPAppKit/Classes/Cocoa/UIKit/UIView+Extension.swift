@@ -29,7 +29,7 @@ public extension UIView {
     ///   - direction: 圆角位置
     ///   - cornerRadius: 圆角大小
     ///   - bounds: 控件大小 自动布局需设置
-    public func setCornerRadius(_ direction: UIRectCorner, cornerRadius: CGFloat, bounds: CGRect? = CGRect.zero) {
+    func setCornerRadius(_ direction: UIRectCorner, cornerRadius: CGFloat, bounds: CGRect? = CGRect.zero) {
         let tempBounds = bounds == CGRect.zero ? self.bounds : bounds
         let cornerSize = CGSize(width: cornerRadius, height: cornerRadius)
         let maskPath = UIBezierPath(roundedRect: tempBounds!, byRoundingCorners: direction, cornerRadii: cornerSize)
@@ -44,7 +44,7 @@ public extension UIView {
     /// - Parameters:
     ///   - cornerRadius: 圆角大小
     ///   - bounds: 控件大小 自动布局需设置
-    public func setAllCornerRadius(cornerRadius: CGFloat, bounds: CGRect? = CGRect.zero) {
+    func setAllCornerRadius(cornerRadius: CGFloat, bounds: CGRect? = CGRect.zero) {
         self.setCornerRadius(.allCorners, cornerRadius: cornerRadius, bounds: bounds)
     }
     
@@ -53,7 +53,7 @@ public extension UIView {
     /// - Parameters:
     ///   - color: 边框颜色
     ///   - borderWidth: 边框宽度
-    public func setBorder(color: UIColor, borderWidth: CGFloat, bounds: CGRect? = CGRect.zero) {
+    func setBorder(color: UIColor, borderWidth: CGFloat, bounds: CGRect? = CGRect.zero) {
         let tempBounds = bounds == CGRect.zero ? self.bounds : bounds
         let linePath = UIBezierPath.init(rect: tempBounds!)
         let shapeLayer = CAShapeLayer()
@@ -73,7 +73,7 @@ public extension UIView {
     ///   - color: 边框颜色
     ///   - borderWidth: 边框宽度
     ///   - bounds: 控件大小 自动布局需设置
-    public func setCornerRadiusAndBorder(_ direction: UIRectCorner, cornerRadius: CGFloat, color: UIColor, borderWidth: CGFloat, bounds: CGRect? = CGRect.zero) {
+    func setCornerRadiusAndBorder(_ direction: UIRectCorner, cornerRadius: CGFloat, color: UIColor, borderWidth: CGFloat, bounds: CGRect? = CGRect.zero) {
         
         let tempBounds = bounds == CGRect.zero ? self.bounds : bounds
         let cornerSize = CGSize(width: cornerRadius, height: cornerRadius)
@@ -99,7 +99,7 @@ public extension UIView {
     ///   - startOrientation: 起点
     ///   - endOrientation: 终点
     ///   - colors: 渐变颜色
-    public func setGradientColor(startOrientation: Orientation, endOrientation: Orientation, colors: [CGColor], bounds: CGRect? = CGRect.zero) {
+    func setGradientColor(startOrientation: Orientation, endOrientation: Orientation, colors: [CGColor], bounds: CGRect? = CGRect.zero) {
         let gradientColors: [CGColor] = colors
         let gradientLayer: CAGradientLayer = CAGradientLayer()
         gradientLayer.colors = gradientColors

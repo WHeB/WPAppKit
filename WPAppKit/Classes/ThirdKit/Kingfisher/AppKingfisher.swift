@@ -12,7 +12,7 @@ import Kingfisher
 public extension UIImageView {
 
     /// 设置网络图片
-    public func king_Image(imgUrl: String, placeholderImg: UIImage? = nil) -> Void {
+    func king_Image(imgUrl: String, placeholderImg: UIImage? = nil) -> Void {
         guard let url = URL(string: imgUrl) else {
             image = placeholderImg
             return
@@ -27,7 +27,7 @@ public extension UIImageView {
 public extension UIButton {
 
     /// 为button设置网络图片
-    public func king_Image(imgUrl: String, placeholderImg: UIImage? = nil) -> Void {
+    func king_Image(imgUrl: String, placeholderImg: UIImage? = nil) -> Void {
         guard let url = URL(string: imgUrl) else {
             setImage(placeholderImg, for: .normal)
             return
@@ -36,7 +36,7 @@ public extension UIButton {
     }
 
     /// 为button设置背景图片
-    public func king_BgImage(imgUrl: String, placeholderImg: UIImage? = nil) -> Void {
+    func king_BgImage(imgUrl: String, placeholderImg: UIImage? = nil) -> Void {
         guard let url = URL(string: imgUrl) else {
             setBackgroundImage(placeholderImg, for: .normal)
             return
