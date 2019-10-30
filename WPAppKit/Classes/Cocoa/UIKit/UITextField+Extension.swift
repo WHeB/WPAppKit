@@ -12,26 +12,18 @@ public extension UITextField {
     
     /// 设置 Placeholder 颜色
     func setPlaceholder(color: UIColor) {
-        if #available(iOS 13.0, *) {
-            guard let placeholder = self.placeholder else {
-                return
-            }
-            self.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSAttributedStringKey.foregroundColor : color])
-        }else {
-            self.setValue(color, forKey: "_placeholderLabel.textColor")
+        guard let placeholder = self.placeholder else {
+            return
         }
+        self.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSAttributedStringKey.foregroundColor : color])
     }
     
     /// 设置 Placeholder 字号
     func setPlaceholder(font: UIFont) {
-        if #available(iOS 13.0, *) {
-            guard let placeholder = self.placeholder else {
-                return
-            }
-            self.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSAttributedStringKey.font : font])
-        }else {
-            self.setValue(font, forKey: "_placeholderLabel.font")
+        guard let placeholder = self.placeholder else {
+            return
         }
+        self.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSAttributedStringKey.font : font])
     }
     
     /// 设置光标颜色

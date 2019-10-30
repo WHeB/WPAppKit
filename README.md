@@ -29,6 +29,9 @@ WPAppKit is available under the MIT license. See the LICENSE file for more info.
 ## Outline
 ```
 
+V0.5.4 开始兼容iOS13（暂未验证夜间模式）
+
+
 |── SnapKit
 |── Alamofire
 |── Localize-Swift
@@ -38,7 +41,8 @@ WPAppKit is available under the MIT license. See the LICENSE file for more info.
 |   |   |── UIFoundation                          
 |   |── Tool                        
 |   |── EmptyView                           
-|   |── WPWebView                                                                  
+|   |── WPWebView                                                       |   |── CustomView
+|   |   |── TagsView                                           
 |   |── WPPopupView                                        
 |   |── CodeScan                                         
 |   |── ThirdKit                              
@@ -46,7 +50,6 @@ WPAppKit is available under the MIT license. See the LICENSE file for more info.
 |   |   |── MBHudProgress                              
 |   |   |── Kingfisher                           
 |   |   |── HBDNavigationBar                           
-
 
 
 ```

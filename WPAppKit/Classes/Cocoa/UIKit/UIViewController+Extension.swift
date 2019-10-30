@@ -89,6 +89,13 @@ public extension UIViewController {
         self.navigationController?.present(viewController, animated: true, completion: nil)
     }
     
+    /// 弹一个窗口
+    func presentPop(_ viewController : UIViewController) {
+        viewController.modalTransitionStyle = .crossDissolve
+        viewController.modalPresentationStyle = .overCurrentContext
+        self.present(viewController, animated: true, completion: nil)
+    }
+    
     /// 模态返回
     func dismiss() {
         self.navigationController?.dismiss(animated: true, completion: nil)
@@ -155,9 +162,15 @@ public extension UIViewController {
     
     /// 设置状态栏背景颜色
     func setStatus(backgroundColor: UIColor) {
-        let barWindow: UIView = UIApplication.shared.value(forKey: "statusBarWindow") as! UIView
-        let barView: UIView = barWindow.value(forKey: "statusBar") as! UIView
-        barView.backgroundColor = backgroundColor
+        if #available(iOS 13.0, *) {
+            let barView = UIView(frame: UIApplication.shared.statusBarFrame)
+            barView.backgroundColor = backgroundColor
+            UIApplication.shared.keyWindow?.addSubview(barView)
+        }else {
+            let barWindow: UIView = UIApplication.shared.value(forKey: "statusBarWindow") as! UIView
+            let barView: UIView = barWindow.value(forKey: "statusBar") as! UIView
+            barView.backgroundColor = backgroundColor
+        }
     }
     
 }

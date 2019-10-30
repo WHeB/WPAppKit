@@ -19,14 +19,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.title = "Test"
         self.view.addSubview(self.tableView)
         
-        self.navigationItem.leftBarButtonItem = self.customTxtItem(type: .leftItem, title: "点", action: #selector(clickAction))
-        
         self.navigationItem.rightBarButtonItem = self.customImgItem(type: .rightItem, image: UIImage(named: "hud_success"), action: #selector(clickAction))
-        
     }
     
     @objc private func clickAction() {
-        
+          
         
     }
     

@@ -158,7 +158,7 @@ extension HomeViewController {
         style.lastBtnColor = UIColor.red
         style.animationOptions = .buttomPop
         style.cornerRadius = 8
-        WPPopupView.showSheetView(style: style, title: "请选择照片", detail: nil, buttons: ["拍照", "从相册选择","取消"]) { (_, index) in
+        WPPopupView.showSheetView(style: style, title: nil, detail: "测试", buttons: ["拍照", "从相册选择","取消"]) { (_, index) in
             print(index)
         }
     }

@@ -40,7 +40,6 @@ open class WPSheetView: UIView {
         self.sheetViewW = ScWidth * 1.0
         // 文本宽
         self.labelW = self.sheetViewW - 2 * padding
-        
         // 标题
         if title != nil && title?.count != 0 {
             self.loadTitle(title: title!)
@@ -49,7 +48,6 @@ open class WPSheetView: UIView {
         if detail != nil && detail?.count != 0 {
             self.loadDetail(detail: detail!)
         }
-        
         // buttons
         if WPPopupToll.popup_isHasSafeArea {
             self.buttonH = CGFloat(buttons.count) * buttonHeight + 20 + 5
@@ -119,11 +117,16 @@ open class WPSheetView: UIView {
     
     // 多个button
     private func loadButtons(buttons: [String]) {
-        let bussonsViewY: CGFloat = self.contentView.popup_bottomY
+        var bussonsViewY: CGFloat = self.contentView.popup_bottomY
+        var buttonOneY: CGFloat = lineHeight
+        if self.titleH == 0.0 && self.detailH == 0.0 {
+            bussonsViewY = self.contentView.popup_bottomY + style.cornerRadius
+            buttonOneY = 0.0
+        }
         self.buttonsView.frame = CGRect.init(x: 0, y: bussonsViewY, width: self.sheetViewW, height: self.buttonH)
         
         for (index, item) in buttons.enumerated() {
-            let buttonY = lineHeight + CGFloat(index) * buttonHeight
+            let buttonY: CGFloat = CGFloat(index) * buttonHeight + buttonOneY
             let button = UIButton.init(type: .custom)
             button.backgroundColor = self.style.popupBgColor
             if index == (buttons.count - 1) { // 最后一个

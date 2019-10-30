@@ -153,6 +153,7 @@
 		B843F6FC230AADE0005CCD16 /* UIScrollView+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = B843F6F7230AADDF005CCD16 /* UIScrollView+Empty.swift */; };
 		B843F6FD230AADE0005CCD16 /* HDEmptyBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B843F6F8230AADDF005CCD16 /* HDEmptyBaseView.swift */; };
 		B849D1F9232A50980017EDCA /* CacheManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B849D1F8232A50970017EDCA /* CacheManage.swift */; };
+		B851550A23698DE300C5ECCB /* TextCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B851550923698DE300C5ECCB /* TextCarouselView.swift */; };
 		B85C3F23232FE62900762052 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85C3F22232FE62900762052 /* NSObject+Extension.swift */; };
 		B85C3F5A2330D66C00762052 /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85C3F592330D66C00762052 /* TagsView.swift */; };
 		B87F1B482301358800C60FE6 /* AppNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87F1B472301358800C60FE6 /* AppNavigationBar.swift */; };
@@ -166,6 +167,7 @@
 		B87F1B8423025AEF00C60FE6 /* CodeCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87F1B8323025AEF00C60FE6 /* CodeCreate.swift */; };
 		B889E074231E813600B32707 /* WPSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B889E073231E813600B32707 /* WPSearchBar.swift */; };
 		B889E076231E814500B32707 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B889E075231E814500B32707 /* Data+Extension.swift */; };
+		B8D25364235D831D00AA296B /* WPPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D25363235D831D00AA296B /* WPPageControl.swift */; };
 		BACA19A92FB31CBEBA9BF48805EFDDEF /* AppHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9362ED7B1179F09583899C0591DC7B18 /* AppHud.swift */; };
 		BD9A09840189D37657887D1467CAA330 /* MJRefreshStateHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 28C4F3CEDE83F06C38BD231FE85B9E81 /* MJRefreshStateHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BEB0C287C895386C521C4A39E1F0322B /* String+LocalizeBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D2D9C1AFFCA60E551C640FB238E80E /* String+LocalizeBundle.swift */; };
@@ -444,6 +446,7 @@
 		B843F6F7230AADDF005CCD16 /* UIScrollView+Empty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Empty.swift"; sourceTree = "<group>"; };
 		B843F6F8230AADDF005CCD16 /* HDEmptyBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HDEmptyBaseView.swift; sourceTree = "<group>"; };
 		B849D1F8232A50970017EDCA /* CacheManage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CacheManage.swift; path = WPAppKit/Classes/Tool/CacheManage.swift; sourceTree = "<group>"; };
+		B851550923698DE300C5ECCB /* TextCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCarouselView.swift; sourceTree = "<group>"; };
 		B85C3F22232FE62900762052 /* NSObject+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSObject+Extension.swift"; path = "WPAppKit/Classes/Cocoa/Foundation/NSObject+Extension.swift"; sourceTree = "<group>"; };
 		B85C3F592330D66C00762052 /* TagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
 		B87F1B472301358800C60FE6 /* AppNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationBar.swift; sourceTree = "<group>"; };
@@ -457,6 +460,7 @@
 		B87F1B8323025AEF00C60FE6 /* CodeCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeCreate.swift; sourceTree = "<group>"; };
 		B889E073231E813600B32707 /* WPSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WPSearchBar.swift; path = WPAppKit/Classes/Cocoa/UIKit/WPSearchBar.swift; sourceTree = "<group>"; };
 		B889E075231E814500B32707 /* Data+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Data+Extension.swift"; path = "WPAppKit/Classes/Cocoa/Foundation/Data+Extension.swift"; sourceTree = "<group>"; };
+		B8D25363235D831D00AA296B /* WPPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WPPageControl.swift; sourceTree = "<group>"; };
 		B9BFF14737AE58EFDA05ED78472D7643 /* MJRefreshAutoStateFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoStateFooter.m; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoStateFooter.m; sourceTree = "<group>"; };
 		BAA64F8D6C809C38ACD740C250371586 /* Localize-Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Localize-Swift-prefix.pch"; sourceTree = "<group>"; };
 		BB18B5F8E4B2C957DBC633481912B9A1 /* Kingfisher-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-umbrella.h"; sourceTree = "<group>"; };
@@ -849,6 +853,8 @@
 			isa = PBXGroup;
 			children = (
 				B85C3F592330D66C00762052 /* TagsView.swift */,
+				B8D25363235D831D00AA296B /* WPPageControl.swift */,
+				B851550923698DE300C5ECCB /* TextCarouselView.swift */,
 			);
 			name = CustomView;
 			path = WPAppKit/Classes/CustomView;
@@ -1357,7 +1363,7 @@
 				LastUpgradeCheck = 1100;
 				TargetAttributes = {
 					1075D76821AB59C63D215759CC7CB0A7 = {
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1100;
 					};
 					19622742EBA51E823D6DAE3F8CDBFAD4 = {
 						LastSwiftMigration = 1100;
@@ -1577,9 +1583,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC381050EA8028E7D787CF49EDC49701 /* HBDNavigationBar-dummy.m in Sources */,
+				B8D25364235D831D00AA296B /* WPPageControl.swift in Sources */,
 				630602F567A422605A29D0814078A257 /* HBDNavigationBar.m in Sources */,
 				1DB399B8E68D67D945CC3AA7458FCCF7 /* HBDNavigationController.m in Sources */,
 				1D9B4EF82D4138F58A9473059EA71312 /* UIViewController+HBD.m in Sources */,
+				B851550A23698DE300C5ECCB /* TextCarouselView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2001,7 +2009,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MARKETING_VERSION = 0.5.4;
+				MARKETING_VERSION = 0.5.5;
 				MODULEMAP_FILE = "Target Support Files/WPAppKit/WPAppKit.modulemap";
 				PRODUCT_MODULE_NAME = WPAppKit;
 				PRODUCT_NAME = WPAppKit;
@@ -2285,7 +2293,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MARKETING_VERSION = 0.5.4;
+				MARKETING_VERSION = 0.5.5;
 				MODULEMAP_FILE = "Target Support Files/WPAppKit/WPAppKit.modulemap";
 				PRODUCT_MODULE_NAME = WPAppKit;
 				PRODUCT_NAME = WPAppKit;

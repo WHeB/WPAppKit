@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class TextViewViewController: UIViewController {
 
@@ -21,5 +22,5 @@ class TextViewViewController: UIViewController {
         textView.placeholder = "请输入内容"
         textView.textContainerInset = UIEdgeInsetsMake(10, 10, 10, 10)
     }
-
+    
 }

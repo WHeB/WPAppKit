@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'WPAppKit'
-    s.version          = '0.5.4'
+    s.version          = '0.5.5'
     s.summary          = '搭建 Swift 项目常用类库整合'
     s.description      = <<-DESC
     Cocoa：Foundation,UIKit相关扩展
@@ -35,6 +35,13 @@ Pod::Spec.new do |s|
         end
     end
     
+    # ---------------  自定义UI  -----------
+    s.subspec 'CustomView' do |ss|
+        ss.source_files = 'WPAppKit/Classes/CustomView/*.swift'
+        ss.frameworks = 'UIKit', 'Foundation'
+        ss.dependency 'WPAppKit/Cocoa'
+    end
+    
     # ---------------  工具库  -----------
     s.subspec 'Tool' do |ss|
         ss.source_files = 'WPAppKit/Classes/Tool/*.swift'
@@ -62,7 +69,6 @@ Pod::Spec.new do |s|
     s.subspec 'CodeScan' do |ss|
         ss.source_files = 'WPAppKit/Classes/CodeScan/*.swift'
         ss.resource = 'WPAppKit/Assets/CodeScan.bundle'
-        
     end
     
     # ---------------  第三方库 + 扩展  -----------
@@ -82,6 +88,7 @@ Pod::Spec.new do |s|
         # MBProgressHUD
         ss.subspec 'MBProgressHUD' do |sss|
             sss.source_files = 'WPAppKit/Classes/ThirdKit/MBProgressHUD/*.{swift,h,m}'
+            ss.dependency 'WPAppKit/Cocoa'
         end
         
         # HBDNavigationBar

@@ -81,7 +81,7 @@ class WebViewController: UIViewController {
     
     func webViewEvaluateJavaScript(_ result: Any?, error: Error?) {
         
-        print(result)
+//        print(result)
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {

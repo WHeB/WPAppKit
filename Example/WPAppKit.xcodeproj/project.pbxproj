@@ -13,6 +13,7 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		B81DC567233B6A730010C0A2 /* PresentPopViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81DC566233B6A730010C0A2 /* PresentPopViewViewController.swift */; };
 		B84F1B8122E166750035628F /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = B84F1B8022E166750035628F /* loading.gif */; };
 		B87037B422CCBFB900D97413 /* BubbleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87037B222CCBFB800D97413 /* BubbleViewController.swift */; };
 		B87037B522CCBFB900D97413 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87037B322CCBFB800D97413 /* HomeViewController.swift */; };
@@ -41,6 +42,7 @@
 		71DB0440C96D13D4D6DFF6F6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		7ED4B3DA385CB94FBC76C400 /* Pods_WPAppKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WPAppKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4FA5E05089D758F0ADC782F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		B81DC566233B6A730010C0A2 /* PresentPopViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentPopViewViewController.swift; sourceTree = "<group>"; };
 		B84F1B8022E166750035628F /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
 		B87037B222CCBFB800D97413 /* BubbleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleViewController.swift; sourceTree = "<group>"; };
 		B87037B322CCBFB800D97413 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				B87037B322CCBFB800D97413 /* HomeViewController.swift */,
 				B87037DB22CDA16600D97413 /* WebViewController.swift */,
 				B87037E022CDC99700D97413 /* HUDViewController.swift */,
+				B81DC566233B6A730010C0A2 /* PresentPopViewViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -285,6 +288,7 @@
 				B87037B422CCBFB900D97413 /* BubbleViewController.swift in Sources */,
 				B8E32F96229D1BDF004324C5 /* TableViewController.swift in Sources */,
 				B8E32F8F229D1BDF004324C5 /* TextViewViewController.swift in Sources */,
+				B81DC567233B6A730010C0A2 /* PresentPopViewViewController.swift in Sources */,
 				B8E32F94229D1BDF004324C5 /* CheckViewController.swift in Sources */,
 				B8E32F8E229D1BDF004324C5 /* ArrayViewController.swift in Sources */,
 				B8E32F93229D1BDF004324C5 /* PageViewController.swift in Sources */,
@@ -430,7 +434,7 @@
 				INFOPLIST_FILE = WPAppKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 0.5.4;
+				MARKETING_VERSION = 0.5.5;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -448,7 +452,7 @@
 				INFOPLIST_FILE = WPAppKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 0.5.4;
+				MARKETING_VERSION = 0.5.5;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
