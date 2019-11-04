@@ -42,7 +42,7 @@ public extension UIButton {
     }
     
     /// 默认图片 + 选中图片
-    convenience init(normalImg: UIImage, selectedImg: UIImage? = nil) {
+    convenience init(normalImg: UIImage?, selectedImg: UIImage? = nil) {
         self.init(type: .custom)
         self.adjustsImageWhenHighlighted = false
         self.setImage(normalImg, for: .normal)
@@ -51,7 +51,7 @@ public extension UIButton {
     }
     
     /// 文本 + 文本颜色 + 字号 + 图片
-    convenience init(title: String, txtColor: UIColor, font: UIFont, normalImg: UIImage) {
+    convenience init(title: String, txtColor: UIColor, font: UIFont, normalImg: UIImage?) {
         self.init(type: .custom)
         self.adjustsImageWhenHighlighted = false
         self.setTitle(title, for: .normal)
@@ -61,7 +61,7 @@ public extension UIButton {
     }
     
     /// 文本 + 颜色 + 选中颜色 + 字号 + 默认图片 + 选中图片
-    convenience init(title: String, txtColor: UIColor, selectedTxtColor: UIColor, font: UIFont, normalImg: UIImage, selectedImg: UIImage? = nil) {
+    convenience init(title: String, txtColor: UIColor, selectedTxtColor: UIColor, font: UIFont, normalImg: UIImage?, selectedImg: UIImage? = nil) {
         self.init(type: .custom)
         self.adjustsImageWhenHighlighted = false
         self.setTitle(title, for: .normal)

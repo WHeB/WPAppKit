@@ -7,57 +7,79 @@
 
 import UIKit
 
+/*
+ 遵守代理 实现这两个方法即可
+ func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String)
+ func searchBarSearchButtonClicked(_ searchBar: UISearchBar)
+ */
+
 public class WPSearchBar: UISearchBar, UITextFieldDelegate {
     
+    /// 输入框
+    public var searchField: UITextField? {
+        get {
+            self.layoutIfNeeded() // 需要获取frame
+            if #available(iOS 13.0, *) {
+                return self.searchTextField
+            }else {
+                if let tfSearch: UITextField = self.value(forKey: "searchField") as? UITextField {
+                    return tfSearch
+                }
+            }
+            return nil
+        }
+    }
+    
+    /// 输入框字号
     public var font: UIFont? {
         didSet {
-            if #available(iOS 13.0, *) {
-                let tfSearch = self.searchTextField
-                tfSearch.font = font
-                placeholderSize = (self.placeholder as NSString?)?.size(withAttributes: [NSAttributedStringKey.font : font ?? 15]) ?? .zero
-            }else {
-                if let tfSearch: UITextField = self.value(forKey: "searchField") as? UITextField {
-                    tfSearch.font = font
-                    placeholderSize = (self.placeholder as NSString?)?.size(withAttributes: [NSAttributedStringKey.font : font ?? 15]) ?? .zero
-                }
+            guard let tfSearch = self.searchField else {
+                return
             }
+            tfSearch.font = font
+            placeholderSize = (self.placeholder as NSString?)?.size(withAttributes: [NSAttributedStringKey.font : font ?? 15]) ?? .zero
+            
             setNormalPosition()
         }
     }
     
+    /// 输入框字体颜色
     public var textColor: UIColor? {
         didSet {
-            if #available(iOS 13.0, *) {
-                let tfSearch = self.searchTextField
-                tfSearch.textColor = textColor
-            }else {
-                if let tfSearch: UITextField = self.value(forKey: "searchField") as? UITextField {
-                    tfSearch.textColor = textColor
-                }
+            guard let tfSearch = self.searchField else {
+                return
             }
+            tfSearch.textColor = textColor
         }
     }
     
+    /// placeholder
     override public var placeholder: String? {
         didSet {
-            if #available(iOS 13.0, *) {
-                let tfSearch = self.searchTextField
-                placeholderSize = (self.placeholder as NSString?)?.size(withAttributes: [NSAttributedStringKey.font : tfSearch.font ?? 15]) ?? .zero
-            }else {
-                if let tfSearch: UITextField = self.value(forKey: "searchField") as? UITextField {
-                    placeholderSize = (self.placeholder as NSString?)?.size(withAttributes: [NSAttributedStringKey.font : tfSearch.font ?? 15]) ?? .zero
-                }
+            guard let tfSearch = self.searchField else {
+                return
             }
+            placeholderSize = (self.placeholder as NSString?)?.size(withAttributes: [NSAttributedStringKey.font : tfSearch.font ?? 15]) ?? .zero
             setNormalPosition()
         }
     }
     
+    /// 搜索框图标
     public var searchIcon: UIImage? {
         didSet {
             searchIconSize = searchIcon?.size ?? CGSize(width: 14, height: 14)
             self.setImage(searchIcon, for: .search, state: .normal)
             
             setNormalPosition()
+        }
+    }
+    
+    /// 搜索框背景颜色
+    override public var backgroundColor: UIColor? {
+        didSet {
+            if let color = backgroundColor {
+                self.backgroundImage = UIImage.colorToImage(color)
+            }
         }
     }
     
@@ -123,4 +145,5 @@ public class WPSearchBar: UISearchBar, UITextFieldDelegate {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
 }

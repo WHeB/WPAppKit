@@ -7,14 +7,14 @@
 
 import UIKit
 
-enum PageControlType {
+public enum PageControlType {
     case dot
     case ring
     case line
     case rectangle
 }
 
-enum PageControlStyle {
+public enum PageControlStyle {
     // 圆点
     case dot(normalColor: UIColor, selectedColor: UIColor, size: CGSize)
     case line(normalColor: UIColor, selectedColor: UIColor, normalSize: CGSize, selectedSize: CGSize)

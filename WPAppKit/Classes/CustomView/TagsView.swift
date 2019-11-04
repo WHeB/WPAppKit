@@ -50,6 +50,7 @@ public struct TagStyle {
     public init() {}
 }
 
+// 回调
 public typealias TagsResultCallBack = (_ result: [(Int, String)], _ index: [Int], _ text: [String]) -> Void
 
 public class TagsView: UIView {
@@ -93,6 +94,25 @@ public class TagsView: UIView {
         self.chooseResult?(result, resultIndex, resultText)
     }
     
+    /// 重置数据源
+    // 注意:重置数据源后，以前选中状态会被清除
+    public func refreshData(data: [String]) {
+        if self.data == data {
+            return
+        }
+        for sub in self.subviews {
+            sub.removeFromSuperview()
+        }
+        self.data = data
+        loadSubView()
+        // 重置高度
+        self.frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.size.width, height: self.selfHeight)
+        
+        self.result.removeAll()
+        self.resultIndex.removeAll()
+        self.resultText.removeAll()
+    }
+    
     /// 实例化
     public convenience init(style: TagStyle, data: [String], frame: CGRect, result: @escaping TagsResultCallBack) {
         self.init(frame: frame)
@@ -106,7 +126,6 @@ public class TagsView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -114,6 +133,9 @@ public class TagsView: UIView {
     }
     
     private func loadSubView() {
+        if data.count == 0 {
+            return
+        }
         
         var btnX: CGFloat = self.style.margin
         var btnY: CGFloat = self.style.rowSpace
@@ -209,6 +231,9 @@ public class TagsView: UIView {
     
     // 添加和删除元素
     private func resultAddRemove(index: Int) {
+        if index > data.count {
+            return
+        }
         let text = self.data[index]
         let indexText = (index, text)
         
