@@ -73,11 +73,11 @@ public extension UIView {
     ///   - color: 边框颜色
     ///   - borderWidth: 边框宽度
     ///   - bounds: 控件大小 自动布局需设置
-    func setCornerRadiusAndBorder(_ direction: UIRectCorner, cornerRadius: CGFloat, color: UIColor, borderWidth: CGFloat, bounds: CGRect? = CGRect.zero) {
+    func setCornerRadiusAndBorder(_ direction: UIRectCorner? = .allCorners, cornerRadius: CGFloat, color: UIColor, borderWidth: CGFloat, bounds: CGRect? = CGRect.zero) {
         
         let tempBounds = bounds == CGRect.zero ? self.bounds : bounds
         let cornerSize = CGSize(width: cornerRadius, height: cornerRadius)
-        let maskPath = UIBezierPath(roundedRect: tempBounds!, byRoundingCorners: direction, cornerRadii: cornerSize)
+        let maskPath = UIBezierPath(roundedRect: tempBounds!, byRoundingCorners: direction!, cornerRadii: cornerSize)
         
         let maskLayer = CAShapeLayer()
         maskLayer.frame = tempBounds!
@@ -212,4 +212,58 @@ public extension UIView {
     }
 }
 
+public extension UIView {
+    
+    /// 将当前视图转为UIImage
+    // 将转换后的UIImage保存到相机胶卷中
+    // UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+    func asImage() -> UIImage {
+        if #available(iOS 10.0, *) {
+            let renderer = UIGraphicsImageRenderer(bounds: bounds)
+            return renderer.image { rendererContext in
+                layer.render(in: rendererContext.cgContext)
+            }
+        } else {
+            return UIImage()
+        }
+    }
+}
 
+
+public extension UIView {
+    
+    /// 添加点击事件
+    func addTapGesture(tapNumber: Int? = 1, target: AnyObject, action: Selector) {
+        let tap = UITapGestureRecognizer(target: target, action: action)
+        tap.numberOfTapsRequired = tapNumber!
+        addGestureRecognizer(tap)
+        isUserInteractionEnabled = true
+    }
+    
+    func addSwipeGesture(direction: UISwipeGestureRecognizerDirection, numberOfTouches: Int? = 1, target: AnyObject, action: Selector) {
+        let swipe = UISwipeGestureRecognizer(target: target, action: action)
+        swipe.direction = direction
+        swipe.numberOfTouchesRequired = numberOfTouches!
+        addGestureRecognizer(swipe)
+        isUserInteractionEnabled = true
+    }
+    
+    func addPanGesture(target: AnyObject, action: Selector) {
+        let pan = UIPanGestureRecognizer(target: target, action: action)
+        addGestureRecognizer(pan)
+        isUserInteractionEnabled = true
+    }
+    
+    func addPinchGesture(target: AnyObject, action: Selector) {
+        let pinch = UIPinchGestureRecognizer(target: target, action: action)
+        addGestureRecognizer(pinch)
+        isUserInteractionEnabled = true
+    }
+    
+    func addLongPressGesture(target: AnyObject, action: Selector) {
+        let longPress = UILongPressGestureRecognizer(target: target, action: action)
+        addGestureRecognizer(longPress)
+        isUserInteractionEnabled = true
+    }
+    
+}

@@ -124,8 +124,8 @@ public extension UIViewController {
     
     /// 系统alertView
     func showAlertView(title: String? = nil,
-                              message: String? = nil,
-                              actionItems: [UIAlertAction]) {
+                       message: String? = nil,
+                       actionItems: [UIAlertAction]) {
         let alertController = UIAlertController(title: title,
                                                 message: message,
                                                 preferredStyle: .alert)
@@ -137,8 +137,8 @@ public extension UIViewController {
     
     /// 系统sheetView
     func showSheetView(title: String? = nil,
-                              message: String? = nil,
-                              actionItems: [UIAlertAction]) {
+                       message: String? = nil,
+                       actionItems: [UIAlertAction]) {
         let sheetController = UIAlertController(title: title,
                                                 message: message,
                                                 preferredStyle: .actionSheet)
@@ -172,7 +172,39 @@ public extension UIViewController {
             barView.backgroundColor = backgroundColor
         }
     }
+}
+
+public extension UIViewController {
     
+    /// 监听键盘
+    func addKeyboardMonitor() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notifi:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notifi:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    @objc open func keyboardWillShow(notifi: Notification) {
+        if let nInfo = (notifi as Notification).userInfo,
+            let value = nInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue {
+            let frame = value.cgRectValue
+            keyboardWillShowWithFrame(frame)
+        }
+    }
+    
+    @objc open func keyboardWillHide(notifi: Notification) {
+        if let nInfo = (notifi as Notification).userInfo,
+            let value = nInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue {
+            let frame = value.cgRectValue
+            keyboardWillHideWithFrame(frame)
+        }
+    }
+    
+    @objc open func keyboardWillShowWithFrame(_ frame: CGRect) {
+        
+    }
+    
+    @objc open func keyboardWillHideWithFrame(_ frame: CGRect) {
+        
+    }
 }
 
 
@@ -183,7 +215,7 @@ public extension UIViewController {
     }
     
     /// 添加文字item
-    func customTxtItem(type: ItemType, title: String, action: Selector) -> UIBarButtonItem {
+    func customTxtItem(type: ItemType, title: String, titleColor: UIColor? = UIColor.black, titleFont: UIFont? = UIFont.systemFont(ofSize: 15), action: Selector) -> UIBarButtonItem {
         let itemButton = UIButton(type: .custom)
         itemButton.setTitle(title, for: .normal)
         if let navBar = self.navigationController?.navigationBar {
@@ -191,7 +223,7 @@ public extension UIViewController {
         }else {
             let appearanceNavBar = UINavigationBar.appearance()
             if appearanceNavBar == NSNull() {
-                itemButton.setTitleColor(UIColor.black, for: .normal)
+                itemButton.setTitleColor(titleColor, for: .normal)
             }else {
                 itemButton.setTitleColor(appearanceNavBar.tintColor, for: .normal)
             }
@@ -199,7 +231,7 @@ public extension UIViewController {
         itemButton.sizeToFit()
         itemButton.width = itemButton.width < 40 ? 40 : itemButton.width
         itemButton.height = itemButton.height < 40 ? 40 : itemButton.height
-        
+        itemButton.titleLabel?.font = titleFont
         switch type {
         case .leftItem:
             itemButton.contentHorizontalAlignment = .left
@@ -236,4 +268,5 @@ public extension UIViewController {
         let item = UIBarButtonItem(customView: itemButton)
         return item
     }
+    
 }

@@ -1,5 +1,5 @@
 //
-//  UILabel+Convenience.swift
+//  UILabel+Extension.swift
 //  WPAppKit
 //
 //  Created by 王鹏 on 2019/4/11.

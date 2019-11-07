@@ -1,5 +1,5 @@
 //
-//  UIColor+Convenience.swift
+//  UIColor+Extension.swift
 //  WPAppKit
 //
 //  Created by 王鹏 on 2019/4/10.

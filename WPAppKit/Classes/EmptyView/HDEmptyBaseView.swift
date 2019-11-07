@@ -21,26 +21,26 @@ public class HDEmptyBaseView: UIView {
     var contentView: UIView! = UIView()
     
     //图片名字
-    var _imageStr: NSString? {
+    var _imageStr: String? {
         didSet {
             setupSubviews()
         }
     }
     //标题
-    var _titleStr: NSString? {
+    var _titleStr: String? {
         didSet {
             setupSubviews()
         }
     }
     //详情
-    var _detailStr: NSString?
+    var _detailStr: String?
     {
         didSet {
             setupSubviews()
         }
     }
     //按钮标题
-    var _btnTitleStr: NSString?
+    var _btnTitleStr: String?
     {
         didSet {
             setupSubviews()
@@ -101,7 +101,7 @@ public class HDEmptyBaseView: UIView {
     
     //MARK: ---
     // target/action 响应
-    public class func emptyActionViewWithImageStr(imageStr: NSString, titleStr: NSString, detailStr: NSString, btnTitleStr: NSString, target:AnyObject, action: Selector) -> HDEmptyBaseView {
+    public class func emptyActionViewWithImageStr(imageStr: String, titleStr: String, detailStr: String, btnTitleStr: String, target:AnyObject, action: Selector) -> HDEmptyBaseView {
         
         let emptyView:HDEmptyView = HDEmptyView.init(frame: CGRect.init(x: 0, y: 0, width: 10, height: 10))
         
@@ -111,8 +111,7 @@ public class HDEmptyBaseView: UIView {
     }
     
     //Block 回调方法
-    public class func emptyActionViewWithImageStr(imageStr: NSString, titleStr: NSString, detailStr: NSString, btnTitleStr: NSString, btnClickBlock:@escaping HDTapBlock) -> HDEmptyView {
-//        let emptyView = HDEmptyView.init(frame: CGRect.zero)
+    public class func emptyActionViewWithImageStr(imageStr: String, titleStr: String, detailStr: String, btnTitleStr: String, btnClickBlock:@escaping HDTapBlock) -> HDEmptyView {
         let emptyView:HDEmptyView = HDEmptyView.init(frame: CGRect.init(x: 0, y: 0, width: 10, height: 10))
 
         emptyView.creatEmptyViewWithImageStr(imageStr: imageStr, titleStr: titleStr, detailStr: detailStr, btnTitleStr: btnTitleStr, btnClickBlock: btnClickBlock)
@@ -121,11 +120,11 @@ public class HDEmptyBaseView: UIView {
     }
     
     //没有刷新操作
-//    public class func emptyActionViewWithImageStr(imageStr: NSString, titleStr: NSString, detailStr: NSString) -> HDEmptyView {
+//    public class func emptyActionViewWithImageStr(imageStr: String, titleStr: String, detailStr: String) -> HDEmptyView {
 //        let emptyView = self
-//        
+//
 //        emptyView.creatEmptyViewWithImageStr(imageStr: imageStr, titleStr: titleStr, detailStr: detailStr)
-//        
+//
 //        return emptyView
 //    }
     
@@ -138,7 +137,7 @@ public class HDEmptyBaseView: UIView {
         return emptyView
     }
     
-    func creatEmptyViewWithImageStr(imageStr: NSString, titleStr: NSString, detailStr: NSString, btnTitleStr: NSString, target:AnyObject, action: Selector) {
+    func creatEmptyViewWithImageStr(imageStr: String, titleStr: String, detailStr: String, btnTitleStr: String, target:AnyObject, action: Selector) {
         _imageStr = imageStr
         _titleStr = titleStr
         _detailStr = detailStr
@@ -156,7 +155,7 @@ public class HDEmptyBaseView: UIView {
         }
     }
     
-    func creatEmptyViewWithImageStr(imageStr: NSString, titleStr: NSString, detailStr: NSString, btnTitleStr: NSString?, btnClickBlock:@escaping HDTapBlock) {
+    func creatEmptyViewWithImageStr(imageStr: String, titleStr: String, detailStr: String, btnTitleStr: String?, btnClickBlock:@escaping HDTapBlock) {
         _imageStr = imageStr
         _titleStr = titleStr
         _detailStr = detailStr
@@ -170,7 +169,7 @@ public class HDEmptyBaseView: UIView {
         }
     }
     
-    func creatEmptyViewWithImageStr(imageStr: NSString, titleStr: NSString, detailStr: NSString) {
+    func creatEmptyViewWithImageStr(imageStr: String, titleStr: String, detailStr: String) {
         _imageStr = imageStr
         _titleStr = titleStr
         _detailStr = detailStr
@@ -179,7 +178,6 @@ public class HDEmptyBaseView: UIView {
             self.addSubview(contentView!)
             let tap = UITapGestureRecognizer.init(target: self, action: #selector(tapContentView(_:)))
             contentView?.addGestureRecognizer(tap)
-            
         }
     }
     
@@ -198,6 +196,8 @@ public class HDEmptyBaseView: UIView {
         }
     }
 }
+
+
 
 
 

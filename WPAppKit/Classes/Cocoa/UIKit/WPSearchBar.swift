@@ -83,8 +83,17 @@ public class WPSearchBar: UISearchBar, UITextFieldDelegate {
         }
     }
     
+    /// 是否居中
+    public var isCenterAlignment: Bool? {
+        didSet {
+            self.isCenterAli = isCenterAlignment ?? true
+            setNormalPosition()
+        }
+    }
+    
     private var placeholderSize = CGSize.zero
     private var searchIconSize = CGSize(width: 14, height: 14)
+    private var isCenterAli = true
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -107,6 +116,10 @@ public class WPSearchBar: UISearchBar, UITextFieldDelegate {
     
     // 设置初始化偏移
     private func setNormalPosition() {
+        if !isCenterAli {
+            self.setPositionAdjustment(UIOffset.init(horizontal: 0, vertical: 0), for: .search)
+            return
+        }
         if #available(iOS 11.0, *) {
             let offX = (self.width - (self.searchIconSize.width + 8 + 30 +  self.placeholderSize.width)) / 2
             self.setPositionAdjustment(UIOffset.init(horizontal: offX, vertical: 0), for: .search)

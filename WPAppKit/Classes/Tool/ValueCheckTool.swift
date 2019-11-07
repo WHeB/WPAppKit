@@ -12,19 +12,9 @@ public class ValueCheckTool: NSObject {
     
     /// 为空判断，用于输入校验（" "也算空）
     public static func isBlank(string: String) -> Bool {
-        let array = string.components(separatedBy: " ")
-        var tempString = ""
-        for (index, item) in array.enumerated() {
-            if index != array.count-1 { // 最后一个不拼接
-                tempString.append(item + "")
-            }else {
-                tempString.append(item)
-            }
-        }
-        if tempString.isEmpty {
-            return true
-        }
-        return false
+        // 除去前后空格
+        let tempString = string.trimmingCharacters(in: .whitespaces)
+        return tempString.isEmpty
     }
     
     /// 验证大陆手机号

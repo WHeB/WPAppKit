@@ -27,6 +27,7 @@ class StringViewController: UIViewController {
         
         let sss = "12你aa"
         print(sss.charLength())
+        print(ValueCheckTool.isBlank(string: "   "))
     }
     
     @objc private func pushAction() {

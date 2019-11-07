@@ -217,7 +217,7 @@ public class HDEmptyView: HDEmptyBaseView {
             }
             
             //标题
-            if self._titleStr != nil && (self._titleStr?.length)! > 0{
+            if self._titleStr != nil && (self._titleStr?.count)! > 0{
                 self.setupTitleLabel(titleStr: self._titleStr!)
             }else {
                 titleLabel.removeFromSuperview()
@@ -227,7 +227,7 @@ public class HDEmptyView: HDEmptyBaseView {
             }
             
             //详细描述
-            if self._detailStr != nil && (self._detailStr?.length)! > 0 {
+            if self._detailStr != nil && (self._detailStr?.count)! > 0 {
                 self.setupDetailLabel(detailStr: self._detailStr!)
             }else {
                 detailLabel.removeFromSuperview()
@@ -236,7 +236,7 @@ public class HDEmptyView: HDEmptyBaseView {
                 }
             }
             //按钮
-            if self._btnTitleStr != nil && (self._btnTitleStr?.length)! > 0{
+            if self._btnTitleStr != nil && (self._btnTitleStr?.count)! > 0{
                 if _target != nil {
                     self.setupActionBtn(btnTitle: self._btnTitleStr!, target: self._target, action: self._selector, btnClickBlock: nil)
                     
@@ -321,7 +321,7 @@ extension HDEmptyView {
         
     }
     //titleLabel
-    func setupTitleLabel(titleStr: NSString) {
+    func setupTitleLabel(titleStr: String) {
         let fontSize: CGFloat = self.titleLabFont.pointSize
         let width: CGFloat = self.getTextWidth(text: titleStr, size: CGSize.init(width: contentMaxWidth!, height: fontSize), font: self.titleLabFont).width
         titleLabel.frame = CGRect.init(x: 0, y: contentHeight!+subViweMargin!, width: width, height: fontSize)
@@ -335,7 +335,7 @@ extension HDEmptyView {
     }
     
     //DetailLabel
-    func setupDetailLabel(detailStr: NSString) {
+    func setupDetailLabel(detailStr: String) {
         
         let size: CGSize = self.getTextWidth(text: detailStr, size: CGSize.init(width: contentMaxWidth!, height: 900), font: self.detailLabFont)
         var width = size.width
@@ -354,7 +354,7 @@ extension HDEmptyView {
     }
     
     //button
-    func setupActionBtn(btnTitle: NSString, target:AnyObject?, action: Selector?, btnClickBlock: HDTapBlock?) {
+    func setupActionBtn(btnTitle: String, target:AnyObject?, action: Selector?, btnClickBlock: HDTapBlock?) {
         
         let fontSize: CGFloat = self.actionBtnFont.pointSize
         var btnWidth: CGFloat = self.getTextWidth(text: btnTitle, size: CGSize.init(width: contentMaxWidth!, height: fontSize), font: self.actionBtnFont).width + self.actionBtnHorizontalMargin*2
@@ -385,7 +385,7 @@ extension HDEmptyView {
     }
     
     //MARK: ----
-    func getTextWidth(text: NSString , size: CGSize, font: UIFont) -> CGSize {
+    func getTextWidth(text: String , size: CGSize, font: UIFont) -> CGSize {
         let textSize: CGSize = (text.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: [kCTFontAttributeName as NSAttributedString.Key: font], context: nil)).size
         return textSize
     }
@@ -398,6 +398,7 @@ extension HDEmptyView {
     
     
 }
+
 
 
 

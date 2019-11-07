@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'WPAppKit'
-    s.version          = '0.5.6'
+    s.version          = '0.5.7'
     s.summary          = '搭建 Swift 项目常用类库整合'
     s.description      = <<-DESC
     Cocoa：Foundation,UIKit相关扩展
@@ -17,10 +17,13 @@ Pod::Spec.new do |s|
     s.ios.deployment_target = '9.0'
     s.static_framework = true
     
-    # 集成的库
-    s.dependency 'SnapKit', '~> 4.0.0'
-    s.dependency 'Alamofire', '4.8.0'
-    s.dependency 'Localize-Swift', '~> 2.0'
+    # ---------------  常用库集成  -----------
+    s.subspec 'OftenLib' do |ss|
+        ss.dependency 'SnapKit', '~> 4.0.0'
+        ss.dependency 'Alamofire', '4.8.0'
+        ss.dependency 'Localize-Swift', '~> 2.0'
+        ss.dependency 'RealmSwift', '~> 3.17.3'
+    end
     
     # ---------------  Cocoa常用扩展  -----------
     s.subspec 'Cocoa' do |ss|

@@ -53,7 +53,6 @@
 		38BE26F4540E5562B0B0D223ECAA2E9A /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21311F4D3EF635DE47757040368DBFAE /* Extension+String.swift */; };
 		39172F66777E6BC6EBFFC5948E3CC765 /* MJRefreshNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0369837AFB28099C64D7DE9CFE2C6171 /* MJRefreshNormalHeader.m */; };
 		39FC1A51FF31905080FDA44316A2E3FA /* Kingfisher.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BD09A7829A893AC76D6888D3F940EEB /* Kingfisher.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3AE0AFA0E0CD5547AB89FD59985217A2 /* UIButton+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F83189CE8FA83B1D5B776840A438189 /* UIButton+Convenience.swift */; };
 		3D8C608F5705FFAC528DF4A02C999FD7 /* AppKingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992D920F7923E2886635698B5954351E /* AppKingfisher.swift */; };
 		4015497700167E2F7A78FB0FA8728D83 /* ImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41B79618135879F394FFF5E1A3368E8 /* ImageView+Kingfisher.swift */; };
 		4055A0ACF4681DEA04E2F0AECD0B97B2 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E09AFB945D5412BB8BF9E83F8ABC9E /* UIScrollView+MJRefresh.m */; };
@@ -63,7 +62,6 @@
 		444DE006F21DC06E7A87752FF4FC1C0B /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D8BB006A192E327E738C3BBFC41FDE /* UIView+Extension.swift */; };
 		45626116C19AA54A2359E85DAEB5AD42 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 03796D67E9CB2FCAAD29CD11EA09D259 /* UIScrollView+MJExtension.m */; };
 		4583409C21FCF11CB11FE51B0B235A00 /* MJRefreshFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D7134BD24B209174CB0D79DD0339054 /* MJRefreshFooter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		47315AA46C49856D33FDCD674580E927 /* UIView+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA48D58B001AAC9BBE5FB42A5101F399 /* UIView+Convenience.swift */; };
 		47C5E12941194A00ED65EECCD1E4B9C3 /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = D8484E1E589F2C33F29DF36683E94C00 /* MJRefreshComponent.m */; };
 		4F5A97CA16447E2BDF919A40C1652E9F /* MJRefreshHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = FF771B210A08A484C280626F1FEE71B4 /* MJRefreshHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		528237787EC24E25AD6BB486B1BEBE5D /* MJRefreshBackStateFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EE429D2F37CD2728FC4C6A00C837705 /* MJRefreshBackStateFooter.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -87,7 +85,7 @@
 		663FB0A37A3617D115642C77CCF56E19 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 34F95B884B2331DFB68ADC80245228C0 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		675F8319809B90A18BB685E1EA09F886 /* MJRefreshAutoNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F77FABA69C083FD9A54DFA2027D3B6 /* MJRefreshAutoNormalFooter.m */; };
 		67776864843D84DC929C1B66FF8C94F6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C02D91DBABE7C0F8FF2C5D109AB13D6C /* Foundation.framework */; };
-		67A5AEB93D4E973C1964E0E48EA0B6F7 /* UILabel+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61ECF902D04BE0957D211B51568E438 /* UILabel+Convenience.swift */; };
+		67A5AEB93D4E973C1964E0E48EA0B6F7 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61ECF902D04BE0957D211B51568E438 /* UILabel+Extension.swift */; };
 		67BEEFAA977A214A25084263304849A0 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4911D5AC8B9B58AE715C5ABD3290352 /* String+Extension.swift */; };
 		696BEC58A027BCCDFB378637C75C78A5 /* MJRefreshAutoGifFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6083871E14A43E115C7DAB7CDAE0EE08 /* MJRefreshAutoGifFooter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6A818C85C8D525938A3788EE5D0FFBF4 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0694AE0A49EC86620512A1FA3CDAFD /* Notification+Extension.swift */; };
@@ -125,7 +123,7 @@
 		9EE2D363A721ACFA89B5B899E1987633 /* ConstraintConstantTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101E99D2D8E0A64A39DBB37DB794247A /* ConstraintConstantTarget.swift */; };
 		A04D46C4C48247D004BAE5C7AD6E05A3 /* ConstraintConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C480E2C3A4721DB19E0D0811D811D7DA /* ConstraintConfig.swift */; };
 		A0F3A8D5530AF8F7BC8D58838728FCC6 /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6850247669A3F3FC781DBAA5CDC165C0 /* DeviceInfo.swift */; };
-		A11EA6AF3C927901859934B608A3529D /* UIColor+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EB3F3F586A8531E93095CD2F8807D0 /* UIColor+Convenience.swift */; };
+		A11EA6AF3C927901859934B608A3529D /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EB3F3F586A8531E93095CD2F8807D0 /* UIColor+Extension.swift */; };
 		A317E632C48B5D4A15D0CBD1E5499430 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF7CBB7CB9FC4DF59702CE9A08FC711 /* ImageCache.swift */; };
 		A3DEA82F229FDF7C9444CEFEE3D9AB84 /* ConstraintMultiplierTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6582C6D9B13160E734A95A48520B19AB /* ConstraintMultiplierTarget.swift */; };
 		A4070B8C9BD30965648B2876CD3C1C43 /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC83F34256C3108F9A90012C9F91FA1F /* ConstraintAttributes.swift */; };
@@ -157,6 +155,10 @@
 		B8515518236C11E200C5ECCB /* TextCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B851550923698DE300C5ECCB /* TextCarouselView.swift */; };
 		B85C3F23232FE62900762052 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85C3F22232FE62900762052 /* NSObject+Extension.swift */; };
 		B85C3F5A2330D66C00762052 /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85C3F592330D66C00762052 /* TagsView.swift */; };
+		B87A6F9623741B53006522A5 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87A6F9423741B52006522A5 /* UIStackView+Extension.swift */; };
+		B87A6F9723741B53006522A5 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87A6F9523741B52006522A5 /* UITableView+Extension.swift */; };
+		B87A6F9923741B62006522A5 /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87A6F9823741B62006522A5 /* UIWindow+Extension.swift */; };
+		B87A6F9B23741B98006522A5 /* SystemPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87A6F9A23741B98006522A5 /* SystemPermission.swift */; };
 		B87F1B482301358800C60FE6 /* AppNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87F1B472301358800C60FE6 /* AppNavigationBar.swift */; };
 		B87F1B7C2302541F00C60FE6 /* ScanNetAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87F1B752302541F00C60FE6 /* ScanNetAnimation.swift */; };
 		B87F1B7D2302541F00C60FE6 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87F1B762302541F00C60FE6 /* ScanView.swift */; };
@@ -194,7 +196,6 @@
 		DEC3E541DB551729EC407FA6566CEE54 /* ConstraintViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8EF24C4837A88011AD2FBC6B6AFA5C /* ConstraintViewDSL.swift */; };
 		E85BBB972867783044ADCD772438150F /* ConstraintRelatableTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3C3AC90F69219F2CAD70C41356DE58 /* ConstraintRelatableTarget.swift */; };
 		EB209DF5DE13F4D802DA1BE20A9CEBD2 /* MJRefreshBackStateFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD25CA936E0779A341164C3743A7A58 /* MJRefreshBackStateFooter.m */; };
-		ECF26D46BA0B74E0FFBA067C636D07C8 /* UITextField+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6A1F9D41677834FED7AA7A037672BB /* UITextField+Convenience.swift */; };
 		ED3E2C1051BAC5B50BE441D95D8801C0 /* MJRefreshBackGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 763C8EFAA164079DD13AD575563C0573 /* MJRefreshBackGifFooter.m */; };
 		EEB13149459A212D0D2CF6D5F4CB7AE7 /* NSAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80853FB81374BEFC5B9C345C9E6EEAC /* NSAttributedString+Extension.swift */; };
 		EECE40C6F296379F86ABB36AF79BB8EC /* MJRefreshNormalHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 936EFEB84565229ECDCD5F8A2AC3F980 /* MJRefreshNormalHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -304,7 +305,6 @@
 		0BD09A7829A893AC76D6888D3F940EEB /* Kingfisher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Kingfisher.h; path = Sources/Kingfisher.h; sourceTree = "<group>"; };
 		0D7134BD24B209174CB0D79DD0339054 /* MJRefreshFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshFooter.h; path = MJRefresh/Base/MJRefreshFooter.h; sourceTree = "<group>"; };
 		0F1E4AA2D40432C3BCAF239C2388E176 /* ConstraintLayoutSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupport.swift; path = Source/ConstraintLayoutSupport.swift; sourceTree = "<group>"; };
-		0F83189CE8FA83B1D5B776840A438189 /* UIButton+Convenience.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Convenience.swift"; path = "WPAppKit/Classes/Cocoa/UIKit/UIButton+Convenience.swift"; sourceTree = "<group>"; };
 		0FCB933044E21073CE897726ACD5814E /* ConstraintPriorityTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriorityTarget.swift; path = Source/ConstraintPriorityTarget.swift; sourceTree = "<group>"; };
 		101E99D2D8E0A64A39DBB37DB794247A /* ConstraintConstantTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConstantTarget.swift; path = Source/ConstraintConstantTarget.swift; sourceTree = "<group>"; };
 		117F5E9988D18756FCEDB93A283797F6 /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraintItem.swift; path = Source/LayoutConstraintItem.swift; sourceTree = "<group>"; };
@@ -337,7 +337,6 @@
 		3AF38AED6C1603FD8D033A6BF71BE1DF /* LayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraint.swift; path = Source/LayoutConstraint.swift; sourceTree = "<group>"; };
 		3D3C3AC90F69219F2CAD70C41356DE58 /* ConstraintRelatableTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelatableTarget.swift; path = Source/ConstraintRelatableTarget.swift; sourceTree = "<group>"; };
 		3DFA86AFD423070019BA066B2658201C /* MJRefreshBackNormalFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshBackNormalFooter.h; path = MJRefresh/Custom/Footer/Back/MJRefreshBackNormalFooter.h; sourceTree = "<group>"; };
-		3F6A1F9D41677834FED7AA7A037672BB /* UITextField+Convenience.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextField+Convenience.swift"; path = "WPAppKit/Classes/Cocoa/UIKit/UITextField+Convenience.swift"; sourceTree = "<group>"; };
 		3FD0B40B76D63AA560D99A44F98BC548 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+Extension.swift"; path = "WPAppKit/Classes/Cocoa/UIKit/UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		41054DA0B21D8C37B27F06E4ACCEBCEC /* MJRefreshAutoNormalFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshAutoNormalFooter.h; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoNormalFooter.h; sourceTree = "<group>"; };
 		4132E3E11481FE51593C937AC1674E97 /* Kingfisher-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Kingfisher-dummy.m"; sourceTree = "<group>"; };
@@ -372,7 +371,7 @@
 		6B10876E8F12AEC11AE03FFA334BAA30 /* RandomTool.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RandomTool.swift; path = WPAppKit/Classes/Tool/RandomTool.swift; sourceTree = "<group>"; };
 		6F0694AE0A49EC86620512A1FA3CDAFD /* Notification+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Notification+Extension.swift"; path = "WPAppKit/Classes/Cocoa/Foundation/Notification+Extension.swift"; sourceTree = "<group>"; };
 		6F5AD6E05D303E4ACB0E027333B29D93 /* String+LocalizeTableName.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+LocalizeTableName.swift"; path = "Sources/String+LocalizeTableName.swift"; sourceTree = "<group>"; };
-		70EB3F3F586A8531E93095CD2F8807D0 /* UIColor+Convenience.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Convenience.swift"; path = "WPAppKit/Classes/Cocoa/UIKit/UIColor+Convenience.swift"; sourceTree = "<group>"; };
+		70EB3F3F586A8531E93095CD2F8807D0 /* UIColor+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Extension.swift"; path = "WPAppKit/Classes/Cocoa/UIKit/UIColor+Extension.swift"; sourceTree = "<group>"; };
 		713B867AAD08146BFFF83DBE7573CA2A /* SnapKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SnapKit-Info.plist"; sourceTree = "<group>"; };
 		723C59126088D68C167C82D3C89ED30A /* HBDNavigationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HBDNavigationController.m; path = HBDNavigationBar/Classes/HBDNavigationController.m; sourceTree = "<group>"; };
 		729C7B4526A1EBA56D45DE9AA176F9A2 /* Pods-WPAppKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WPAppKit_Example-umbrella.h"; sourceTree = "<group>"; };
@@ -420,7 +419,7 @@
 		A2F757CD248A0196BA7AF3FB88596D75 /* Pods-WPAppKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WPAppKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		A310BED2E19254B5FEB4F9DFBBC7C8A7 /* WPBubbleView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WPBubbleView.swift; path = WPAppKit/Classes/WPPopupView/WPBubbleView.swift; sourceTree = "<group>"; };
 		A347E6E40CB465C2569F44CC43A1FB9A /* Localize-Swift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Localize-Swift-Info.plist"; sourceTree = "<group>"; };
-		A61ECF902D04BE0957D211B51568E438 /* UILabel+Convenience.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILabel+Convenience.swift"; path = "WPAppKit/Classes/Cocoa/UIKit/UILabel+Convenience.swift"; sourceTree = "<group>"; };
+		A61ECF902D04BE0957D211B51568E438 /* UILabel+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILabel+Extension.swift"; path = "WPAppKit/Classes/Cocoa/UIKit/UILabel+Extension.swift"; sourceTree = "<group>"; };
 		A80853FB81374BEFC5B9C345C9E6EEAC /* NSAttributedString+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSAttributedString+Extension.swift"; path = "WPAppKit/Classes/Cocoa/Foundation/NSAttributedString+Extension.swift"; sourceTree = "<group>"; };
 		A834F21ED50BE700A520C1530590E57F /* MJRefreshConst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshConst.m; path = MJRefresh/MJRefreshConst.m; sourceTree = "<group>"; };
 		AA3086C94BE4653926B017F1DCE76DAF /* SnapKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-prefix.pch"; sourceTree = "<group>"; };
@@ -449,6 +448,10 @@
 		B851550923698DE300C5ECCB /* TextCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCarouselView.swift; sourceTree = "<group>"; };
 		B85C3F22232FE62900762052 /* NSObject+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSObject+Extension.swift"; path = "WPAppKit/Classes/Cocoa/Foundation/NSObject+Extension.swift"; sourceTree = "<group>"; };
 		B85C3F592330D66C00762052 /* TagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
+		B87A6F9423741B52006522A5 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIStackView+Extension.swift"; path = "WPAppKit/Classes/Cocoa/UIKit/UIStackView+Extension.swift"; sourceTree = "<group>"; };
+		B87A6F9523741B52006522A5 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableView+Extension.swift"; path = "WPAppKit/Classes/Cocoa/UIKit/UITableView+Extension.swift"; sourceTree = "<group>"; };
+		B87A6F9823741B62006522A5 /* UIWindow+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIWindow+Extension.swift"; path = "WPAppKit/Classes/Cocoa/UIKit/UIWindow+Extension.swift"; sourceTree = "<group>"; };
+		B87A6F9A23741B98006522A5 /* SystemPermission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SystemPermission.swift; path = WPAppKit/Classes/Tool/SystemPermission.swift; sourceTree = "<group>"; };
 		B87F1B472301358800C60FE6 /* AppNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationBar.swift; sourceTree = "<group>"; };
 		B87F1B752302541F00C60FE6 /* ScanNetAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanNetAnimation.swift; sourceTree = "<group>"; };
 		B87F1B762302541F00C60FE6 /* ScanView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
@@ -516,7 +519,6 @@
 		F4911D5AC8B9B58AE715C5ABD3290352 /* String+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Extension.swift"; path = "WPAppKit/Classes/Cocoa/Foundation/String+Extension.swift"; sourceTree = "<group>"; };
 		F590425322AEE0251C03DA50588EDC81 /* SnapKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SnapKit.modulemap; sourceTree = "<group>"; };
 		F6AE114322A6AFD867D8FB86FDBC459F /* MJRefresh-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MJRefresh-umbrella.h"; sourceTree = "<group>"; };
-		FA48D58B001AAC9BBE5FB42A5101F399 /* UIView+Convenience.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Convenience.swift"; path = "WPAppKit/Classes/Cocoa/UIKit/UIView+Convenience.swift"; sourceTree = "<group>"; };
 		FA91862ECD13B4FE94AFE80791203E42 /* WPSheetView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WPSheetView.swift; path = WPAppKit/Classes/WPPopupView/WPSheetView.swift; sourceTree = "<group>"; };
 		FB0B433B18D2B053FF9F4E138753F4E2 /* Kingfisher-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-prefix.pch"; sourceTree = "<group>"; };
 		FB996BED725C8D3AE1782F9CCF854ED7 /* UITextField+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextField+Extension.swift"; path = "WPAppKit/Classes/Cocoa/UIKit/UITextField+Extension.swift"; sourceTree = "<group>"; };
@@ -707,6 +709,7 @@
 		7CE4412DCA49E067475F9D414BF7EC46 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				B87A6F9A23741B98006522A5 /* SystemPermission.swift */,
 				B849D1F8232A50970017EDCA /* CacheManage.swift */,
 				77681A355FE11390A40C08B73EB93F79 /* CurrentManager.swift */,
 				6850247669A3F3FC781DBAA5CDC165C0 /* DeviceInfo.swift */,
@@ -715,7 +718,6 @@
 				24AD62997D77957D4870F00743908272 /* FormatterTime.swift */,
 				C69C147DFF8BE5DB5EDCF885735B2EC3 /* LocalStoreTool.swift */,
 				6B10876E8F12AEC11AE03FFA334BAA30 /* RandomTool.swift */,
-				FFEE998DF0D778F66FE011DE8C815118 /* StoryboardAndXib.swift */,
 				FDBB414318355D4250496361E3351FE6 /* ValueCheckTool.swift */,
 			);
 			name = Tool;
@@ -1075,17 +1077,18 @@
 		EC9F9BC4F3D44F757264BC2491A143C4 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				B87A6F9423741B52006522A5 /* UIStackView+Extension.swift */,
+				B87A6F9523741B52006522A5 /* UITableView+Extension.swift */,
+				FFEE998DF0D778F66FE011DE8C815118 /* StoryboardAndXib.swift */,
 				86B7B522BE8EAE5045876660C836E655 /* UIApplication+Extension.swift */,
-				0F83189CE8FA83B1D5B776840A438189 /* UIButton+Convenience.swift */,
 				82AD852C45B62D37C16B87A1817B53F7 /* UIButton+Extension.swift */,
-				70EB3F3F586A8531E93095CD2F8807D0 /* UIColor+Convenience.swift */,
+				70EB3F3F586A8531E93095CD2F8807D0 /* UIColor+Extension.swift */,
+				B87A6F9823741B62006522A5 /* UIWindow+Extension.swift */,
 				7DC5669FED6523B891E2625D7921D0C0 /* UIImage+Extension.swift */,
 				3FD0B40B76D63AA560D99A44F98BC548 /* UIImageView+Extension.swift */,
-				A61ECF902D04BE0957D211B51568E438 /* UILabel+Convenience.swift */,
-				3F6A1F9D41677834FED7AA7A037672BB /* UITextField+Convenience.swift */,
+				A61ECF902D04BE0957D211B51568E438 /* UILabel+Extension.swift */,
 				FB996BED725C8D3AE1782F9CCF854ED7 /* UITextField+Extension.swift */,
 				E519A635B0A54C2318E5E58A38B649D7 /* UITextView+Extension.swift */,
-				FA48D58B001AAC9BBE5FB42A5101F399 /* UIView+Convenience.swift */,
 				B7D8BB006A192E327E738C3BBFC41FDE /* UIView+Extension.swift */,
 				35C7D697E7EEF9529C843EFDEA5393AA /* UIView+Frame.swift */,
 				41F028FB3E5F00654929EF2488CC2C5D /* UIViewController+Extension.swift */,
@@ -1625,21 +1628,19 @@
 				67BEEFAA977A214A25084263304849A0 /* String+Extension.swift in Sources */,
 				B87F1B7E2302541F00C60FE6 /* ScanViewController.swift in Sources */,
 				DE4FA1294BA08F70736224E01842C923 /* UIApplication+Extension.swift in Sources */,
-				3AE0AFA0E0CD5547AB89FD59985217A2 /* UIButton+Convenience.swift in Sources */,
 				B85C3F5A2330D66C00762052 /* TagsView.swift in Sources */,
 				B843F6FB230AADE0005CCD16 /* UIView+Position.swift in Sources */,
 				87BF4894DDEA2FE266F8C4FD68FED06D /* UIButton+Extension.swift in Sources */,
 				B83B03AD230650720092619F /* UserDefaults+Extension.swift in Sources */,
+				B87A6F9923741B62006522A5 /* UIWindow+Extension.swift in Sources */,
 				B843F6FC230AADE0005CCD16 /* UIScrollView+Empty.swift in Sources */,
-				A11EA6AF3C927901859934B608A3529D /* UIColor+Convenience.swift in Sources */,
+				A11EA6AF3C927901859934B608A3529D /* UIColor+Extension.swift in Sources */,
 				369F0045AC68C2DB763BAB7EF1B12B1E /* UIImage+Extension.swift in Sources */,
 				7908A791E886EF67AD9CA5FB04E155DF /* UIImageView+Extension.swift in Sources */,
 				B87F1B7C2302541F00C60FE6 /* ScanNetAnimation.swift in Sources */,
-				67A5AEB93D4E973C1964E0E48EA0B6F7 /* UILabel+Convenience.swift in Sources */,
-				ECF26D46BA0B74E0FFBA067C636D07C8 /* UITextField+Convenience.swift in Sources */,
+				67A5AEB93D4E973C1964E0E48EA0B6F7 /* UILabel+Extension.swift in Sources */,
 				01F813113B008225FA5DA168273A4B99 /* UITextField+Extension.swift in Sources */,
 				1C961784A1E06D44E2253C86791E236D /* UITextView+Extension.swift in Sources */,
-				47315AA46C49856D33FDCD674580E927 /* UIView+Convenience.swift in Sources */,
 				B843F6FD230AADE0005CCD16 /* HDEmptyBaseView.swift in Sources */,
 				444DE006F21DC06E7A87752FF4FC1C0B /* UIView+Extension.swift in Sources */,
 				A6D69BA0F6295D3743C3543838B95BD2 /* UIView+Frame.swift in Sources */,
@@ -1650,9 +1651,11 @@
 				364EC1E3E5F7FC47B61B7F50999A04F6 /* WKJSPOST.html in Sources */,
 				B889E074231E813600B32707 /* WPSearchBar.swift in Sources */,
 				8F177D87F8A8330656B0A663F59E4863 /* WkwebViewConfig.swift in Sources */,
+				B87A6F9B23741B98006522A5 /* SystemPermission.swift in Sources */,
 				7A5629B6409E928B742236AB42889ABE /* WPAlertView.swift in Sources */,
 				54441F4E01E4D1EEC2E0D11B92993EE5 /* WPAppKit-dummy.m in Sources */,
 				277B4AB9A9D63D5FF99060FA1325460F /* WPBubbleView.swift in Sources */,
+				B87A6F9723741B53006522A5 /* UITableView+Extension.swift in Sources */,
 				2FB72D70F86763B46538FD629F2D052A /* WPPopupStyle.swift in Sources */,
 				B849D1F9232A50980017EDCA /* CacheManage.swift in Sources */,
 				B87F1B822302541F00C60FE6 /* ScanWrapper.swift in Sources */,
@@ -1660,6 +1663,7 @@
 				3600DF8D8AA6470187C50F715093E021 /* WPPopupView.swift in Sources */,
 				310643924E62AE50F89DFA7FC359D7D3 /* WPSheetView.swift in Sources */,
 				97D8F05DF7A76005978CC47336DAD529 /* WPWebView.swift in Sources */,
+				B87A6F9623741B53006522A5 /* UIStackView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2009,7 +2013,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MARKETING_VERSION = 0.5.6;
+				MARKETING_VERSION = 0.5.7;
 				MODULEMAP_FILE = "Target Support Files/WPAppKit/WPAppKit.modulemap";
 				PRODUCT_MODULE_NAME = WPAppKit;
 				PRODUCT_NAME = WPAppKit;
@@ -2293,7 +2297,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MARKETING_VERSION = 0.5.6;
+				MARKETING_VERSION = 0.5.7;
 				MODULEMAP_FILE = "Target Support Files/WPAppKit/WPAppKit.modulemap";
 				PRODUCT_MODULE_NAME = WPAppKit;
 				PRODUCT_NAME = WPAppKit;

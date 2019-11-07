@@ -8,9 +8,13 @@
 
 import UIKit
 import WPAppKit
+import AVFoundation
+import Photos
 
 class UIViewViewController: UIViewController {
 
+    private var tfView: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,8 +36,9 @@ class UIViewViewController: UIViewController {
         self.view.addSubview(searchView)
         searchView.searchField?.setCornerRadiusAndBorder(.allCorners, cornerRadius: 18, color: UIColor.red, borderWidth: 1)
         searchView.backgroundColor = UIColor.orange
+        searchView.isCenterAlignment = false
         
-        let tfView = UITextField(frame: CGRect(x: 20, y: 300, width: ScreenWidth - 40, height: 50))
+        tfView = UITextField(frame: CGRect(x: 20, y: ScreenHeight - 50, width: ScreenWidth - 40, height: 50))
         let leftImg = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 50))
         tfView.leftView = leftImg
         tfView.leftViewMode = .always
@@ -45,6 +50,17 @@ class UIViewViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboardAction))
         self.view.addGestureRecognizer(tap)
         
+        self.addKeyboardMonitor()
+    }
+    
+    override func keyboardWillShowWithFrame(_ frame: CGRect) {
+        super.keyboardWillShowWithFrame(frame)
+        tfView.bottomY = ScreenHeight - frame.height
+    }
+    
+    override func keyboardWillHideWithFrame(_ frame: CGRect) {
+        super.keyboardWillHideWithFrame(frame)
+        tfView.bottomY = ScreenHeight
     }
     
     @objc private func hideKeyboardAction() {
@@ -52,16 +68,21 @@ class UIViewViewController: UIViewController {
     }
     
     @objc private func buttonAction(button: UIButton) {
-        button.isSelected = !button.isSelected
-        
-        let vc = PresentPopViewViewController()
-        vc.modalTransitionStyle = .crossDissolve
-        vc.modalPresentationStyle = .overCurrentContext
-        self.present(vc, animated: true, completion: nil)
+
     }
     
     @objc private func testAction() {
-        
-        
+        SystemPermission.isOpenPhotoLibrary {
+            if $0 {
+//                let image = self.redView.asImage()
+//                        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+//                let picker = UIImagePickerController()
+//                  picker.sourceType = UIImagePickerController.SourceType.photoLibrary
+//                  picker.allowsEditing = true
+//                 self.present(picker, animated: true, completion: nil)
+            }else {
+                self.pushSystemSetting()
+            }
+        }
     }
 }
