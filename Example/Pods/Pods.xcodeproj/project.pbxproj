@@ -159,6 +159,7 @@
 		B87A6F9723741B53006522A5 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87A6F9523741B52006522A5 /* UITableView+Extension.swift */; };
 		B87A6F9923741B62006522A5 /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87A6F9823741B62006522A5 /* UIWindow+Extension.swift */; };
 		B87A6F9B23741B98006522A5 /* SystemPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87A6F9A23741B98006522A5 /* SystemPermission.swift */; };
+		B87A6FA123757B8E006522A5 /* PhotoManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87A6FA023757B8D006522A5 /* PhotoManger.swift */; };
 		B87F1B482301358800C60FE6 /* AppNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87F1B472301358800C60FE6 /* AppNavigationBar.swift */; };
 		B87F1B7C2302541F00C60FE6 /* ScanNetAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87F1B752302541F00C60FE6 /* ScanNetAnimation.swift */; };
 		B87F1B7D2302541F00C60FE6 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87F1B762302541F00C60FE6 /* ScanView.swift */; };
@@ -452,6 +453,7 @@
 		B87A6F9523741B52006522A5 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableView+Extension.swift"; path = "WPAppKit/Classes/Cocoa/UIKit/UITableView+Extension.swift"; sourceTree = "<group>"; };
 		B87A6F9823741B62006522A5 /* UIWindow+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIWindow+Extension.swift"; path = "WPAppKit/Classes/Cocoa/UIKit/UIWindow+Extension.swift"; sourceTree = "<group>"; };
 		B87A6F9A23741B98006522A5 /* SystemPermission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SystemPermission.swift; path = WPAppKit/Classes/Tool/SystemPermission.swift; sourceTree = "<group>"; };
+		B87A6FA023757B8D006522A5 /* PhotoManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoManger.swift; path = WPAppKit/Classes/Tool/PhotoManger.swift; sourceTree = "<group>"; };
 		B87F1B472301358800C60FE6 /* AppNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationBar.swift; sourceTree = "<group>"; };
 		B87F1B752302541F00C60FE6 /* ScanNetAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanNetAnimation.swift; sourceTree = "<group>"; };
 		B87F1B762302541F00C60FE6 /* ScanView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
@@ -709,6 +711,7 @@
 		7CE4412DCA49E067475F9D414BF7EC46 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				B87A6FA023757B8D006522A5 /* PhotoManger.swift */,
 				B87A6F9A23741B98006522A5 /* SystemPermission.swift */,
 				B849D1F8232A50970017EDCA /* CacheManage.swift */,
 				77681A355FE11390A40C08B73EB93F79 /* CurrentManager.swift */,
@@ -1609,6 +1612,7 @@
 				98C83A48FFA028192F93A1F8C0D7327C /* Dictionary+Extension.swift in Sources */,
 				38BE26F4540E5562B0B0D223ECAA2E9A /* Extension+String.swift in Sources */,
 				B87F1B8423025AEF00C60FE6 /* CodeCreate.swift in Sources */,
+				B87A6FA123757B8E006522A5 /* PhotoManger.swift in Sources */,
 				B843F6FA230AADE0005CCD16 /* HDRunTime.swift in Sources */,
 				102874E298EB6BCB8BE2F0272D0E1607 /* FileUtils.swift in Sources */,
 				B87F1B7F2302541F00C60FE6 /* ScanLineAnimation.swift in Sources */,
@@ -2013,7 +2017,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MARKETING_VERSION = 0.5.7;
+				MARKETING_VERSION = 0.5.8;
 				MODULEMAP_FILE = "Target Support Files/WPAppKit/WPAppKit.modulemap";
 				PRODUCT_MODULE_NAME = WPAppKit;
 				PRODUCT_NAME = WPAppKit;
@@ -2297,7 +2301,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MARKETING_VERSION = 0.5.7;
+				MARKETING_VERSION = 0.5.8;
 				MODULEMAP_FILE = "Target Support Files/WPAppKit/WPAppKit.modulemap";
 				PRODUCT_MODULE_NAME = WPAppKit;
 				PRODUCT_NAME = WPAppKit;

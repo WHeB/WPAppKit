@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'WPAppKit'
-    s.version          = '0.5.7'
+    s.version          = '0.5.8'
     s.summary          = '搭建 Swift 项目常用类库整合'
     s.description      = <<-DESC
     Cocoa：Foundation,UIKit相关扩展
@@ -49,6 +49,7 @@ Pod::Spec.new do |s|
     s.subspec 'Tool' do |ss|
         ss.source_files = 'WPAppKit/Classes/Tool/*.swift'
         ss.frameworks = 'UIKit', 'Foundation'
+        ss.dependency 'WPAppKit/Cocoa'
     end
     
     # ---------------  空页面  -----------
@@ -60,6 +61,7 @@ Pod::Spec.new do |s|
     # ---------------  弹窗  -----------
     s.subspec 'WPPopupView' do |ss|
         ss.source_files = 'WPAppKit/Classes/WPPopupView/*.swift'
+        ss.dependency 'WPAppKit/Tool'
     end
     
     # ---------------  WebView  -----------

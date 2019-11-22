@@ -41,7 +41,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             ("WebView", WebViewController()),
             ("HUD", HUDViewController()),
             ("标签", TagsViewController()),
-            ("轮播", CarouseViewController())]
+            ("轮播", CarouseViewController()),
+            ("拍照相册", PhotoViewController())]
         return array
     }()
     
@@ -50,7 +51,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: "Cell")
-        tableView.tableFooterView = UIView.init()
+        tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: 50))
         return tableView
     }()
     

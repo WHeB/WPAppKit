@@ -21,6 +21,11 @@ class TextViewViewController: UIViewController {
         textView.setBorder(color: UIColor.orange, borderWidth: 2)
         textView.placeholder = "请输入内容"
         textView.textContainerInset = UIEdgeInsetsMake(10, 10, 10, 10)
+        
+        
+        let img = UIImage(named: "map_bubble")
+        let imgView = UIImageView(image: img)
+        imgView.frame = CGRect(x: 30, y: 300, width: 200, height: 37)
+        self.view.addSubview(imgView)
     }
-    
 }

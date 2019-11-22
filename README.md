@@ -33,7 +33,8 @@ V0.5.4 开始兼容iOS13（暂未验证夜间模式）
 
 WPAppKit		
 |   |── OftenLib                   
-|   |   |── SnapKit                                                |   |   |── Alamofire                   
+|   |   |── SnapKit                 
+|   |   |── Alamofire                   
 |   |   |── Localize-Swift          
 |   |   |── RealmSwift
 |   |── Cocoa                        
@@ -41,7 +42,8 @@ WPAppKit
 |   |   |── UIFoundation                          
 |   |── Tool                        
 |   |── EmptyView                           
-|   |── WPWebView                                                      |   |── CustomView
+|   |── WPWebView                               
+|   |   |── CustomView
 |   |   |── TagsView                                           
 |   |── WPPopupView                                        
 |   |── CodeScan                                         

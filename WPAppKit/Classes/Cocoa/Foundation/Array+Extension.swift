@@ -72,6 +72,13 @@ public extension Array {
         }
     }
     
+    /// 根据下标移除元素
+    mutating func removeAtIndexes(indexs:[Int]) -> () {
+        for index in indexs.sorted(by: >) {
+            self.remove(at: index)
+        }
+    }
+    
     /// 找出数组中的元素
     // let one = groups.findElement {return $0 == 1}
     func findElement(match:(Element) -> Bool) -> Element? {

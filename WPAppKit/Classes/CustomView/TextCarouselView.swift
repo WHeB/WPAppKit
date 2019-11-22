@@ -62,17 +62,14 @@ public class TextCarouselView: UIView {
         label_2.textAlignment = self.style.txtAlignment
         self.addSubview(label_2)
         
-        
-        
         label_1.text = "1111111111111111111"
         label_1.frame = CGRect(x: 10, y: 0, width: 400, height: 40)
-        
         
         label_2.text = "2222222222222222222"
         label_2.frame = CGRect(x: 10, y: 40, width: 400, height: 40)
         
-//        self.timer = Timer(fire: <#T##Date#>, interval: <#T##TimeInterval#>, repeats: <#T##Bool#>, block: <#T##(Timer) -> Void#>)
-        
+        self.timer = Timer.init(timeInterval: 3, target: self, selector: #selector(timerRunAction), userInfo: nil, repeats: true)
+        RunLoop.current.add(timer, forMode: .commonModes)
     }
     
     required init?(coder: NSCoder) {
@@ -84,4 +81,10 @@ public class TextCarouselView: UIView {
         return view
     }()
     
+    @objc func timerRunAction() {
+        label_2.frame = CGRect(x: 10, y: 40, width: 400, height: 40)
+        
+        
+        
+    }
 }
