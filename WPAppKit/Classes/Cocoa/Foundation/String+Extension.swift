@@ -11,29 +11,6 @@ import CommonCrypto
 
 public extension String {
     
-    /// 正则表达式匹配
-    func matches(_ pattern: String) -> Bool {
-        var reg : NSRegularExpression?
-        do{
-            reg = try NSRegularExpression(pattern: pattern, options: NSRegularExpression.Options.caseInsensitive)
-        }catch{
-            reg = nil
-        }
-        if reg != nil{
-            let matches = reg!.matches(in: self, options: [], range:NSMakeRange(0, (self as NSString).length))
-            return matches.count > 0
-        }
-        return false
-    }
-
-    /// 字符串比较
-    ///
-    /// - Parameter str: 待对比字符串
-    /// - Returns: 结果
-    func equals(_ str: String?) -> Bool{
-        return str == nil ? false : self == str!
-    }
-    
     /// 字符串比较(忽略大小写)
     ///
     /// - Parameter str: 待对比字符串
@@ -193,6 +170,28 @@ public extension String {
         }
         return []
     }
+    
+    /// 获取url中键值对
+    func urlStringToDict() -> [String: Any] {
+        if StringCheck.isURL(self) == false {
+            return [:]
+        }
+        guard let lastStr = self.components(separatedBy: "?").last else {
+            return [:]
+        }
+        let dictArr = lastStr.components(separatedBy: "&")
+        var result = [String: Any]()
+        for dictStr in dictArr {
+            let dict = dictStr.components(separatedBy: "=")
+            guard let key = dict.first,
+                let value = dict.last else {
+                continue
+            }
+            result[key] = value
+        }
+        return result
+    }
+    
 }
 
 
@@ -254,6 +253,3 @@ public extension String {
         return String(data: data, encoding: .utf8)
     }
 }
-
-
-

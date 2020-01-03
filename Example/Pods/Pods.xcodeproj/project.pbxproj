@@ -26,7 +26,7 @@
 		14E9ACC5796C5E35C84DD6659BEB788F /* ConstraintPriorityTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCB933044E21073CE897726ACD5814E /* ConstraintPriorityTarget.swift */; };
 		157D65666D92F1DC614C3CB11122ADA4 /* String+LocalizeTableName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5AD6E05D303E4ACB0E027333B29D93 /* String+LocalizeTableName.swift */; };
 		17949EA5A648628698D3045C32125D9A /* FormatIndicatedCacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B34A148C41441E50AD5DB7E5A166ED /* FormatIndicatedCacheSerializer.swift */; };
-		1A7A7BEA8DD91175ADCB3485DE55F37F /* ValueCheckTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBB414318355D4250496361E3351FE6 /* ValueCheckTool.swift */; };
+		1A7A7BEA8DD91175ADCB3485DE55F37F /* StringCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBB414318355D4250496361E3351FE6 /* StringCheck.swift */; };
 		1C961784A1E06D44E2253C86791E236D /* UITextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E519A635B0A54C2318E5E58A38B649D7 /* UITextView+Extension.swift */; };
 		1D182C2DB0E3A2FC683C635DA33254CD /* UIButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3E859F06AC81897ABA4E5D8BF93A8E /* UIButton+Kingfisher.swift */; };
 		1D9B4EF82D4138F58A9473059EA71312 /* UIViewController+HBD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9894E5BF80AE7B0870A724A48C2D4C94 /* UIViewController+HBD.m */; };
@@ -157,7 +157,6 @@
 		B85C3F5A2330D66C00762052 /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85C3F592330D66C00762052 /* TagsView.swift */; };
 		B87A6F9623741B53006522A5 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87A6F9423741B52006522A5 /* UIStackView+Extension.swift */; };
 		B87A6F9723741B53006522A5 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87A6F9523741B52006522A5 /* UITableView+Extension.swift */; };
-		B87A6F9923741B62006522A5 /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87A6F9823741B62006522A5 /* UIWindow+Extension.swift */; };
 		B87A6F9B23741B98006522A5 /* SystemPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87A6F9A23741B98006522A5 /* SystemPermission.swift */; };
 		B87A6FA123757B8E006522A5 /* PhotoManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87A6FA023757B8D006522A5 /* PhotoManger.swift */; };
 		B87F1B482301358800C60FE6 /* AppNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87F1B472301358800C60FE6 /* AppNavigationBar.swift */; };
@@ -451,7 +450,6 @@
 		B85C3F592330D66C00762052 /* TagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
 		B87A6F9423741B52006522A5 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIStackView+Extension.swift"; path = "WPAppKit/Classes/Cocoa/UIKit/UIStackView+Extension.swift"; sourceTree = "<group>"; };
 		B87A6F9523741B52006522A5 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableView+Extension.swift"; path = "WPAppKit/Classes/Cocoa/UIKit/UITableView+Extension.swift"; sourceTree = "<group>"; };
-		B87A6F9823741B62006522A5 /* UIWindow+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIWindow+Extension.swift"; path = "WPAppKit/Classes/Cocoa/UIKit/UIWindow+Extension.swift"; sourceTree = "<group>"; };
 		B87A6F9A23741B98006522A5 /* SystemPermission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SystemPermission.swift; path = WPAppKit/Classes/Tool/SystemPermission.swift; sourceTree = "<group>"; };
 		B87A6FA023757B8D006522A5 /* PhotoManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoManger.swift; path = WPAppKit/Classes/Tool/PhotoManger.swift; sourceTree = "<group>"; };
 		B87F1B472301358800C60FE6 /* AppNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationBar.swift; sourceTree = "<group>"; };
@@ -526,7 +524,7 @@
 		FB996BED725C8D3AE1782F9CCF854ED7 /* UITextField+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextField+Extension.swift"; path = "WPAppKit/Classes/Cocoa/UIKit/UITextField+Extension.swift"; sourceTree = "<group>"; };
 		FC673151C5497BC8027FF15C04A83C54 /* HBDNavigationBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HBDNavigationBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC83F34256C3108F9A90012C9F91FA1F /* ConstraintAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintAttributes.swift; path = Source/ConstraintAttributes.swift; sourceTree = "<group>"; };
-		FDBB414318355D4250496361E3351FE6 /* ValueCheckTool.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValueCheckTool.swift; path = WPAppKit/Classes/Tool/ValueCheckTool.swift; sourceTree = "<group>"; };
+		FDBB414318355D4250496361E3351FE6 /* StringCheck.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringCheck.swift; path = WPAppKit/Classes/Tool/StringCheck.swift; sourceTree = "<group>"; };
 		FE504034043733CFF3DB830D74D6537E /* ConstraintView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintView+Extensions.swift"; path = "Source/ConstraintView+Extensions.swift"; sourceTree = "<group>"; };
 		FEC801A47B2B1F822FC30D4DFC0AB416 /* HBDNavigationBar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HBDNavigationBar.xcconfig; sourceTree = "<group>"; };
 		FF0A4A04B26E22106EFCE5452A323A57 /* WPAppKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = WPAppKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -721,7 +719,7 @@
 				24AD62997D77957D4870F00743908272 /* FormatterTime.swift */,
 				C69C147DFF8BE5DB5EDCF885735B2EC3 /* LocalStoreTool.swift */,
 				6B10876E8F12AEC11AE03FFA334BAA30 /* RandomTool.swift */,
-				FDBB414318355D4250496361E3351FE6 /* ValueCheckTool.swift */,
+				FDBB414318355D4250496361E3351FE6 /* StringCheck.swift */,
 			);
 			name = Tool;
 			sourceTree = "<group>";
@@ -1086,7 +1084,6 @@
 				86B7B522BE8EAE5045876660C836E655 /* UIApplication+Extension.swift */,
 				82AD852C45B62D37C16B87A1817B53F7 /* UIButton+Extension.swift */,
 				70EB3F3F586A8531E93095CD2F8807D0 /* UIColor+Extension.swift */,
-				B87A6F9823741B62006522A5 /* UIWindow+Extension.swift */,
 				7DC5669FED6523B891E2625D7921D0C0 /* UIImage+Extension.swift */,
 				3FD0B40B76D63AA560D99A44F98BC548 /* UIImageView+Extension.swift */,
 				A61ECF902D04BE0957D211B51568E438 /* UILabel+Extension.swift */,
@@ -1636,7 +1633,6 @@
 				B843F6FB230AADE0005CCD16 /* UIView+Position.swift in Sources */,
 				87BF4894DDEA2FE266F8C4FD68FED06D /* UIButton+Extension.swift in Sources */,
 				B83B03AD230650720092619F /* UserDefaults+Extension.swift in Sources */,
-				B87A6F9923741B62006522A5 /* UIWindow+Extension.swift in Sources */,
 				B843F6FC230AADE0005CCD16 /* UIScrollView+Empty.swift in Sources */,
 				A11EA6AF3C927901859934B608A3529D /* UIColor+Extension.swift in Sources */,
 				369F0045AC68C2DB763BAB7EF1B12B1E /* UIImage+Extension.swift in Sources */,
@@ -1649,7 +1645,7 @@
 				444DE006F21DC06E7A87752FF4FC1C0B /* UIView+Extension.swift in Sources */,
 				A6D69BA0F6295D3743C3543838B95BD2 /* UIView+Frame.swift in Sources */,
 				9A2E1136071AEB6FB68F0C370F4E3293 /* UIViewController+Extension.swift in Sources */,
-				1A7A7BEA8DD91175ADCB3485DE55F37F /* ValueCheckTool.swift in Sources */,
+				1A7A7BEA8DD91175ADCB3485DE55F37F /* StringCheck.swift in Sources */,
 				B87F1B7D2302541F00C60FE6 /* ScanView.swift in Sources */,
 				855B8C27E6053289297A7D051C8447CD /* WebView+Extension.swift in Sources */,
 				364EC1E3E5F7FC47B61B7F50999A04F6 /* WKJSPOST.html in Sources */,
@@ -2017,7 +2013,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MARKETING_VERSION = 0.5.8;
+				MARKETING_VERSION = 0.5.9;
 				MODULEMAP_FILE = "Target Support Files/WPAppKit/WPAppKit.modulemap";
 				PRODUCT_MODULE_NAME = WPAppKit;
 				PRODUCT_NAME = WPAppKit;
@@ -2301,7 +2297,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MARKETING_VERSION = 0.5.8;
+				MARKETING_VERSION = 0.5.9;
 				MODULEMAP_FILE = "Target Support Files/WPAppKit/WPAppKit.modulemap";
 				PRODUCT_MODULE_NAME = WPAppKit;
 				PRODUCT_NAME = WPAppKit;

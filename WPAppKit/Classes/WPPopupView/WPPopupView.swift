@@ -96,7 +96,7 @@ public class WPPopupView: UIView {
     
     /// 重置button样式
     // 注意：谨慎使用 自定义view不要用。主要在alert和sheet中使用
-    public static func resetStyle(titleColor: UIColor, titleFont: UIFont, itemIndex: Int) {
+    public static func resetSheetViewStyle(titleColor: UIColor, titleFont: UIFont, itemIndex: Int) {
         let views = CurrentManager.getCurrentWindow()?.subviews
         guard let popupView: WPPopupView = views?.filter({ (view) -> Bool in
             return view is WPPopupView
@@ -104,16 +104,18 @@ public class WPPopupView: UIView {
             return
         }
         // 拿到目标类型View alert sheet bubble -> 拿到包裹的view
-        guard let targetTypeView = popupView.subviews.last,
-            let contentView = targetTypeView.subviews.last else {
+        guard let targetTypeView = popupView.subviews.last else {
                 return
         }
+        
+        let contentView = targetTypeView.subviews[1]
         // 拿到buttons
         guard let buttons: [UIButton] = contentView.subviews.filter({ (view) -> Bool in
             return view is UIButton
         }) as? [UIButton] else {
             return
         }
+
         let targetButton = buttons[itemIndex]
         targetButton.setTitleColor(titleColor, for: .normal)
         targetButton.titleLabel?.font = titleFont

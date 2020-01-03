@@ -127,7 +127,6 @@ extension HomeViewController {
         WPPopupView.showAlertView(style: style, title: "请选择支付方式", buttons: ["银行卡", "微信", "支付宝", "取消"]) { (_, index) in
             print(index)
         }
-        WPPopupView.resetStyle(titleColor: UIColor.orange, titleFont: UIFont.systemFont(ofSize: 17), itemIndex: 2)
     }
     
     @objc func showAlertLongDetail() {
@@ -162,6 +161,7 @@ extension HomeViewController {
         WPPopupView.showSheetView(style: style, title: nil, detail: "测试", buttons: ["拍照", "从相册选择","取消"]) { (_, index) in
             print(index)
         }
+        WPPopupView.resetSheetViewStyle(titleColor: UIColor.orange, titleFont: UIFont.systemFont(ofSize: 17), itemIndex: 0)
     }
     
     @objc func showBubbleView() {

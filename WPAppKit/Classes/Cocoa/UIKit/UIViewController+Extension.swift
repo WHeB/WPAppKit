@@ -85,8 +85,26 @@ public extension UIViewController {
     }
     
     /// 模态跳转
-    func present(_ viewController : UIViewController) {
+    func present(_ viewController: UIViewController) {
         self.navigationController?.present(viewController, animated: true, completion: nil)
+    }
+    
+    /// 跨页面跳转
+    func resetVCS(backNum: Int? = 1, vc: UIViewController) {
+        guard self.isPush(),
+            let num = backNum,
+            let vcArray =  self.navigationController?.viewControllers else {
+                return
+        }
+        if vcArray.count < num {
+            return
+        }
+        var vcResult: [UIViewController] = vcArray
+        for _ in 0..<num {
+            vcResult.removeLast()
+        }
+        vcResult.append(vc)
+        self.navigationController?.setViewControllers(vcResult, animated: true)
     }
     
     /// 弹一个窗口
@@ -182,7 +200,7 @@ public extension UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notifi:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
-    @objc open func keyboardWillShow(notifi: Notification) {
+    @objc func keyboardWillShow(notifi: Notification) {
         if let nInfo = (notifi as Notification).userInfo,
             let value = nInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue {
             let frame = value.cgRectValue
@@ -190,7 +208,7 @@ public extension UIViewController {
         }
     }
     
-    @objc open func keyboardWillHide(notifi: Notification) {
+    @objc func keyboardWillHide(notifi: Notification) {
         if let nInfo = (notifi as Notification).userInfo,
             let value = nInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue {
             let frame = value.cgRectValue
@@ -207,7 +225,6 @@ public extension UIViewController {
     }
 }
 
-
 public extension UIViewController {
     enum ItemType {
         case leftItem
@@ -218,15 +235,11 @@ public extension UIViewController {
     func customTxtItem(type: ItemType, title: String, titleColor: UIColor? = UIColor.black, titleFont: UIFont? = UIFont.systemFont(ofSize: 15), action: Selector) -> UIBarButtonItem {
         let itemButton = UIButton(type: .custom)
         itemButton.setTitle(title, for: .normal)
-        if let navBar = self.navigationController?.navigationBar {
-            itemButton.setTitleColor(navBar.tintColor, for: .normal)
+        let appearanceNavBar = UINavigationBar.appearance()
+        if appearanceNavBar == NSNull() {
+            itemButton.setTitleColor(titleColor, for: .normal)
         }else {
-            let appearanceNavBar = UINavigationBar.appearance()
-            if appearanceNavBar == NSNull() {
-                itemButton.setTitleColor(titleColor, for: .normal)
-            }else {
-                itemButton.setTitleColor(appearanceNavBar.tintColor, for: .normal)
-            }
+            itemButton.setTitleColor(appearanceNavBar.tintColor, for: .normal)
         }
         itemButton.sizeToFit()
         itemButton.width = itemButton.width < 40 ? 40 : itemButton.width

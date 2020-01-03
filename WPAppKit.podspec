@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'WPAppKit'
-    s.version          = '0.5.8'
+    s.version          = '0.5.9'
     s.summary          = '搭建 Swift 项目常用类库整合'
     s.description      = <<-DESC
     Cocoa：Foundation,UIKit相关扩展
@@ -30,6 +30,7 @@ Pod::Spec.new do |s|
         # Foundation
         ss.subspec 'Foundation' do |sss|
             sss.source_files = 'WPAppKit/Classes/Cocoa/Foundation/*.swift'
+            sss.dependency 'WPAppKit/Tool'
         end
         
         # UIKit
@@ -81,7 +82,7 @@ Pod::Spec.new do |s|
         # MJRefresh
         ss.subspec 'MJRefresh' do |sss|
             sss.source_files = 'WPAppKit/Classes/ThirdKit/MJRefresh/*.swift'
-            sss.dependency 'MJRefresh'
+            sss.dependency 'MJRefresh','3.2.2'
         end
         
         # Kingfisher
