@@ -29,7 +29,7 @@ WPAppKit is available under the MIT license. See the LICENSE file for more info.
 ## Outline
 ```
 
-V0.5.4 开始兼容iOS13（暂未验证夜间模式）
+V0.5.4 开始兼容iOS13（暂不支持夜间模式）
 
 WPAppKit		
 |   |── OftenLib                   
@@ -51,7 +51,7 @@ WPAppKit
 |   |   |── MJRefresh                              
 |   |   |── MBHudProgress                              
 |   |   |── Kingfisher                           
-|   |   |── HBDNavigationBar                           
+|   |   |── HBDNavigationBar                        
 
 
 ```

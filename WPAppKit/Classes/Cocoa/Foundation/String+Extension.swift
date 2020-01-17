@@ -173,7 +173,7 @@ public extension String {
     
     /// 获取url中键值对
     func urlStringToDict() -> [String: Any] {
-        if StringCheck.isURL(self) == false {
+        if self.hasPrefix("http") == false {
             return [:]
         }
         guard let lastStr = self.components(separatedBy: "?").last else {

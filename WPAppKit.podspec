@@ -30,7 +30,6 @@ Pod::Spec.new do |s|
         # Foundation
         ss.subspec 'Foundation' do |sss|
             sss.source_files = 'WPAppKit/Classes/Cocoa/Foundation/*.swift'
-            sss.dependency 'WPAppKit/Tool'
         end
         
         # UIKit
