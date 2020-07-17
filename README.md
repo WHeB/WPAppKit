@@ -36,12 +36,10 @@ WPAppKit
 |   |   |── SnapKit                 
 |   |   |── Alamofire                   
 |   |   |── Localize-Swift          
-|   |   |── RealmSwift
 |   |── Cocoa                        
 |   |   |── UIKit                        
 |   |   |── UIFoundation                          
-|   |── Tool                        
-|   |── EmptyView                           
+|   |── Tool                                              
 |   |── WPWebView                               
 |   |   |── CustomView
 |   |   |── TagsView                                           

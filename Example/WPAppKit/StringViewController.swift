@@ -27,7 +27,7 @@ class StringViewController: UIViewController {
     }
     
     @objc private func pushAction() {
-        self.push(viewController: ArrayViewController())
+        self.pushViewController(ArrayViewController())
     }
     
 }

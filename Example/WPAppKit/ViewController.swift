@@ -69,7 +69,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.deselectRow(at: indexPath, animated: true)
         let vc = self.demoData[indexPath.row].1
         vc.title = self.demoData[indexPath.row].0
-        self.push(viewController: vc)
+        self.pushViewController(vc)
     }
 }
 

@@ -69,7 +69,7 @@ public class TextCarouselView: UIView {
         label_2.frame = CGRect(x: 10, y: 40, width: 400, height: 40)
         
         self.timer = Timer.init(timeInterval: 3, target: self, selector: #selector(timerRunAction), userInfo: nil, repeats: true)
-        RunLoop.current.add(timer, forMode: .commonModes)
+        RunLoop.current.add(timer, forMode: .common)
     }
     
     required init?(coder: NSCoder) {

@@ -9,7 +9,7 @@
 import UIKit
 
 public class FormatterNumber: NSObject {
-
+    
     /// CLongLong格式化String
     ///
     /// - Parameters:
@@ -57,5 +57,5 @@ public class FormatterNumber: NSObject {
             return result
         }
     }
-
+    
 }

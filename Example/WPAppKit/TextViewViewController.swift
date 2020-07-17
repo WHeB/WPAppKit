@@ -16,16 +16,18 @@ class TextViewViewController: UIViewController {
         self.title = "TextView"
         self.view.backgroundColor = UIColor.white
         
-        var textView = UITextView.init(frame: CGRect.init(x: 50, y: 100, width: 200, height: 100))
+        let redView = UIView(frame: CGRect(x: 50, y: 100, width: 100, height: 20))
+        redView.backgroundColor = UIColor.red
+        self.view.addSubview(redView)
+        
+        let textView = UITextView(placeholder: "请输入内容", txtColor: UIColor.black, txtFont: UIFont.systemFont(ofSize: 16))
+        textView.frame = CGRect(x: 50, y: 150, width: 100, height: 100)
+        textView.backgroundColor = UIColor.orange
         self.view.addSubview(textView)
-        textView.setBorder(color: UIColor.orange, borderWidth: 2)
-        textView.placeholder = "请输入内容"
-        textView.textContainerInset = UIEdgeInsetsMake(10, 10, 10, 10)
         
-        
-        let img = UIImage(named: "map_bubble")
-        let imgView = UIImageView(image: img)
-        imgView.frame = CGRect(x: 30, y: 300, width: 200, height: 37)
-        self.view.addSubview(imgView)
+        let priceTextfield = UITextField(placeholder: "请输入价格", txtColor: UIColor.black, txtFont: UIFont.systemFont(ofSize: 18), decimalLength: 8)
+        priceTextfield.frame = CGRect(x: 50, y: 260, width: 220, height: 50)
+        priceTextfield.backgroundColor = UIColor.yellow
+        self.view.addSubview(priceTextfield)
     }
 }

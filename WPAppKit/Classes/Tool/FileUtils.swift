@@ -55,7 +55,7 @@ public class FileUtils: NSObject {
         guard fileManager.fileExists(atPath: path) else {
             guard
                 let image = UIImage(named: name),
-                let data = UIImagePNGRepresentation(image)
+                let data = image.pngData()
                 else { return nil }
             
             fileManager.createFile(atPath: path, contents: data, attributes: nil)

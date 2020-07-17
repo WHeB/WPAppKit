@@ -139,9 +139,9 @@ open class ScanViewController: UIViewController, UIImagePickerControllerDelegate
     //MARK: -----相册选择图片识别二维码 （条形码没有找到系统方法）
     public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         picker.dismiss(animated: true, completion: nil)
-        var image: UIImage? = info[UIImagePickerControllerEditedImage] as? UIImage
+        var image: UIImage? = info[UIImagePickerController.InfoKey.editedImage.rawValue] as? UIImage
         if (image == nil) {
-            image = info[UIImagePickerControllerOriginalImage] as? UIImage
+            image = info[UIImagePickerController.InfoKey.originalImage.rawValue] as? UIImage
         }
         if(image != nil) {
             let arrayResult = ScanWrapper.recognizeQRImage(image: image!)

@@ -24,19 +24,19 @@ class DictionaryViewController: UIViewController {
         
         var dict = ["name": "张三", "age": "12"]
         let dict2 = ["job": "码农"]
-        let ddd = dict.append(dictionary: dict2)
+        let ddd = dict + dict2
         print(ddd)
         let jsonDict = ddd.toJsonString()
         print(jsonDict)
         print(ddd.toURLParameter())
-        let dictResult = jsonDict.toDictionary()
+        let dictResult = jsonDict?.toDictionary()
         print("-------\(dictResult)")
     }
     
     @objc private func pushAction() {
 //        self.popTo(2)
 //        self.popToViewController("StringViewController")
-        self.popToController(2)
+        self.popToViewController(index: 2)
     }
     
 }

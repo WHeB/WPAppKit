@@ -11,22 +11,21 @@ import UIKit
 public class CurrentManager: NSObject {
     
     /// 获取当前viewController
-    public static func getCurrentViewController() -> UIViewController? {
-        
-        let viewController = self.getCurrentWindow()?.rootViewController
+    public static func getTopController() -> UIViewController? {
+        let viewController = self.getTopWindow()?.rootViewController
         return self.topViewControllerWithRootViewController(viewController: viewController)
     }
     
     /// 获取当前window
-    public static func getCurrentWindow() -> UIWindow? {
+    public static func getTopWindow() -> UIWindow? {
         // 只有一个window时
         var window: UIWindow? = UIApplication.shared.keyWindow
         // 有多个window时
-        if window?.windowLevel != UIWindowLevelNormal {
+        if window?.windowLevel != UIWindow.Level.normal {
             // windowLevel = UIWindowLevelNormal 时，表示这个window是当前屏幕正在显示的window
             window = UIApplication.shared.windows.filter {
-                $0.windowLevel == UIWindowLevelNormal
-                }.first
+                $0.windowLevel == UIWindow.Level.normal
+            }.first
         }
         return window
     }

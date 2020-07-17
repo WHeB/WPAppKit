@@ -27,17 +27,17 @@ class PageViewController: UIViewController, UIScrollViewDelegate {
         lastY = -headView.bounds.size.height
         
         oneVC = TableViewController()
-        self.add(childViewController: oneVC)
+        self.addChild(oneVC)
         boxScrollerView.addSubview(oneVC.view)
         oneVC.view.frame = CGRect.init(x: 0, y: 0, width: ScreenWidth, height: boxScrollerView.bounds.size.height)
-        oneVC.tableView.contentInset = UIEdgeInsetsMake(200, 0, 0, 0)
+        oneVC.tableView.contentInset = UIEdgeInsets(top: 200, left: 0, bottom: 0, right: 0)
         oneVC.tableView.addObserver(self, forKeyPath: "contentOffset", options: .new, context: nil)
         
         twoVC = TableViewController()
-        self.add(childViewController: twoVC)
+        self.addChild(twoVC)
         boxScrollerView.addSubview(twoVC.view)
         twoVC.view.frame = CGRect.init(x: ScreenWidth, y: 0, width: ScreenWidth, height: boxScrollerView.bounds.size.height)
-        twoVC.tableView.contentInset = UIEdgeInsetsMake(200, 0, 0, 0)
+        twoVC.tableView.contentInset = UIEdgeInsets(top: 200, left: 0, bottom: 0, right: 0)
         twoVC.tableView.addObserver(self, forKeyPath: "contentOffset", options: .new, context: nil)
         
         self.tableviewArray = [oneVC.tableView, twoVC.tableView]

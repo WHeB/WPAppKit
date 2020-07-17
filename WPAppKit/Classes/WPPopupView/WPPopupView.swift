@@ -15,9 +15,9 @@ public typealias ItemArray = [(imgName: String?, title: String)]
 public class WPPopupView: UIView {
     
     /// 创建AlertView
-    public static func showAlertView(style: WPPopupStyle? = WPPopupStyle.init(), title: String, detail: String? = nil, buttons: [String], clickBlock: @escaping PopupClickButtonBlock) {
+    public static func showAlertView(style: WPPopupStyle? = WPPopupStyle(), title: String, detail: String? = nil, buttons: [String], clickBlock: @escaping PopupClickButtonBlock) {
         
-        let selfView = WPPopupView.init(frame: CGRect.init(x: 0, y: 0, width: ScWidth, height: ScHeight))
+        let selfView = WPPopupView.init(frame: CGRect(x: 0, y: 0, width: ScWidth, height: ScHeight))
         selfView.effectView.backgroundColor = style?.coverBgColor
         selfView.effectView.alpha = (style?.effectAlpha)!
         selfView.addSubview(selfView.effectView)
@@ -29,7 +29,7 @@ public class WPPopupView: UIView {
     
     /// 自定义AlertView
     public static func showCustomAlertView(style: WPPopupStyle? = WPPopupStyle.init(), view: WPAlertView) {
-        let selfView = WPPopupView.init(frame: CGRect.init(x: 0, y: 0, width: ScWidth, height: ScHeight))
+        let selfView = WPPopupView.init(frame: CGRect(x: 0, y: 0, width: ScWidth, height: ScHeight))
         selfView.effectView.backgroundColor = style?.coverBgColor
         selfView.effectView.alpha = (style?.effectAlpha)!
         selfView.addSubview(selfView.effectView)
@@ -41,7 +41,7 @@ public class WPPopupView: UIView {
     /// 创建SheetView
     public static func showSheetView(style: WPPopupStyle? = WPPopupStyle.init(), title: String? = nil, detail: String? = nil, buttons: [String], clickBlock: @escaping PopupClickButtonBlock) {
         
-        let selfView = WPPopupView.init(frame: CGRect.init(x: 0, y: 0, width: ScWidth, height: ScHeight))
+        let selfView = WPPopupView.init(frame: CGRect(x: 0, y: 0, width: ScWidth, height: ScHeight))
         selfView.effectView.backgroundColor = style?.coverBgColor
         selfView.effectView.alpha = (style?.effectAlpha)!
         selfView.addSubview(selfView.effectView)
@@ -54,7 +54,7 @@ public class WPPopupView: UIView {
     /// 自定义WPSheetView
     public static func showCustomSheetView(style: WPPopupStyle? = WPPopupStyle.init(), view: WPSheetView) {
         
-        let selfView = WPPopupView.init(frame: CGRect.init(x: 0, y: 0, width: ScWidth, height: ScHeight))
+        let selfView = WPPopupView.init(frame: CGRect(x: 0, y: 0, width: ScWidth, height: ScHeight))
         selfView.effectView.backgroundColor = style?.coverBgColor
         selfView.effectView.alpha = (style?.effectAlpha)!
         selfView.addSubview(selfView.effectView)
@@ -66,7 +66,7 @@ public class WPPopupView: UIView {
     /// 创建BubbleView
     public static func showBubbleView(fromView: UIView, style: WPPopupStyle, viewSize: CGSize, imgNameAndTitleArray: ItemArray, clickBlock: @escaping PopupClickButtonBlock) {
         
-        let selfView = WPPopupView.init(frame: CGRect.init(x: 0, y: 0, width: ScWidth, height: ScHeight))
+        let selfView = WPPopupView.init(frame: CGRect(x: 0, y: 0, width: ScWidth, height: ScHeight))
         selfView.effectView.backgroundColor = style.coverBgColor
         selfView.effectView.alpha = style.effectAlpha
         selfView.addSubview(selfView.effectView)
@@ -84,7 +84,7 @@ public class WPPopupView: UIView {
     /// 创建BubbleView
     public static func showBubbleView(startPoint: CGPoint, style: WPPopupStyle, viewSize: CGSize, imgNameAndTitleArray: ItemArray, clickBlock: @escaping PopupClickButtonBlock) {
         
-        let selfView = WPPopupView.init(frame: CGRect.init(x: 0, y: 0, width: ScWidth, height: ScHeight))
+        let selfView = WPPopupView.init(frame: CGRect(x: 0, y: 0, width: ScWidth, height: ScHeight))
         selfView.effectView.backgroundColor = style.coverBgColor
         selfView.effectView.alpha = style.effectAlpha
         selfView.addSubview(selfView.effectView)
@@ -97,7 +97,7 @@ public class WPPopupView: UIView {
     /// 重置button样式
     // 注意：谨慎使用 自定义view不要用。主要在alert和sheet中使用
     public static func resetSheetViewStyle(titleColor: UIColor, titleFont: UIFont, itemIndex: Int) {
-        let views = CurrentManager.getCurrentWindow()?.subviews
+        let views = CurrentManager.getTopWindow()?.subviews
         guard let popupView: WPPopupView = views?.filter({ (view) -> Bool in
             return view is WPPopupView
         }).first as? WPPopupView else {

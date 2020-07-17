@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'WPAppKit'
-    s.version          = '0.5.9'
+    s.version          = '1.0.0'
     s.summary          = '搭建 Swift 项目常用类库整合'
     s.description      = <<-DESC
     Cocoa：Foundation,UIKit相关扩展
@@ -13,17 +13,9 @@ Pod::Spec.new do |s|
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
     s.author           = { 'WHeB' => '1193325271@qq.com' }
     s.source           = { :git => 'https://github.com/WHeB/WPAppKit.git', :tag => s.version.to_s }
-    s.swift_version = '4.0'
-    s.ios.deployment_target = '9.0'
+    s.swift_version = '5.0'
+    s.ios.deployment_target = '10.0'
     s.static_framework = true
-    
-    # ---------------  常用库集成  -----------
-    s.subspec 'OftenLib' do |ss|
-        ss.dependency 'SnapKit', '~> 4.0.0'
-        ss.dependency 'Alamofire', '4.8.0'
-        ss.dependency 'Localize-Swift', '~> 2.0'
-        ss.dependency 'RealmSwift', '~> 3.17.3'
-    end
     
     # ---------------  Cocoa常用扩展  -----------
     s.subspec 'Cocoa' do |ss|
@@ -52,12 +44,6 @@ Pod::Spec.new do |s|
         ss.dependency 'WPAppKit/Cocoa'
     end
     
-    # ---------------  空页面  -----------
-    # https://github.com/Ethan561/HDEmptyView
-    s.subspec 'EmptyView' do |ss|
-        ss.source_files = 'WPAppKit/Classes/EmptyView/*.swift'
-    end
-    
     # ---------------  弹窗  -----------
     s.subspec 'WPPopupView' do |ss|
         ss.source_files = 'WPAppKit/Classes/WPPopupView/*.swift'
@@ -76,6 +62,13 @@ Pod::Spec.new do |s|
         ss.resource = 'WPAppKit/Assets/CodeScan.bundle'
     end
     
+    # ---------------  常用库集成  -----------
+    s.subspec 'OftenLib' do |ss|
+        ss.dependency 'SnapKit', '~> 5.0.0'
+        ss.dependency 'Alamofire', '~> 5.2'
+        ss.dependency 'Localize-Swift', '~> 2.0'
+    end
+    
     # ---------------  第三方库 + 扩展  -----------
     s.subspec 'ThirdKit' do |ss|
         # MJRefresh
@@ -87,7 +80,7 @@ Pod::Spec.new do |s|
         # Kingfisher
         ss.subspec 'Kingfisher' do |sss|
             sss.source_files = 'WPAppKit/Classes/ThirdKit/Kingfisher/*.swift'
-            sss.dependency 'Kingfisher','~> 4.6.0'
+            sss.dependency 'Kingfisher','~> 5.0'
         end
         
         # MBProgressHUD

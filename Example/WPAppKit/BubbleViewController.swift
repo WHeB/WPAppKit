@@ -16,7 +16,7 @@ class BubbleViewController: UIViewController {
         self.view.backgroundColor = UIColor.white
         
         self.title = "BubbleView"
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.add, target: self, action: #selector(addItemAction))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: #selector(addItemAction))
         
         self.view.addSubview(self.button1)
         self.view.addSubview(self.button2)

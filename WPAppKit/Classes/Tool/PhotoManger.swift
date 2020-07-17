@@ -1,6 +1,6 @@
 //
 //  PhotoManger.swift
-//  HBDNavigationBar
+//  WPAppKit
 //
 //  Created by 王鹏 on 2019/11/8.
 //
@@ -34,7 +34,7 @@ public class PhotoManger: NSObject, UIImagePickerControllerDelegate, UINavigatio
     
     /// 拍照
     public func takePhoto() {
-        guard let vc = CurrentManager.getCurrentViewController() else {
+        guard let vc = CurrentManager.getTopController() else {
             return
         }
         let picker = UIImagePickerController()
@@ -46,7 +46,7 @@ public class PhotoManger: NSObject, UIImagePickerControllerDelegate, UINavigatio
     
     /// 从相册选择
     public func libraryPicker() {
-        guard let vc = CurrentManager.getCurrentViewController() else {
+        guard let vc = CurrentManager.getTopController() else {
             return
         }
         let picker = UIImagePickerController()
@@ -58,10 +58,10 @@ public class PhotoManger: NSObject, UIImagePickerControllerDelegate, UINavigatio
     
     // 拍照或选择照片 UIImagePickerControllerDelegate
     public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        guard let vc = CurrentManager.getCurrentViewController() else {
+        guard let vc = CurrentManager.getTopController() else {
             return
         }
-        guard let image: UIImage = info[UIImagePickerControllerOriginalImage] as? UIImage else {
+        guard let image: UIImage = info[UIImagePickerController.InfoKey.originalImage.rawValue] as? UIImage else {
             return
         }
         let finalData = self.resetSizeOfImageData(image: image)
@@ -77,7 +77,7 @@ public class PhotoManger: NSObject, UIImagePickerControllerDelegate, UINavigatio
     
     // 取消
     public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        guard let vc = CurrentManager.getCurrentViewController() else {
+        guard let vc = CurrentManager.getTopController() else {
             return
         }
         vc.dismiss(animated: true, completion: nil)
@@ -111,7 +111,7 @@ extension PhotoManger {
         self.normalSetting()
         
         // 1
-        var finalData = UIImageJPEGRepresentation(image, 1.0)
+        var finalData = image.jpegData(compressionQuality: 1.0)
         let firstFinish = self.isFinishReset(data: finalData!)
         if firstFinish { // 合适
             return finalData!
@@ -120,7 +120,7 @@ extension PhotoManger {
         // 2
         let defaultSize = CGSize.init(width: 1024, height: 1024)
         let newImage = self.newSizeImage(size: defaultSize, image: image)
-        finalData = UIImageJPEGRepresentation(newImage, 1.0)
+        finalData = newImage.jpegData(compressionQuality: 1.0)
         let secondFinish = self.isFinishReset(data: finalData!)
         if secondFinish {
             return finalData!
@@ -174,7 +174,7 @@ extension PhotoManger {
         var finalData: Data?
         while start <= end {
             mid = start + (end - start) / 2
-            finalData = UIImageJPEGRepresentation(image, CGFloat(array[mid]))
+            finalData = image.jpegData(compressionQuality: CGFloat(array[mid]))
             let originSize = (finalData?.count)! / 1024
             // 和目标值相差30Kb则满足要求
             if abs(originSize - self.reduceLevel) <= self.absRange {

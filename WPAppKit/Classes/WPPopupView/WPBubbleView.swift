@@ -290,8 +290,8 @@ open class WPBubbleView: UIView, UITableViewDataSource, UITableViewDelegate {
         let lineShape = CAShapeLayer()
         lineShape.frame = self.bounds
         lineShape.lineWidth = 1
-        lineShape.lineJoin = kCALineJoinMiter
-        lineShape.lineCap = kCALineCapSquare
+        lineShape.lineJoin = CAShapeLayerLineJoin.miter
+        lineShape.lineCap = CAShapeLayerLineCap.square
         lineShape.strokeColor = self.style.popupBgColor.cgColor
         lineShape.path = linePath.cgPath
         lineShape.fillColor = self.style.popupBgColor.cgColor
@@ -345,13 +345,14 @@ class CustomCell: UITableViewCell {
     static func cellWithTableView(tableView: UITableView) -> CustomCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: "cell")
         if cell == nil {
-            cell = CustomCell.init(style: .default, reuseIdentifier: "cell")
+            cell = CustomCell(style: .default, reuseIdentifier: "cell")
         }
         return cell as! CustomCell
     }
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
         self.selectionStyle = .none
         
         self.iconImgView = UIImageView.init()

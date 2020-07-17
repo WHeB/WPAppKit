@@ -27,7 +27,7 @@ public class CodeCreate: UIView {
         qrFilter?.setValue("H", forKey: "inputCorrectionLevel")
         //上色
         let colorFilter = CIFilter(name: "CIFalseColor",
-                                   withInputParameters: ["inputImage": qrFilter!.outputImage!,
+                                   parameters: ["inputImage": qrFilter!.outputImage!,
                                                          "inputColor0": CIColor(cgColor: qrColor.cgColor),
                                                          "inputColor1": CIColor(cgColor:  bkColor.cgColor)])
         let qrImage = colorFilter!.outputImage!

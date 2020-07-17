@@ -81,7 +81,7 @@ class UIViewViewController: UIViewController {
 //                  picker.allowsEditing = true
 //                 self.present(picker, animated: true, completion: nil)
             }else {
-                self.pushSystemSetting()
+//                UIApplication.shared.pushSystemSetting()
             }
         }
     }

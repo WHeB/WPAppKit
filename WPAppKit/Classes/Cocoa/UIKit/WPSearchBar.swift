@@ -37,7 +37,7 @@ public class WPSearchBar: UISearchBar, UITextFieldDelegate {
                 return
             }
             tfSearch.font = font
-            placeholderSize = (self.placeholder as NSString?)?.size(withAttributes: [NSAttributedStringKey.font : font ?? 15]) ?? .zero
+            placeholderSize = (self.placeholder as NSString?)?.size(withAttributes: [NSAttributedString.Key.font : font ?? 15]) ?? .zero
             
             setNormalPosition()
         }
@@ -59,7 +59,7 @@ public class WPSearchBar: UISearchBar, UITextFieldDelegate {
             guard let tfSearch = self.searchField else {
                 return
             }
-            placeholderSize = (self.placeholder as NSString?)?.size(withAttributes: [NSAttributedStringKey.font : tfSearch.font ?? 15]) ?? .zero
+            placeholderSize = (self.placeholder as NSString?)?.size(withAttributes: [NSAttributedString.Key.font : tfSearch.font ?? 15]) ?? .zero
             setNormalPosition()
         }
     }
@@ -78,7 +78,7 @@ public class WPSearchBar: UISearchBar, UITextFieldDelegate {
     override public var backgroundColor: UIColor? {
         didSet {
             if let color = backgroundColor {
-                self.backgroundImage = UIImage.colorToImage(color)
+                self.backgroundImage = UIImage.initFrom(color: color, size: self.bounds.size)
             }
         }
     }
@@ -104,11 +104,11 @@ public class WPSearchBar: UISearchBar, UITextFieldDelegate {
             let tfSearch = self.searchTextField
             tfSearch.delegate = self
             tfSearch.font = UIFont.systemFont(ofSize: 15)
-            placeholderSize = (self.placeholder as NSString?)?.size(withAttributes: [NSAttributedStringKey.font : tfSearch.font ?? 15]) ?? .zero
+            placeholderSize = (self.placeholder as NSString?)?.size(withAttributes: [NSAttributedString.Key.font : tfSearch.font ?? 15]) ?? .zero
         }else {
             if let tfSearch: UITextField = self.value(forKey: "searchField") as? UITextField {
                 tfSearch.font = UIFont.systemFont(ofSize: 15)
-                placeholderSize = (self.placeholder as NSString?)?.size(withAttributes: [NSAttributedStringKey.font : tfSearch.font ?? 15]) ?? .zero
+                placeholderSize = (self.placeholder as NSString?)?.size(withAttributes: [NSAttributedString.Key.font : tfSearch.font ?? 15]) ?? .zero
             }
         }
         setNormalPosition()

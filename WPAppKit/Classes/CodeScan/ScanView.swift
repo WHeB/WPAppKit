@@ -366,7 +366,7 @@ public class ScanView: UIView {
             self.activityView = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
 
             activityView?.center = CGPoint(x: XRetangleLeft +  sizeRetangle.width/2 - 50, y: YMinRetangle + sizeRetangle.height/2)
-            activityView?.activityIndicatorViewStyle = UIActivityIndicatorView.Style.whiteLarge
+            activityView?.style = UIActivityIndicatorView.Style.whiteLarge
 
             addSubview(activityView!)
 
