@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
         
         # Kingfisher
         ss.subspec 'Kingfisher' do |sss|
-            sss.source_files = 'WPAppKit/Classes/ThirdKit/Kingfisher/*.swift'
+#            sss.source_files = 'WPAppKit/Classes/ThirdKit/Kingfisher/*.swift'
             sss.dependency 'Kingfisher','~> 5.0'
         end
         
