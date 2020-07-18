@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'WPAppKit'
-    s.version          = '1.0.0'
+    s.version          = '1.0.1'
     s.summary          = '搭建 Swift 项目常用类库整合'
     s.description      = <<-DESC
     Cocoa：Foundation,UIKit相关扩展
@@ -64,8 +64,8 @@ Pod::Spec.new do |s|
     
     # ---------------  常用库集成  -----------
     s.subspec 'OftenLib' do |ss|
-        ss.dependency 'SnapKit', '~> 5.0.0'
-        ss.dependency 'Alamofire', '~> 5.2'
+        ss.dependency 'SnapKit', '~> 5.0.1'
+        ss.dependency 'Alamofire', '~> 4.9.1'
         ss.dependency 'Localize-Swift', '~> 2.0'
     end
     
@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
         
         # Kingfisher
         ss.subspec 'Kingfisher' do |sss|
-#            sss.source_files = 'WPAppKit/Classes/ThirdKit/Kingfisher/*.swift'
+            sss.source_files = 'WPAppKit/Classes/ThirdKit/Kingfisher/*.swift'
             sss.dependency 'Kingfisher','~> 5.0'
         end
         

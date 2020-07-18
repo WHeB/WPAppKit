@@ -24,27 +24,6 @@ public extension UIImageView {
     }
 }
 
-public extension UIButton {
-
-    /// 为button设置网络图片
-    func king_Image(imgUrl: String, placeholderImg: UIImage? = nil) -> Void {
-        guard let url = URL(string: imgUrl) else {
-            setImage(placeholderImg, for: .normal)
-            return
-        }
-        kf.setImage(with: url, for: .normal, placeholder: placeholderImg, options: nil, progressBlock: nil, completionHandler: nil)
-    }
-
-    /// 为button设置背景图片
-    func king_BgImage(imgUrl: String, placeholderImg: UIImage? = nil) -> Void {
-        guard let url = URL(string: imgUrl) else {
-            setBackgroundImage(placeholderImg, for: .normal)
-            return
-        }
-        kf.setBackgroundImage(with: url, for: .normal, placeholder: placeholderImg, options: nil, progressBlock: nil, completionHandler: nil)
-    }
-}
-
 public class KFImageCacheManager: NSObject {
 
     /// 设置缓存时间 (默认一周)

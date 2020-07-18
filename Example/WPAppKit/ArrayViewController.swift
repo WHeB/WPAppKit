@@ -34,6 +34,8 @@ class ArrayViewController: UIViewController {
         let rest2 = array1.removeAll([12, 2])
         print("------\(rest2)")
         
+        UIImageView()
+        
     }
     
     @objc private func pushAction() {

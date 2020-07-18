@@ -1,6 +1,6 @@
 {
   "name": "WPAppKit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "summary": "搭建 Swift 项目常用类库整合",
   "description": "Cocoa：Foundation,UIKit相关扩展\nTool：常用工具库\nThirdKit：常用第三方库",
   "homepage": "https://github.com/WHeB/WPAppKit.git",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/WHeB/WPAppKit.git",
-    "tag": "1.0.0"
+    "tag": "1.0.1"
   },
   "swift_versions": "5.0",
   "platforms": {
@@ -85,10 +85,10 @@
       "name": "OftenLib",
       "dependencies": {
         "SnapKit": [
-          "~> 5.0.0"
+          "~> 5.0.1"
         ],
         "Alamofire": [
-          "~> 5.2"
+          "~> 4.9.1"
         ],
         "Localize-Swift": [
           "~> 2.0"

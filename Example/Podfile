@@ -5,8 +5,5 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 target 'WPAppKit_Example' do
   pod 'WPAppKit', :path => '../'
-  pod 'Kingfisher','~> 5.0'
-  pod 'MJRefresh'
-  pod 'HBDNavigationBar', '~> 1.5.2' # https://github.com/listenzz/HBDNavigationBar
   
 end

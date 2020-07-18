@@ -1,72 +1,62 @@
 PODS:
+  - Alamofire (4.9.1)
   - HBDNavigationBar (1.5.2)
-  - Kingfisher (4.6.4)
+  - Kingfisher (5.10.1):
+    - Kingfisher/Core (= 5.10.1)
+  - Kingfisher/Core (5.10.1)
   - Localize-Swift (2.0.0)
-  - MJRefresh (3.2.0)
-  - SnapKit (4.0.1)
-  - WPAppKit (0.3.3):
+  - MJRefresh (3.2.2)
+  - SnapKit (5.0.1)
+  - WPAppKit (1.0.1):
+    - WPAppKit/Cocoa (= 1.0.1)
+    - WPAppKit/CodeScan (= 1.0.1)
+    - WPAppKit/CustomView (= 1.0.1)
+    - WPAppKit/OftenLib (= 1.0.1)
+    - WPAppKit/ThirdKit (= 1.0.1)
+    - WPAppKit/Tool (= 1.0.1)
+    - WPAppKit/WPPopupView (= 1.0.1)
+    - WPAppKit/WPWebView (= 1.0.1)
+  - WPAppKit/Cocoa (1.0.1):
+    - WPAppKit/Cocoa/Foundation (= 1.0.1)
+    - WPAppKit/Cocoa/UIKit (= 1.0.1)
+  - WPAppKit/Cocoa/Foundation (1.0.1)
+  - WPAppKit/Cocoa/UIKit (1.0.1)
+  - WPAppKit/CodeScan (1.0.1)
+  - WPAppKit/CustomView (1.0.1):
+    - WPAppKit/Cocoa
+  - WPAppKit/OftenLib (1.0.1):
+    - Alamofire (~> 4.9.1)
     - Localize-Swift (~> 2.0)
-    - SnapKit (~> 4.0.0)
-    - WPAppKit/Cocoa (= 0.3.3)
-    - WPAppKit/ThirdKit (= 0.3.3)
-    - WPAppKit/Tool (= 0.3.3)
-    - WPAppKit/WPEmptyView (= 0.3.3)
-    - WPAppKit/WPPopupView (= 0.3.3)
-    - WPAppKit/WPWebView (= 0.3.3)
-  - WPAppKit/Cocoa (0.3.3):
-    - Localize-Swift (~> 2.0)
-    - SnapKit (~> 4.0.0)
-    - WPAppKit/Cocoa/Foundation (= 0.3.3)
-    - WPAppKit/Cocoa/UIKit (= 0.3.3)
-  - WPAppKit/Cocoa/Foundation (0.3.3):
-    - Localize-Swift (~> 2.0)
-    - SnapKit (~> 4.0.0)
-  - WPAppKit/Cocoa/UIKit (0.3.3):
-    - Localize-Swift (~> 2.0)
-    - SnapKit (~> 4.0.0)
-  - WPAppKit/ThirdKit (0.3.3):
-    - Localize-Swift (~> 2.0)
-    - SnapKit (~> 4.0.0)
-    - WPAppKit/ThirdKit/HBDNavigationBar (= 0.3.3)
-    - WPAppKit/ThirdKit/Kingfisher (= 0.3.3)
-    - WPAppKit/ThirdKit/MBProgressHUD (= 0.3.3)
-    - WPAppKit/ThirdKit/MJRefresh (= 0.3.3)
-  - WPAppKit/ThirdKit/HBDNavigationBar (0.3.3):
+    - SnapKit (~> 5.0.1)
+  - WPAppKit/ThirdKit (1.0.1):
+    - WPAppKit/Cocoa
+    - WPAppKit/ThirdKit/HBDNavigationBar (= 1.0.1)
+    - WPAppKit/ThirdKit/Kingfisher (= 1.0.1)
+    - WPAppKit/ThirdKit/MBProgressHUD (= 1.0.1)
+    - WPAppKit/ThirdKit/MJRefresh (= 1.0.1)
+  - WPAppKit/ThirdKit/HBDNavigationBar (1.0.1):
     - HBDNavigationBar (~> 1.5.2)
-    - Localize-Swift (~> 2.0)
-    - SnapKit (~> 4.0.0)
-  - WPAppKit/ThirdKit/Kingfisher (0.3.3):
-    - Kingfisher (~> 4.6.0)
-    - Localize-Swift (~> 2.0)
-    - SnapKit (~> 4.0.0)
-  - WPAppKit/ThirdKit/MBProgressHUD (0.3.3):
-    - Localize-Swift (~> 2.0)
-    - SnapKit (~> 4.0.0)
-  - WPAppKit/ThirdKit/MJRefresh (0.3.3):
-    - Localize-Swift (~> 2.0)
-    - MJRefresh
-    - SnapKit (~> 4.0.0)
-  - WPAppKit/Tool (0.3.3):
-    - Localize-Swift (~> 2.0)
-    - SnapKit (~> 4.0.0)
-  - WPAppKit/WPEmptyView (0.3.3):
-    - Localize-Swift (~> 2.0)
-    - SnapKit (~> 4.0.0)
-  - WPAppKit/WPPopupView (0.3.3):
-    - Localize-Swift (~> 2.0)
-    - SnapKit (~> 4.0.0)
-  - WPAppKit/WPWebView (0.3.3):
-    - Localize-Swift (~> 2.0)
-    - SnapKit (~> 4.0.0)
+    - WPAppKit/Cocoa
+  - WPAppKit/ThirdKit/Kingfisher (1.0.1):
+    - Kingfisher (~> 5.0)
+    - WPAppKit/Cocoa
+  - WPAppKit/ThirdKit/MBProgressHUD (1.0.1):
+    - WPAppKit/Cocoa
+  - WPAppKit/ThirdKit/MJRefresh (1.0.1):
+    - MJRefresh (= 3.2.2)
+    - WPAppKit/Cocoa
+  - WPAppKit/Tool (1.0.1):
+    - WPAppKit/Cocoa
+  - WPAppKit/WPPopupView (1.0.1):
+    - WPAppKit/Tool
+  - WPAppKit/WPWebView (1.0.1)
 
 DEPENDENCIES:
-  - HBDNavigationBar (~> 1.5.2)
-  - Kingfisher (~> 4.6.0)
-  - MJRefresh
   - WPAppKit (from `../`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
     - HBDNavigationBar
     - Kingfisher
     - Localize-Swift
@@ -78,13 +68,14 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   HBDNavigationBar: 1c470db0183d1aa8cbb4912196cfb10752eebcc8
-  Kingfisher: 68498a706e46c2a050b0c9572f100e5db407f6e0
+  Kingfisher: eb36b7dfcc78d60877051c92c119a2865972961a
   Localize-Swift: c798ec9286494866f7068f85f7c71283ac5bdab4
-  MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
-  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
-  WPAppKit: ffa3048c847e2a90ddf3dad766e158b995549f92
+  MJRefresh: 72a46ecaa2a0feaf48fc5198dff95f25f8bb27c6
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  WPAppKit: 9628f593a7677139e15ddb2e313e1bdbea46f521
 
-PODFILE CHECKSUM: 0d983b439e2f19669ee575682179fd0aeeceb8bb
+PODFILE CHECKSUM: f4a7684ecf5d7ac01c2bc2813d5f1b829778aeb0
 
-COCOAPODS: 1.7.4
+COCOAPODS: 1.9.3
