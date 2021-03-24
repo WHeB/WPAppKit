@@ -5,5 +5,4 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 target 'WPAppKit_Example' do
   pod 'WPAppKit', :path => '../'
-#    pod 'WPAppKit', '1.0.1'
 end
