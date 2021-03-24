@@ -1,9 +1,9 @@
 PODS:
   - Alamofire (4.9.1)
   - HBDNavigationBar (1.5.2)
-  - Kingfisher (5.10.1):
-    - Kingfisher/Core (= 5.10.1)
-  - Kingfisher/Core (5.10.1)
+  - Kingfisher (5.14.1):
+    - Kingfisher/Core (= 5.14.1)
+  - Kingfisher/Core (5.14.1)
   - Localize-Swift (2.0.0)
   - MJRefresh (3.2.2)
   - SnapKit (5.0.1)
@@ -52,7 +52,7 @@ PODS:
   - WPAppKit/WPWebView (1.0.1)
 
 DEPENDENCIES:
-  - WPAppKit (from `../`)
+  - WPAppKit (= 1.0.1)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -62,20 +62,17 @@ SPEC REPOS:
     - Localize-Swift
     - MJRefresh
     - SnapKit
-
-EXTERNAL SOURCES:
-  WPAppKit:
-    :path: "../"
+    - WPAppKit
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   HBDNavigationBar: 1c470db0183d1aa8cbb4912196cfb10752eebcc8
-  Kingfisher: eb36b7dfcc78d60877051c92c119a2865972961a
+  Kingfisher: 8050bc6f7f68cbf3908bd04df7ccbac188f6d6d6
   Localize-Swift: c798ec9286494866f7068f85f7c71283ac5bdab4
   MJRefresh: 72a46ecaa2a0feaf48fc5198dff95f25f8bb27c6
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   WPAppKit: 9628f593a7677139e15ddb2e313e1bdbea46f521
 
-PODFILE CHECKSUM: f4a7684ecf5d7ac01c2bc2813d5f1b829778aeb0
+PODFILE CHECKSUM: 8fa660de1f28dbf13d3e12d366a86558368d9548
 
 COCOAPODS: 1.9.3

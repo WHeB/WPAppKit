@@ -148,7 +148,7 @@ extension HomeViewController {
     
     @objc func showCustomSheetView() {
         var style = WPPopupStyle.init()
-        style.animationOptions = .buttomPop
+        style.animationOptions = .sheetBottomPop
         style.touchHide = true
         WPPopupView.showCustomSheetView(style: style, view: self.sheetView)
     }
@@ -156,7 +156,7 @@ extension HomeViewController {
     @objc func showSheetView() {
         var style = WPPopupStyle.init()
         style.lastBtnColor = UIColor.red
-        style.animationOptions = .buttomPop
+        style.animationOptions = .sheetBottomPop
         style.cornerRadius = 8
         WPPopupView.showSheetView(style: style, title: nil, detail: "测试", buttons: ["拍照", "从相册选择","取消"]) { (_, index) in
             print(index)

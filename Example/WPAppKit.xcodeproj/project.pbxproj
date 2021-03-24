@@ -292,7 +292,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-WPAppKit_Example/Pods-WPAppKit_Example-resources.sh",
-				"${PODS_ROOT}/../../WPAppKit/Assets/CodeScan.bundle",
+				"${PODS_ROOT}/WPAppKit/WPAppKit/Assets/CodeScan.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (

@@ -26,7 +26,7 @@ class PhotoViewController: UIViewController {
     
     @objc private func chooseImgAction() {
         var style = WPPopupStyle()
-        style.animationOptions = .buttomPop
+        style.animationOptions = .sheetBottomPop
         WPPopupView.showSheetView(style: style, title: "请选择照片", buttons: ["拍照", "选择照片", "取消"]) { (string, index) in
             let manger = PhotoManger.share
             manger.reduceLevel = 900
