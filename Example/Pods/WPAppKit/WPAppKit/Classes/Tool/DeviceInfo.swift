@@ -227,4 +227,7 @@ public struct DeviceInfo {
         }
     }
     
+    
+    
+    
 }

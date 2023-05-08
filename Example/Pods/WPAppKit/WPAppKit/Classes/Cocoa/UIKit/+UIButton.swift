@@ -91,8 +91,7 @@ public extension UIButton {
     
     /// 设置背景颜色
     func setbackground(normalColor: UIColor,
-                       selectedColor: UIColor,
-                       bounds: CGRect? = nil) {
+                       selectedColor: UIColor, bounds: CGRect? = nil) {
         let btnSize = bounds?.size ?? self.bounds.size
         
         self.setBackgroundImage(UIImage.initFrom(color: normalColor, size: btnSize), for: .normal)
@@ -111,10 +110,7 @@ public extension UIButton {
     ///   - normalTitle: 默认文本
     ///   - countdownTitle: 开始计时后文本  例如："s" "s后重新开始"
     ///   - finishTitle: 完成后文本  例如："重新发送"
-    func startCountdown(timeLine: Int,
-                        normalTitle: String? = nil,
-                        countdownTitle: String? = nil,
-                        finishTitle: String) {
+    func startCountdown(timeLine: Int, normalTitle: String? = nil, countdownTitle: String? = nil, finishTitle: String) {
         if normalTitle != nil {
             self.setTitle(normalTitle, for: .normal)
         }
@@ -187,8 +183,7 @@ public extension UIButton {
     /// - Parameters:
     ///   - position: 图片相对于文字的位置 仅限 上下左右
     ///   - spacing: 图片和文字的间距
-    func setImageOrientation(position: UIView.ContentMode,
-                             spacing: CGFloat) {
+    func setImageOrientation(position: UIView.ContentMode, spacing: CGFloat) {
         let buttonW = self.bounds.size.width
         let buttonH = self.bounds.size.height
         guard let imgW: CGFloat = self.currentImage?.size.width,

@@ -4,11 +4,11 @@
 //
 //  Created by 王鹏 on 2019/10/30.
 //
-//  文字型轮播图  待完善
+//  文字型轮播图
 
 import UIKit
 
-enum CarouselDirection {
+public enum CarouselDirection {
     // top bottom 上下轮播
     case top
     case bottom
@@ -17,7 +17,7 @@ enum CarouselDirection {
     case right
 }
 
-struct CarouseStyle {
+public struct CarouseStyle {
     
     // 轮播方向
     public var scrollerDirection: CarouselDirection = .top

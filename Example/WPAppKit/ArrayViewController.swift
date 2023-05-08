@@ -28,13 +28,11 @@ class ArrayViewController: UIViewController {
         let array2 = jsonString.toArray()
         print("------\(array2)")
         
-        let rest = array1.remove(at: 12)
+        let rest = array1.remove(at: 2)
         print("------\(rest)")
         
         let rest2 = array1.removeAll([12, 2])
         print("------\(rest2)")
-        
-        UIImageView()
         
     }
     

@@ -132,7 +132,10 @@ public extension String {
 
     /// 获取文本高
     func txtStringHeight(font: UIFont, maxWidth: CGFloat) -> CGFloat {
-        let size = CGSize.init(width: maxWidth, height: CGFloat(MAXFLOAT))
+        if self.isEmpty {
+            return 0
+        }
+        let size = CGSize(width: maxWidth, height: CGFloat(MAXFLOAT))
         let dictionary = NSDictionary.init(object: font, forKey: NSAttributedString.Key.font as NSCopying)
         let stringSize = self.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: dictionary as? [NSAttributedString.Key : Any], context: nil)
         return stringSize.height
@@ -140,7 +143,10 @@ public extension String {
     
     /// 获取文本宽
     func txtStringWidth(font: UIFont, maxHeight: CGFloat) -> CGFloat {
-        let size = CGSize.init(width: CGFloat(MAXFLOAT), height: maxHeight)
+        if self.isEmpty {
+            return 0
+        }
+        let size = CGSize(width: CGFloat(MAXFLOAT), height: maxHeight)
         let dictionary = NSDictionary.init(object: font, forKey: NSAttributedString.Key.font as NSCopying)
         let stringSize = self.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: dictionary as? [NSAttributedString.Key : Any], context: nil)
         return stringSize.width

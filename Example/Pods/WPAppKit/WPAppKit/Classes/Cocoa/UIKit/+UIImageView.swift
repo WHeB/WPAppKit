@@ -30,10 +30,7 @@ public extension UIImageView {
     ///   - repeatCount: 重复次数
     ///   - isDisappear: 执行完一次是否消失
     ///   - gifType: 图片的类型 gif/png
-    func loadBundleGif(_ path: String,
-                       repeatCount: Int? = 0,
-                       isDisappear: Bool? = false,
-                       gifType: String? = "gif") {
+    func loadBundleGif(_ path: String, repeatCount: Int? = 0, isDisappear: Bool? = false, gifType: String? = "gif") {
         // 1、加载gif图片，并转成Data类型
         guard let imgData = NSData(contentsOfFile: path) else {
             return
@@ -69,6 +66,8 @@ public extension UIImageView {
         self.animationRepeatCount = repeatCount ?? 0  // 执行一次，设置为0时无限执行
         // 6、开始播放
         self.startAnimating()
+//        self.perform(#selector(startAnimating), with: nil, afterDelay: 0.0, inModes: [RunLoop.Mode.common])
     }
+    
     
 }

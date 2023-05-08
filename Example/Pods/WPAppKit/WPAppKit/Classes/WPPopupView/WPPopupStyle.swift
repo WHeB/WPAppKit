@@ -25,13 +25,11 @@ let space: CGFloat = 18.0
 let rowSpace: CGFloat = 5.0
 
 public enum AnimationOptions {
-    case none       // 默认
-    case zoom       // 先放大，再缩小，在还原;  对 sheet 无效
+    case none // 默认
+    case zoom // 先放大，再缩小，在还原;  对 sheet 无效
     case smallToBig // 从小变大; 对 sheet 无效
     case topToCenter // 从顶部到中间; 对 sheet pop 无效
-    case sheetBottomPop      // sheet底部弹出; 对 alert 无效
-    case sheetLeftPop   // sheet左侧弹出
-    case sheetRightPop   // sheet右侧弹出
+    case buttomPop // 底部弹出; 对 alert 无效
 }
 
 /// BubbleView三角view指向

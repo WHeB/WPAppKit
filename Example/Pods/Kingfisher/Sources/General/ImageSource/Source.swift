@@ -75,7 +75,8 @@ public enum Source {
     public var url: URL? {
         switch self {
         case .network(let resource): return resource.downloadURL
-        case .provider(let provider): return provider.contentURL
+        // `ImageDataProvider` does not provide a URL. All it cares is how to get the data back.
+        case .provider(_): return nil
         }
     }
 }

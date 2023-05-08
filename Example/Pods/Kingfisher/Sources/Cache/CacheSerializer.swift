@@ -25,7 +25,6 @@
 //  THE SOFTWARE.
 
 import Foundation
-import CoreGraphics
 
 /// An `CacheSerializer` is used to convert some data to an image object after
 /// retrieving it from disk storage, and vice versa, to convert an image to data object
@@ -81,22 +80,8 @@ public struct DefaultCacheSerializer: CacheSerializer {
     
     /// The default general cache serializer used across Kingfisher's cache.
     public static let `default` = DefaultCacheSerializer()
-
-    /// The compression quality when converting image to a lossy format data. Default is 1.0.
-    public var compressionQuality: CGFloat = 1.0
-
-    /// Whether the original data should be preferred when serializing the image.
-    /// If `true`, the input original data will be checked first and used unless the data is `nil`.
-    /// In that case, the serialization will fall back to creating data from image.
-    public var preferCacheOriginalData: Bool = false
-
-    /// Creates a cache serializer that serialize and deserialize images in PNG, JPEG and GIF format.
-    ///
-    /// - Note:
-    /// Use `DefaultCacheSerializer.default` unless you need to specify your own properties.
-    ///
-    public init() { }
-
+    private init() {}
+    
     /// - Parameters:
     ///   - image: The image needed to be serialized.
     ///   - original: The original data which is just downloaded.
@@ -110,18 +95,7 @@ public struct DefaultCacheSerializer: CacheSerializer {
     /// converted to the corresponding data type. Otherwise, if the `original` is provided but it is not
     /// If `original` is `nil`, the input `image` will be encoded as PNG data.
     public func data(with image: KFCrossPlatformImage, original: Data?) -> Data? {
-        if preferCacheOriginalData {
-            return original ??
-                image.kf.data(
-                    format: original?.kf.imageFormat ?? .unknown,
-                    compressionQuality: compressionQuality
-                )
-        } else {
-            return image.kf.data(
-                format: original?.kf.imageFormat ?? .unknown,
-                compressionQuality: compressionQuality
-            )
-        }
+        return image.kf.data(format: original?.kf.imageFormat ?? .unknown)
     }
     
     /// Gets an image deserialized from provided data.

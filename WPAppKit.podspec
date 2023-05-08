@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
     s.author           = { 'WHeB' => '1193325271@qq.com' }
     s.source           = { :git => 'https://github.com/WHeB/WPAppKit.git', :tag => s.version.to_s }
     s.swift_version = '5.0'
-    s.ios.deployment_target = '10.0'
+    s.ios.deployment_target = '11.0'
     s.static_framework = true
     
     # ---------------  Cocoa常用扩展  -----------
@@ -74,7 +74,7 @@ Pod::Spec.new do |s|
         # MJRefresh
         ss.subspec 'MJRefresh' do |sss|
             sss.source_files = 'WPAppKit/Classes/ThirdKit/MJRefresh/*.swift'
-            sss.dependency 'MJRefresh','3.2.2'
+            sss.dependency 'MJRefresh','~> 3.7.5'
         end
         
         # Kingfisher

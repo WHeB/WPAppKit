@@ -14,8 +14,8 @@ open class WPSheetView: UIView {
     private var style: WPPopupStyle!
     private var titleLabel: UILabel!
     private var detailLabel: UILabel!
-    private var contentView: UIView = UIView()
-    private var buttonsView: UIView = UIView()
+    private var contentView: UIView = UIView.init()
+    private var buttonsView: UIView = UIView.init()
     private var sheetViewW: CGFloat = 0.0
     private var labelW: CGFloat = 0.0
     private var titleH: CGFloat = 0.0
@@ -51,7 +51,7 @@ open class WPSheetView: UIView {
         // buttons
         if WPPopupToll.popup_isHasSafeArea {
             self.buttonH = CGFloat(buttons.count) * buttonHeight + 20 + 5
-            let safetyView = UIView.init(frame: CGRect(x: 0, y: self.buttonH - 20, width: self.sheetViewW, height: 20))
+            let safetyView = UIView.init(frame: CGRect.init(x: 0, y: self.buttonH - 20, width: self.sheetViewW, height: 20))
             safetyView.backgroundColor = self.style.popupBgColor
             self.buttonsView.addSubview(safetyView)
         }else {
@@ -62,17 +62,17 @@ open class WPSheetView: UIView {
         if self.titleH == 0.0 && self.detailH == 0.0 {
             totalH = style.cornerRadius + buttonH
         }else if self.titleH != 0.0 && self.detailH == 0.0 {
-            self.contentView.frame = CGRect(x: 0, y: self.style.cornerRadius, width: self.sheetViewW, height: padding + self.titleH + space)
+            self.contentView.frame = CGRect.init(x: 0, y: self.style.cornerRadius, width: self.sheetViewW, height: padding + self.titleH + space)
         }else if self.titleH == 0.0 && self.detailH != 0.0 {
-            self.contentView.frame = CGRect(x: 0, y: self.style.cornerRadius, width: self.sheetViewW, height: padding + self.detailH + space)
+            self.contentView.frame = CGRect.init(x: 0, y: self.style.cornerRadius, width: self.sheetViewW, height: padding + self.detailH + space)
         }else {
-            self.contentView.frame = CGRect(x: 0, y: self.style.cornerRadius, width: self.sheetViewW, height: padding + self.titleH + space + self.detailH + space)
+            self.contentView.frame = CGRect.init(x: 0, y: self.style.cornerRadius, width: self.sheetViewW, height: padding + self.titleH + space + self.detailH + space)
         }
         
         self.loadButtons(buttons: buttons)
         totalH = style.cornerRadius + self.contentView.bounds.size.height + buttonH
-        self.frame = CGRect(x: 0, y: 0, width: self.sheetViewW, height: totalH)
-        self.center = CGPoint(x: ScWidth / 2.0, y: ScHeight - totalH / 2.0)
+        self.frame = CGRect.init(x: 0, y: 0, width: self.sheetViewW, height: totalH)
+        self.center = CGPoint.init(x: ScWidth / 2.0, y: ScHeight - totalH / 2.0)
     
         if self.style.cornerRadius > 0 {
             self .addCornerRadii(CGSize(width: self.style.cornerRadius, height: self.style.cornerRadius), bounds: CGRect(x: 0, y: 0, width: self.popup_width, height: totalH))
@@ -81,7 +81,7 @@ open class WPSheetView: UIView {
     
     // 标题
     private func loadTitle(title: String) {
-        let label = UILabel.init(frame: CGRect(x: padding, y: padding, width: self.labelW, height: self.titleH))
+        let label = UILabel.init(frame: CGRect.init(x: padding, y: padding, width: self.labelW, height: self.titleH))
         self.contentView.addSubview(label)
         label.textColor = self.style.titleColor
         label.font = self.style.titleFont
@@ -89,20 +89,20 @@ open class WPSheetView: UIView {
         label.textAlignment = self.style.titleTextAlignment
         label.sizeToFit()
         self.titleH = label.frame.size.height
-        label.frame = CGRect(x: padding, y: padding, width: self.labelW, height: self.titleH)
+        label.frame = CGRect.init(x: padding, y: padding, width: self.labelW, height: self.titleH)
         self.titleLabel = label
     }
     
     // 内容
     private func loadDetail(detail: String) {
         let labelY = self.titleH == 0.0 ? padding : self.titleLabel.popup_bottomY + space
-        let label = UILabel(frame: CGRect(x: 0, y: labelY, width: self.labelW, height: self.detailH))
+        let label = UILabel.init(frame: CGRect.init(x: 0, y: labelY, width: self.labelW, height: self.detailH))
         self.contentView.addSubview(label)
         // 文本
-        let text = NSMutableAttributedString(string: detail)
-        let pStyle = NSMutableParagraphStyle()
+        let text = NSMutableAttributedString.init(string: detail)
+        let pStyle = NSMutableParagraphStyle.init()
         pStyle.lineSpacing = rowSpace
-        text.addAttributes([NSAttributedString.Key.paragraphStyle : pStyle], range: NSRange(location: 0, length: text.length))
+        text.addAttributes([NSAttributedString.Key.paragraphStyle : pStyle], range: NSRange.init(location: 0, length: text.length))
         label.attributedText = text
         
         label.textColor = self.style.detailColor
@@ -111,7 +111,7 @@ open class WPSheetView: UIView {
         label.numberOfLines = 0
         label.sizeToFit()
         self.detailH = label.frame.size.height
-        label.frame = CGRect(x: padding, y: labelY, width: self.labelW, height: self.detailH)
+        label.frame = CGRect.init(x: padding, y: labelY, width: self.labelW, height: self.detailH)
         self.detailLabel = label
     }
     
@@ -123,18 +123,18 @@ open class WPSheetView: UIView {
             bussonsViewY = self.contentView.popup_bottomY + style.cornerRadius
             buttonOneY = 0.0
         }
-        self.buttonsView.frame = CGRect(x: 0, y: bussonsViewY, width: self.sheetViewW, height: self.buttonH)
+        self.buttonsView.frame = CGRect.init(x: 0, y: bussonsViewY, width: self.sheetViewW, height: self.buttonH)
         
         for (index, item) in buttons.enumerated() {
             let buttonY: CGFloat = CGFloat(index) * buttonHeight + buttonOneY
-            let button = UIButton(type: .custom)
+            let button = UIButton.init(type: .custom)
             button.backgroundColor = self.style.popupBgColor
             if index == (buttons.count - 1) { // 最后一个
-                button.frame = CGRect(x: 0, y: buttonY + 5, width: self.sheetViewW, height: buttonHeight - lineHeight)
+                button.frame = CGRect.init(x: 0, y: buttonY + 5, width: self.sheetViewW, height: buttonHeight - lineHeight)
                 button.setTitleColor(self.style.lastBtnColor, for: .normal)
                 button.titleLabel?.font = self.style.lastBtnFont
             }else {
-                button.frame = CGRect(x: 0, y: buttonY, width: self.sheetViewW, height: buttonHeight - lineHeight)
+                button.frame = CGRect.init(x: 0, y: buttonY, width: self.sheetViewW, height: buttonHeight - lineHeight)
                 button.setTitleColor(self.style.normalBtnColor, for: .normal)
                 button.titleLabel?.font = self.style.lastBtnFont
             }
@@ -172,7 +172,7 @@ open class WPSheetView: UIView {
         }
         kWindowView.addSubview(supView)
         if self.style.touchHide {
-            let tap = UITapGestureRecognizer(target: self, action: #selector(hideSheetView))
+            let tap = UITapGestureRecognizer.init(target: self, action: #selector(hideSheetView))
             supView.effectView.addGestureRecognizer(tap)
         }
         
@@ -187,12 +187,12 @@ open class WPSheetView: UIView {
             }
             
         case .sheetBottomPop:
-            self.layer.position = CGPoint(x: ScWidth / 2.0, y: ScHeight + (self.popup_height / 2.0))
+            self.layer.position = CGPoint.init(x: ScWidth / 2.0, y: ScHeight + (self.popup_height / 2.0))
             UIView.animate(withDuration: 0.3, animations: {
                 if self.style.openEffect {
                     supView.effectView.effect = UIBlurEffect(style: .dark)
                 }
-                self.layer.position = CGPoint(x: ScWidth / 2.0, y: ScHeight - (self.popup_height / 2.0))
+                self.layer.position = CGPoint.init(x: ScWidth / 2.0, y: ScHeight - (self.popup_height / 2.0))
             })
             
         case .zoom, .smallToBig, .topToCenter: // 无效
@@ -203,7 +203,7 @@ open class WPSheetView: UIView {
                 if self.style.openEffect {
                     supView.effectView.effect = UIBlurEffect(style: .dark)
                 }
-                self.layer.position = CGPoint(x: self.popup_width/2, y: ScHeight / 2)
+                self.layer.position = CGPoint.init(x: self.popup_width/2, y: ScHeight / 2)
             })
             break
         case .sheetRightPop: // 右侧弹出
@@ -232,7 +232,7 @@ open class WPSheetView: UIView {
                 if self.style.openEffect {
                     supView.effectView.effect = nil
                 }
-                self.layer.position = CGPoint(x: ScWidth / 2.0, y: ScHeight + self.popup_height )
+                self.layer.position = CGPoint.init(x: ScWidth / 2.0, y: ScHeight + self.popup_height )
             }, completion: { (_) in
                 supView.removeFromSuperview()
             })
@@ -254,7 +254,7 @@ open class WPSheetView: UIView {
                 if self.style.openEffect {
                     supView.effectView.effect = nil
                 }
-                self.layer.position = CGPoint(x: ScWidth / 2.0, y: ScHeight + self.popup_height )
+                self.layer.position = CGPoint.init(x: ScWidth / 2.0, y: ScHeight + self.popup_height )
             }, completion: { (_) in
                 supView.removeFromSuperview()
             })

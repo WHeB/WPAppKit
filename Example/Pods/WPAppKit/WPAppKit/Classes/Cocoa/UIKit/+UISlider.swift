@@ -15,7 +15,8 @@ public extension UISlider {
                      maxValue: Float,
                      normalValue: Float? = 0,
                      target: AnyObject,
-                     action: Selector) {
+                     action: Selector
+    ) {
         self.init()
         self.minimumTrackTintColor = minTrackColor
         self.maximumTrackTintColor = maxTrackColor
@@ -50,10 +51,7 @@ public extension UISlider {
     }
     
     
-    func setValue(_ value: Float,
-                  animated: Bool = true,
-                  duration: TimeInterval = 1,
-                  completion: (() -> Void)? = nil) {
+    func setValue(_ value: Float, animated: Bool = true, duration: TimeInterval = 1, completion: (() -> Void)? = nil) {
         if animated {
             UIView.animate(withDuration: duration, animations: {
                 self.setValue(value, animated: true)
@@ -65,5 +63,6 @@ public extension UISlider {
             completion?()
         }
     }
+    
     
 }

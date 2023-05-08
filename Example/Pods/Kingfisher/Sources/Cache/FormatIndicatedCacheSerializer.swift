@@ -25,7 +25,6 @@
 //  THE SOFTWARE.
 
 import Foundation
-import CoreGraphics
 
 /// `FormatIndicatedCacheSerializer` lets you indicate an image format for serialized caches.
 ///
@@ -56,31 +55,18 @@ public struct FormatIndicatedCacheSerializer: CacheSerializer {
     
     /// A `FormatIndicatedCacheSerializer` which converts image from and to PNG format. If the image cannot be
     /// represented by PNG format, it will fallback to its real format which is determined by `original` data.
-    public static let png = FormatIndicatedCacheSerializer(imageFormat: .PNG, jpegCompressionQuality: nil)
+    public static let png = FormatIndicatedCacheSerializer(imageFormat: .PNG)
     
     /// A `FormatIndicatedCacheSerializer` which converts image from and to JPEG format. If the image cannot be
     /// represented by JPEG format, it will fallback to its real format which is determined by `original` data.
-    /// The compression quality is 1.0 when using this serializer. If you need to set a customized compression quality,
-    /// use `jpeg(compressionQuality:)`.
-    public static let jpeg = FormatIndicatedCacheSerializer(imageFormat: .JPEG, jpegCompressionQuality: 1.0)
-
-    /// A `FormatIndicatedCacheSerializer` which converts image from and to JPEG format with a settable compression
-    /// quality. If the image cannot be represented by JPEG format, it will fallback to its real format which is
-    /// determined by `original` data.
-    /// - Parameter compressionQuality: The compression quality when converting image to JPEG data.
-    public static func jpeg(compressionQuality: CGFloat) -> FormatIndicatedCacheSerializer {
-        return FormatIndicatedCacheSerializer(imageFormat: .JPEG, jpegCompressionQuality: compressionQuality)
-    }
+    public static let jpeg = FormatIndicatedCacheSerializer(imageFormat: .JPEG)
     
     /// A `FormatIndicatedCacheSerializer` which converts image from and to GIF format. If the image cannot be
     /// represented by GIF format, it will fallback to its real format which is determined by `original` data.
-    public static let gif = FormatIndicatedCacheSerializer(imageFormat: .GIF, jpegCompressionQuality: nil)
+    public static let gif = FormatIndicatedCacheSerializer(imageFormat: .GIF)
     
     /// The indicated image format.
     private let imageFormat: ImageFormat
-
-    /// The compression quality used for loss image format (like JPEG).
-    private let jpegCompressionQuality: CGFloat?
     
     /// Creates data which represents the given `image` under a format.
     public func data(with image: KFCrossPlatformImage, original: Data?) -> Data? {
@@ -89,7 +75,7 @@ public struct FormatIndicatedCacheSerializer: CacheSerializer {
             return autoreleasepool { () -> Data? in
                 switch imageFormat {
                 case .PNG: return image.kf.pngRepresentation()
-                case .JPEG: return image.kf.jpegRepresentation(compressionQuality: jpegCompressionQuality ?? 1.0)
+                case .JPEG: return image.kf.jpegRepresentation(compressionQuality: 1.0)
                 case .GIF: return image.kf.gifRepresentation()
                 case .unknown: return nil
                 }

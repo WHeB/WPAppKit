@@ -205,8 +205,9 @@ open class AnimatedImageView: UIImageView {
     /// Starts the animation.
     override open func startAnimating() {
         guard !isAnimating else { return }
-        guard let animator = animator else { return }
-        guard !animator.isReachMaxRepeatCount else { return }
+        if animator?.isReachMaxRepeatCount ?? false {
+            return
+        }
 
         displayLink.isPaused = false
     }
@@ -297,7 +298,7 @@ open class AnimatedImageView: UIImageView {
             duration = displayLink.duration
         } else {
             // Some devices (like iPad Pro 10.5) will have a different FPS.
-            duration = 1.0 / TimeInterval(preferredFramesPerSecond)
+            duration = 1.0 / Double(preferredFramesPerSecond)
         }
 
         animator.shouldChangeFrame(with: duration) { [weak self] hasNewFrame in

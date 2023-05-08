@@ -11,8 +11,7 @@ import UIKit
 public class AppHud: NSObject {
     
     /// 显示文字提示窗
-    public static func showToast(_ text: String,
-                                 delay: Double? = 1.5) {
+    public static func showToast(_ text: String, delay: Double? = 1.5) {
         let toView = getCurrentViewWithView()
         MBProgressHUD.hide(for: toView, animated: true)
 
@@ -30,9 +29,7 @@ public class AppHud: NSObject {
     }
     
     /// 显示文字 + 图片 提示窗
-    public static func showToast(_ text: String,
-                                 image: UIImage,
-                                 delay: Double? = 1.5) {
+    public static func showToast(_ text: String, image: UIImage, delay: Double? = 1.5) {
         let toView = getCurrentViewWithView()
         MBProgressHUD.hide(for: toView, animated: true)
         
@@ -55,8 +52,7 @@ public class AppHud: NSObject {
     /// - Parameters:
     ///   - text: 文字提示
     ///   - maskingAlpha: > 0 会锁死界面，不能操作, 一定要移除
-    public static func showLoading(_ text: String? = "",
-                                   maskingAlpha: CGFloat? = 0.00) {
+    public static func showLoading(_ text: String? = "", maskingAlpha: CGFloat? = 0.00) {
         let toView = getCurrentViewWithView()
         MBProgressHUD.hide(for: toView, animated: true)
         
@@ -88,8 +84,7 @@ public class AppHud: NSObject {
     /// - Parameters:
     ///   - gifName: 动图名称
     ///   - maskingAlpha: > 0 会锁死界面，不能操作, 一定要移除
-    public static func showGifLoading(_ gifName: String,
-                                      maskingAlpha: CGFloat? = 0.00) {
+    public static func showGifLoading(_ gifName: String, maskingAlpha: CGFloat? = 0.00) {
         let toView = getCurrentViewWithView()
         MBProgressHUD.hide(for: toView, animated: true)
         
@@ -117,8 +112,7 @@ public class AppHud: NSObject {
         hud.customView = imageView
     }
     
-    public static func showGifLoading(images: [UIImage],
-                                      maskingAlpha: CGFloat? = 0.00) {
+    public static func showGifLoading(images: [UIImage], maskingAlpha: CGFloat? = 0.00) {
         let toView = getCurrentViewWithView()
         MBProgressHUD.hide(for: toView, animated: true)
         

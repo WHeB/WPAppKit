@@ -17,11 +17,7 @@ public class FormatterNumber: NSObject {
     ///   - minIntLen: 最小位数
     ///   - maxIntLen: 最大位数 默认9位
     /// - Returns: 返回String
-    public static func formatterInt(value: CLongLong,
-                                    minIntLen: Int? = 1,
-                                    maxIntLen: Int? = 9,
-                                    separator: String? = "",
-                                    prefix: String? = "") -> String {
+    public static func formatterInt(value: CLongLong, minIntLen: Int? = 1, maxIntLen: Int? = 9, separator: String? = "", prefix: String? = "") -> String {
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
         formatter.minimumIntegerDigits = minIntLen!
@@ -33,11 +29,7 @@ public class FormatterNumber: NSObject {
     }
     
     /// Doubel
-    public static func formatterDouble(value: Double? = 0,
-                                       minFractionLen: Int? = 0,
-                                       maxFractionLen: Int? = 8,
-                                       separator: String? = "",
-                                       prefix: String? = "") -> String {
+    public static func formatterDouble(value: Double? = 0, minFractionLen: Int? = 0, maxFractionLen: Int? = 8, separator: String? = "", prefix: String? = "") -> String {
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
         formatter.minimumFractionDigits = minFractionLen!
@@ -49,11 +41,7 @@ public class FormatterNumber: NSObject {
     }
     
     /// 格式化数字string
-    public static func formatterString(value: String,
-                                       minFractionLen: Int? = 0,
-                                       maxFractionLen: Int? = 8,
-                                       separator: String? = "",
-                                       prefix: String? = "") -> String {
+    public static func formatterString(value: String, minFractionLen: Int? = 0, maxFractionLen: Int? = 8, separator: String? = "", prefix: String? = "") -> String {
         
         if value.contains(".") {
             guard let tempValue = Double(value) else {

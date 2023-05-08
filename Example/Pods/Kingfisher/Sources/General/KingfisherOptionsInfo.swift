@@ -240,17 +240,6 @@ public enum KingfisherOptionsInfoItem {
     ///
     /// User cancellation will not trigger the alternative source loading.
     case alternativeSources([Source])
-
-    /// Provide a retry strategy which will be used when something gets wrong during the image retrieving process from
-    /// `KingfisherManager`. You can define a strategy by create a type conforming to the `RetryStrategy` protocol.
-    ///
-    /// - Note:
-    ///
-    /// All extension methods of Kingfisher (`kf` extensions on `UIImageView` or `UIButton`) retrieve images through
-    /// `KingfisherManager`, so the retry strategy also applies when using them. However, this option does not apply
-    /// when pass to an `ImageDownloader` or `ImageCache`.
-    ///
-    case retryStrategy(RetryStrategy)
 }
 
 // Improve performance by parsing the input `KingfisherOptionsInfo` (self) first.
@@ -293,7 +282,6 @@ public struct KingfisherParsedOptionsInfo {
     public var processingQueue: CallbackQueue? = nil
     public var progressiveJPEG: ImageProgressive? = nil
     public var alternativeSources: [Source]? = nil
-    public var retryStrategy: RetryStrategy? = nil
 
     var onDataReceived: [DataReceivingSideEffect]? = nil
     
@@ -335,7 +323,6 @@ public struct KingfisherParsedOptionsInfo {
             case .processingQueue(let queue): processingQueue = queue
             case .progressiveJPEG(let value): progressiveJPEG = value
             case .alternativeSources(let sources): alternativeSources = sources
-            case .retryStrategy(let strategy): retryStrategy = strategy
             }
         }
 
@@ -379,7 +366,7 @@ class ImageLoadingProgressSideEffect: DataReceivingSideEffect {
                 return
             }
 
-            let dataLength = Int64(task.mutableData.count)
+            let dataLength: Int64 = Int64(task.mutableData.count)
             self.block(dataLength, expectedContentLength)
         }
     }

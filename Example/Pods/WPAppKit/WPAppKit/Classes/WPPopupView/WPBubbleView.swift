@@ -55,27 +55,27 @@ open class WPBubbleView: UIView, UITableViewDataSource, UITableViewDelegate {
         case .top:
             let selfX = startPoint.x - size.width/2 - 5
             let selfY = startPoint.y
-            self.frame = CGRect(x: selfX, y: selfY, width: size.width, height: size.height + 5)
-            self.tableView.frame = CGRect(x: 0, y: 5, width: size.width, height: size.height)
-            
+            self.frame = CGRect.init(x: selfX, y: selfY, width: size.width, height: size.height + 5)
+            self.tableView.frame = CGRect.init(x: 0, y: 5, width: size.width, height: size.height)
+            break
         case .left:
             let selfX = startPoint.x
             let selfY = startPoint.y - size.height/2
-            self.frame = CGRect(x: selfX, y: selfY, width: size.width + 5, height: size.height)
-            self.tableView.frame = CGRect(x: 5, y: 0, width: size.width, height: size.height)
-            
+            self.frame = CGRect.init(x: selfX, y: selfY, width: size.width + 5, height: size.height)
+            self.tableView.frame = CGRect.init(x: 5, y: 0, width: size.width, height: size.height)
+            break
         case .buttom:
             let selfX = startPoint.x - size.width/2 - 5
             let selfY = startPoint.y - size.height - 5
-            self.frame = CGRect(x: selfX, y: selfY, width: size.width, height: size.height + 5)
-            self.tableView.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
-            
+            self.frame = CGRect.init(x: selfX, y: selfY, width: size.width, height: size.height + 5)
+            self.tableView.frame = CGRect.init(x: 0, y: 0, width: size.width, height: size.height)
+            break
         case .right:
             let selfX = startPoint.x - size.width - 5
             let selfY = startPoint.y - size.height/2
-            self.frame = CGRect(x: selfX, y: selfY, width: size.width + 5, height: size.height)
-            self.tableView.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
-            
+            self.frame = CGRect.init(x: selfX, y: selfY, width: size.width + 5, height: size.height)
+            self.tableView.frame = CGRect.init(x: 0, y: 0, width: size.width, height: size.height)
+            break
         }
     }
     
@@ -84,27 +84,27 @@ open class WPBubbleView: UIView, UITableViewDataSource, UITableViewDelegate {
         case .top:
             let selfX = fromReact.origin.x + fromReact.width/2 - size.width/2
             let selfY = fromReact.origin.y + fromReact.height
-            self.frame = CGRect(x: selfX, y: selfY, width: size.width, height: size.height + 5)
-            self.tableView.frame = CGRect(x: 0, y: 5, width: size.width, height: size.height)
-            
+            self.frame = CGRect.init(x: selfX, y: selfY, width: size.width, height: size.height + 5)
+            self.tableView.frame = CGRect.init(x: 0, y: 5, width: size.width, height: size.height)
+            break
         case .left:
             let selfX = fromReact.origin.x + fromReact.width
             let selfY = fromReact.origin.y + fromReact.height/2 - size.height/2
-            self.frame = CGRect(x: selfX, y: selfY, width: size.width + 5, height: size.height)
-            self.tableView.frame = CGRect(x: 5, y: 0, width: size.width, height: size.height)
-            
+            self.frame = CGRect.init(x: selfX, y: selfY, width: size.width + 5, height: size.height)
+            self.tableView.frame = CGRect.init(x: 5, y: 0, width: size.width, height: size.height)
+            break
         case .buttom:
             let selfX = fromReact.origin.x + fromReact.width/2 - size.width/2
             let selfY = fromReact.origin.y - size.height - 5
-            self.frame = CGRect(x: selfX, y: selfY, width: size.width, height: size.height + 5)
-            self.tableView.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
-            
+            self.frame = CGRect.init(x: selfX, y: selfY, width: size.width, height: size.height + 5)
+            self.tableView.frame = CGRect.init(x: 0, y: 0, width: size.width, height: size.height)
+            break
         case .right:
             let selfX = fromReact.origin.x - size.width - 5
             let selfY = fromReact.origin.y + fromReact.height/2 - size.height/2
-            self.frame = CGRect(x: selfX, y: selfY, width: size.width + 5, height: size.height)
-            self.tableView.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
-            
+            self.frame = CGRect.init(x: selfX, y: selfY, width: size.width + 5, height: size.height)
+            self.tableView.frame = CGRect.init(x: 0, y: 0, width: size.width, height: size.height)
+            break
         }
     }
     
@@ -120,7 +120,7 @@ open class WPBubbleView: UIView, UITableViewDataSource, UITableViewDelegate {
     }
     
     lazy var tableView: UITableView = {
-        let tableView = UITableView(frame: CGRect.zero, style: .plain)
+        let tableView = UITableView.init(frame: CGRect.zero, style: .plain)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.backgroundColor = self.style.popupBgColor
@@ -159,7 +159,7 @@ open class WPBubbleView: UIView, UITableViewDataSource, UITableViewDelegate {
         let supView: WPPopupView = self.superview as! WPPopupView
         kWindowView.addSubview(supView)
         if self.style.touchHide {
-            let tap = UITapGestureRecognizer(target: self, action: #selector(hideBubbleView))
+            let tap = UITapGestureRecognizer.init(target: self, action: #selector(hideBubbleView))
             supView.effectView.addGestureRecognizer(tap)
         }
         
@@ -270,27 +270,27 @@ open class WPBubbleView: UIView, UITableViewDataSource, UITableViewDelegate {
         switch self.style.triangleOrientation {
         case .top:
             let firstX = size.width/2 + style.adjustDistance
-            linePath.move(to: CGPoint(x: firstX, y: 0))
-            linePath.addLine(to: CGPoint(x: firstX - 5, y: 5))
-            linePath.addLine(to: CGPoint(x: firstX + 5, y: 5))
+            linePath.move(to: CGPoint.init(x: firstX, y: 0))
+            linePath.addLine(to: CGPoint.init(x: firstX - 5, y: 5))
+            linePath.addLine(to: CGPoint.init(x: firstX + 5, y: 5))
             break
         case .left:
             let firstY = size.height/2 + style.adjustDistance
-            linePath.move(to: CGPoint(x: 0, y: firstY))
-            linePath.addLine(to: CGPoint(x: 5, y: firstY - 5))
-            linePath.addLine(to: CGPoint(x: 5, y: firstY + 5))
+            linePath.move(to: CGPoint.init(x: 0, y: firstY))
+            linePath.addLine(to: CGPoint.init(x: 5, y: firstY - 5))
+            linePath.addLine(to: CGPoint.init(x: 5, y: firstY + 5))
             break
         case .buttom:
             let firstX = size.width/2 + style.adjustDistance
-            linePath.move(to: CGPoint(x: firstX, y: size.height + 5))
-            linePath.addLine(to: CGPoint(x: firstX - 5, y: size.height))
-            linePath.addLine(to: CGPoint(x: firstX + 5, y: size.height))
+            linePath.move(to: CGPoint.init(x: firstX, y: size.height + 5))
+            linePath.addLine(to: CGPoint.init(x: firstX - 5, y: size.height))
+            linePath.addLine(to: CGPoint.init(x: firstX + 5, y: size.height))
             break
         case .right:
             let firstY = size.height/2 + style.adjustDistance
-            linePath.move(to: CGPoint(x: size.width + 5, y: firstY))
-            linePath.addLine(to: CGPoint(x: size.width, y: firstY - 5))
-            linePath.addLine(to: CGPoint(x: size.width, y: firstY + 5))
+            linePath.move(to: CGPoint.init(x: size.width + 5, y: firstY))
+            linePath.addLine(to: CGPoint.init(x: size.width, y: firstY - 5))
+            linePath.addLine(to: CGPoint.init(x: size.width, y: firstY + 5))
             break
         }
         linePath.close()
@@ -327,15 +327,15 @@ class CustomCell: UITableViewCell {
             
             if model?.imgName == nil ||
                 (model?.imgName?.isEmpty)! { // 没有图片
-                self.titleLabel?.frame = CGRect(x: 15, y: 0, width: cellW - 30, height: cellH)
+                self.titleLabel?.frame = CGRect.init(x: 15, y: 0, width: cellW - 30, height: cellH)
                 self.titleLabel?.text = model?.title
             }else {
-                guard let img = UIImage(named: (model?.imgName)!) else {return}
-                self.iconImgView?.frame = CGRect(x: 15, y: 0, width: img.size.width, height: img.size.height)
+                guard let img = UIImage.init(named: (model?.imgName)!) else {return}
+                self.iconImgView?.frame = CGRect.init(x: 15, y: 0, width: img.size.width, height: img.size.height)
                 iconImgView?.popup_centerY = cellH / 2
                 iconImgView?.image = img
                 
-                self.titleLabel?.frame = CGRect(x: img.size.width + 25, y: 0, width: cellW - img.size.width - 40, height: cellH)
+                self.titleLabel?.frame = CGRect.init(x: img.size.width + 25, y: 0, width: cellW - img.size.width - 40, height: cellH)
                 self.titleLabel?.text = model?.title
             }
             
@@ -344,7 +344,7 @@ class CustomCell: UITableViewCell {
             self.titleLabel?.textAlignment = (model?.style.labelAlignment)!
             
             if !(model?.isLast)! { // 最后的分割线不显示
-                self.lineLabel?.frame = CGRect(x: style.lineSpace.leftSpace, y: cellH - lineHeight, width: cellW - style.lineSpace.leftSpace - style.lineSpace.rightSpace, height: lineHeight)
+                self.lineLabel?.frame = CGRect.init(x: style.lineSpace.leftSpace, y: cellH - lineHeight, width: cellW - style.lineSpace.leftSpace - style.lineSpace.rightSpace, height: lineHeight)
                 self.lineLabel?.backgroundColor = model?.style.lineColor
             }
         }
@@ -363,13 +363,13 @@ class CustomCell: UITableViewCell {
         
         self.selectionStyle = .none
         
-        self.iconImgView = UIImageView()
+        self.iconImgView = UIImageView.init()
         self.contentView.addSubview(iconImgView!)
         
-        self.titleLabel = UILabel()
+        self.titleLabel = UILabel.init()
         self.contentView.addSubview(titleLabel!)
         
-        self.lineLabel = UILabel()
+        self.lineLabel = UILabel.init()
         self.contentView.addSubview(lineLabel!)
     }
     

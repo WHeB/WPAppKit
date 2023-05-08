@@ -47,9 +47,6 @@ public enum DiskStorage {
 
         let metaChangingQueue: DispatchQueue
 
-        var maybeCached : Set<String>?
-        let maybeCachedCheckingQueue = DispatchQueue(label: "com.onevcat.Kingfisher.maybeCachedCheckingQueue")
-
         /// Creates a disk storage with the given `DiskStorage.Config`.
         ///
         /// - Parameter config: The config used for this disk storage.
@@ -75,19 +72,6 @@ public enum DiskStorage {
             metaChangingQueue = DispatchQueue(label: cacheName)
 
             try prepareDirectory()
-
-            maybeCachedCheckingQueue.async {
-                do {
-                    self.maybeCached = Set()
-                    try config.fileManager.contentsOfDirectory(atPath: self.directoryURL.path).forEach { fileName in
-                        self.maybeCached?.insert(fileName)
-                    }
-                } catch {
-                    // Just disable the functionality if we fail to initialize it properly. This will just revert to
-                    // the behavior which is to check file existence on disk directly.
-                    self.maybeCached = nil
-                }
-            }
         }
 
         // Creates the storage folder.
@@ -124,13 +108,6 @@ public enum DiskStorage {
             }
 
             let fileURL = cacheFileURL(forKey: key)
-            do {
-                try data.write(to: fileURL)
-            } catch {
-                throw KingfisherError.cacheError(
-                    reason: .cannotCreateCacheFile(fileURL: fileURL, key: key, data: data, error: error)
-                )
-            }
 
             let now = Date()
             let attributes: [FileAttributeKey : Any] = [
@@ -139,22 +116,7 @@ public enum DiskStorage {
                 // The estimated expiration date.
                 .modificationDate: expiration.estimatedExpirationSinceNow.fileAttributeDate
             ]
-            do {
-                try config.fileManager.setAttributes(attributes, ofItemAtPath: fileURL.path)
-            } catch {
-                try? config.fileManager.removeItem(at: fileURL)
-                throw KingfisherError.cacheError(
-                    reason: .cannotSetCacheFileAttribute(
-                        filePath: fileURL.path,
-                        attributes: attributes,
-                        error: error
-                    )
-                )
-            }
-
-            maybeCachedCheckingQueue.async {
-                self.maybeCached?.insert(fileURL.lastPathComponent)
-            }
+            config.fileManager.createFile(atPath: fileURL.path, contents: data, attributes: attributes)
         }
 
         func value(forKey key: String, extendingExpiration: ExpirationExtending = .cacheTime) throws -> T? {
@@ -170,13 +132,6 @@ public enum DiskStorage {
             let fileManager = config.fileManager
             let fileURL = cacheFileURL(forKey: key)
             let filePath = fileURL.path
-
-            let fileMaybeCached = maybeCachedCheckingQueue.sync {
-                return maybeCached?.contains(fileURL.lastPathComponent) ?? true
-            }
-            guard fileMaybeCached else {
-                return nil
-            }
             guard fileManager.fileExists(atPath: filePath) else {
                 return nil
             }
@@ -198,9 +153,7 @@ public enum DiskStorage {
             do {
                 let data = try Data(contentsOf: fileURL)
                 let obj = try T.fromData(data)
-                metaChangingQueue.async {
-                    meta.extendExpiration(with: fileManager, extendingExpiration: extendingExpiration)
-                }
+                metaChangingQueue.async { meta.extendExpiration(with: fileManager, extendingExpiration: extendingExpiration) }
                 return obj
             } catch {
                 throw KingfisherError.cacheError(reason: .cannotLoadDataFromDisk(url: fileURL, error: error))
@@ -213,13 +166,10 @@ public enum DiskStorage {
 
         func isCached(forKey key: String, referenceDate: Date) -> Bool {
             do {
-                let result = try value(
-                    forKey: key,
-                    referenceDate: referenceDate,
-                    actuallyLoad: false,
-                    extendingExpiration: .none
-                )
-                return result != nil
+                guard let _ = try value(forKey: key, referenceDate: referenceDate, actuallyLoad: false, extendingExpiration: .none) else {
+                    return false
+                }
+                return true
             } catch {
                 return false
             }
@@ -255,7 +205,7 @@ public enum DiskStorage {
         /// the `cacheKey` of an image `Source`. It is the computed key with processor identifier considered.
         public func cacheFileURL(forKey key: String) -> URL {
             let fileName = cacheFileName(forKey: key)
-            return directoryURL.appendingPathComponent(fileName, isDirectory: false)
+            return directoryURL.appendingPathComponent(fileName)
         }
 
         func cacheFileName(forKey key: String) -> String {

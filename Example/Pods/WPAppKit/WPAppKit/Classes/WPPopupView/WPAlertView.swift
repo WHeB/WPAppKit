@@ -59,8 +59,8 @@ open class WPAlertView: UIView {
         }else {
             totalH = padding + self.titleH + space + self.detailH + space + buttonH
         }
-        self.frame = CGRect(x: 0, y: 0, width: self.alertViewW, height: totalH)
-        self.center = CGPoint(x: ScWidth / 2.0, y: ScHeight / 2.0)
+        self.frame = CGRect.init(x: 0, y: 0, width: self.alertViewW, height: totalH)
+        self.center = CGPoint.init(x: ScWidth / 2.0, y: ScHeight / 2.0)
     }
     
     // 设置view自身样式
@@ -88,7 +88,7 @@ open class WPAlertView: UIView {
     
     // 标题
     private func loadTitle(title: String) {
-        let label = UILabel(frame: CGRect.init(x: padding, y: padding, width: self.labelW, height: self.titleH))
+        let label = UILabel.init(frame: CGRect.init(x: padding, y: padding, width: self.labelW, height: self.titleH))
         self.addSubview(label)
         label.numberOfLines = 0
         label.textColor = self.style.titleColor
@@ -97,18 +97,18 @@ open class WPAlertView: UIView {
         label.textAlignment = self.style.titleTextAlignment
         label.sizeToFit()
         self.titleH = label.frame.size.height
-        label.frame = CGRect(x: padding, y: padding, width: self.labelW, height: self.titleH)
+        label.frame = CGRect.init(x: padding, y: padding, width: self.labelW, height: self.titleH)
         self.titleLabel = label
     }
     
     // 内容
     private func loadDetail(detail: String) {
         let labelY = self.titleLabel.popup_bottomY + space
-        let label = UILabel(frame: CGRect.init(x: 0, y: labelY, width: self.labelW, height: self.detailH))
+        let label = UILabel.init(frame: CGRect.init(x: 0, y: labelY, width: self.labelW, height: self.detailH))
         self.addSubview(label)
         // 文本
-        let text = NSMutableAttributedString(string: detail)
-        let pStyle = NSMutableParagraphStyle()
+        let text = NSMutableAttributedString.init(string: detail)
+        let pStyle = NSMutableParagraphStyle.init()
         pStyle.lineSpacing = rowSpace
         text.addAttributes([NSAttributedString.Key.paragraphStyle : pStyle], range: NSRange.init(location: 0, length: text.length))
         label.attributedText = text
@@ -119,22 +119,22 @@ open class WPAlertView: UIView {
         label.numberOfLines = 0
         label.sizeToFit()
         self.detailH = label.frame.size.height
-        label.frame = CGRect(x: padding, y: labelY, width: self.labelW, height: self.detailH)
+        label.frame = CGRect.init(x: padding, y: labelY, width: self.labelW, height: self.detailH)
         self.detailLabel = label
     }
     
     // 只有一个button
     private func loadOneButton(buttons: [String]) {
         let bussonsViewY = self.detailH == 0 ? (self.titleLabel.popup_bottomY + space) : (self.detailLabel.popup_bottomY + space)
-        self.buttonsView.frame = CGRect(x: 0, y: bussonsViewY, width: self.alertViewW, height: self.buttonH)
+        self.buttonsView.frame = CGRect.init(x: 0, y: bussonsViewY, width: self.alertViewW, height: self.buttonH)
         self.addSubview(self.buttonsView)
         
-        let line = UILabel(frame: CGRect(x: 0, y: 0, width: self.alertViewW, height: lineHeight))
+        let line = UILabel.init(frame: CGRect.init(x: 0, y: 0, width: self.alertViewW, height: lineHeight))
         line.backgroundColor = lineColor
         self.buttonsView.addSubview(line)
         
-        let button = UIButton(type: .custom)
-        button.frame = CGRect(x: 0, y: line.popup_bottomY, width: self.alertViewW, height: buttonHeight - lineHeight)
+        let button = UIButton.init(type: .custom)
+        button.frame = CGRect.init(x: 0, y: line.popup_bottomY, width: self.alertViewW, height: buttonHeight - lineHeight)
         button.setTitle(buttons[0], for: .normal)
         button.setTitleColor(self.style.lastBtnColor, for: .normal)
         button.titleLabel?.font = self.style.lastBtnFont
@@ -147,22 +147,22 @@ open class WPAlertView: UIView {
     // 有两个button
     private func loadTwoButton(buttons: [String]) {
         let bussonsViewY = self.detailH == 0 ? (self.titleLabel.popup_bottomY + space) : (self.detailLabel.popup_bottomY + space)
-        self.buttonsView.frame = CGRect(x: 0, y: bussonsViewY, width: self.alertViewW, height: self.buttonH)
+        self.buttonsView.frame = CGRect.init(x: 0, y: bussonsViewY, width: self.alertViewW, height: self.buttonH)
         self.addSubview(self.buttonsView)
         
-        let line = UILabel(frame: CGRect(x: 0, y: 0, width: self.alertViewW, height: lineHeight))
+        let line = UILabel.init(frame: CGRect.init(x: 0, y: 0, width: self.alertViewW, height: lineHeight))
         line.backgroundColor = lineColor
         self.buttonsView.addSubview(line)
         
         let buttonW = (self.alertViewW - lineHeight) / 2
-        let vLine = UILabel(frame: CGRect(x: buttonW, y: line.popup_bottomY, width: lineHeight, height: buttonHeight - lineHeight))
+        let vLine = UILabel.init(frame: CGRect.init(x: buttonW, y: line.popup_bottomY, width: lineHeight, height: buttonHeight - lineHeight))
         vLine.backgroundColor = lineColor
         self.buttonsView.addSubview(vLine)
         
         for (index, item) in buttons.enumerated() {
-            let button = UIButton(type: .custom)
+            let button = UIButton.init(type: .custom)
             let butttonX = CGFloat(index) * (buttonW + lineHeight)
-            button.frame = CGRect(x: butttonX, y: line.popup_bottomY, width: buttonW, height: buttonHeight - lineHeight)
+            button.frame = CGRect.init(x: butttonX, y: line.popup_bottomY, width: buttonW, height: buttonHeight - lineHeight)
             button.setTitle(item, for: .normal)
             if index == (buttons.count - 1) { // 最后一个
                 button.setTitleColor(self.style.lastBtnColor, for: .normal)
@@ -181,17 +181,17 @@ open class WPAlertView: UIView {
     // 多个button
     private func loadMoreButton(buttons: [String]) {
         let bussonsViewY = self.detailH == 0 ? (self.titleLabel.popup_bottomY + space) : (self.detailLabel.popup_bottomY + space)
-        self.buttonsView.frame = CGRect(x: 0, y: bussonsViewY, width: self.alertViewW, height: self.buttonH)
+        self.buttonsView.frame = CGRect.init(x: 0, y: bussonsViewY, width: self.alertViewW, height: self.buttonH)
         self.addSubview(self.buttonsView)
         
         for (index, item) in buttons.enumerated() {
             // 线
-            let line = UILabel(frame: CGRect(x: 0, y: CGFloat(index) * buttonHeight, width: self.alertViewW, height: lineHeight))
+            let line = UILabel.init(frame: CGRect.init(x: 0, y: CGFloat(index) * buttonHeight, width: self.alertViewW, height: lineHeight))
             line.backgroundColor = lineColor
             self.buttonsView.addSubview(line)
             
-            let button = UIButton(type: .custom)
-            button.frame = CGRect(x: 0, y: line.popup_bottomY, width: self.alertViewW, height: buttonHeight - lineHeight)
+            let button = UIButton.init(type: .custom)
+            button.frame = CGRect.init(x: 0, y: line.popup_bottomY, width: self.alertViewW, height: buttonHeight - lineHeight)
             button.setTitle(item, for: .normal)
             if index == (buttons.count - 1) { // 最后一个
                 button.setTitleColor(self.style.lastBtnColor, for: .normal)
@@ -225,7 +225,7 @@ open class WPAlertView: UIView {
         }
         kWindowView.addSubview(supView)
         if self.style.touchHide {
-            let tap = UITapGestureRecognizer(target: self, action: #selector(hideAlertView))
+            let tap = UITapGestureRecognizer.init(target: self, action: #selector(hideAlertView))
             supView.effectView.addGestureRecognizer(tap)
         }
         
@@ -258,13 +258,13 @@ open class WPAlertView: UIView {
             })
             
         case .topToCenter:
-            self.layer.position = CGPoint(x: ScWidth / 2.0, y: -(self.popup_height / 2.0))
+            self.layer.position = CGPoint.init(x: ScWidth / 2.0, y: -(self.popup_height / 2.0))
             UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1.0, options: .curveEaseIn, animations: { [unowned self] in
                 if self.style.openEffect {
                     supView.effectView.effect = UIBlurEffect(style: .dark)
                 }
                 let centerY = self.style.hasKeyboard ? (ScHeight-216.0)/2.0 : ScHeight/2.0
-                self.layer.position = CGPoint(x: ScWidth / 2.0, y: centerY)
+                self.layer.position = CGPoint.init(x: ScWidth / 2.0, y: centerY)
             })
             
         case .sheetBottomPop: // 无效
@@ -315,7 +315,7 @@ open class WPAlertView: UIView {
                 if self.style.openEffect {
                     supView.effectView.effect = nil
                 }
-                self.layer.position = CGPoint(x: ScWidth / 2.0, y: ScHeight + self.popup_height )
+                self.layer.position = CGPoint.init(x: ScWidth / 2.0, y: ScHeight + self.popup_height )
             }, completion: { (_) in
                 supView.removeFromSuperview()
             })

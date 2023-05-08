@@ -62,9 +62,7 @@ class SessionDelegate: NSObject {
 
         // Create a new task if necessary.
         let task = SessionDataTask(task: dataTask)
-        task.onCallbackCancelled.delegate(on: self) { [weak task] (self, value) in
-            guard let task = task else { return }
-
+        task.onCallbackCancelled.delegate(on: self) { [unowned task] (self, value) in
             let (token, callback) = value
 
             let error = KingfisherError.requestError(reason: .taskCancelled(task: task, token: token))

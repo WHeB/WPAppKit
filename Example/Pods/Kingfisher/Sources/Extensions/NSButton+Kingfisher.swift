@@ -152,7 +152,7 @@ extension KingfisherWrapper where Base: NSButton {
         completionHandler: ((Result<RetrieveImageResult, KingfisherError>) -> Void)? = nil) -> DownloadTask?
     {
         return setImage(
-            with: resource?.convertToSource(),
+            with: resource.map { .network($0) },
             placeholder: placeholder,
             options: options,
             progressBlock: progressBlock,
@@ -273,7 +273,7 @@ extension KingfisherWrapper where Base: NSButton {
         completionHandler: ((Result<RetrieveImageResult, KingfisherError>) -> Void)? = nil) -> DownloadTask?
     {
         return setAlternateImage(
-            with: resource?.convertToSource(),
+            with: resource.map { .network($0) },
             placeholder: placeholder,
             options: options,
             progressBlock: progressBlock,
