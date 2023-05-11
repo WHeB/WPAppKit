@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'WPAppKit'
-    s.version          = '1.0.3'
+    s.version          = '1.0.4'
     s.summary          = '搭建 Swift 项目常用类库整合'
     s.description      = <<-DESC
     Cocoa：Foundation,UIKit相关扩展
@@ -92,7 +92,7 @@ Pod::Spec.new do |s|
         # HBDNavigationBar
         ss.subspec 'HBDNavigationBar' do |sss|
             sss.source_files = 'WPAppKit/Classes/ThirdKit/HBDNavigationBar/*.swift'
-            sss.dependency 'HBDNavigationBar','~> 1.5.2'
+            sss.dependency 'HBDNavigationBar','~> 1.9.5'
         end
         
     end
