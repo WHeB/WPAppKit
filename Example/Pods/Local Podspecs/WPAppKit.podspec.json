@@ -1,6 +1,6 @@
 {
   "name": "WPAppKit",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "summary": "搭建 Swift 项目常用类库整合",
   "description": "Cocoa：Foundation,UIKit相关扩展\nTool：常用工具库\nThirdKit：常用第三方库",
   "homepage": "https://github.com/WHeB/WPAppKit.git",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/WHeB/WPAppKit.git",
-    "tag": "1.0.2"
+    "tag": "1.0.4"
   },
   "swift_versions": "5.0",
   "platforms": {
@@ -130,7 +130,7 @@
           "source_files": "WPAppKit/Classes/ThirdKit/HBDNavigationBar/*.swift",
           "dependencies": {
             "HBDNavigationBar": [
-              "~> 1.5.2"
+              "~> 1.9.5"
             ]
           }
         }
