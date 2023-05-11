@@ -73,7 +73,7 @@ public extension UIViewController {
     
     /// 设置导航栏透明度
     func setBarAlpha(_ alpha: CGFloat) {
-        self.hbd_barAlpha = Float(alpha)
+        self.hbd_barAlpha = CGFloat(alpha)
     }
     
     /// 设置导航栏背景图片 （barTintColor会失效）
