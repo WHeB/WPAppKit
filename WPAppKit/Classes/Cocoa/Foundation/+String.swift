@@ -13,17 +13,17 @@ public extension String {
     
     /// 字符串比较(忽略大小写)
     ///
-    /// - Parameter str: 待对比字符串
+    /// - Parameter string: 待对比字符串
     /// - Returns: 结果
-    func equalsIgnoreCase(_ str: String?) -> Bool {
-        return str == nil ? false : self.lowercased() == str!.lowercased()
+    func equalsIgnoreCase(string: String?) -> Bool {
+        return string == nil ? false : self.lowercased() == string!.lowercased()
     }
  
     /// 字符串是否以某个字符串开头
     ///
     /// - Parameter with: 开头字符串
     /// - Returns: 结果
-    func start(_ with: String) -> Bool {
+    func start(with: String) -> Bool {
         return self.substring(toIndex: with.count) == with
     }
     
@@ -71,7 +71,7 @@ public extension String {
     ///   - of: 要替换的字符串
     ///   - with: 替换成哪个字符串
     /// - Returns: 结果
-    func replace(_ of: String, with: String) -> String {
+    func replace(of: String, with: String) -> String {
         return self.replacingOccurrences(of: of, with: with)
     }
     
@@ -99,7 +99,7 @@ public extension String {
     ///
     /// - Parameter isBlank: 是否要空格
     /// - Returns: 结果
-    func transformToPinyin(isBlank: Bool? = true) -> String {
+    func toPinyin(isBlank: Bool? = true) -> String {
         let mutableString = NSMutableString(string: self)
         // 结果带音标
         CFStringTransform(mutableString, nil, kCFStringTransformToLatin, false)
@@ -108,7 +108,7 @@ public extension String {
         if isBlank! {
             return String(mutableString)
         }
-        return String(mutableString).replace(" ", with: "")
+        return String(mutableString).replace(of: " ", with: "")
     }
     
     /// 获取中英文混合的字节长度
@@ -133,7 +133,7 @@ public extension String {
     /// 获取文本高
     func txtStringHeight(font: UIFont, maxWidth: CGFloat) -> CGFloat {
         let size = CGSize.init(width: maxWidth, height: CGFloat(MAXFLOAT))
-        let dictionary = NSDictionary.init(object: font, forKey: NSAttributedString.Key.font as NSCopying)
+        let dictionary = NSDictionary(object: font, forKey: NSAttributedString.Key.font as NSCopying)
         let stringSize = self.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: dictionary as? [NSAttributedString.Key : Any], context: nil)
         return stringSize.height
     }
@@ -141,7 +141,7 @@ public extension String {
     /// 获取文本宽
     func txtStringWidth(font: UIFont, maxHeight: CGFloat) -> CGFloat {
         let size = CGSize.init(width: CGFloat(MAXFLOAT), height: maxHeight)
-        let dictionary = NSDictionary.init(object: font, forKey: NSAttributedString.Key.font as NSCopying)
+        let dictionary = NSDictionary(object: font, forKey: NSAttributedString.Key.font as NSCopying)
         let stringSize = self.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: dictionary as? [NSAttributedString.Key : Any], context: nil)
         return stringSize.width
     }
@@ -255,4 +255,5 @@ public extension String {
                               options: .ignoreUnknownCharacters) else { return nil }
         return String(data: data, encoding: .utf8)
     }
+    
 }

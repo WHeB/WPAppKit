@@ -63,4 +63,5 @@ public extension NSMutableAttributedString {
             self.addAttribute(NSAttributedString.Key.backgroundColor, value: bgColor, range: range)
         }
     }
+    
 }

@@ -143,7 +143,7 @@ open class WPBubbleView: UIView, UITableViewDataSource, UITableViewDelegate {
         if self.sourceArray.count > 0 {
             let item = self.sourceArray[indexPath.row]
             let isLast = indexPath.row == self.sourceArray.count - 1 ? true : false
-            cell.model = (imgName: item.0, title: item.1, cellSize: CGSize.init(width: self.tableView.popup_width, height: self.cellHeight), style: self.style, isLast: isLast)
+            cell.model = (imgName: item.0, title: item.1, cellSize: CGSize(width: self.tableView.popup_width, height: self.cellHeight), style: self.style, isLast: isLast)
         }
         return cell
     }

@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'WPAppKit'
-    s.version          = '1.0.5'
+    s.version          = '1.1.0'
     s.summary          = '搭建 Swift 项目常用类库整合'
     s.description      = <<-DESC
     Cocoa：Foundation,UIKit相关扩展
@@ -67,6 +67,7 @@ Pod::Spec.new do |s|
         ss.dependency 'SnapKit', '~> 5.0.1'
         ss.dependency 'Alamofire', '~> 5.1.0'
         ss.dependency 'Localize-Swift', '~> 2.0'
+        ss.dependency 'KeychainSwift'
     end
     
     # ---------------  第三方库 + 扩展  -----------

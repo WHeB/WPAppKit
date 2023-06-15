@@ -15,14 +15,6 @@ class CarouseViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
         
-        adView1.frame = CGRect(x: 0, y: 100, width: ScreenWidth, height: 50)
-        self.view.addSubview(adView1)
     }
-    
-    
-    lazy var adView1: TextCarouselView = {
-        let view = TextCarouselView()
-        return view
-    }()
     
 }

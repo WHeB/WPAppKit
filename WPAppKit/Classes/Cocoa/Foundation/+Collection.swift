@@ -17,7 +17,6 @@ public extension Collection {
         return indices.contains(index) ? self[index] : nil
     }
     
-    
     /// 数据分组
     //  [0, 2, 4, 7].group(by: 2) -> [[0, 2], [4, 7]]
     //  [0, 2, 4, 7, 6].group(by: 2) -> [[0, 2], [4, 7], [6]]

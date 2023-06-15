@@ -16,9 +16,9 @@ public extension UIColor {
     }
     
     ///  设置十六进制颜色
-    convenience init(hex: String, alpha: CGFloat = 1.0) {
+    convenience init(hex: String, alpha: CGFloat? = 1.0) {
         guard hex.count >= 6 else {
-            self.init(r: CGFloat(255), g: CGFloat(255), b: CGFloat(255), alpha: alpha)
+            self.init(r: CGFloat(255), g: CGFloat(255), b: CGFloat(255), alpha: alpha ?? 1.0)
             return
         }
         var tempHex = hex.uppercased()
@@ -41,7 +41,7 @@ public extension UIColor {
         Scanner(string: gHex).scanHexInt32(&g)
         Scanner(string: bHex).scanHexInt32(&b)
         
-        self.init(r: CGFloat(r), g: CGFloat(g), b: CGFloat(b), alpha: alpha)
+        self.init(r: CGFloat(r), g: CGFloat(g), b: CGFloat(b), alpha: alpha ?? 1.0)
     }
     
     /// 获取随机颜色

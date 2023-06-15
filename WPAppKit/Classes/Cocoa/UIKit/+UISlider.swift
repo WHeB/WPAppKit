@@ -49,8 +49,7 @@ public extension UISlider {
         self.addTarget(target, action: action, for: .valueChanged)
     }
     
-    
-    func setValue(_ value: Float,
+    func setValue(value: Float,
                   animated: Bool = true,
                   duration: TimeInterval = 1,
                   completion: (() -> Void)? = nil) {

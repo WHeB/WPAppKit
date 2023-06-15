@@ -11,13 +11,15 @@ import WebKit
 
 public struct CacheManage {
     
-    /// 获取所有缓存大小
-    public static func sizeOfAllCache() -> String {
-        let cachePath = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).first
-        let fileArr = FileManager.default.subpaths(atPath: cachePath!)
+    /// 获取所有缓存大小 单位kb
+    public static func allCacheSize() -> Double {
+        guard let cachePath = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).first else {
+            return 0.0
+        }
+        let fileArr = FileManager.default.subpaths(atPath: cachePath)
         var size: Double = 0
         for file in fileArr! {
-            let path = (cachePath! as NSString).appending("/\(file)")
+            let path = (cachePath as NSString).appending("/\(file)")
             let floder = try! FileManager.default.attributesOfItem(atPath: path)
             for (abc, bcd) in floder {
                 if abc == FileAttributeKey.size {
@@ -25,16 +27,24 @@ public struct CacheManage {
                 }
             }
         }
-        let cache = size / 1024 / 1024
-        return String(format: "%.1fM", cache)
+        let cache = size / 1024
+        return cache
+    }
+    
+    /// 获取所有缓存大小
+    public static func allCacheSizeWithString() -> String {
+        let M = self.allCacheSize() / 1024
+        return String(format: "%.1fM", M)
     }
     
     /// 清除所有缓存
     public static func clearAllCache() {
-        let cachePath = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).first
-        let fileArr = FileManager.default.subpaths(atPath: cachePath!)
+        guard let cachePath = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).first else {
+            return
+        }
+        let fileArr = FileManager.default.subpaths(atPath: cachePath)
         for file in fileArr! {
-            let path = (cachePath! as NSString).appending("/\(file)")
+            let path = (cachePath as NSString).appending("/\(file)")
             if FileManager.default.fileExists(atPath: path) {
                 do {
                     try FileManager.default.removeItem(atPath: path)

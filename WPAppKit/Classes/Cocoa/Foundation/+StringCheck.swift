@@ -16,10 +16,10 @@ public extension String {
     }
     
     /// 验证大陆手机号
-    var isTelNum: Bool {
-        let pattern = "^1[2-9][0-9]\\d{8}$"
-        let result = String.customCheck(regular: pattern, content: self)
-        return result
+    var is86PhoneNumber: Bool {
+        let phoneRegex = "^1[3456789]\\d{9}$"
+        let phonePredicate = NSPredicate(format: "SELF MATCHES %@", phoneRegex)
+        return phonePredicate.evaluate(with: self)
     }
     
     /// 验证邮箱
@@ -29,10 +29,10 @@ public extension String {
     }
     
     /// 校验密码(6 - 12位 数字或字母)
-    var isPassword: Bool {
-        let pattern = "^[0-9a-zA-Z]{6,12}$"
-        let result = String.customCheck(regular: pattern, content: self)
-        return result
+    var isValidPassword: Bool {
+        let passwordRegex = "^[a-zA-Z0-9]{8,16}$"
+        let passwordPredicate = NSPredicate(format: "SELF MATCHES %@", passwordRegex)
+        return passwordPredicate.evaluate(with: self)
     }
     
     /// 校验url
@@ -65,7 +65,7 @@ public extension String {
     }
     
     /// 是否身份证号(只限制二代身份证)
-    var isCardId: Bool {
+    var isChineseCardId: Bool {
         // 1、18位
         if self.count != 18 {
             return false

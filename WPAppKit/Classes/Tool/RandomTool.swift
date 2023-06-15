@@ -24,7 +24,8 @@ public class RandomTool: NSObject {
     ///   - length: 长度
     ///   - isLetter: 是否只要字母
     /// - Returns: 结果
-    public class func randomString(length: Int, isLetter: Bool = false) -> String {
+    public class func randomString(length: Int,
+                                   isLetter: Bool = false) -> String {
         var ch: [CChar] = Array(repeating: 0, count: length)
         for index in 0..<length {
             var num = isLetter ? arc4random_uniform(58) + 65 : arc4random_uniform(75) + 48

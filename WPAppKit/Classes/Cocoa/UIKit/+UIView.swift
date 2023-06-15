@@ -9,6 +9,16 @@
 import UIKit
 
 public extension UIView {
+    
+    /// 便利构造器
+    convenience init(bgColor: UIColor) {
+        self.init()
+        self.backgroundColor = bgColor
+    }
+
+}
+
+public extension UIView {
     /// 方位
     enum Orientation {
         case leftTop
@@ -239,8 +249,6 @@ public extension UIView {
         addSubview(blurEffectView)
         clipsToBounds = true
     }
-    
-    
     
 }
 

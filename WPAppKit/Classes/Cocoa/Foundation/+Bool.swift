@@ -9,15 +9,15 @@ import UIKit
 
 public extension Bool {
     
-    var int: Int {
+    var toInt: Int {
         return self ? 1 : 0
     }
     
-    var string: String {
+    var toString: String {
         return self ? "true" : "false"
     }
     
-    var ocString: String {
+    var toOCString: String {
         return self ? "yes" : "no"
     }
     

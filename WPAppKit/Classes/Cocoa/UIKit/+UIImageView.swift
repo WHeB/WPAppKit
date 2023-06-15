@@ -15,7 +15,8 @@ public extension UIImageView {
     /// - Parameters:
     ///   - bounds: 控件大小 自动布局需设置
     ///   - cornerRadius: 圆角大小
-    func setCornerRadius(_ bounds: CGRect? = CGRect.zero, cornerRadius: CGFloat) {
+    func setCornerRadius(_ bounds: CGRect? = CGRect.zero,
+                         cornerRadius: CGFloat) {
         let tempBounds = bounds == CGRect.zero ? self.bounds : bounds
         let maskPath = UIBezierPath(roundedRect: tempBounds!, cornerRadius: cornerRadius)
         let maskLayer = CAShapeLayer()

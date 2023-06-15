@@ -56,7 +56,6 @@ public extension UITextView {
                      txtColor: UIColor,
                      txtFont: UIFont) {
         self.init()
-//        wrapToContent()
         textColor = textColor
         font = txtFont
         self.placeholder = placeholder

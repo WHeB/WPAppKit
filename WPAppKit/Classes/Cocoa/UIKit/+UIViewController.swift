@@ -86,7 +86,9 @@ public extension UIViewController {
     }
     
     /// 跨页面跳转
-    func resetVCS(backNum: Int? = 1, vc: UIViewController, animated: Bool? = true) {
+    func resetVCS(backNum: Int? = 1,
+                  vc: UIViewController,
+                  animated: Bool? = true) {
         guard self.isPush(),
             let num = backNum,
             let vcArray =  self.navigationController?.viewControllers else {
@@ -104,7 +106,7 @@ public extension UIViewController {
     }
     
     /// 弹一个窗口
-    func presentPop(_ viewController : UIViewController) {
+    func presentPop(_ viewController: UIViewController) {
         viewController.modalTransitionStyle = .crossDissolve
         viewController.modalPresentationStyle = .overCurrentContext
         self.present(viewController, animated: true, completion: nil)
@@ -128,7 +130,7 @@ public extension UIViewController {
     }
     
     /// pop 或 dismiss
-    func backLastController() {
+    func backLastViewController() {
         if let navCtr = self.navigationController{
             navCtr.popViewController(animated: true)
         }else{

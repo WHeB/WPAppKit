@@ -39,4 +39,5 @@ public extension UIScrollView {
     func scrollToTop(animated: Bool? = true) {
         setContentOffset(CGPoint.zero, animated: animated ?? true)
     }
+    
 }

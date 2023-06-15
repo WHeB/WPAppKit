@@ -18,11 +18,10 @@ public extension UIBezierPath {
     
     convenience init(points: [CGPoint]) {
         self.init()
-        if !points.isEmpty {
-            move(to: points[0])
-            for point in points[1...] {
-                addLine(to: point)
-            }
+        if points.isEmpty {return}
+        move(to: points[0])
+        for point in points[1...] {
+            addLine(to: point)
         }
     }
     
@@ -57,10 +56,5 @@ public extension UIBezierPath {
         let origin = centered ? CGPoint(x: -size.width / 2, y: -size.height / 2) : .zero
         self.init(rect: CGRect(origin: origin, size: size))
     }
-    
-    
-    
-    
-    
     
 }

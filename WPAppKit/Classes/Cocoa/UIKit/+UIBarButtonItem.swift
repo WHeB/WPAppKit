@@ -22,7 +22,7 @@ public extension UIBarButtonItem {
     }
     
     /// target-action
-    func addTargetForAction(_ target: AnyObject, action: Selector) {
+    func add(target: AnyObject, action: Selector) {
         self.target = target
         self.action = action
     }

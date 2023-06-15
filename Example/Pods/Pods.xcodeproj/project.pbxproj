@@ -141,7 +141,6 @@
 		8385BC5CA214B80B537EC6A7D8186F86 /* MJRefreshStateTrailer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0983F7C7ADC679A08D1D65E8E4470DED /* MJRefreshStateTrailer.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		83A4AD507509EB52AB6AF0AF484FA0F1 /* String+LocalizedBundleTableName.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC255D6A87C1D349C19525A9814577B6 /* String+LocalizedBundleTableName.swift */; };
 		8449EB1DFD43E222D687D5A8D2088D2D /* ConstraintLayoutGuideDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6367A68143593E36F8E16E44246174 /* ConstraintLayoutGuideDSL.swift */; };
-		847375E626A8A9AEC278BFB3C6334D08 /* TextCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA6B763F8623E29EBD77F30F51A764 /* TextCarouselView.swift */; };
 		851C441EB1E1005A7FD06837F33F926C /* +UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84361A4E28EA5EEC5CFDAC1339E0F5C /* +UIImage.swift */; };
 		852F01163B67AF4889D36C2806675549 /* WPPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421D5392E331E7CD8D8D96ED6F996619 /* WPPopupView.swift */; };
 		878D0393AF2E3C320BF87A1A63B035CA /* StoryboardAndXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560583E716015143E4A788005DCBC2DD /* StoryboardAndXib.swift */; };
@@ -189,7 +188,6 @@
 		A519EA8D637E3F850680172E0ACCC20D /* ScanNetAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE520C11517BBE38276BA1269F785A5 /* ScanNetAnimation.swift */; };
 		A53D3AF15CE8D348306EF11619C5D166 /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC8EFA3199F6FD49EABDA46ACC8AA5C /* ConstraintMakerEditable.swift */; };
 		A5BD0BE257B65708E3C4953135CA358B /* +NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868AEBC98DB220A55A3BE5DE79331C7E /* +NSObject.swift */; };
-		A63EB1DAFEF5EA9EA3243C0ECBA99D6A /* WPPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50902F01E92B55A11CF0D05EA94FC17 /* WPPageControl.swift */; };
 		A6694C59DC8B0DD9E2687ACEBD311D30 /* DiskStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831CC35C2FA6F77C9F30668AE9944177 /* DiskStorage.swift */; };
 		A8B930220EB81F011A5097AB03A77CC8 /* PhotoManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC7F9D83F7B3D2FCB2E96265ECA3C03 /* PhotoManger.swift */; };
 		A952A6BDB2B5C5A4BDC12F6B35D17859 /* +UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4428B0404CA11B8BF3B01A95B1FD10E /* +UINavigationBar.swift */; };
@@ -207,6 +205,7 @@
 		B5B122B965516FA9349250A502C3A58D /* MJRefreshStateTrailer.h in Headers */ = {isa = PBXBuildFile; fileRef = 107C0560AC3649BE97B564A4F77A4681 /* MJRefreshStateTrailer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B75B16E4067B31A62ADE2A2086FFB17E /* +UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEB4D15EDE8F8D1254B8808F099899E /* +UIApplication.swift */; };
 		B77A7339FD04CF333439151AD9E4E00D /* CurrentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA93126F839C4AF3CF5803E4AD53FBF3 /* CurrentManager.swift */; };
+		B8156A5D2A3B819400C8694A /* +StringAttributed.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8156A5C2A3B819400C8694A /* +StringAttributed.swift */; };
 		B8E23CDE3B0D733F38B0A03671224AD9 /* UIViewController+HBD.h in Headers */ = {isa = PBXBuildFile; fileRef = CD289FE27AB0F69A97FF0DF10BDC60E4 /* UIViewController+HBD.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B8FFCDF24E0F3E7E565C6DD3310FCEC7 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = A614FB0C6849A717FC8923036FACD98B /* UIScrollView+MJRefresh.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B95A93BB9F2835933F9E00E63C7D4010 /* CodeCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9B160B710EC89ECD276943BA737A01 /* CodeCreate.swift */; };
@@ -430,7 +429,7 @@
 		244F9F8C2E729C73E3F9DBCEEA912120 /* NSBundle+MJRefresh.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+MJRefresh.m"; path = "MJRefresh/NSBundle+MJRefresh.m"; sourceTree = "<group>"; };
 		24B71910E7E478D5F8D17F3826D7D622 /* Pods-WPAppKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WPAppKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		26204F79058514E742572B9F531EE845 /* CodeScan.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = CodeScan.bundle; path = WPAppKit/Assets/CodeScan.bundle; sourceTree = "<group>"; };
-		2625B73CB7342A9F840AAD3C63DFA28F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		2625B73CB7342A9F840AAD3C63DFA28F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		26423A623C2B63D2A7DC8445661C5E1A /* MJRefresh.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MJRefresh.modulemap; sourceTree = "<group>"; };
 		283E8D1BCEEA86D068D299463431E248 /* GIFAnimatedImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GIFAnimatedImage.swift; path = Sources/Image/GIFAnimatedImage.swift; sourceTree = "<group>"; };
 		2866262FFAFF5C99A77386AE16CD314F /* ScanViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScanViewController.swift; path = WPAppKit/Classes/CodeScan/ScanViewController.swift; sourceTree = "<group>"; };
@@ -473,7 +472,7 @@
 		40E2EC584C290FE8BA61DDD70E43C724 /* ConstraintDirectionalInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDirectionalInsetTarget.swift; path = Source/ConstraintDirectionalInsetTarget.swift; sourceTree = "<group>"; };
 		418A8554056C34A3DF4EB7FBF809943F /* KingfisherOptionsInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherOptionsInfo.swift; path = Sources/General/KingfisherOptionsInfo.swift; sourceTree = "<group>"; };
 		41999A2EACA2C56948ACA8937701C51D /* WPAppKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WPAppKit.release.xcconfig; sourceTree = "<group>"; };
-		41ED3259CC87DCE7F9767275B7FFD2BC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		41ED3259CC87DCE7F9767275B7FFD2BC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		421D5392E331E7CD8D8D96ED6F996619 /* WPPopupView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WPPopupView.swift; path = WPAppKit/Classes/WPPopupView/WPPopupView.swift; sourceTree = "<group>"; };
 		42CEBB22E746CF4577DADA031E124E59 /* CacheManage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CacheManage.swift; path = WPAppKit/Classes/Tool/CacheManage.swift; sourceTree = "<group>"; };
 		444405755B048C0B797ED21E12856B92 /* Localize-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Localize-Swift.release.xcconfig"; sourceTree = "<group>"; };
@@ -524,7 +523,6 @@
 		6AC2804FB6E059D940B0DC5018795926 /* SessionDataTask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDataTask.swift; path = Sources/Networking/SessionDataTask.swift; sourceTree = "<group>"; };
 		6C30E1131243B15721F4ADEDBD7A7D4F /* ImageDataProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDataProcessor.swift; path = Sources/Networking/ImageDataProcessor.swift; sourceTree = "<group>"; };
 		6D0C9FA88FC1E0736D632AE8F709D74B /* ImagePrefetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImagePrefetcher.swift; path = Sources/Networking/ImagePrefetcher.swift; sourceTree = "<group>"; };
-		6DBA6B763F8623E29EBD77F30F51A764 /* TextCarouselView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextCarouselView.swift; path = WPAppKit/Classes/CustomView/TextCarouselView.swift; sourceTree = "<group>"; };
 		6E72DBFECBF5EAB7F6981187959C55BD /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
 		6F8A6A606FF514CDCFA9272EB2FCA935 /* Pods-WPAppKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WPAppKit_Example.modulemap"; sourceTree = "<group>"; };
 		6FA4E42977300BD93A1203FD46A154ED /* +UIScrollView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "+UIScrollView.swift"; path = "WPAppKit/Classes/Cocoa/UIKit/+UIScrollView.swift"; sourceTree = "<group>"; };
@@ -588,7 +586,7 @@
 		9D41B3FB7D74466AF255C4327252ED0F /* Storage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Storage.swift; path = Sources/Cache/Storage.swift; sourceTree = "<group>"; };
 		9D5AB0944D40CA8DDAB65A9C1002F4AD /* ConstraintConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConfig.swift; path = Source/ConstraintConfig.swift; sourceTree = "<group>"; };
 		9D6E0B0B2D751D9AF378AFA7F73FBCED /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Source/Constraint.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DBAE24D45E71743AC343BB2C29AE841 /* ConstraintView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintView+Extensions.swift"; path = "Source/ConstraintView+Extensions.swift"; sourceTree = "<group>"; };
 		9F4D902FD27A5678C71D2493FAD0C952 /* HBDNavigationBar-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HBDNavigationBar-Info.plist"; sourceTree = "<group>"; };
 		9F4EAFE561CDFB7E97413D660C25805E /* ParameterEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoder.swift; path = Source/ParameterEncoder.swift; sourceTree = "<group>"; };
@@ -606,7 +604,7 @@
 		AB68F851B4222AB81B295EC868E62B00 /* MJRefreshStateHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshStateHeader.h; path = MJRefresh/Custom/Header/MJRefreshStateHeader.h; sourceTree = "<group>"; };
 		ABB57A0CF988DCD2A76466BE2D826F1E /* Alamofire-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Alamofire-Info.plist"; sourceTree = "<group>"; };
 		AC9BB14CCB1DB63A48B5AED06F599C01 /* KingfisherManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherManager.swift; path = Sources/General/KingfisherManager.swift; sourceTree = "<group>"; };
-		AD426EC9A39D63526838BD0FB82158E9 /* WPAppKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = WPAppKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AD426EC9A39D63526838BD0FB82158E9 /* WPAppKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = WPAppKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AD7BB7B972D635D2A3CE996C1D51B64B /* HBDNavigationBar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HBDNavigationBar-umbrella.h"; sourceTree = "<group>"; };
 		AE7972E550CD3C4B311D0D2A41CEDEFE /* +UISlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "+UISlider.swift"; path = "WPAppKit/Classes/Cocoa/UIKit/+UISlider.swift"; sourceTree = "<group>"; };
 		AECC723A0D9098E4F988C91FBBC75900 /* SnapKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.debug.xcconfig; sourceTree = "<group>"; };
@@ -617,17 +615,17 @@
 		B25D80E352B19CA3F69DBB027C9E5323 /* ServerTrustEvaluation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustEvaluation.swift; path = Source/ServerTrustEvaluation.swift; sourceTree = "<group>"; };
 		B33B1AE58C415C25F3D96EEBF37ED944 /* UIView+MJExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+MJExtension.m"; path = "MJRefresh/UIView+MJExtension.m"; sourceTree = "<group>"; };
 		B367F49131627F992355AD964BE87684 /* MJRefreshAutoGifFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshAutoGifFooter.h; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoGifFooter.h; sourceTree = "<group>"; };
-		B50902F01E92B55A11CF0D05EA94FC17 /* WPPageControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WPPageControl.swift; path = WPAppKit/Classes/CustomView/WPPageControl.swift; sourceTree = "<group>"; };
 		B6774E8666F449F069A02197F503577B /* WkwebViewConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WkwebViewConfig.swift; path = WPAppKit/Classes/WPWebView/WkwebViewConfig.swift; sourceTree = "<group>"; };
 		B70AEE202760579B6B5B7B0A53E73A14 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
 		B778523C9AC35292AE67777DB3BD8DA2 /* Pods-WPAppKit_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-WPAppKit_Example"; path = Pods_WPAppKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B812862241727A56C3D2793E2146BEE5 /* +UISwitch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "+UISwitch.swift"; path = "WPAppKit/Classes/Cocoa/UIKit/+UISwitch.swift"; sourceTree = "<group>"; };
+		B8156A5C2A3B819400C8694A /* +StringAttributed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+StringAttributed.swift"; sourceTree = "<group>"; };
 		B877088C2A471E8ADBA727B66B61B440 /* +UIBarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "+UIBarButtonItem.swift"; path = "WPAppKit/Classes/Cocoa/UIKit/+UIBarButtonItem.swift"; sourceTree = "<group>"; };
 		B8F66EBAF37ADCD9C9E9EA330C0D3317 /* AppHud.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppHud.swift; path = WPAppKit/Classes/ThirdKit/MBProgressHUD/AppHud.swift; sourceTree = "<group>"; };
 		BB037BD3BB78C07E269147ED90B03106 /* MJRefreshAutoStateFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoStateFooter.m; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoStateFooter.m; sourceTree = "<group>"; };
 		BD10545F07E16A586714E83BDCA5E82F /* Protected.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Protected.swift; path = Source/Protected.swift; sourceTree = "<group>"; };
 		BE0332DD655B8C86E49043246210BE50 /* SizeExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SizeExtensions.swift; path = Sources/Utility/SizeExtensions.swift; sourceTree = "<group>"; };
-		BF1EC2C5130E7FAFA448135BC7D1ABEF /* WKJSPOST.html */ = {isa = PBXFileReference; includeInIndex = 1; name = WKJSPOST.html; path = WPAppKit/Classes/WPWebView/WKJSPOST.html; sourceTree = "<group>"; };
+		BF1EC2C5130E7FAFA448135BC7D1ABEF /* WKJSPOST.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = WKJSPOST.html; path = WPAppKit/Classes/WPWebView/WKJSPOST.html; sourceTree = "<group>"; };
 		C07E3BFCA436294041A91EE26A288B72 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
 		C2BBDEC7EFB0DB0A43FFBF7F429C58FF /* ImageDownloaderDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDownloaderDelegate.swift; path = Sources/Networking/ImageDownloaderDelegate.swift; sourceTree = "<group>"; };
 		C302DD46696809E9F661DFA5A9EDCA94 /* Localize-Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Localize-Swift-prefix.pch"; sourceTree = "<group>"; };
@@ -794,7 +792,6 @@
 				E8836137F00F69D5970258D3455E74A4 /* Core */,
 				1DEE153FF884EF712A9CF226A1D5B257 /* Support Files */,
 			);
-			name = Kingfisher;
 			path = Kingfisher;
 			sourceTree = "<group>";
 		};
@@ -947,7 +944,6 @@
 				80665DD4B1ACD939E0910D503A9A06CE /* Resources */,
 				9CD743F1F265FCDCF6E261946482F79F /* Support Files */,
 			);
-			name = MJRefresh;
 			path = MJRefresh;
 			sourceTree = "<group>";
 		};
@@ -1039,7 +1035,6 @@
 				72A4813B256EC72531F0AC3BE13D5A06 /* UIViewController+HBD.m */,
 				7757A38D0E9BD331861CBD12545AA2BC /* Support Files */,
 			);
-			name = HBDNavigationBar;
 			path = HBDNavigationBar;
 			sourceTree = "<group>";
 		};
@@ -1217,7 +1212,6 @@
 				3FCD22B5BD1E7D2770731227442B5377 /* UILayoutSupport+Extensions.swift */,
 				9DBF517F564DC3AAF3668A767A9D7258 /* Support Files */,
 			);
-			name = SnapKit;
 			path = SnapKit;
 			sourceTree = "<group>";
 		};
@@ -1237,8 +1231,6 @@
 			isa = PBXGroup;
 			children = (
 				964048BF57D3483916EBC31F7A476D3F /* TagsView.swift */,
-				6DBA6B763F8623E29EBD77F30F51A764 /* TextCarouselView.swift */,
-				B50902F01E92B55A11CF0D05EA94FC17 /* WPPageControl.swift */,
 			);
 			name = CustomView;
 			sourceTree = "<group>";
@@ -1262,6 +1254,7 @@
 				66CC9FEBCBF10186BF27AD7DA0E286E0 /* +Dictionary.swift */,
 				8CE6542A9360FCC48965D40719AE613D /* +Notification.swift */,
 				E3C6E76141B47A20624351B72D2C74D3 /* +NSAttributedString.swift */,
+				B8156A5C2A3B819400C8694A /* +StringAttributed.swift */,
 				868AEBC98DB220A55A3BE5DE79331C7E /* +NSObject.swift */,
 				55F8D4AAC65AF757C57C69F344C3151B /* +String.swift */,
 				CABD0E845630E11221593E8724EF3361 /* +StringCheck.swift */,
@@ -1373,7 +1366,6 @@
 				763D39E1126C205B270D73B8269A79EB /* String+LocalizeTableName.swift */,
 				42EA67921D7296CFAB210084C09F5C38 /* Support Files */,
 			);
-			name = "Localize-Swift";
 			path = "Localize-Swift";
 			sourceTree = "<group>";
 		};
@@ -1415,7 +1407,6 @@
 				B70AEE202760579B6B5B7B0A53E73A14 /* Validation.swift */,
 				4A8399E4C18EF5D0568452318FB6C5ED /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -2055,14 +2046,13 @@
 				878D0393AF2E3C320BF87A1A63B035CA /* StoryboardAndXib.swift in Sources */,
 				59628284FA5CD626C6B90F41EDA9D9BD /* SystemPermission.swift in Sources */,
 				436AA7EE04D0D1F8DE533CD6DA22CD78 /* TagsView.swift in Sources */,
-				847375E626A8A9AEC278BFB3C6334D08 /* TextCarouselView.swift in Sources */,
 				73C7F65323DAB0E4D8BD86D7EC5E1918 /* UIView+Frame.swift in Sources */,
 				BCFBCC171B16B0FB85571BCBBF84B287 /* WKJSPOST.html in Sources */,
+				B8156A5D2A3B819400C8694A /* +StringAttributed.swift in Sources */,
 				547066E0C8168B04CF44719A9B55E4E0 /* WkwebViewConfig.swift in Sources */,
 				DA21D4002A1393B20EDEDCEEE9B42FD7 /* WPAlertView.swift in Sources */,
 				1AE323ABC70265B6C3DCBA67CA2F3CCC /* WPAppKit-dummy.m in Sources */,
 				324F5B16C805CEA2865C37A516421C7E /* WPBubbleView.swift in Sources */,
-				A63EB1DAFEF5EA9EA3243C0ECBA99D6A /* WPPageControl.swift in Sources */,
 				F98569371AE5E15AE70E4A86F450BB30 /* WPPopupStyle.swift in Sources */,
 				60E55FAB6650DF447D0C115BB3252BE5 /* WPPopupToll.swift in Sources */,
 				852F01163B67AF4889D36C2806675549 /* WPPopupView.swift in Sources */,
@@ -2467,8 +2457,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

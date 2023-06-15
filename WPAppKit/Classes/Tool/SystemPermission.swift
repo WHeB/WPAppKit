@@ -10,7 +10,6 @@ import AVFoundation
 import Photos
 import CoreLocation
 
-@available(iOS 9.0, *)
 public class SystemPermission: NSObject {
     
     /// 访问相册权限

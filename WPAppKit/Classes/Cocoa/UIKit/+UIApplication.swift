@@ -40,7 +40,7 @@ public extension UIApplication {
             if UIApplication.shared.canOpenURL(phoneURL) {
                 UIApplication.shared.open(phoneURL, options: [:], completionHandler: nil)
             }
-            break
+            
         case .sheet:
             guard let phoneURL = URL(string: "tel://\(phone)") else {
                 return
@@ -48,7 +48,7 @@ public extension UIApplication {
             if UIApplication.shared.canOpenURL(phoneURL) {
                 UIApplication.shared.open(phoneURL, options: [:], completionHandler: nil)
             }
-            break
+            
         }
     }
     
@@ -59,4 +59,5 @@ public extension UIApplication {
             UIApplication.shared.open(urlPath, options: [:], completionHandler: nil)
         }
     }
+    
 }

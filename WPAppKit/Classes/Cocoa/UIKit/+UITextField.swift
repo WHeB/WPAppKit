@@ -66,7 +66,6 @@ public extension UITextField {
             self.keyboardType = .decimalPad
         case .password:
             self.keyboardType = .asciiCapable
-            self.isSecureTextEntry = true
         case .url:
             self.keyboardType = .URL
         case .email:

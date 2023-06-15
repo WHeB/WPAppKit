@@ -10,7 +10,8 @@ import UIKit
 public extension UINavigationBar {
     
     /// 设置字号和颜色
-    func setTitleFont(_ font: UIFont, color: UIColor = .black) {
+    func setTitleFont(_ font: UIFont,
+                      color: UIColor = .black) {
         var attrs = [NSAttributedString.Key: Any]()
         attrs[.font] = font
         attrs[.foregroundColor] = color
@@ -30,7 +31,8 @@ public extension UINavigationBar {
     }
     
     /// 设置导航栏背景和文本颜色
-    func setColor(background: UIColor, text: UIColor) {
+    func setColor(background: UIColor,
+                  text: UIColor) {
         isTranslucent = false
         backgroundColor = background
         barTintColor = background

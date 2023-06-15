@@ -14,7 +14,7 @@ open class WPAlertView: UIView {
     private var style: WPPopupStyle!
     private var titleLabel: UILabel!
     private var detailLabel: UILabel!
-    private var buttonsView: UIView = UIView.init()
+    private var buttonsView: UIView = UIView()
     private var alertViewW: CGFloat = 0.0
     private var labelW: CGFloat = 0.0
     private var titleH: CGFloat = 0.0
@@ -88,7 +88,7 @@ open class WPAlertView: UIView {
     
     // 标题
     private func loadTitle(title: String) {
-        let label = UILabel(frame: CGRect.init(x: padding, y: padding, width: self.labelW, height: self.titleH))
+        let label = UILabel(frame: CGRect(x: padding, y: padding, width: self.labelW, height: self.titleH))
         self.addSubview(label)
         label.numberOfLines = 0
         label.textColor = self.style.titleColor
@@ -104,13 +104,13 @@ open class WPAlertView: UIView {
     // 内容
     private func loadDetail(detail: String) {
         let labelY = self.titleLabel.popup_bottomY + space
-        let label = UILabel(frame: CGRect.init(x: 0, y: labelY, width: self.labelW, height: self.detailH))
+        let label = UILabel(frame: CGRect(x: 0, y: labelY, width: self.labelW, height: self.detailH))
         self.addSubview(label)
         // 文本
         let text = NSMutableAttributedString(string: detail)
         let pStyle = NSMutableParagraphStyle()
         pStyle.lineSpacing = rowSpace
-        text.addAttributes([NSAttributedString.Key.paragraphStyle : pStyle], range: NSRange.init(location: 0, length: text.length))
+        text.addAttributes([NSAttributedString.Key.paragraphStyle : pStyle], range: NSRange(location: 0, length: text.length))
         label.attributedText = text
         
         label.textColor = self.style.detailColor
@@ -218,7 +218,7 @@ open class WPAlertView: UIView {
         if style != nil { // 自定义alertView
             self.style = style
             let centerY = self.style.hasKeyboard ? (ScHeight-216.0)/2 : ScHeight/2
-            self.center = CGPoint.init(x: ScWidth / 2.0, y: centerY)
+            self.center = CGPoint(x: ScWidth / 2.0, y: centerY)
         }
         guard let supView: WPPopupView = self.superview as? WPPopupView else {
             return

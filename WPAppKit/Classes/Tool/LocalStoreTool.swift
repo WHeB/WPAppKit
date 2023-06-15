@@ -54,7 +54,8 @@ public class LocalStoreTool: NSObject {
     }
     
     /// 归档
-    public func archiverInfo(objectName: Any, fileName: String) {
+    public func archiverInfo(objectName: Any,
+                             fileName: String) {
         let data: NSMutableData = NSMutableData()
         let archiver = NSKeyedArchiver.init(forWritingWith: data)
         archiver.encode(objectName, forKey: fileName)
@@ -74,7 +75,8 @@ public class LocalStoreTool: NSObject {
     }
     
     /// 写入数组
-    public func writeArrayToPlist(plistPath: String, fileArray: [Any]) {
+    public func writeArrayToPlist(plistPath: String,
+                                  fileArray: [Any]) {
         let filePath = self.documentFileName(fileName: plistPath)
         NSArray(array: fileArray).write(toFile: filePath, atomically: true)
     }
@@ -92,7 +94,8 @@ public class LocalStoreTool: NSObject {
     }
     
     /// 写入字典
-    public func writeDictToPlist(plistPath: String, dict: [String : Any]) {
+    public func writeDictToPlist(plistPath: String,
+                                 dict: [String : Any]) {
         let filePath = self.documentFileName(fileName: plistPath)
         (dict as NSDictionary).write(toFile: filePath, atomically: true)
     }
@@ -109,7 +112,8 @@ public class LocalStoreTool: NSObject {
     }
     
     /// 写入字符串
-    public func writeString(toFilePath: String, string: String) {
+    public func writeString(toFilePath: String,
+                            string: String) {
         let filePath = self.documentFileName(fileName: toFilePath)
         try? (string as NSString).write(toFile: filePath, atomically: true, encoding: String.Encoding.utf8.rawValue)
     }

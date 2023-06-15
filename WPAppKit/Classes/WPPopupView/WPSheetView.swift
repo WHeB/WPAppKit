@@ -51,7 +51,7 @@ open class WPSheetView: UIView {
         // buttons
         if WPPopupToll.popup_isHasSafeArea {
             self.buttonH = CGFloat(buttons.count) * buttonHeight + 20 + 5
-            let safetyView = UIView.init(frame: CGRect(x: 0, y: self.buttonH - 20, width: self.sheetViewW, height: 20))
+            let safetyView = UIView(frame: CGRect(x: 0, y: self.buttonH - 20, width: self.sheetViewW, height: 20))
             safetyView.backgroundColor = self.style.popupBgColor
             self.buttonsView.addSubview(safetyView)
         }else {
@@ -81,7 +81,7 @@ open class WPSheetView: UIView {
     
     // 标题
     private func loadTitle(title: String) {
-        let label = UILabel.init(frame: CGRect(x: padding, y: padding, width: self.labelW, height: self.titleH))
+        let label = UILabel(frame: CGRect(x: padding, y: padding, width: self.labelW, height: self.titleH))
         self.contentView.addSubview(label)
         label.textColor = self.style.titleColor
         label.font = self.style.titleFont
@@ -139,7 +139,7 @@ open class WPSheetView: UIView {
                 button.titleLabel?.font = self.style.lastBtnFont
             }
             button.setTitle(item, for: .normal)
-            button.setBackgroundImage(UIImage.popup_createImageWithColor(color: UIColor.init(popup_hex: "EBEBEB")), for: .highlighted)
+            button.setBackgroundImage(UIImage.popup_createImageWithColor(color: UIColor(popup_hex: "EBEBEB")), for: .highlighted)
             button.tag = 100 + index
             button.addTarget(self, action: #selector(clickAction(button:)), for: .touchUpInside)
             self.buttonsView.addSubview(button)
@@ -163,7 +163,7 @@ open class WPSheetView: UIView {
             case .sheetRightPop:
                 break
             default:
-                self.center = CGPoint.init(x: ScWidth / 2.0, y: ScHeight - self.popup_height / 2.0)
+                self.center = CGPoint(x: ScWidth / 2.0, y: ScHeight - self.popup_height / 2.0)
                 break
             }
         }
